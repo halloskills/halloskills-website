@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HalloSkills – Deine Online-Umschulung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* ── TOKENS ── */
+    :root {
+      --navy:   #004b76;
+      --gold:   #d4af37;
+      --dark:   #111827;
+      --text:   #475467;
+      --light:  #f5f7f9;
+      --footer: #111827;
+      --white:  #ffffff;
+      --border: #e5e7eb;
+      --font-head: Georgia, Times, "Times New Roman", serif;
+      --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* ── BASE ── */
+    body { font-family: var(--font-body); color: var(--dark); background: var(--white); line-height: 1.65; font-size: 1rem; }
+    h1,h2,h3,h4 { font-family: var(--font-head); font-weight: 400; line-height: 1.1; color: var(--dark); }
+    h1 { font-size: clamp(2.4rem,5vw,3.75rem); letter-spacing: -0.08rem; }
+    h2 { font-size: clamp(1.8rem,3.5vw,2.5rem); letter-spacing: -0.01rem; }
+    h3 { font-size: clamp(1.1rem,2vw,1.25rem); }
+    p  { color: var(--text); line-height: 1.7; }
+    a  { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── UTILS ── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .btn-outline {
+      display: inline-block;
+      padding: 13px 28px;
+      border: 1.5px solid var(--dark);
+      color: var(--dark);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      background: transparent;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { background: var(--dark); color: var(--white); }
+    .btn-outline--white {
+      border-color: var(--white);
+      color: var(--white);
+    }
+    .btn-outline--white:hover { background: var(--white); color: var(--dark); }
+    .divider { width: 100%; height: 1px; background: var(--border); }
+
+    /* Scroll-in animation */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ── NAVBAR ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px;
+      max-width: 1200px; margin: 0 auto; padding: 0 48px;
+    }
+    .nav__logo img { height: 36px; width: auto; }
+    .nav__links { display: flex; gap: 48px; }
+    .nav__links a {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dark);
+      transition: color 0.2s;
+    }
+    .nav__links a:hover { color: var(--navy); }
+    .nav__hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .nav__hamburger span { width: 22px; height: 1.5px; background: var(--dark); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex; align-items: center;
+      overflow: hidden;
+    }
+    .hero__bg {
+      position: absolute; inset: 0;
+      background-image: url('https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d6822cc5fecb2e72e7c750_ChatGPT%20Image%208.%20Apr.%202026%2C%2018_27_59.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+    }
+    .hero__content {
+      position: relative; z-index: 1;
+      max-width: 1200px; margin: 0 auto; padding: 0 48px;
+      width: 100%;
+    }
+    .hero__inner { max-width: 580px; }
+    .hero h1 { color: var(--white); margin-bottom: 20px; }
+    .hero h1 em { font-style: italic; }
+    .hero p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 36px; max-width: 460px; }
+
+    /* ── NEUSTART ── */
+    .neustart { padding: 120px 0; background: var(--white); }
+    .neustart__grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 0 64px;
+      align-items: start;
+    }
+    .neustart__divider { background: var(--border); height: 100%; }
+    .neustart__left { padding-right: 0; text-align: center; }
+    .neustart__right { padding-left: 0; }
+    .neustart h2 { margin-bottom: 24px; text-align: center; }
+    .neustart__left p { margin-bottom: 0; }
+    .neustart__right-top { margin-bottom: 36px; }
+    .program-list { list-style: none; }
+    .program-list__link {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      align-items: center;
+      gap: 0 20px;
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+    }
+    .program-list__link:hover .program-name { color: var(--navy); }
+    .program-list__item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .program-list__item:first-child { border-top: 1px solid var(--border); }
+    .program-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .program-icon img { width: 48px; height: 48px; object-fit: contain; }
+    .program-name {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--dark);
+      text-align: left;
+    }
+
+    /* ── STANDORTE ── */
+    .standorte { padding: 120px 0; background: var(--white); }
+    .standorte__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: stretch;
+    }
+    .standorte h2 { margin-bottom: 16px; }
+    .standorte__intro { margin-bottom: 80px; color: var(--text); font-weight: 400; }
+    .num-list { list-style: none; }
+    .num-list__item {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .num-list__item:first-child { border-top: 1px solid var(--border); }
+    .num-list__num {
+      font-family: var(--font-head);
+      font-size: 3.75rem;
+      line-height: 1;
+      color: rgba(0, 75, 118, 0.08);
+      flex-shrink: 0;
+      min-width: 64px;
+    }
+    .num-list__label {
+      font-family: var(--font-head);
+      font-size: 1.375rem;
+      font-weight: 400;
+      color: var(--dark);
+    }
+    .standorte__imgwrap { position: relative; }
+    .standorte__img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .standorte__badge {
+      position: absolute;
+      bottom: 24px; left: 24px;
+      background: #004B76;
+      color: var(--white);
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      gap: 10px;
+    }
+    .standorte__badge img { width: 22px; height: 22px; filter: brightness(0) invert(1); }
+
+    /* ── UMSCHULUNGEN ── */
+    .umschulungen { padding: 100px 0; background: var(--light); }
+    .umschulungen__header { text-align: center; margin-bottom: 60px; }
+    .umschulungen__header h2 { max-width: 800px; margin: 0 auto; }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .course-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .course-card__img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .course-card:hover .course-card__img { transform: scale(1.04); }
+    .course-card__body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.95);
+      padding: 20px 24px;
+    }
+    .course-card__tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .course-card__title { font-family: var(--font-head); font-size: 1.15rem; color: var(--dark); margin-bottom: 0; }
+    .course-card__details {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.45s ease, opacity 0.35s ease, margin-top 0.35s ease;
+      margin-top: 0;
+    }
+    .course-card:hover .course-card__details {
+      max-height: 300px;
+      opacity: 1;
+      margin-top: 20px;
+    }
+    .course-detail {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 4px 12px;
+      padding: 10px 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+    .course-detail:first-child { border-top: none; padding-top: 0; }
+    .course-detail__label { color: var(--text); }
+    .course-detail__value { color: var(--dark); font-weight: 400; }
+    .courses-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 48px;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .courses-banner__text {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--dark);
+    }
+    .courses-banner__divider {
+      width: 1px;
+      height: 30px;
+      background: rgba(21,21,21,0.15);
+      flex-shrink: 0;
+    }
+    .courses-banner__btn {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dark);
+      border-bottom: 1px solid var(--dark);
+      padding-bottom: 2px;
+      text-decoration: none;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .courses-banner__btn:hover { color: var(--navy); border-color: var(--navy); }
+
+    /* ── PROZESS ── */
+    .prozess { padding: 120px 0; background: var(--white); }
+    .prozess__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .prozess__imgwrap { position: relative; }
+    .prozess__img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+    .steps { list-style: none; }
+    .step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 0 24px;
+      padding: 24px 0;
+      position: relative;
+    }
+    .step__num-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Gepunktete Verbindungslinie zwischen den Kreisen */
+    .step:not(:last-child) .step__num-wrap::after {
+      content: '';
+      flex: 1;
+      width: 0;
+      margin-top: 8px;
+      margin-bottom: -40px; /* gleicher Abstand (8px) zum nächsten Kreis wie zum oberen */
+      border-left: 1px dashed rgba(0, 0, 0, 0.2);
+      min-height: 24px;
+    }
+    .step__circle {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+      flex-shrink: 0;
+      transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+    }
+    .step__circle--active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+      transform: scale(1.12);
+    }
+    .step__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .step__title { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 8px; }
+    .step__text { font-size: 0.9rem; color: var(--text); }
+
+    /* ── VORTEILE ── */
+    .vorteile { padding: 100px 0; background: var(--light); }
+    .vorteile__header { text-align: center; margin-bottom: 60px; }
+    .vorteile__grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 0;
+    }
+    .vorteile__divider-v { background: var(--border); }
+    .vorteile__col { display: flex; flex-direction: column; gap: 20px; }
+    .vorteil {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 0 24px;
+      align-items: start;
+      padding: 40px 40px 40px 0;
+    }
+    .vorteile__col--right .vorteil { padding: 40px 0 40px 40px; }
+    .vorteil__icon img { width: 48px; }
+    .vorteil h3 { margin-bottom: 8px; font-size: 1.05rem; }
+    .vorteil p { font-size: 0.875rem; }
+
+    /* ── TEAM ── */
+    .team { padding: 100px 0 0; background: #004B76; }
+    .team .eyebrow { color: var(--gold); }
+    .team__header { margin-bottom: 64px; max-width: 680px; }
+    .team__header h2 { margin-bottom: 20px; color: var(--white); }
+    .team__header p { color: rgba(255,255,255,0.7); line-height: 1.7; }
+    .team__carousel-wrap { position: relative; }
+    .team__carousel { overflow: hidden; }
+    .team__track {
+      display: flex;
+      gap: 48px;
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .team-card {
+      flex: 0 0 calc(20% - 39px);
+      text-align: left;
+      min-width: 0;
+    }
+    .team-card__photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      margin-bottom: 16px;
+      display: block;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .team-card__name {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .team-card__role {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      font-weight: 400;
+    }
+    .team__nav {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      margin-top: 48px;
+    }
+    .team__nav-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.7);
+      background: transparent;
+      color: var(--white);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+      line-height: 1;
+    }
+    .team__nav-btn:hover { background: rgba(255,255,255,0.15); border-color: var(--white); }
+    .team__nav-btn:disabled { opacity: 0.2; cursor: default; }
+
+    /* ── HIRING (innerhalb Team-Section) ── */
+    .team__hiring {
+      margin-top: 60px;
+      padding: 0 0 80px;
+    }
+    .team__hiring-box {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .team__hiring .eyebrow {
+      color: var(--gold);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .team__hiring p {
+      font-size: 0.95rem;
+      color: var(--dark);
+      margin: 0;
+      max-width: 600px;
+    }
+    .btn-outline--hiring {
+      border-color: var(--dark);
+      color: var(--dark);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-outline--hiring:hover { background: var(--dark); color: var(--white); }
+
+    /* ── KONTAKT ── */
+    .kontakt { padding: 120px 0; background: var(--white); }
+    .kontakt__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .kontakt h2 { margin-bottom: 100px; }
+    .kontakt__intro { margin-bottom: 40px; font-size: 0.95rem; }
+    .form-field { margin-bottom: 0; }
+    .form-field input, .form-field select, .form-field textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 1.5px solid var(--border);
+      padding: 14px 0;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--dark);
+      background: transparent;
+      outline: none;
+      transition: border-color 0.2s;
+      display: block;
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: #adb5bd; }
+    .form-field input:focus,
+    .form-field textarea:focus { border-bottom-color: var(--navy); }
+    .form-fields { display: flex; flex-direction: column; gap: 0; margin-bottom: 12px; }
+    .form-note { font-size: 0.8rem; color: var(--text); margin-bottom: 32px; }
+    .kontakt__imgwrap { position: relative; }
+    .kontakt__img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 4/5;
+    }
+    .kontakt__img-text {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 32px;
+      background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+      border-radius: 0 0 16px 16px;
+      color: var(--white);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+    .form-success { display: none; color: #027a48; background: #ecfdf3; padding: 14px; border-radius: 4px; font-size: 0.875rem; font-weight: 600; }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--footer); padding: 80px 0 40px; }
+    .footer__top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer__logo img { width: 180px; height: auto; margin-bottom: 20px; }
+    .footer__desc { display: none; }
+    .footer__follow { display: none; }
+    .footer__social { display: none; }
+    .footer__social a { opacity: 0.6; transition: opacity 0.2s; }
+    .footer__social a:hover { opacity: 1; }
+    .footer__social img { height: 18px; }
+    .footer__col h4 {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .footer__col a { font-size: 0.9rem; color: rgba(255,255,255,0.7); transition: color 0.2s; }
+    .footer__col a:hover { color: var(--white); }
+    .footer__bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 32px;
+    }
+    .footer__copy { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+
+    /* ── MOBILE NAV MENU ── */
+    .nav__mobile { display: none; flex-direction: column; gap: 0; background: var(--white); border-top: 1px solid var(--border); }
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a { padding: 16px 48px; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dark); border-bottom: 1px solid var(--border); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .courses-grid { grid-template-columns: 1fr 1fr; }
+      .team-card { flex: 0 0 calc(33.333% - 28px); }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      .nav__inner { padding: 0 24px; }
+      .nav__links { display: none; }
+      .nav__hamburger { display: flex; }
+      .nav__mobile a { padding: 16px 24px; }
+      .hero__content { padding: 0 24px; }
+      .neustart__grid { grid-template-columns: 1fr; }
+      .neustart__divider { display: none; }
+      .standorte__grid { grid-template-columns: 1fr; }
+      .prozess__grid { grid-template-columns: 1fr; }
+      .prozess__imgwrap { display: none; }
+      .vorteile__grid { grid-template-columns: 1fr; }
+      .vorteile__divider-v { display: none; }
+      .vorteil { padding: 32px 0; }
+      .vorteile__col--right .vorteil { padding: 32px 0; }
+      .kontakt__grid { grid-template-columns: 1fr; }
+      .kontakt__imgwrap { display: none; }
+      .team-card { flex: 0 0 calc(50% - 20px); }
+      .courses-grid { grid-template-columns: 1fr; }
+      .hiring__inner { flex-direction: column; align-items: flex-start; }
+      .footer__top { grid-template-columns: 1fr; gap: 40px; }
+      .footer__bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .team__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__logo">
+      <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69cb776dafe519b35f797192_HalloSkills-Blau.svg" alt="HalloSkills"/>
+    </a>
+    <div class="nav__links">
+      <a href="#kurs-angebot">Umschulungen</a>
+      <a href="#standorte">Standorte</a>
+      <a href="#team">Team</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="nav__hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="#kurs-angebot" onclick="toggleNav()">Umschulungen</a>
+    <a href="#standorte" onclick="toggleNav()">Standorte</a>
+    <a href="#team" onclick="toggleNav()">Team</a>
+    <a href="#kontakt" onclick="toggleNav()">Kontakt</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <div class="hero__inner fade-up">
+      <span class="eyebrow" style="color:var(--gold);">100% Virtuell &amp; IHK-Zertifiziert</span>
+      <h1>Deine Online-Umschulung<br>für einen Job <em>mit<br>Zukunftsperspektive</em></h1>
+      <p>Bei HalloSkills bekommst du eine staatlich geförderte Umschulung im kaufmännischen Bereich. Komplett aus dem Homeoffice, kostenfrei durch Bildungsgutschein und mit anerkanntem IHK-Abschluss.</p>
+      <a href="#umschulungen" class="btn-outline btn-outline--white">Mehr erfahren</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NEUSTART ═══════════════ -->
+<section class="neustart" id="umschulungen">
+  <div class="container">
+    <div class="neustart__grid">
+      <div class="neustart__left fade-up">
+        <span class="eyebrow">Dein Neustart</span>
+        <h2>Wir begleiten dich in<br>deine neue Karriere</h2>
+        <br>
+        <p>HalloSkills unterstützt dich bei deinem beruflichen Neustart: Wir beraten dich bei der Förderung, vermitteln dir Future Skills und begleiten dich beim Start in einen gut bezahlten Job mit Aufstiegschancen.</p>
+      </div>
+      <div class="neustart__divider"></div>
+      <div class="neustart__right fade-up" style="transition-delay:0.15s">
+        <div class="neustart__right-top">
+          <a href="#kurs-angebot" class="btn-outline">Umschulungen erkunden</a>
+        </div>
+        <ul class="program-list">
+          <li class="program-list__item">
+            <a href="#kurs-angebot" class="program-list__link">
+              <span class="program-icon">
+                <img src="Assets/website-icons/E-Commerce.png" alt="E-Commerce"/>
+              </span>
+              <span class="program-name">Kaufmann / Kauffrau im E-Commerce (IHK)</span>
+            </a>
+          </li>
+          <li class="program-list__item">
+            <a href="#kurs-angebot" class="program-list__link">
+              <span class="program-icon">
+                <img src="Assets/website-icons/Bueromanagement.png" alt="Büromanagement"/>
+              </span>
+              <span class="program-name">Kaufmann / Kauffrau für Büromanagement (IHK)</span>
+            </a>
+          </li>
+          <li class="program-list__item">
+            <a href="#kurs-angebot" class="program-list__link">
+              <span class="program-icon">
+                <img src="Assets/website-icons/Gesundheitswesen.png" alt="Gesundheitswesen"/>
+              </span>
+              <span class="program-name">Kaufmann / Kauffrau im Gesundheitswesen (IHK)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STANDORTE / LERNEN ═══════════════ -->
+<section class="standorte" id="standorte">
+  <div class="container">
+    <div class="standorte__grid">
+      <div class="fade-up">
+        <span class="eyebrow">Standorte</span>
+        <h2>Lernen ohne<br>Einschränkung</h2>
+        <p class="standorte__intro">Bei HalloSkills kommt die Umschulung zu dir nach Hause: Unser 100 % virtuelles Homeoffice-Konzept bietet Flexibilität und ein Lernerlebnis, das sich an dein Leben anpasst.</p>
+        <ul class="num-list">
+          <li class="num-list__item">
+            <span class="num-list__num">01</span>
+            <span class="num-list__label">Keine Pendelfahrten, mehr Zeit</span>
+          </li>
+          <li class="num-list__item">
+            <span class="num-list__num">02</span>
+            <span class="num-list__label">Lernen in deinem Tempo</span>
+          </li>
+          <li class="num-list__item">
+            <span class="num-list__num">03</span>
+            <span class="num-list__label">Von Zuhause &amp; Unterwegs</span>
+          </li>
+          <li class="num-list__item">
+            <span class="num-list__num">04</span>
+            <span class="num-list__label">Familie &amp; Lernen vereinen</span>
+          </li>
+        </ul>
+      </div>
+      <div class="standorte__imgwrap fade-up" style="transition-delay:0.2s">
+        <img class="standorte__img"
+          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d6794a5cfccdb03971eaf3_Untitled%20design-7.png"
+          alt="Frau lernt im Homeoffice"/>
+        <div class="standorte__badge">
+          <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe996_Tick.svg" alt=""/>
+          IHK-Abschluss im Homeoffice
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ UMSCHULUNGEN GRID ═══════════════ -->
+<section class="umschulungen" id="kurs-angebot">
+  <div class="container">
+    <div class="umschulungen__header fade-up">
+      <span class="eyebrow" style="color:#004B76;">Coming Soon</span>
+      <h2>Unsere Umschulungen vermitteln Skills<br>für Jobs mit Zukunftspotenzial</h2>
+    </div>
+    <div class="courses-grid">
+      <div class="course-card fade-up">
+        <img class="course-card__img"
+          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d78f6799fdc8a71ce56e56_ChatGPT%20Image%209.%20Apr.%202026%2C%2013_36_43.png"
+          alt="E-Commerce"/>
+        <div class="course-card__body">
+          <div class="course-card__tag">Umschulung</div>
+          <h3 class="course-card__title">Kaufmann / Kauffrau im E-Commerce (IHK)</h3>
+          <div class="course-card__details">
+            <div class="course-detail">
+              <span class="course-detail__label">Dauer:</span>
+              <span class="course-detail__value">ca. 24 Monate</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Standort:</span>
+              <span class="course-detail__value">Virtuell</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Abschluss:</span>
+              <span class="course-detail__value">IHK-Abschluss, ICDL-Zertifikat, etc.</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Nächster Start:</span>
+              <span class="course-detail__value">Januar 2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="course-card fade-up" style="transition-delay:0.1s">
+        <img class="course-card__img"
+          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d78ecda4fedbbadbb55310_ChatGPT%20Image%209.%20Apr.%202026%2C%2013_34_20.png"
+          alt="Büromanagement"/>
+        <div class="course-card__body">
+          <div class="course-card__tag">Umschulung</div>
+          <h3 class="course-card__title">Kaufmann / Kauffrau für Büromanagement (IHK)</h3>
+          <div class="course-card__details">
+            <div class="course-detail">
+              <span class="course-detail__label">Dauer:</span>
+              <span class="course-detail__value">ca. 24 Monate</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Standort:</span>
+              <span class="course-detail__value">Virtuell</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Abschluss:</span>
+              <span class="course-detail__value">IHK-Abschluss, ICDL-Zertifikat, etc.</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Nächster Start:</span>
+              <span class="course-detail__value">Januar 2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="course-card fade-up" style="transition-delay:0.2s">
+        <img class="course-card__img"
+          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe9b1_case-studies-three.webp"
+          alt="Gesundheitswesen"/>
+        <div class="course-card__body">
+          <div class="course-card__tag">Umschulung</div>
+          <h3 class="course-card__title">Kaufmann / Kauffrau im Gesundheitswesen (IHK)</h3>
+          <div class="course-card__details">
+            <div class="course-detail">
+              <span class="course-detail__label">Dauer:</span>
+              <span class="course-detail__value">ca. 24 Monate</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Standort:</span>
+              <span class="course-detail__value">Virtuell</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Abschluss:</span>
+              <span class="course-detail__value">IHK-Abschluss, ICDL-Zertifikat, etc.</span>
+            </div>
+            <div class="course-detail">
+              <span class="course-detail__label">Nächster Start:</span>
+              <span class="course-detail__value">Januar 2027</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="course-card fade-up" style="transition-delay:0.3s">
+        <img class="course-card__img"
+          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe9b2_case-studies-one.webp"
+          alt="Umschulung der Zukunft"/>
+        <div class="course-card__body">
+          <div class="course-card__tag">Umschulung</div>
+          <h3 class="course-card__title">Umschulung der Zukunft</h3>
+          <div class="course-card__details">
+            <p style="font-size:0.9rem; color:var(--text); line-height:1.65; margin:0;">Wir behalten immer im Blick, welche Umschulungen es gibt. Mit uns kannst du sicher sein, dass du die beste Umschulung findest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="courses-banner fade-up">
+      <span class="courses-banner__text">Wir sind auch in deiner Stadt</span>
+      <div class="courses-banner__divider"></div>
+      <a href="#kontakt" class="courses-banner__btn">Kostenlose Beratung buchen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROZESS ═══════════════ -->
+<section class="prozess">
+  <div class="container">
+    <div class="prozess__grid">
+      <div class="prozess__imgwrap fade-up">
+        <img class="prozess__img"
+          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69cb76764814f81f1e597bf3_ChatGPT%20Image%2031.%20Ma%CC%88rz%202026%2C%2009_23_05.png"
+          alt="Beraterin"/>
+      </div>
+      <div class="fade-up" style="transition-delay:0.15s">
+        <ul class="steps">
+          <li class="step">
+            <div class="step__num-wrap">
+              <div class="step__circle">1</div>
+            </div>
+            <div>
+              <div class="step__label">Schritt 1</div>
+              <h3 class="step__title">Beratung</h3>
+              <p class="step__text">Bei HalloSkills findest du Jobs mit Sinn. Wir beraten dich bei der Wahl der richtigen Umschulung und machen aus deinen Wünschen einen klaren Plan.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num-wrap">
+              <div class="step__circle">2</div>
+            </div>
+            <div>
+              <div class="step__label">Schritt 2</div>
+              <h3 class="step__title">Förderung</h3>
+              <p class="step__text">Deine Investition in die Zukunft ist kostenlos: Mit dem Bildungsgutschein wird deine IHK-Umschulung zu 100 % finanziert. Wir helfen dir bei der Beantragung.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num-wrap">
+              <div class="step__circle">3</div>
+            </div>
+            <div>
+              <div class="step__label">Schritt 3</div>
+              <h3 class="step__title">Lernen von Zuhause</h3>
+              <p class="step__text">Starte deine virtuelle Umschulung im Homeoffice. Flexibel, modern und mit erfahrenen Dozierenden an deiner Seite – ganz ohne Pendelstress.</p>
+            </div>
+          </li>
+          <li class="step">
+            <div class="step__num-wrap">
+              <div class="step__circle">4</div>
+            </div>
+            <div>
+              <div class="step__label">Schritt 4</div>
+              <h3 class="step__title">IHK-Abschluss</h3>
+              <p class="step__text">Wir führen dich zu deinem Berufsabschluss. Mit Theorie, Projektarbeiten, Klausurvorbereitung und Praxisinhalten bist du optimal auf deinen beruflichen Neustart vorbereitet.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ VORTEILE ═══════════════ -->
+<section class="vorteile">
+  <div class="container">
+    <div class="vorteile__header fade-up">
+      <span class="eyebrow" style="color:#004B76;">Umschulung für die moderne Berufswelt</span>
+      <h2>Vorteile virtueller Umschulungen<br>für den Kostenträger</h2>
+    </div>
+    <div class="vorteile__grid">
+      <div class="vorteile__col fade-up">
+        <div class="vorteil">
+          <div class="vorteil__icon">
+            <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebea17_line-icon-one.svg" alt=""/>
+          </div>
+          <div>
+            <h3>Keine Fahrtkosten</h3>
+            <p>Das Lernen von zuhause spart Kosten und bietet mehr Zeit für das Lernen</p>
+          </div>
+        </div>
+        <div class="vorteil">
+          <div class="vorteil__icon">
+            <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebea02_line-icon-three.svg" alt=""/>
+          </div>
+          <div>
+            <h3>Produktivere Gruppenarbeit</h3>
+            <p>Die überregionale Vernetzung von Teilnehmenden ermöglicht präziser zusammengesetzte Lerngruppen</p>
+          </div>
+        </div>
+      </div>
+      <div class="vorteile__divider-v"></div>
+      <div class="vorteile__col vorteile__col--right fade-up" style="transition-delay:0.15s">
+        <div class="vorteil">
+          <div class="vorteil__icon">
+            <img src="Assets/website-icons/Ausstattung.png" alt=""/>
+          </div>
+          <div>
+            <h3>Moderne Arbeitsumgebung</h3>
+            <p>Online-Umschulungen von HalloSkills sind die perfekte Vorbereitung für die digitale Arbeitswelt</p>
+          </div>
+        </div>
+        <div class="vorteil">
+          <div class="vorteil__icon">
+            <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebea04_line-icon-four.svg" alt=""/>
+          </div>
+          <div>
+            <h3>Bessere Betreuung</h3>
+            <p>Die Flexibilität einer Online-Umschulung ermöglicht direktere, schnellere Betreuung der Umschüler</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TEAM ═══════════════ -->
+<section class="team" id="team">
+  <div class="container">
+    <div class="team__header fade-up">
+      <span class="eyebrow">Unser Team</span>
+      <h2>Wir bieten einen Einstieg in die<br>digitale Arbeitswelt</h2>
+      <p>Wir glauben, dass sich Bildung der modernen Welt anpassen muss. Mit unseren virtuellen Umschulungen bieten wir Teilnehmenden frische Perspektiven, Future Skills und eine spannende Lernatmosphäre.</p>
+    </div>
+    <div class="team__carousel-wrap fade-up">
+      <div class="team__carousel">
+        <div class="team__track" id="teamTrack">
+          <div class="team-card">
+            <img class="team-card__photo"
+              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d7721e5db05fcb2616a258_ChatGPT%20Image%209.%20Apr.%202026%2C%2011_30_15.png"
+              alt="Heiko"/>
+            <div class="team-card__name">Heiko</div>
+            <div class="team-card__role">Geschäftsführung</div>
+          </div>
+          <div class="team-card">
+            <img class="team-card__photo"
+              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77a3fffd5dca192018458_ChatGPT%20Image%209.%20Apr.%202026%2C%2012_06_41.png"
+              alt="Andrea"/>
+            <div class="team-card__name">Andrea</div>
+            <div class="team-card__role">Bildungsleitung</div>
+          </div>
+          <div class="team-card">
+            <img class="team-card__photo"
+              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77a10931a64d09566745d_ChatGPT%20Image%209.%20Apr.%202026%2C%2011_47_18.png"
+              alt="Konrad"/>
+            <div class="team-card__name">Konrad</div>
+            <div class="team-card__role">Qualitätsmanagement</div>
+          </div>
+          <div class="team-card">
+            <img class="team-card__photo"
+              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77368eab22095b0c8d9c1_ChatGPT%20Image%209.%20Apr.%202026%2C%2011_37_17.png"
+              alt="Nina"/>
+            <div class="team-card__name">Nina</div>
+            <div class="team-card__role">Produkt & Marketing</div>
+          </div>
+          <div class="team-card">
+            <img class="team-card__photo"
+              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77b7a927fd1d36682b230_ChatGPT%20Image%209.%20Apr.%202026%2C%2012_11_51.png"
+              alt="Christina"/>
+            <div class="team-card__name">Christina</div>
+            <div class="team-card__role">Karriereberatung</div>
+          </div>
+          <div class="team-card">
+            <img class="team-card__photo"
+              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77cba3464a17bdc76f346_ChatGPT%20Image%209.%20Apr.%202026%2C%2012_17_11.png"
+              alt="Christian"/>
+            <div class="team-card__name">Christian</div>
+            <div class="team-card__role">Administration</div>
+          </div>
+        </div>
+      </div>
+      <div class="team__nav">
+        <button class="team__nav-btn" id="teamPrev" onclick="teamSlide(-1)" disabled>&#8592;</button>
+        <button class="team__nav-btn" id="teamNext" onclick="teamSlide(1)">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- Hiring-Box innerhalb Team-Section -->
+    <div class="team__hiring fade-up">
+      <div class="team__hiring-box">
+        <div>
+          <span class="eyebrow">Wir stellen ein!</span>
+          <p>Bei HalloSkills findest du Jobs mit Sinn. Wir beraten dich bei der Wahl der richtigen Umschulung und machen aus deinen Wünschen einen klaren Plan.</p>
+        </div>
+        <a href="#kontakt" class="btn-outline btn-outline--hiring">Jetzt bewerben</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ KONTAKT ═══════════════ -->
+<section class="kontakt" id="kontakt">
+  <div class="container">
+    <div class="kontakt__grid">
+      <div class="fade-up">
+        <span class="eyebrow" style="color:#004B76;">Du brauchst mehr Infos?</span>
+        <h2>Lass uns sprechen</h2>
+        <form action="https://formspree.io/f/mrerpgqa" method="POST">
+          <div class="form-fields">
+            <div class="form-field">
+              <input type="text" name="name" placeholder="Dein Name*" required/>
+            </div>
+            <div class="form-field">
+              <input type="email" name="email" placeholder="E-Mail*" required/>
+            </div>
+            <div class="form-field">
+              <input type="tel" name="telefon" placeholder="Telefon"/>
+            </div>
+            <div class="form-field form-field--full">
+              <textarea name="nachricht" placeholder="Deine Nachricht*" rows="5" required></textarea>
+            </div>
+          </div>
+          <p class="form-note">Bitte fülle alle Pflichtfelder aus (*)</p>
+          <button type="submit" class="btn-outline">Absenden</button>
+        </form>
+      </div>
+      <div class="kontakt__imgwrap fade-up" style="transition-delay:0.2s">
+        <img class="kontakt__img"
+          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69cebd103ccd993fdfc224ae_Untitled%20design-5.png"
+          alt="Beratung"/>
+        <div class="kontakt__img-text">
+          Teile ein paar Details mit uns und wir melden uns mit den nächsten Schritten bei dir.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="Assets/2026%2002%2024%20Logo_wei%C3%9F.png" alt="HalloSkills"/>
+        </div>
+        <p class="footer__desc">Hier kann noch ein kleiner Fließtext stehen, starte mit uns die neue Ära der Umschulung. Digital für die Zukunft.</p>
+        <p class="footer__follow">Folge uns</p>
+        <div class="footer__social">
+          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe966_instagram-icon-white.svg" alt="Instagram"/></a>
+          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe964_facebook-icon-white.svg" alt="Facebook"/></a>
+          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe963_linkedin-icon-white.svg" alt="LinkedIn"/></a>
+          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe965_youtube-icon-white.svg" alt="YouTube"/></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#umschulungen">Umschulungen</a></li>
+          <li><a href="#standorte">Standorte</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="widerrufsrecht.html">Widerrufsrecht</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="cookie-richtlinien.html">Cookie-Richtlinien</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">© 2026 HalloSkills GmbH</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Mobile nav ──
+  function toggleNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+  }
+
+  // ── Scroll animations ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Form ──
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // ── Sticky nav shadow ──
+  window.addEventListener('scroll', () => {
+    document.querySelector('.nav').style.boxShadow =
+      window.scrollY > 10 ? '0 2px 16px rgba(0,0,0,0.06)' : 'none';
+  });
+
+  // ── Team Carousel ──
+  let teamIndex = 0;
+  const teamTrack = document.getElementById('teamTrack');
+  const teamCards = teamTrack.querySelectorAll('.team-card');
+  const teamPrev = document.getElementById('teamPrev');
+  const teamNext = document.getElementById('teamNext');
+  const VISIBLE = 5;
+  const MAX = teamCards.length - VISIBLE; // = 1 (6 cards, show 5)
+
+  function teamSlide(dir) {
+    teamIndex = Math.max(0, Math.min(teamIndex + dir, MAX));
+    const cardW = teamCards[0].offsetWidth + 40; // width + gap
+    teamTrack.style.transform = `translateX(-${teamIndex * cardW}px)`;
+    teamPrev.disabled = teamIndex === 0;
+    teamNext.disabled = teamIndex >= MAX;
+  }
+
+  // ── Steps scroll animation ──
+  const stepCircles = document.querySelectorAll('.step__circle');
+  const prozessSection = document.querySelector('.prozess');
+
+  function updateActiveStep() {
+    const sectionRect = prozessSection.getBoundingClientRect();
+
+    // Wenn Section komplett außerhalb → alle deaktivieren
+    if (sectionRect.bottom < 0 || sectionRect.top > window.innerHeight) {
+      stepCircles.forEach(c => c.classList.remove('step__circle--active'));
+      return;
+    }
+
+    // Trigger-Punkt: 60% von oben im Viewport
+    const triggerY = window.innerHeight * 0.6;
+    let activeIndex = -1;
+
+    stepCircles.forEach((circle, i) => {
+      const rect = circle.closest('.step').getBoundingClientRect();
+      if (rect.top <= triggerY) {
+        activeIndex = i; // immer das letzte das den Trigger passiert hat
+      }
+    });
+
+    // Nur einen aktiv setzen, alle anderen zurücksetzen
+    stepCircles.forEach((circle, i) => {
+      circle.classList.toggle('step__circle--active', i === activeIndex);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveStep, { passive: true });
+  // Einmal initial aufrufen (falls Seite schon gescrollt)
+  updateActiveStep();
+</script>
+</body>
+</html>
