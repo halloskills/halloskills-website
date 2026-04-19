@@ -105,12 +105,14 @@
       min-height: 92vh;
       display: flex; align-items: center;
       overflow: hidden;
+      background-color: #004B76;
     }
     .hero__bg {
       position: absolute; inset: 0;
-      background-image: url('https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d6822cc5fecb2e72e7c750_ChatGPT%20Image%208.%20Apr.%202026%2C%2018_27_59.png');
+      background-image: url('Assets/Bilder/Hero-Bild.png');
       background-size: cover;
       background-position: center;
+      opacity: 0.92;
     }
     .hero__overlay {
       position: absolute; inset: 0;
@@ -600,26 +602,69 @@
       .team-card { flex: 0 0 calc(33.333% - 28px); }
     }
     @media (max-width: 768px) {
-      .container { padding: 0 24px; }
-      .nav__inner { padding: 0 24px; }
+      /* Layout */
+      .container { padding: 0 20px; }
+      .nav__inner { padding: 0 20px; }
       .nav__links { display: none; }
       .nav__hamburger { display: flex; }
-      .nav__mobile a { padding: 16px 24px; }
-      .hero__content { padding: 0 24px; }
-      .neustart__grid { grid-template-columns: 1fr; }
+      .nav__mobile a { padding: 16px 20px; }
+
+      /* Section padding – reduce 120px → 64px */
+      .neustart { padding: 64px 0; }
+      .standorte { padding: 64px 0; }
+      .prozess { padding: 64px 0; }
+      .umschulungen { padding: 64px 0; }
+      .vorteile { padding: 64px 0; }
+      .kontakt { padding: 64px 0; }
+      .team { padding: 64px 0 0; }
+
+      /* Hero */
+      .hero__content { padding: 0 20px; }
+      .hero { min-height: 100svh; }
+
+      /* Neustart grid → stack, center content */
+      .neustart__grid { grid-template-columns: 1fr; gap: 40px; }
       .neustart__divider { display: none; }
-      .standorte__grid { grid-template-columns: 1fr; }
+      .neustart__right { text-align: center; }
+      .neustart__right-top { text-align: center; }
+      .program-list__link { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+      .program-name { text-align: center; }
+      .program-list__item { padding: 24px 0; }
+      .program-icon img { width: 24px; height: 24px; }
+
+      /* Standorte grid → stack, image gets fixed height matching course cards */
+      .standorte__grid { grid-template-columns: 1fr; gap: 40px; }
+      .standorte__imgwrap { height: 400px; }
+      .standorte__img { object-position: top center; }
+
+      /* Prozess */
       .prozess__grid { grid-template-columns: 1fr; }
       .prozess__imgwrap { display: none; }
+
+      /* Vorteile */
       .vorteile__grid { grid-template-columns: 1fr; }
       .vorteile__divider-v { display: none; }
-      .vorteil { padding: 32px 0; }
-      .vorteile__col--right .vorteil { padding: 32px 0; }
+      .vorteil { padding: 28px 0; }
+      .vorteile__col--right .vorteil { padding: 28px 0; }
+
+      /* Courses */
+      .courses-grid { grid-template-columns: 1fr; }
+      .courses-banner { flex-direction: column; gap: 16px; text-align: center; padding: 32px 0; }
+      .courses-banner__divider { width: 40px; height: 1px; }
+
+      /* Team */
+      .team-card { flex: 0 0 calc(50% - 20px); }
+
+      /* Wir stellen ein – FIX: was .hiring__inner (wrong), correct class is .team__hiring-box */
+      .team__hiring-box { flex-direction: column; align-items: flex-start; gap: 20px; padding: 24px; }
+      .btn-outline--hiring { white-space: normal; width: 100%; text-align: center; }
+
+      /* Kontakt */
       .kontakt__grid { grid-template-columns: 1fr; }
       .kontakt__imgwrap { display: none; }
-      .team-card { flex: 0 0 calc(50% - 20px); }
-      .courses-grid { grid-template-columns: 1fr; }
-      .hiring__inner { flex-direction: column; align-items: flex-start; }
+      .kontakt h2 { margin-bottom: 40px; }
+
+      /* Footer */
       .footer__top { grid-template-columns: 1fr; gap: 40px; }
       .footer__bottom { flex-direction: column; gap: 12px; align-items: flex-start; }
     }
@@ -743,7 +788,7 @@
       </div>
       <div class="standorte__imgwrap fade-up" style="transition-delay:0.2s">
         <img class="standorte__img"
-          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d6794a5cfccdb03971eaf3_Untitled%20design-7.png"
+          src="Assets/Bilder/standorte.png"
           alt="Frau lernt im Homeoffice"/>
         <div class="standorte__badge">
           <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe996_Tick.svg" alt=""/>
@@ -764,7 +809,7 @@
     <div class="courses-grid">
       <div class="course-card fade-up">
         <img class="course-card__img"
-          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d78f6799fdc8a71ce56e56_ChatGPT%20Image%209.%20Apr.%202026%2C%2013_36_43.png"
+          src="Assets/Bilder/Kaufmann-ECommerce.png"
           alt="E-Commerce"/>
         <div class="course-card__body">
           <div class="course-card__tag">Umschulung</div>
@@ -791,7 +836,7 @@
       </div>
       <div class="course-card fade-up" style="transition-delay:0.1s">
         <img class="course-card__img"
-          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d78ecda4fedbbadbb55310_ChatGPT%20Image%209.%20Apr.%202026%2C%2013_34_20.png"
+          src="Assets/Bilder/Kaufmann-Bueromanagement.png"
           alt="Büromanagement"/>
         <div class="course-card__body">
           <div class="course-card__tag">Umschulung</div>
@@ -818,7 +863,7 @@
       </div>
       <div class="course-card fade-up" style="transition-delay:0.2s">
         <img class="course-card__img"
-          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe9b1_case-studies-three.webp"
+          src="Assets/Bilder/Kaufmann-Gesundheitswesen.png"
           alt="Gesundheitswesen"/>
         <div class="course-card__body">
           <div class="course-card__tag">Umschulung</div>
@@ -845,7 +890,7 @@
       </div>
       <div class="course-card fade-up" style="transition-delay:0.3s">
         <img class="course-card__img"
-          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe9b2_case-studies-one.webp"
+          src="Assets/Bilder/Umschulung-der-Zukunft.png"
           alt="Umschulung der Zukunft"/>
         <div class="course-card__body">
           <div class="course-card__tag">Umschulung</div>
@@ -870,7 +915,7 @@
     <div class="prozess__grid">
       <div class="prozess__imgwrap fade-up">
         <img class="prozess__img"
-          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69cb76764814f81f1e597bf3_ChatGPT%20Image%2031.%20Ma%CC%88rz%202026%2C%2009_23_05.png"
+          src="Assets/Bilder/Schritt1-4.png"
           alt="Beraterin"/>
       </div>
       <div class="fade-up" style="transition-delay:0.15s">
@@ -987,15 +1032,16 @@
         <div class="team__track" id="teamTrack">
           <div class="team-card">
             <img class="team-card__photo"
-              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d7721e5db05fcb2616a258_ChatGPT%20Image%209.%20Apr.%202026%2C%2011_30_15.png"
+              src="Assets/Bilder/Team/Heiko.png"
               alt="Heiko"/>
             <div class="team-card__name">Heiko</div>
             <div class="team-card__role">Geschäftsführung</div>
           </div>
           <div class="team-card">
-            <img class="team-card__photo"
-              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77a3fffd5dca192018458_ChatGPT%20Image%209.%20Apr.%202026%2C%2012_06_41.png"
-              alt="Andrea"/>
+            <div class="team-card__photo" style="overflow:hidden; display:block;">
+              <img src="Assets/Bilder/Team/Andrea.png" alt="Andrea"
+                style="width:100%; height:100%; object-fit:cover; object-position:center center;"/>
+            </div>
             <div class="team-card__name">Andrea</div>
             <div class="team-card__role">Bildungsleitung</div>
           </div>
@@ -1117,9 +1163,6 @@
         <h4>Rechtliches</h4>
         <ul>
           <li><a href="datenschutz.html">Datenschutz</a></li>
-          <li><a href="widerrufsrecht.html">Widerrufsrecht</a></li>
-          <li><a href="agb.html">AGB</a></li>
-          <li><a href="cookie-richtlinien.html">Cookie-Richtlinien</a></li>
           <li><a href="impressum.html">Impressum</a></li>
         </ul>
       </div>
