@@ -1211,16 +1211,34 @@
   const teamCards = teamTrack.querySelectorAll('.team-card');
   const teamPrev = document.getElementById('teamPrev');
   const teamNext = document.getElementById('teamNext');
-  const VISIBLE = 5;
-  const MAX = teamCards.length - VISIBLE; // = 1 (6 cards, show 5)
+
+  function getVisible() {
+    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 1024) return 3;
+    return 5;
+  }
+
+  function getMax() {
+    return Math.max(0, teamCards.length - getVisible());
+  }
 
   function teamSlide(dir) {
+    const MAX = getMax();
     teamIndex = Math.max(0, Math.min(teamIndex + dir, MAX));
     const cardW = teamCards[0].offsetWidth + 40; // width + gap
     teamTrack.style.transform = `translateX(-${teamIndex * cardW}px)`;
     teamPrev.disabled = teamIndex === 0;
     teamNext.disabled = teamIndex >= MAX;
   }
+
+  // Reset on resize
+  window.addEventListener('resize', () => {
+    teamIndex = 0;
+    teamTrack.style.transform = 'translateX(0)';
+    const MAX = getMax();
+    teamPrev.disabled = true;
+    teamNext.disabled = MAX === 0;
+  });
 
   // ── Steps scroll animation ──
   const stepCircles = document.querySelectorAll('.step__circle');
