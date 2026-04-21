@@ -4,9 +4,20 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HalloSkills – Deine Online-Umschulung</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    @font-face {
+      font-family: "General Sans";
+      src: url('Assets/Schriften/GeneralSans-Variable.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "General Sans";
+      src: url('Assets/Schriften/GeneralSans-VariableItalic.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: italic;
+    }
+  </style>
   <style>
     /* ── RESET ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -23,7 +34,7 @@
       --white:  #ffffff;
       --border: #e5e7eb;
       --font-head: Georgia, Times, "Times New Roman", serif;
-      --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+      --font-body: "General Sans", "Helvetica Neue", Arial, sans-serif;
     }
 
     /* ── BASE ── */
@@ -681,7 +692,7 @@
 <nav class="nav">
   <div class="nav__inner">
     <a href="#" class="nav__logo">
-      <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69cb776dafe519b35f797192_HalloSkills-Blau.svg" alt="HalloSkills"/>
+      <img src="Assets/Logos/HalloSkills-Blau.svg" alt="HalloSkills"/>
     </a>
     <div class="nav__links">
       <a href="#kurs-angebot">Umschulungen</a>
@@ -793,7 +804,7 @@
           src="Assets/Bilder/Standorte.png"
           alt="Frau lernt im Homeoffice"/>
         <div class="standorte__badge">
-          <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe996_Tick.svg" alt=""/>
+          <img src="Assets/Website-icons/Tick.svg" alt=""/>
           IHK-Abschluss im Homeoffice
         </div>
       </div>
@@ -979,7 +990,7 @@
       <div class="vorteile__col fade-up">
         <div class="vorteil">
           <div class="vorteil__icon">
-            <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebea17_line-icon-one.svg" alt=""/>
+            <img src="Assets/Website-icons/Vorteil-1.svg" alt=""/>
           </div>
           <div>
             <h3>Keine Fahrtkosten</h3>
@@ -988,7 +999,7 @@
         </div>
         <div class="vorteil">
           <div class="vorteil__icon">
-            <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebea02_line-icon-three.svg" alt=""/>
+            <img src="Assets/Website-icons/Vorteil-3.svg" alt=""/>
           </div>
           <div>
             <h3>Produktivere Gruppenarbeit</h3>
@@ -1009,7 +1020,7 @@
         </div>
         <div class="vorteil">
           <div class="vorteil__icon">
-            <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebea04_line-icon-four.svg" alt=""/>
+            <img src="Assets/Website-icons/Vorteil-4.svg" alt=""/>
           </div>
           <div>
             <h3>Bessere Betreuung</h3>
@@ -1049,28 +1060,28 @@
           </div>
           <div class="team-card">
             <img class="team-card__photo"
-              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77a10931a64d09566745d_ChatGPT%20Image%209.%20Apr.%202026%2C%2011_47_18.png"
+              src="Assets/Bilder/Team/Konrad.png"
               alt="Konrad"/>
             <div class="team-card__name">Konrad</div>
             <div class="team-card__role">Qualitätsmanagement</div>
           </div>
           <div class="team-card">
             <img class="team-card__photo"
-              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77368eab22095b0c8d9c1_ChatGPT%20Image%209.%20Apr.%202026%2C%2011_37_17.png"
+              src="Assets/Bilder/Team/Nina.png"
               alt="Nina"/>
             <div class="team-card__name">Nina</div>
             <div class="team-card__role">Produkt & Marketing</div>
           </div>
           <div class="team-card">
             <img class="team-card__photo"
-              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77b7a927fd1d36682b230_ChatGPT%20Image%209.%20Apr.%202026%2C%2012_11_51.png"
+              src="Assets/Bilder/Team/Christina.png"
               alt="Christina"/>
             <div class="team-card__name">Christina</div>
             <div class="team-card__role">Karriereberatung</div>
           </div>
           <div class="team-card">
             <img class="team-card__photo"
-              src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69d77cba3464a17bdc76f346_ChatGPT%20Image%209.%20Apr.%202026%2C%2012_17_11.png"
+              src="Assets/Bilder/Team/Christian.png"
               alt="Christian"/>
             <div class="team-card__name">Christian</div>
             <div class="team-card__role">Administration</div>
@@ -1125,7 +1136,7 @@
       </div>
       <div class="kontakt__imgwrap fade-up" style="transition-delay:0.2s">
         <img class="kontakt__img"
-          src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69cebd103ccd993fdfc224ae_Untitled%20design-5.png"
+          src="Assets/Bilder/Kontakt-Bild.png"
           alt="Beratung"/>
         <div class="kontakt__img-text">
           Teile ein paar Details mit uns und wir melden uns mit den nächsten Schritten bei dir.
@@ -1146,10 +1157,10 @@
         <p class="footer__desc">Hier kann noch ein kleiner Fließtext stehen, starte mit uns die neue Ära der Umschulung. Digital für die Zukunft.</p>
         <p class="footer__follow">Folge uns</p>
         <div class="footer__social">
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe966_instagram-icon-white.svg" alt="Instagram"/></a>
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe964_facebook-icon-white.svg" alt="Facebook"/></a>
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe963_linkedin-icon-white.svg" alt="LinkedIn"/></a>
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe965_youtube-icon-white.svg" alt="YouTube"/></a>
+          <a href="#"><img src="Assets/Website-icons/instagram.svg" alt="Instagram"/></a>
+          <a href="#"><img src="Assets/Website-icons/facebook.svg" alt="Facebook"/></a>
+          <a href="#"><img src="Assets/Website-icons/linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#"><img src="Assets/Website-icons/youtube.svg" alt="YouTube"/></a>
         </div>
       </div>
       <div class="footer__col">

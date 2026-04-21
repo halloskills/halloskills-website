@@ -4,9 +4,20 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Datenschutzerklärung – HalloSkills</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    @font-face {
+      font-family: "General Sans";
+      src: url('../Assets/Schriften/GeneralSans-Variable.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "General Sans";
+      src: url('../Assets/Schriften/GeneralSans-VariableItalic.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: italic;
+    }
+  </style>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -20,7 +31,7 @@
       --white:  #ffffff;
       --border: #e5e7eb;
       --font-head: Georgia, Times, "Times New Roman", serif;
-      --font-body: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+      --font-body: "General Sans", "Helvetica Neue", Arial, sans-serif;
     }
     body { font-family: var(--font-body); color: var(--dark); background: var(--white); line-height: 1.65; font-size: 1rem; }
     h1,h2,h3,h4 { font-family: var(--font-head); font-weight: 400; line-height: 1.2; color: var(--dark); }
@@ -84,7 +95,7 @@
 <nav class="nav">
   <div class="nav__inner">
     <a class="nav__logo" href="../index.html">
-      <img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69cb776dafe519b35f797192_HalloSkills-Blau.svg" alt="HalloSkills"/>
+      <img src="../Assets/Logos/HalloSkills-Blau.svg" alt="HalloSkills"/>
     </a>
     <div class="nav__links">
       <a href="../index.html#umschulungen">Umschulungen</a>
@@ -220,10 +231,10 @@
         <p class="footer__desc">Hier kann noch ein kleiner Fließtext stehen, starte mit uns die neue Ära der Umschulung. Digital für die Zukunft.</p>
         <p class="footer__follow">Folge uns</p>
         <div class="footer__social">
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe966_instagram-icon-white.svg" alt="Instagram"/></a>
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe964_facebook-icon-white.svg" alt="Facebook"/></a>
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe963_linkedin-icon-white.svg" alt="LinkedIn"/></a>
-          <a href="#"><img src="https://cdn.prod.website-files.com/69ca6b2afc52142445ebe58e/69ca6b2ffc52142445ebe965_youtube-icon-white.svg" alt="YouTube"/></a>
+          <a href="#"><img src="../Assets/Website-icons/instagram.svg" alt="Instagram"/></a>
+          <a href="#"><img src="../Assets/Website-icons/facebook.svg" alt="Facebook"/></a>
+          <a href="#"><img src="../Assets/Website-icons/linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#"><img src="../Assets/Website-icons/youtube.svg" alt="YouTube"/></a>
         </div>
       </div>
       <div class="footer__col">
