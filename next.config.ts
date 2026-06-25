@@ -49,25 +49,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: securityHeaders,
-      },
-    ];
-  },
+  output: "export",
+  trailingSlash: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "d22po4pjz3o32e.cloudfront.net",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.jsdelivr.net",
-      },
-    ],
+    unoptimized: true,
   },
 };
 
