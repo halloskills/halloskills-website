@@ -2,30 +2,9 @@
 
 import Link from "next/link";
 import React from "react";
+import { POSTS } from "@/lib/blog-data";
 
-const posts = [
-  {
-    slug: "bildungsgutschein-beantragen",
-    category: "Bildungsgutschein",
-    readingTime: "8 min",
-    title: "Bildungsgutschein beantragen – Schritt für Schritt erklärt",
-    excerpt: "Alles was du wissen musst, um deinen Bildungsgutschein erfolgreich zu beantragen.",
-  },
-  {
-    slug: "online-marketing-karriere",
-    category: "Karriere",
-    readingTime: "6 min",
-    title: "Online Marketing Manager:in – der Einstieg lohnt sich",
-    excerpt: "Wie KI die Marketing-Branche verändert und welche Skills Arbeitgeber 2025 suchen.",
-  },
-  {
-    slug: "ki-jobs-zukunft",
-    category: "KI & Digitalisierung",
-    readingTime: "7 min",
-    title: "KI-Tools die du für deinen neuen Job kennen solltest",
-    excerpt: "Ein Überblick über die wichtigsten KI-Anwendungen im Berufsalltag.",
-  },
-];
+const posts = POSTS.slice(0, 3);
 
 export function Blog40() {
   return (
@@ -69,7 +48,7 @@ export function Blog40() {
                   style={{ aspectRatio: "3/2" }}
                 >
                   <img
-                    src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
+                    src={p.image}
                     alt={p.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   />
