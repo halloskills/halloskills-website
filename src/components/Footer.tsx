@@ -89,9 +89,9 @@ export function Footer4() {
           </p>
           <div className="flex gap-6">
             {[
-              { label: "Datenschutz", href: "#" },
-              { label: "Impressum", href: "#" },
-              { label: "AGB", href: "#" },
+              { label: "Datenschutz", href: "/datenschutz" },
+              { label: "Impressum", href: "/impressum" },
+              { label: "AGB", href: "/agb" },
             ].map((l) => (
               <Link
                 key={l.label}
