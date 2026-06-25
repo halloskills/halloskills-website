@@ -5,7 +5,7 @@ import React from "react";
 const team = [
   {
     name: "Nina Eglinsky",
-    role: "Gründerin & Geschäftsführerin",
+    role: "IT Lead",
     bio: "Mit HalloSkills die Mission verwirklichen, Weiterbildung für alle zugänglich zu machen.",
     img: "/images/team/nina.png",
   },
