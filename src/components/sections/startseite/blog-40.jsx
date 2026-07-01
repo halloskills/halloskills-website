@@ -17,7 +17,7 @@ export function Blog40() {
               className="mb-4 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
-              Blog
+              Magazin
             </span>
             <h2
               style={{
@@ -27,7 +27,7 @@ export function Blog40() {
                 color: "#0f2744",
               }}
             >
-              Wissen für deinen Karriereschritt
+              Tipps & Ratgeber für deinen Neustart
             </h2>
           </div>
           <Link
