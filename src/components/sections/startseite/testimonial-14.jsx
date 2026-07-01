@@ -178,7 +178,7 @@ export function Testimonial14() {
               </p>
             </div>
             <Link
-              href="mailto:jobs@halloskills.de"
+              href="/jobs"
               className="shrink-0 border-[1.5px] border-[#004B76] px-7 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-[#004B76] transition-colors hover:bg-[#004B76] hover:text-white"
             >
               Jetzt bewerben
