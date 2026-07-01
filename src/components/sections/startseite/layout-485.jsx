@@ -38,7 +38,7 @@ export function Layout485() {
             setActiveStep(i);
           }
         },
-        { threshold: 1.0 }
+        { threshold: 0.5, rootMargin: "0px 0px -80px 0px" }
       );
       obs.observe(el);
       observers.push(obs);
@@ -145,7 +145,7 @@ export function Layout485() {
                 href="/beratung-buchen"
                 className="inline-block border-[1.5px] px-7 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] transition-colors duration-500"
                 style={{
-                  borderColor: activeStep !== null && activeStep > 0 ? "#ffffff" : "#111827",
+                  borderColor: "#111827",
                   color: "#111827",
                   background: "transparent",
                 }}
@@ -156,7 +156,7 @@ export function Layout485() {
                 href="/kurse"
                 className="inline-flex items-center gap-1 border-b pb-0.5 text-[0.8rem] font-semibold uppercase tracking-[0.1em] transition-colors duration-500"
                 style={{
-                  borderColor: activeStep !== null && activeStep > 0 ? "#ffffff" : "#111827",
+                  borderColor: "#111827",
                   color: "#111827",
                 }}
               >
