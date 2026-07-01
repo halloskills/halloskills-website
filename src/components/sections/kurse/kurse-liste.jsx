@@ -65,7 +65,7 @@ export function KurseListe() {
               <img
                 src={k.img}
                 alt={k.title}
-                className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-5">
                 <p
@@ -75,17 +75,15 @@ export function KurseListe() {
                   {k.kategorie}
                 </p>
                 <h3
-                  className="mb-1"
                   style={{
                     fontFamily: "Georgia, 'Times New Roman', serif",
-                    fontSize: "1.05rem",
+                    fontSize: "1.1rem",
                     fontWeight: 400,
                     color: "#0f2744",
                   }}
                 >
                   {k.title}
                 </h3>
-                <p style={{ fontSize: "0.82rem", color: "#475467", marginBottom: "12px" }}>{k.body}</p>
                 <div
                   className="overflow-hidden transition-all duration-500 ease-in-out"
                   style={{ maxHeight: 0, opacity: 0 }}
@@ -96,10 +94,12 @@ export function KurseListe() {
                     parent.addEventListener("mouseenter", () => {
                       el.style.maxHeight = "200px";
                       el.style.opacity = "1";
+                      el.style.marginTop = "16px";
                     });
                     parent.addEventListener("mouseleave", () => {
                       el.style.maxHeight = "0";
                       el.style.opacity = "0";
+                      el.style.marginTop = "0";
                     });
                   }}
                 >
