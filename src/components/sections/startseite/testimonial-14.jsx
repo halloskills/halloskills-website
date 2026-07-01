@@ -31,7 +31,7 @@ export function Testimonial14() {
         <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <span
-              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
               Das Team
@@ -70,7 +70,7 @@ export function Testimonial14() {
                 />
               </div>
               <h3
-                className="mb-1 text-[0.75rem] font-semibold uppercase tracking-[0.1em]"
+                className="mb-1 text-[0.75rem] font-bold uppercase tracking-[0.1em]"
                 style={{ color: "#ffffff" }}
               >
                 {person.name}

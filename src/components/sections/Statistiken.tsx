@@ -16,7 +16,7 @@ export default function Statistiken() {
           <div className="text-center mb-14">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-4"
-              style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+              style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
             >
               Zahlen, die für sich sprechen
             </h2>

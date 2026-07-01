@@ -79,7 +79,7 @@ export default function BeratungBuchenPage() {
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-16 md:px-12 md:py-24">
           <div className="max-w-[600px]">
             <span
-              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
               Kostenlose Erstberatung
@@ -129,7 +129,7 @@ export default function BeratungBuchenPage() {
                       fontFamily: "Georgia, 'Times New Roman', serif",
                       fontWeight: 400,
                       fontSize: "1rem",
-                      color: "#111827",
+                      color: "#0f2744",
                     }}
                   >
                     {v.title}
@@ -147,7 +147,7 @@ export default function BeratungBuchenPage() {
         <div className="mx-auto max-w-[1200px] px-6 md:px-12">
           <div className="mb-12 text-center">
             <span
-              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
               Terminbuchung
@@ -157,7 +157,7 @@ export default function BeratungBuchenPage() {
                 fontFamily: "Georgia, 'Times New Roman', serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
                 fontWeight: 400,
-                color: "#111827",
+                color: "#0f2744",
               }}
             >
               Wähle deinen Wunschtermin
@@ -193,7 +193,7 @@ export default function BeratungBuchenPage() {
             genehmigten Bildungsgutschein in der Hand."
           </p>
           <p
-            className="text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#ffffff" }}
           >
             Fatima K.
@@ -208,7 +208,7 @@ export default function BeratungBuchenPage() {
           <div className="grid grid-cols-1 gap-20 lg:grid-cols-[1fr_1.6fr]">
             <div>
               <span
-                className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+                className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
                 style={{ color: "#D4AF37" }}
               >
                 FAQ
@@ -219,7 +219,7 @@ export default function BeratungBuchenPage() {
                   fontFamily: "Georgia, 'Times New Roman', serif",
                   fontSize: "clamp(1.8rem, 3vw, 2.2rem)",
                   fontWeight: 400,
-                  color: "#111827",
+                  color: "#0f2744",
                 }}
               >
                 Fragen zur Beratung
@@ -241,7 +241,7 @@ export default function BeratungBuchenPage() {
                         fontFamily: "Georgia, 'Times New Roman', serif",
                         fontSize: "1rem",
                         fontWeight: 400,
-                        color: "#111827",
+                        color: "#0f2744",
                       }}
                     >
                       {faq.q}

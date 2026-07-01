@@ -70,7 +70,7 @@ export default function Faq() {
           <div className="text-center mb-12">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-4"
-              style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+              style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
             >
               Häufige Fragen
             </h2>

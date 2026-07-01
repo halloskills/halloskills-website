@@ -83,7 +83,7 @@ export default async function BlogPostPage({ params }: Props) {
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
               fontWeight: 400,
-              color: "#111827",
+              color: "#0f2744",
               lineHeight: 1.2,
             }}
           >
@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="py-20" style={{ background: "#004B76" }}>
         <div className="mx-auto max-w-[700px] px-8 text-center">
           <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
             Kostenlose Beratung
@@ -155,7 +155,7 @@ export default async function BlogPostPage({ params }: Props) {
         <section className="py-20" style={{ background: "#f5f7f9" }}>
           <div className="mx-auto max-w-[1200px] px-6 md:px-12">
             <span
-              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
               Weiterlesen
@@ -166,7 +166,7 @@ export default async function BlogPostPage({ params }: Props) {
                 fontFamily: "Georgia, 'Times New Roman', serif",
                 fontSize: "1.8rem",
                 fontWeight: 400,
-                color: "#111827",
+                color: "#0f2744",
               }}
             >
               Weitere Artikel
@@ -198,7 +198,7 @@ export default async function BlogPostPage({ params }: Props) {
                           fontFamily: "Georgia, 'Times New Roman', serif",
                           fontSize: "1rem",
                           fontWeight: 400,
-                          color: "#111827",
+                          color: "#0f2744",
                           lineHeight: 1.4,
                         }}
                       >
@@ -207,7 +207,7 @@ export default async function BlogPostPage({ params }: Props) {
                     </Link>
                     <Link
                       href={`/blog/${p.slug}`}
-                      className="border-b pb-0.5 text-[0.75rem] font-semibold uppercase tracking-[0.1em]"
+                      className="border-b pb-0.5 text-[0.75rem] font-bold uppercase tracking-[0.1em]"
                       style={{ borderColor: "#111827", color: "#111827", width: "fit-content", display: "inline-block" }}
                     >
                       Lesen →

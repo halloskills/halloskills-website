@@ -17,7 +17,7 @@ export function BgsErklaerung() {
           {/* Left */}
           <div>
             <span
-              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
               Was ist das?
@@ -28,7 +28,7 @@ export function BgsErklaerung() {
                 fontFamily: "Georgia, 'Times New Roman', serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
                 fontWeight: 400,
-                color: "#111827",
+                color: "#0f2744",
               }}
             >
               Was ist der Bildungsgutschein?

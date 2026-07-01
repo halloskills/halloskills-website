@@ -37,7 +37,7 @@ export default function BlogPreview() {
             <div>
               <h2
                 className="text-3xl sm:text-4xl font-bold mb-3"
-                style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+                style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
               >
                 Wissen für deinen Karriereschritt
               </h2>
@@ -70,7 +70,7 @@ export default function BlogPreview() {
                     </span>
                     <h3
                       className="text-lg font-bold mb-2 group-hover:text-[#004B76] transition-colors"
-                      style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+                      style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
                     >
                       {post.title}
                     </h3>

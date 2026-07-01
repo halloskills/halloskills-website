@@ -12,7 +12,7 @@ function AnrufenDialog() {
     <Dialog>
       <DialogTrigger asChild>
         <button
-          className="text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-neutral-darkest border-b border-neutral-darkest pb-0.5 hover:text-regal-blue hover:border-regal-blue transition-colors whitespace-nowrap"
+          className="text-[0.75rem] font-bold uppercase tracking-[0.1em] text-neutral-darkest border-b border-neutral-darkest pb-0.5 hover:text-regal-blue hover:border-regal-blue transition-colors whitespace-nowrap"
         >
           Anrufen
         </button>
@@ -86,7 +86,7 @@ function CallbackForm() {
       />
       <button
         type="submit"
-        className="w-full border-[1.5px] border-regal-blue bg-transparent py-3 text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-regal-blue hover:bg-regal-blue hover:text-white transition-colors"
+        className="w-full border-[1.5px] border-regal-blue bg-transparent py-3 text-[0.75rem] font-bold uppercase tracking-[0.1em] text-regal-blue hover:bg-regal-blue hover:text-white transition-colors"
       >
         Rückruf vereinbaren
       </button>
@@ -125,7 +125,7 @@ export function Navbar2() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#111827] hover:text-regal-blue transition-colors"
+              className="text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#111827] hover:text-regal-blue transition-colors"
             >
               {l.label}
             </Link>
@@ -137,7 +137,7 @@ export function Navbar2() {
           <AnrufenDialog />
           <Link
             href="/beratung-buchen"
-            className="border-[1.5px] border-regal-blue bg-regal-blue px-7 py-3 text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-white hover:bg-regal-blue-dark hover:border-regal-blue-dark transition-colors whitespace-nowrap"
+            className="border-[1.5px] border-regal-blue bg-regal-blue px-7 py-3 text-[0.75rem] font-bold uppercase tracking-[0.1em] text-white hover:bg-regal-blue-dark hover:border-regal-blue-dark transition-colors whitespace-nowrap"
           >
             Beratung sichern
           </Link>
@@ -179,7 +179,7 @@ export function Navbar2() {
               <Link
                 href="/beratung-buchen"
                 onClick={() => setMobileOpen(false)}
-                className="block border-[1.5px] border-regal-blue bg-regal-blue px-6 py-3 text-center text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-white"
+                className="block border-[1.5px] border-regal-blue bg-regal-blue px-6 py-3 text-center text-[0.75rem] font-bold uppercase tracking-[0.1em] text-white"
               >
                 Beratung sichern
               </Link>

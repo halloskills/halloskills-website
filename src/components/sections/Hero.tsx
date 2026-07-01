@@ -33,7 +33,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+            style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
           >
             Arbeitslos? Starte deine{" "}
             <span style={{ color: "#004B76" }}>geförderte Weiterbildung</span>{" "}

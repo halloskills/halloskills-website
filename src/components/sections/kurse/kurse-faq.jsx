@@ -31,7 +31,7 @@ export function KurseFaq() {
         <div className="grid grid-cols-1 gap-20 lg:grid-cols-[1fr_1.6fr]">
           <div>
             <span
-              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
               FAQ
@@ -42,7 +42,7 @@ export function KurseFaq() {
                 fontFamily: "Georgia, 'Times New Roman', serif",
                 fontSize: "clamp(1.8rem, 3vw, 2.2rem)",
                 fontWeight: 400,
-                color: "#111827",
+                color: "#0f2744",
               }}
             >
               Häufige Fragen zu unseren Kursen
@@ -70,7 +70,7 @@ export function KurseFaq() {
                       fontFamily: "Georgia, 'Times New Roman', serif",
                       fontSize: "1rem",
                       fontWeight: 400,
-                      color: "#111827",
+                      color: "#0f2744",
                     }}
                   >
                     {faq.q}

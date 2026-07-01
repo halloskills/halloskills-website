@@ -34,7 +34,7 @@ export default function BlogPage() {
         />
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-12 md:px-12 md:py-20">
           <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
             Unser Blog
@@ -114,7 +114,7 @@ export default function BlogPage() {
                     fontFamily: "Georgia, 'Times New Roman', serif",
                     fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
                     fontWeight: 400,
-                    color: "#111827",
+                    color: "#0f2744",
                     lineHeight: 1.3,
                   }}
                 >
@@ -164,7 +164,7 @@ export default function BlogPage() {
                           fontFamily: "Georgia, 'Times New Roman', serif",
                           fontSize: "1.05rem",
                           fontWeight: 400,
-                          color: "#111827",
+                          color: "#0f2744",
                           lineHeight: 1.4,
                         }}
                       >
@@ -176,7 +176,7 @@ export default function BlogPage() {
                     </p>
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="border-b pb-0.5 text-[0.75rem] font-semibold uppercase tracking-[0.1em] transition-colors"
+                      className="border-b pb-0.5 text-[0.75rem] font-bold uppercase tracking-[0.1em] transition-colors"
                       style={{ borderColor: "#111827", color: "#111827", width: "fit-content" }}
                     >
                       Lesen →
@@ -193,7 +193,7 @@ export default function BlogPage() {
       <section className="py-24" style={{ background: "#111827" }}>
         <div className="mx-auto max-w-[700px] px-6 md:px-12 text-center">
           <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
             Newsletter

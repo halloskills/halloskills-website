@@ -8,7 +8,7 @@ export default function CtaSection() {
         <FadeUp>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-5"
-            style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+            style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
           >
             Bereit für deinen nächsten Karriereschritt?
           </h2>

@@ -20,7 +20,7 @@ export function KurseHeader() {
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-16 md:px-12 md:py-24">
         <div className="max-w-[600px]">
           <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
             Unser Kursangebot

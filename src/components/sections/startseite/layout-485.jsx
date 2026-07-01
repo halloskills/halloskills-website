@@ -63,7 +63,7 @@ export function Layout485() {
           {/* Right: steps */}
           <div>
             <span
-              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em] transition-colors duration-500"
+              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em] transition-colors duration-500"
               style={{ color: "#D4AF37" }}
             >
               So funktioniert es
@@ -74,7 +74,7 @@ export function Layout485() {
                 fontFamily: "Georgia, 'Times New Roman', serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
                 fontWeight: 400,
-                color: "#111827",
+                color: "#0f2744",
               }}
             >
               In 3 Schritten zum neuen Job
@@ -123,7 +123,7 @@ export function Layout485() {
                           fontFamily: "Georgia, 'Times New Roman', serif",
                           fontSize: "1.2rem",
                           fontWeight: 400,
-                          color: "#111827",
+                          color: "#0f2744",
                         }}
                       >
                         {s.title}

@@ -59,7 +59,7 @@ export function Layout395() {
         {/* Header */}
         <div className="mb-16 text-center">
           <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
             Unsere Weiterbildungen
@@ -69,7 +69,7 @@ export function Layout395() {
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
               fontWeight: 400,
-              color: "#111827",
+              color: "#0f2744",
             }}
           >
             Unsere Top-Weiterbildungen
@@ -99,7 +99,7 @@ export function Layout395() {
                     fontFamily: "Georgia, 'Times New Roman', serif",
                     fontSize: "1.1rem",
                     fontWeight: 400,
-                    color: "#111827",
+                    color: "#0f2744",
                   }}
                 >
                   {k.title}
@@ -147,7 +147,7 @@ export function Layout395() {
               fontFamily: "Georgia, 'Times New Roman', serif",
               fontSize: "1.4rem",
               fontWeight: 400,
-              color: "#111827",
+              color: "#0f2744",
             }}
           >
             Alle Weiterbildungen sind 100% über den Bildungsgutschein finanzierbar.

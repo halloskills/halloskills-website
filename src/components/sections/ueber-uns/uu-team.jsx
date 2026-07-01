@@ -29,7 +29,7 @@ export function UeberUnsTeam() {
       <div className="mx-auto max-w-[1200px] px-6 md:px-12">
         <div className="mb-16 text-center">
           <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
             Team
@@ -61,7 +61,7 @@ export function UeberUnsTeam() {
                 />
               </div>
               <h3
-                className="mb-1 text-[0.75rem] font-semibold uppercase tracking-[0.1em]"
+                className="mb-1 text-[0.75rem] font-bold uppercase tracking-[0.1em]"
                 style={{ color: "#ffffff" }}
               >
                 {person.name}

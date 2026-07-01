@@ -14,7 +14,7 @@ export function Blog40() {
         <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <span
-              className="mb-4 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              className="mb-4 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
               Blog
@@ -24,7 +24,7 @@ export function Blog40() {
                 fontFamily: "Georgia, 'Times New Roman', serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
                 fontWeight: 400,
-                color: "#111827",
+                color: "#0f2744",
               }}
             >
               Wissen für deinen Karriereschritt
@@ -70,7 +70,7 @@ export function Blog40() {
                     fontFamily: "Georgia, 'Times New Roman', serif",
                     fontSize: "1.1rem",
                     fontWeight: 400,
-                    color: "#111827",
+                    color: "#0f2744",
                     lineHeight: 1.4,
                   }}
                 >
@@ -82,7 +82,7 @@ export function Blog40() {
               </p>
               <Link
                 href={`/blog/${p.slug}`}
-                className="border-b border-[#111827] pb-0.5 text-[0.75rem] font-semibold uppercase tracking-[0.1em] text-[#111827] transition-colors hover:border-regal-blue hover:text-regal-blue w-fit"
+                className="border-b border-[#111827] pb-0.5 text-[0.75rem] font-bold uppercase tracking-[0.1em] text-[#111827] transition-colors hover:border-regal-blue hover:text-regal-blue w-fit"
               >
                 Lesen →
               </Link>

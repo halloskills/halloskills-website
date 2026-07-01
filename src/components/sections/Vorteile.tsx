@@ -37,7 +37,7 @@ export default function Vorteile() {
               </span>
               <h2
                 className="text-3xl sm:text-4xl font-bold mb-6"
-                style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+                style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
               >
                 Mehr als eine Weiterbildung –{" "}
                 <span style={{ color: "#004B76" }}>ein echter Neustart.</span>
@@ -67,7 +67,7 @@ export default function Vorteile() {
                   <span className="text-3xl block mb-3">{v.icon}</span>
                   <h3
                     className="text-base font-bold mb-2"
-                    style={{ fontFamily: "Georgia, serif", color: "#111827" }}
+                    style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
                   >
                     {v.title}
                   </h3>

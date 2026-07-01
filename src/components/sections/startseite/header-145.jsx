@@ -23,7 +23,7 @@ export function Header145() {
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 md:px-12">
         <div className="max-w-[560px]">
           <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
             100% Kostenfrei · AZAV-zertifiziert
