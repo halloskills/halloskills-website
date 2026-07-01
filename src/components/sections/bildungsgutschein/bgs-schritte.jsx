@@ -36,7 +36,7 @@ export function BgsSchritte() {
         ([entry]) => {
           if (entry.isIntersecting) setActiveStep(i);
         },
-        { threshold: 0.6 }
+        { threshold: 1.0 }
       );
       obs.observe(el);
       observers.push(obs);
