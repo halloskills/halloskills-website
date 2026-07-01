@@ -7,7 +7,7 @@ const kurse = [
   {
     slug: "projektmanagement",
     kategorie: "Projektmanagement",
-    title: "Projektmanagement",
+    title: "Projektmanager/-in",
     body: "Klassisches & agiles Projektmanagement, Scrum, PRINCE2, digitale PM-Tools.",
     dauer: "12–28 Wochen",
     start: "Jeden Montag",
@@ -17,7 +17,7 @@ const kurse = [
   {
     slug: "online-marketing",
     kategorie: "Online Marketing",
-    title: "Online Marketing Manager:in",
+    title: "Online-Marketing Manager/-in",
     body: "SEO, Social Media, Performance Marketing, Google Ads, KI-Tools im Marketing.",
     dauer: "24–36 Wochen",
     start: "Jeden Montag",
@@ -27,7 +27,7 @@ const kurse = [
   {
     slug: "ki-digitalisierung",
     kategorie: "KI & Digitalisierung",
-    title: "KI & digitale Transformation",
+    title: "KI-Manager/-in",
     body: "KI-Grundlagen, Automatisierung, Prompt Engineering, digitale Geschäftsprozesse.",
     dauer: "10–20 Wochen",
     start: "Jeden Montag",
@@ -67,17 +67,7 @@ export function KurseListe() {
                 alt={k.title}
                 className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
-              <div
-                className="absolute left-0 right-0 bg-white/95 p-5 overflow-hidden"
-                style={{ bottom: 0, height: 120, transition: "height 0.5s cubic-bezier(0.4,0,0.2,1)" }}
-                ref={(el) => {
-                  if (!el) return;
-                  const parent = el.closest(".group");
-                  if (!parent) return;
-                  parent.addEventListener("mouseenter", () => { el.style.height = "280px"; });
-                  parent.addEventListener("mouseleave", () => { el.style.height = "120px"; });
-                }}
-              >
+              <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-5">
                 <p
                   className="mb-2 text-[0.7rem] font-bold uppercase tracking-[0.12em]"
                   style={{ color: "#004B76" }}
