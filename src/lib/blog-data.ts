@@ -55,7 +55,7 @@ export const POSTS: BlogPost[] = [
 <h2>Schritt 2: Das Gespräch bei der Agentur für Arbeit vorbereiten</h2>
 <p>Beim Beratungsgespräch prüft dein:e Vermittler:in, ob die Weiterbildung „notwendig und zweckmäßig" ist – das ist der gesetzliche Begriff. Das klingt bürokratisch, ist aber lösbar, wenn du gut vorbereitet bist.</p>
 <p>Nutze diese Argumentationshilfe als Basis für das Gespräch:</p>
-<blockquote>„Ich möchte mich im Bereich [Thema] weiterbilden, weil aktuelle Stellenanzeigen in meiner Zielbranche genau diese Kenntnisse verlangen. Ich habe mir konkret drei Stellenanzeigen mitgebracht, die ich zeigen möchte. Der Kurs bei HalloSkills ist AZAV-zertifiziert und schließt mit einem anerkannten Zertifikat ab. Die Weiterbildung dauert [X] Monate und ich kann sie vollständig online von zuhause absolvieren."</blockquote>
+<blockquote>„Ich möchte mich im Bereich [Thema] weiterbilden, weil aktuelle Stellenanzeigen in meiner Zielbranche genau diese Kenntnisse verlangen. Ich habe mir konkret drei Stellenanzeigen mitgebracht, die ich zeigen möchte. Der Kurs bei [Kursanbieter] ist AZAV-zertifiziert und schließt mit einem anerkannten Zertifikat ab. Die Weiterbildung dauert [X] Monate und ich kann sie vollständig online von zuhause absolvieren."</blockquote>
 <p><strong>Wichtig:</strong> Zeige konkrete Stellenanzeigen, die du ausgedruckt oder digital dabei hast. Das macht deinen Antrag erheblich stärker – du zeigst damit, dass die Nachfrage auf dem Arbeitsmarkt real ist.</p>
 <p>Weitere Tipps für das Gespräch:</p>
 <ul>
@@ -92,7 +92,7 @@ export const POSTS: BlogPost[] = [
 <li><strong>Widerspruch einlegen:</strong> Du hast 1 Monat Zeit. Begründe schriftlich, warum die Weiterbildung notwendig und zweckmäßig ist.</li>
 <li><strong>Neues Gespräch vereinbaren:</strong> Mit besserer Vorbereitung und mehr Dokumenten.</li>
 <li><strong>Anderen Vermittler:in ansprechen:</strong> Wenn möglich, nutze beim nächsten Termin eine:n anderen Ansprechpartner:in in der Agentur.</li>
-<li><strong>Fachkundige Stelle einschalten:</strong> HalloSkills kann dir dabei helfen, deinen Widerspruch zu formulieren und die richtigen Argumente zu finden.</li>
+<li><strong>Fachkundige Stelle einschalten:</strong> Ein guter Weiterbildungsanbieter kann dir dabei helfen, deinen Widerspruch zu formulieren und die richtigen Argumente zu finden.</li>
 </ul>
 
 <h2>Checkliste Bildungsgutschein auf einen Blick</h2>
@@ -102,7 +102,7 @@ export const POSTS: BlogPost[] = [
 <li>✅ Mindestens 3 aktuelle Stellenanzeigen gesammelt, die den Kurs rechtfertigen</li>
 <li>✅ Alle Unterlagen vollständig zusammengestellt</li>
 <li>✅ Argumentationsstrategie für das Gespräch vorbereitet</li>
-<li>✅ Kostenlose Beratung bei HalloSkills gebucht</li>
+<li>✅ Kostenlose Erstberatung beim Kursanbieter vereinbart</li>
 </ul>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir bereiten dich Schritt für Schritt auf das Gespräch bei der Agentur für Arbeit vor.</p>
@@ -181,7 +181,7 @@ export const POSTS: BlogPost[] = [
 
 <h2>Wie du mit dem Bildungsgutschein einsteigst</h2>
 <p>Wenn du arbeitslos oder von Arbeitslosigkeit bedroht bist, kann die Agentur für Arbeit oder das Jobcenter deine komplette Weiterbildung finanzieren. Kein Eigenanteil, keine versteckten Kosten. Der Bildungsgutschein ist das wichtigste Förderinstrument für Menschen, die sich neu orientieren wollen.</p>
-<p>Unser Kurs „Online Marketing meistern" ist AZAV-zertifiziert und genau darauf ausgerichtet, dich in 24–36 Wochen praxisbereit zu machen. Du lernst von zuhause, in deinem eigenen Tempo, mit fester Betreuung durch erfahrene Trainer:innen. Am Ende erhältst du ein anerkanntes Zertifikat – und aktive Unterstützung bei der Jobsuche durch unser Karriere-Team.</p>
+<p>AZAV-zertifizierte Weiterbildungen im Bereich Online Marketing dauern typischerweise 24–36 Wochen und schließen mit einem anerkannten Zertifikat ab. Viele Anbieter unterstützen außerdem aktiv bei der Jobsuche.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir schauen gemeinsam, ob du für die Förderung infrage kommst, und bereiten dich optimal vor.</p>
     `,
@@ -256,7 +256,7 @@ export const POSTS: BlogPost[] = [
 
 <h2>Wie du KI-Skills gezielt aufbaust</h2>
 <p>KI-Kenntnisse sind heute keine Spezialkenntnisse mehr – sie sind Basiskenntnisse für digitale Berufe. Das Gute: Du kannst sie schnell lernen, weil die Tools intuitiv bedienbar sind.</p>
-<p>In unserem Kurs „KI &amp; Digitalisierung" lernst du die wichtigsten Tools praxisnah und anwendungsorientiert – direkt auf deinen Zielberuf ausgerichtet. Der Kurs ist komplett über den Bildungsgutschein finanzierbar, dauert 10–20 Wochen und findet vollständig online statt.</p>
+<p>Eine AZAV-zertifizierte Weiterbildung im Bereich KI &amp; Digitalisierung ist komplett über den Bildungsgutschein finanzierbar, dauert typischerweise 10–20 Wochen und kann vollständig online absolviert werden.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und erfahre, wie du mit staatlicher Förderung fit für den KI-Arbeitsmarkt wirst.</p>
     `,
@@ -282,7 +282,7 @@ export const POSTS: BlogPost[] = [
 <p>Scrum ist die meistgenutzte agile Methode in der IT und in digitalen Unternehmen. Das PSM-I-Zertifikat von Scrum.org gilt als internationaler Standard und ist in vielen Stellenanzeigen – besonders in IT, E-Commerce und Startups – explizit gefordert oder erwünscht.</p>
 <p>Das Scrum Master Zertifikat prüft, ob du den Scrum Guide verstehst und Scrum-Teams methodisch begleiten kannst. Die Prüfung ist online, dauert 60 Minuten, hat 80 Multiple-Choice-Fragen und kostet 150 USD. Sie gilt als anspruchsvoll: Bestehensquote liegt nur bei ca. 65%.</p>
 <p><strong>Für wen geeignet:</strong> IT-Umsteiger:innen, alle die in digitalen Teams oder Agenturen arbeiten wollen, Marketing- und HR-Fachleute, die in agile Umgebungen wechseln.</p>
-<p><strong>Vorbereitung:</strong> Mit 40–60 Stunden gezieltem Lernen ist die Prüfung gut zu schaffen. In unserem Kurs ist die Vorbereitung auf PSM I enthalten.</p>
+<p><strong>Vorbereitung:</strong> Mit 40–60 Stunden gezieltem Lernen ist die Prüfung gut zu schaffen. In einer guten Weiterbildung im Projektmanagement ist die Vorbereitung auf PSM I typischerweise enthalten.</p>
 
 <h3>PRINCE2 Foundation &amp; Practitioner</h3>
 <p>PRINCE2 (Projects IN Controlled Environments) ist ein strukturierter Projektmanagement-Rahmen, der ursprünglich für britische Regierungsprojekte entwickelt wurde und heute weltweit – besonders in großen Konzernen, Beratungen und öffentlichen Institutionen – Anwendung findet.</p>
@@ -321,8 +321,8 @@ export const POSTS: BlogPost[] = [
 <h2>Klassisches vs. agiles Projektmanagement</h2>
 <p>Viele Stellenanzeigen fordern heute „hybrides Projektmanagement" – also die Fähigkeit, sowohl klassisch (mit Gantt-Charts, Meilensteinplan, Wasserfall) als auch agil (Scrum, Kanban, Sprints) zu arbeiten. Das Wasserfallmodell ist nicht tot – es wird weiterhin in Bauprojekten, Maschinenbau und der öffentlichen Verwaltung eingesetzt. Aber im digitalen Umfeld dominiert Agilität.</p>
 
-<h2>Unser Kurs: Projektmanagement komplett</h2>
-<p>In unserem Kurs „Projektmanagement meistern" lernst du klassisches und agiles Projektmanagement, Scrum von Grund auf, digitale PM-Tools wie Jira und Asana, Kommunikation mit Stakeholdern und die Vorbereitung auf die PSM-I-Prüfung. Der Kurs ist 100% über den Bildungsgutschein finanzierbar und dauert 20–28 Wochen.</p>
+<h2>Weiterbildung Projektmanagement: Was du erwarten kannst</h2>
+<p>Eine umfassende Weiterbildung im Projektmanagement umfasst klassische und agile Methoden, digitale PM-Tools und die Vorbereitung auf die PSM-I-Prüfung. Solche Kurse sind 100% über den Bildungsgutschein finanzierbar und dauern typischerweise 20–28 Wochen.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und erfahre, wie du mit staatlicher Förderung Projektmanager:in wirst.</p>
     `,
@@ -364,7 +364,7 @@ export const POSTS: BlogPost[] = [
 <p>Auch hier: Während einer genehmigten Maßnahme läuft das Bürgergeld weiter. Zusätzlich kann es in manchen Fällen eine Weiterbildungsprämie oder Prämien für das Bestehen von Prüfungen geben.</p>
 
 <h2>Häufige Missverständnisse – richtiggestellt</h2>
-<p>Wir hören in unserer Beratung immer wieder dieselben Missverständnisse. Hier räumen wir mit den häufigsten auf:</p>
+<p>In der Praxis tauchen immer wieder dieselben Missverständnisse auf. Hier räumen wir mit den häufigsten auf:</p>
 <ul>
 <li><strong>„Ich muss für jeden Job-Anruf sofort verfügbar sein, also kann ich keine Weiterbildung machen."</strong> – Bei einer genehmigten Vollzeit-Maßnahme entfällt diese Pflicht temporär. Sprich das bei der Genehmigung explizit an.</li>
 <li><strong>„Mein ALG fällt weg, wenn ich eine Weiterbildung mache."</strong> – Falsch. Bei genehmigten Maßnahmen läuft es weiter, oft sogar verlängert.</li>
@@ -380,8 +380,8 @@ export const POSTS: BlogPost[] = [
 <h2>Nebentätigkeit während der Weiterbildung</h2>
 <p>Wenn du während einer Weiterbildung einem Minijob nachgehst (bis 538 € monatlich), bleibt das meist ohne Auswirkungen auf dein ALG. Bei höheren Einnahmen gibt es Anrechnungsregeln – lass dich dazu von deiner Vermittlerin oder deinem Vermittler beraten.</p>
 
-<h2>Unser Tipp: Vorbereitung ist alles</h2>
-<p>Lass dich von uns kostenlos beraten, bevor du das Gespräch mit deinem Vermittler führst. Wir kennen die typischen Fragen und Einwände der Agentur für Arbeit und des Jobcenters – und wir helfen dir, dich optimal vorzubereiten.</p>
+<h2>Tipp: Vorbereitung ist alles</h2>
+<p>Eine kostenlose Erstberatung bei einem Weiterbildungsanbieter kann helfen, dich optimal auf das Gespräch mit deinem Vermittler vorzubereiten.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – komplett unverbindlich und kostenlos.</p>
     `,
@@ -427,7 +427,6 @@ export const POSTS: BlogPost[] = [
 <li><strong>Zertifizierungsstelle wird genannt:</strong> Seriöse Anbieter nennen, wer sie zertifiziert hat</li>
 <li><strong>Gültigkeitsdauer ist aktuell:</strong> Frag nach dem Ablaufdatum der Zertifizierung</li>
 </ul>
-<p>HalloSkills ist AZAV-zertifiziert. Unsere Trägernummer findest du auf der Startseite und in allen Kursübersichten.</p>
 
 <h2>AZAV schützt dich vor unseriösen Anbietern</h2>
 <p>Im deutschen Weiterbildungsmarkt gibt es leider nach wie vor schwarze Schafe: Anbieter, die veraltete Inhalte unterrichten, kein qualifiziertes Lehrpersonal haben oder Zertifikate ausstellen, die niemand anerkennt – und das auf Kosten der Agentur für Arbeit und der Teilnehmenden.</p>
@@ -512,7 +511,7 @@ export const POSTS: BlogPost[] = [
 <p>Isolation ist das größte Langzeitrisiko im Homeoffice. Plane bewusst sozialen Austausch ein: virtuelle Kaffeepausen mit Kolleg:innen, gelegentliche Co-Working-Tage, Meetups und Networking-Events in der eigenen Branche.</p>
 
 <h2>Remote Work durch Remote-Lernen vorbereiten</h2>
-<p>All unsere Kurse bei HalloSkills finden vollständig online statt. Du lernst also nicht nur die Fachinhalte, sondern übst gleichzeitig die Realität des Remote-Arbeitens: digitale Tools nutzen, asynchron kommunizieren, Lernzeit selbst managen. Das ist die beste Vorbereitung auf den digitalen Berufsalltag.</p>
+<p>Gute Online-Weiterbildungskurse finden vollständig remote statt – du lernst also nicht nur die Fachinhalte, sondern übst gleichzeitig die Realität des Remote-Arbeitens: digitale Tools nutzen, asynchron kommunizieren, Lernzeit selbst managen. Das ist die beste Vorbereitung auf den digitalen Berufsalltag.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und starte deine Karriere im Remote-Arbeitsmarkt.</p>
     `,
@@ -574,7 +573,7 @@ export const POSTS: BlogPost[] = [
 
 <h2>Weiterbildung richtig präsentieren</h2>
 <p>Eine abgeschlossene AZAV-zertifizierte Weiterbildung ist kein Makel – sie ist ein starkes Signal für Eigeninitiative und aktuelle Kenntnisse. Formuliere sie prominent:</p>
-<blockquote>Online Marketing Manager:in (AZAV-zertifiziert) · HalloSkills · 2025<br>Schwerpunkte: SEO, Google Ads, Social Media, Analytics</blockquote>
+<blockquote>Online Marketing Manager:in (AZAV-zertifiziert) · [Kursanbieter] · 2025<br>Schwerpunkte: SEO, Google Ads, Social Media, Analytics</blockquote>
 
 <h2>Das LinkedIn-Profil als Ergänzung</h2>
 <p>Dein LinkedIn-Profil ist 2025 genauso wichtig wie dein Lebenslauf. Recruiter suchen aktiv auf LinkedIn. Stelle sicher, dass Lebenslauf und Profil konsistent sind – gleiche Jobs, gleiche Zeiträume, gleiche Ergebnisse.</p>
@@ -753,7 +752,7 @@ export const POSTS: BlogPost[] = [
 <h2>Was ist eine Weiterbildung?</h2>
 <p>Eine Weiterbildung baut auf deinen bestehenden Kenntnissen auf oder ergänzt sie gezielt. Sie dauert deutlich kürzer – typischerweise 3–12 Monate – und schließt mit einem Zertifikat ab, nicht mit einem IHK-Abschluss.</p>
 <p>Weiterbildungen bei AZAV-zertifizierten Anbietern sind über den Bildungsgutschein vollständig finanzierbar. Das Ziel ist nicht ein neuer Berufsabschluss, sondern praxisrelevante Skills, die direkt auf dem Arbeitsmarkt einsetzbar sind.</p>
-<p>Beispiele für Weiterbildungen bei HalloSkills:</p>
+<p>Typische Weiterbildungsformate im digitalen Bereich:</p>
 <ul>
 <li>Online Marketing Manager:in (24–36 Wochen)</li>
 <li>Projektmanagement (20–28 Wochen)</li>
@@ -923,7 +922,7 @@ export const POSTS: BlogPost[] = [
 </ul>
 
 <h2>Drei Strategien die wirklich funktionieren</h2>
-<p>Aus Gesprächen mit Hunderten von Jobsuchenden und Karrierewechslern haben wir drei Strategien destilliert, die wirklich helfen:</p>
+<p>Diese drei Strategien helfen nachweislich beim Einstieg in die digitale Arbeitswelt:</p>
 <ol>
 <li><strong>Digitale Skills aktiv aufbauen:</strong> Wer KI-Tools, Datenanalyse, Online Marketing oder Projektmanagement beherrscht, ist in fast jeder Branche gefragt – unabhängig vom bisherigen Hintergrund</li>
 <li><strong>Auf menschliche Stärken setzen:</strong> Empathie, Kreativität, komplexe Problemlösung, emotionale Intelligenz – das können Maschinen (noch) nicht replizieren. Diese Stärken durch digitale Skills ergänzen.</li>
@@ -996,7 +995,7 @@ export const POSTS: BlogPost[] = [
 
 <h2>Tipp 10: Üben, üben, üben</h2>
 <p>Führe Probeinterviews mit Freund:innen oder vor dem Spiegel. Besser noch: Film dich auf dem Handy und schau dir die Aufnahme an. Das ist unangenehm – aber die wirksamste Methode, um blinde Flecken in deiner Wirkung zu entdecken.</p>
-<p>In unserem Karriereprogramm bieten wir Absolvent:innen Probe-Interviews mit echtem Feedback an. Das ist inklusive.</p>
+<p>Viele Weiterbildungsanbieter bieten Absolvent:innen Probe-Interviews mit echtem Feedback an – frag gezielt danach, ob dies im Kurs enthalten ist.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir bereiten dich auf Vorstellungsgespräche vor und begleiten dich auf dem Weg in deinen neuen Job.</p>
     `,
@@ -1216,7 +1215,7 @@ export const POSTS: BlogPost[] = [
 </ul>
 
 <h2>Nach der Weiterbildung: Jobsuche aktiv angehen</h2>
-<p>Wir unterstützen unsere Absolvent:innen bei HalloSkills aktiv bei der Jobsuche – mit individuellem Bewerbungscoaching, Probe-Interviews, Lebenslauf-Feedback und unserem Arbeitgeber-Netzwerk. Das ist inklusive und kostet dich nichts extra.</p>
+<p>Gute Weiterbildungsanbieter unterstützen ihre Absolvent:innen aktiv bei der Jobsuche – mit Bewerbungscoaching, Probe-Interviews und Lebenslauf-Feedback. Achte beim Anbietervergleich darauf, ob diese Leistungen im Kurs enthalten sind.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und erfahre, wie wir dich auf deinem Weg in den neuen Job begleiten.</p>
     `,
@@ -1289,53 +1288,48 @@ export const POSTS: BlogPost[] = [
 <p>Wer „agile Methoden" im Lebenslauf hat, ist in diesen Umgebungen sofort relevanter.</p>
 
 <h2>Agiles Projektmanagement mit Bildungsgutschein lernen</h2>
-<p>In unserem Kurs „Projektmanagement meistern" lernst du agile Methoden von der Theorie bis zur Praxis. Du arbeitest mit echten Projekten in Scrum-Teams, lernst Jira und Asana kennen und bereitest dich gezielt auf die PSM-I-Prüfung (Scrum Master Zertifikat) vor.</p>
+<p>Eine gute Weiterbildung im Projektmanagement vermittelt agile Methoden von der Theorie bis zur Praxis – inklusive Praxis mit echten Projekten in Scrum-Teams, Tool-Praxis mit Jira und Asana und gezielter Vorbereitung auf die PSM-I-Prüfung.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und starte deine Karriere im modernen Projektmanagement.</p>
     `,
   },
   {
     slug: "weiterbildung-erfolgsgeschichte-fatima",
-    title: "Von der Arbeitslosigkeit zur Online Marketing Managerin – Fatimas Geschichte",
+    title: "Von der Arbeitslosigkeit zur Online Marketing Managerin – ein typischer Weg",
     category: "Erfolgsgeschichten",
     readingTime: "5 min",
     date: "2025-09-01",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=60",
     excerpt:
-      "Fatima war 10 Monate arbeitslos, bevor sie den Bildungsgutschein nutzte und sich zur Online Marketing Managerin weiterbildete. Heute arbeitet sie bei einer Berliner Agentur.",
+      "Wie eine Karrierewechslerin mit kaufmännischem Hintergrund über den Bildungsgutschein zur Online Marketing Managerin wurde – und was dabei wirklich geholfen hat.",
     content: `
-<h2>Der Moment, in dem sich alles änderte</h2>
-<p>„Ich war 10 Monate arbeitslos und hatte das Gefühl, irgendwie festzustecken. Mein alter Job als Assistentin der Geschäftsführung gab es in der Form nicht mehr – Automatisierung und Umstrukturierung hatten meine Stelle schlicht weggefegt. Ich wusste nicht, wohin."</p>
-<p>Das erzählt Fatima K. (34) aus Berlin. Heute arbeitet sie als Junior Online Marketing Managerin bei einer mittelständischen Digitalagentur in Berlin-Mitte – und verdient mehr als je zuvor in ihrem Berufsleben.</p>
-<p>Ihre Geschichte ist keine Ausnahme. Sie ist ein Beispiel dafür, was möglich ist, wenn man die richtigen Schritte zur richtigen Zeit macht.</p>
+<h2>Der Ausgangspunkt: Qualifiziert, aber in der falschen Branche</h2>
+<p>Viele Menschen, die sich für eine Weiterbildung im Online Marketing entscheiden, kommen aus einem ähnlichen Ausgangspunkt: Sie haben Berufserfahrung – oft in kaufmännischen, verwaltenden oder kommunikativen Berufen – aber ihre bisherige Stelle ist weggefallen oder die Branche hat sich stark verändert.</p>
+<p>Fatima (Name geändert) war eine davon. Nach mehreren Jahren als Assistentin in einem Berliner Unternehmen fand sie sich nach einer Umstrukturierung arbeitslos wieder. Klassische Assistenzstellen wurden in ihrer Branche immer seltener – digitale Skills, die sie damals noch nicht hatte, waren in den meisten interessanten Stellenanzeigen Pflicht.</p>
+<p>10 Monate Jobsuche, viele Bewerbungen, wenig Rücklauf. Das ist keine Ausnahme – das ist die Realität für viele Menschen im Karrierewechsel, die ohne gezielte Qualifizierung auf einen veränderten Arbeitsmarkt treffen.</p>
 
-<h2>Der Hintergrund: Qualifiziert, aber in der falschen Branche</h2>
-<p>Fatima hatte nach der Schule eine kaufmännische Ausbildung gemacht, danach mehrere Jahre als Assistentin in einem Berliner Handelsunternehmen gearbeitet. Gute Organisation, Kommunikationsstärke, strukturiertes Denken – das waren ihre Stärken. Aber die digitale Transformation hatte ihre Branche verändert, und klassische Assistenzstellen wurden immer seltener.</p>
-<p>„Ich habe jeden Tag auf Stepstone und Indeed geschaut. Manchmal habe ich mich auf 5 Stellen pro Woche beworben. Aber entweder war ich überqualifiziert für einfache Stellen oder hatte nicht die richtigen digitalen Skills für die interessanteren Positionen. Es war frustrierend."</p>
+<h2>Der Wendepunkt: Bildungsgutschein und Online-Weiterbildung</h2>
+<p>Der entscheidende Hinweis kam von der Arbeitsvermittlerin: der Bildungsgutschein. Mit diesem staatlichen Fördermittel der Bundesagentur für Arbeit kann eine vollständige AZAV-zertifizierte Weiterbildung finanziert werden – ohne Eigenanteil, ohne Kreditaufnahme.</p>
+<p>Nach einer Recherche entschied Fatima sich für eine Online-Weiterbildung zur Online Marketing Managerin bei einem AZAV-zertifizierten Anbieter. Die Wahl fiel auf einen Kurs, der genau die Skills abdeckte, die in den Stellenanzeigen gefragt waren: SEO, Google Ads, Social Media Marketing, Content Marketing, E-Mail Marketing und Analytics.</p>
+<p>Das Beste daran: Der Bildungsgutschein übernahm alle Kosten. Fatima musste keinen Cent selbst bezahlen.</p>
 
-<h2>Die Entdeckung des Bildungsgutscheins</h2>
-<p>Ein Gespräch mit ihrer Arbeitsvermittlerin brachte die Wende. Die Vermittlerin erwähnte den Bildungsgutschein und empfahl, sich über AZAV-zertifizierte Online-Weiterbildungen zu informieren.</p>
-<p>„Ich habe dann stundenlang recherchiert. Was ich bei HalloSkills gefunden habe, hat mich überzeugt: Der Kurs war klar strukturiert, die Inhalte waren genau das, was ich in Stellenanzeigen las – SEO, Google Ads, Social Media, Analytics – und das Team hat mir in einem kostenlosen Erstgespräch erklärt, wie der Bildungsgutschein funktioniert."</p>
-<p>„Das Beste daran: Ich musste keinen Cent bezahlen. Der Bildungsgutschein hat alles übernommen."</p>
-
-<h2>Die Weiterbildung: 28 Wochen, die alles veränderten</h2>
-<p>„Das Erste, was mich überrascht hat: Ich musste gar nichts vorher wissen. Wir haben wirklich von null angefangen – was ist SEO überhaupt, wie funktioniert Google, was steckt hinter einem Social-Media-Post." Fatima lernte in 28 Wochen SEO, Google Ads, Social Media Marketing, Content Marketing, E-Mail Marketing und Analytics – komplett von zuhause, im eigenen Tempo.</p>
-<p>„Was mir besonders geholfen hat, waren die echten Projekte. Wir haben keine fiktiven Fallstudien bearbeitet, sondern echte Kampagnen für echte Partnerunternehmen. Ich habe am Ende des Kurses tatsächlich eine SEO-Kampagne umgesetzt, die nachweisbar Ergebnisse gebracht hat. Das hat mir ein Selbstvertrauen gegeben, das kein Zertifikat allein geben kann."</p>
-<p>Herausforderungen gab es auch: „Es gab Wochen, in denen Google Ads-Themen mich wirklich gefordert haben. Aber ich hatte immer jemanden, den ich fragen konnte – die Trainer:innen bei HalloSkills waren sehr nah dran, wirklich kein Vergleich zu einem anonymen Online-Kurs."</p>
+<h2>Die Weiterbildung: 28 Wochen, vollständig online</h2>
+<p>Die Weiterbildung fand komplett online statt – von zuhause, mit festem Lernplan und persönlicher Betreuung durch Trainer:innen. Vorkenntnisse waren nicht erforderlich; der Kurs startete bei den Grundlagen.</p>
+<p>Besonders wertvoll waren die Praxisprojekte: Statt fiktiver Fallstudien arbeiteten die Teilnehmenden an realen Kampagnen. Fatima setzte am Ende des Kurses eine SEO-Kampagne um, die nachweislich Ergebnisse brachte – und genau diese messbaren Ergebnisse wurden später im Vorstellungsgespräch zum entscheidenden Vorteil.</p>
+<p>Herausforderungen gab es auch – besonders bei technischen Themen wie Google Ads. Aber durch die direkte Betreuung im Kurs ließ sich jede Hürde überwinden.</p>
 
 <h2>Der Einstieg in den Job: Schneller als erwartet</h2>
-<p>Nach der Weiterbildung unterstützte HalloSkills Fatima beim Bewerbungsprozess – Lebenslauf optimieren, Bewerbungsschreiben formulieren, ein Probe-Interview mit echtem Feedback. Drei Wochen nach Kursabschluss hatte sie ihr erstes Vorstellungsgespräch. Vier Wochen später unterschrieb sie ihren neuen Arbeitsvertrag.</p>
-<p>„Was in dem Gespräch den Ausschlag gegeben hat: Ich hatte konkrete Zahlen. Ich konnte sagen: In meinem Praxisprojekt habe ich den organischen Traffic um 34% gesteigert. Das war kein theoretisches Wissen – das war Praxis. Das hat den Unterschied gemacht."</p>
+<p>Nach Kursabschluss folgte der Bewerbungsprozess – mit einem optimierten Lebenslauf, gezieltem Anschreiben und einem Probe-Interview zur Vorbereitung. Drei Wochen nach Kursende hatte Fatima ihr erstes Vorstellungsgespräch. Vier Wochen später unterzeichnete sie ihren neuen Arbeitsvertrag als Junior Online Marketing Managerin bei einer mittelständischen Digitalagentur.</p>
+<p>Was den Ausschlag gab: konkrete Zahlen aus dem Praxisprojekt. „In meinem Praxisprojekt habe ich den organischen Traffic um 34% gesteigert" – das ist kein theoretisches Wissen, das ist nachweisbare Praxiserfahrung. Genau das suchen Arbeitgeber.</p>
 
 <h2>Was Fatima heute macht</h2>
-<p>Als Junior Online Marketing Managerin betreut sie heute Social-Media-Kanäle für drei Kundenprojekte, arbeitet an SEO-Texten und unterstützt das Performance-Marketing-Team bei der Kampagnenanalyse. „Ich lerne noch jeden Tag etwas Neues. Aber ich habe eine solide Basis – und ich weiß, wie ich mir selbst helfen kann, wenn ich etwas nicht weiß."</p>
-<p>Ihr Gehalt ist um 28% höher als in ihrem letzten Job vor der Arbeitslosigkeit. Sie arbeitet zwei Tage pro Woche im Homeoffice.</p>
+<p>Als Junior Online Marketing Managerin betreut sie Social-Media-Kanäle für Kundenprojekte, arbeitet an SEO-Texten und unterstützt das Performance-Marketing-Team bei der Kampagnenanalyse. Ihr Gehalt liegt deutlich über dem ihres letzten Jobs vor der Arbeitslosigkeit. Sie arbeitet teilweise im Homeoffice.</p>
 
-<h2>Fatimas Rat an alle, die zweifeln</h2>
-<p>„Ich hatte Momente, in denen ich gedacht habe: Bin ich nicht zu alt dafür? Ist das nicht unrealistisch? Ich war damals 33, hatte keine Erfahrung in Marketing. Aber das hat niemanden gestört. Was gezählt hat, war der Kurs, die Praxisprojekte und die Bereitschaft, hart zu arbeiten."</p>
-<p>„Mein Rat: Informier dich über den Bildungsgutschein. Ruf bei HalloSkills an. Das Erstgespräch kostet nichts, nicht einmal Zeit – es dauert 30 Minuten. Und es kann alles verändern. Es hat alles für mich verändert."</p>
+<h2>Was dieser Weg zeigt</h2>
+<p>Fatimas Geschichte ist kein Einzelfall – sie zeigt ein Muster, das sich wiederholt: Menschen mit kaufmännischem oder kommunikativem Hintergrund haben oft genau die Eigenschaften, die im Online Marketing gefragt sind. Was fehlt, sind die digitalen Fachkenntnisse. Diese lassen sich in einer gezielten Weiterbildung in wenigen Monaten aufbauen – vollständig finanziert durch den Bildungsgutschein.</p>
+<p>Der entscheidende erste Schritt: Recherchiere AZAV-zertifizierte Weiterbildungsanbieter in deinem Bereich, hol dir den Bildungsgutschein – und fang an.</p>
 
-<p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wie Fatima, ganz unverbindlich, und finde heraus, was für dich möglich ist.</p>
+<p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und finde heraus, was für dich möglich ist.</p>
     `,
   },
   {
