@@ -62,7 +62,7 @@ export function Testimonial14() {
               color: "#ffffff",
             }}
           >
-            Menschen hinter HalloSkills
+            Wir bieten einen Einstieg in die digitale Arbeitswelt
           </h2>
           <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>
             Wir glauben, dass sich Bildung der modernen Welt anpassen muss. Mit unseren
