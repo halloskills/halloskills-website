@@ -20,7 +20,7 @@ export function BgsErklaerung() {
               className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
-              Was ist das?
+              Staatliche Förderung
             </span>
             <h2
               className="mb-6"

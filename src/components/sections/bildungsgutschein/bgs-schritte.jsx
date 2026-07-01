@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const schritte = [
   {
@@ -25,6 +25,25 @@ const schritte = [
 ];
 
 export function BgsSchritte() {
+  const [activeStep, setActiveStep] = useState(null);
+  const stepRefs = useRef([]);
+
+  useEffect(() => {
+    const observers = [];
+    stepRefs.current.forEach((el, i) => {
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveStep(i);
+        },
+        { threshold: 0.6 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
   return (
     <section id="bgs-ablauf" className="py-24" style={{ background: "#f5f7f9" }}>
       <div className="mx-auto max-w-[1200px] px-6 md:px-12">
@@ -49,41 +68,53 @@ export function BgsSchritte() {
 
         <div className="mx-auto max-w-[720px]">
           <ul className="list-none">
-            {schritte.map((s, i) => (
-              <li key={s.num} className="relative grid py-8" style={{ gridTemplateColumns: "48px 1fr", gap: "0 24px" }}>
-                {i < schritte.length - 1 && (
-                  <div
-                    className="absolute left-[23px] top-[64px] bottom-0 w-px"
-                    style={{ borderLeft: "1px dashed rgba(0,0,0,0.2)" }}
-                  />
-                )}
-                <div className="flex flex-col items-center">
-                  <div
-                    className="flex size-10 shrink-0 items-center justify-center rounded-full border-[1.5px] text-sm font-medium"
-                    style={{ borderColor: "#e5e7eb", color: "#475467", background: "#fff" }}
-                  >
-                    {i + 1}
+            {schritte.map((s, i) => {
+              const isActive = activeStep === i && i > 0;
+              return (
+                <li
+                  key={s.num}
+                  ref={(el) => (stepRefs.current[i] = el)}
+                  className="relative grid py-8 transition-all duration-500"
+                  style={{ gridTemplateColumns: "48px 1fr", gap: "0 24px" }}
+                >
+                  {i < schritte.length - 1 && (
+                    <div
+                      className="absolute left-[23px] top-[64px] bottom-0 w-px"
+                      style={{ borderLeft: "1px dashed rgba(0,0,0,0.2)" }}
+                    />
+                  )}
+                  <div className="flex flex-col items-center">
+                    <div
+                      className="flex size-10 shrink-0 items-center justify-center rounded-full border-[1.5px] text-sm font-medium transition-all duration-500"
+                      style={{
+                        background: isActive ? "#004B76" : "transparent",
+                        borderColor: isActive ? "#004B76" : "#e5e7eb",
+                        color: isActive ? "#ffffff" : "#475467",
+                      }}
+                    >
+                      {i + 1}
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <p className="mb-1.5 text-[0.7rem] font-bold uppercase tracking-[0.1em]" style={{ color: "#D4AF37" }}>
-                    {s.label}
-                  </p>
-                  <h3
-                    className="mb-2"
-                    style={{
-                      fontFamily: "Georgia, 'Times New Roman', serif",
-                      fontSize: "1.2rem",
-                      fontWeight: 400,
-                      color: "#0f2744",
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p style={{ fontSize: "0.9rem", color: "#475467" }}>{s.body}</p>
-                </div>
-              </li>
-            ))}
+                  <div>
+                    <p className="mb-1.5 text-[0.7rem] font-bold uppercase tracking-[0.1em]" style={{ color: "#D4AF37" }}>
+                      {s.label}
+                    </p>
+                    <h3
+                      className="mb-2"
+                      style={{
+                        fontFamily: "Georgia, 'Times New Roman', serif",
+                        fontSize: "1.2rem",
+                        fontWeight: 400,
+                        color: "#0f2744",
+                      }}
+                    >
+                      {s.title}
+                    </h3>
+                    <p style={{ fontSize: "0.9rem", color: "#475467" }}>{s.body}</p>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
 
           <div className="mt-8 flex justify-center">
@@ -91,7 +122,7 @@ export function BgsSchritte() {
               href="/beratung-buchen"
               className="inline-block border-[1.5px] border-[#111827] px-8 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-[#111827] transition-colors hover:bg-[#111827] hover:text-white"
             >
-              Jetzt Bildungsgutschein beantragen
+              Jetzt beraten lassen
             </Link>
           </div>
         </div>
