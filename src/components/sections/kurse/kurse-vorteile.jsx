@@ -7,7 +7,7 @@ const vorteile = [
   "Persönliche Lernbegleitung während des gesamten Kurses",
   "Bundesweit anerkannte Abschlüsse mit Zertifikat",
   "Lebenslanger Zugriff auf alle Kursinhalte",
-  "Start jeden Montag – kurze Wartezeiten",
+  "Flexible Startzeiten – individuell abgestimmt",
   "100% Kostenübernahme durch Bildungsgutschein",
 ];
 
@@ -21,7 +21,7 @@ export function KurseVorteile() {
               className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
               style={{ color: "#D4AF37" }}
             >
-              Das bekommst du
+              Alle Weiterbildungen im Überblick
             </span>
             <h2
               className="mb-6"
@@ -32,10 +32,10 @@ export function KurseVorteile() {
                 color: "#0f2744",
               }}
             >
-              Alle Kurse im Überblick
+              Was jede Weiterbildung bei uns beinhaltet
             </h2>
             <p className="mb-10 leading-[1.7]" style={{ color: "#475467" }}>
-              Egal welchen Kurs du wählst – diese Vorteile gelten für alle HalloSkills-Weiterbildungen.
+              Egal welche Weiterbildung du wählst – diese Vorteile gelten für alle HalloSkills-Weiterbildungen.
             </p>
             <ul className="flex flex-col gap-5">
               {vorteile.map((v, i) => (

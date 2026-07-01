@@ -45,7 +45,7 @@ export function KurseListe() {
             className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
-            Angebote
+            Übersicht
           </span>
           <h2
             style={{
@@ -55,7 +55,7 @@ export function KurseListe() {
               color: "#0f2744",
             }}
           >
-            Unsere Kurse
+            Unsere Weiterbildungen
           </h2>
         </div>
 
@@ -65,7 +65,7 @@ export function KurseListe() {
               <img
                 src={k.img}
                 alt={k.title}
-                className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-5">
                 <p
@@ -105,7 +105,6 @@ export function KurseListe() {
                 >
                   {[
                     { label: "Dauer", value: k.dauer },
-                    { label: "Start", value: k.start },
                     { label: "Abschluss", value: k.abschluss },
                     { label: "Förderung", value: "100% Bildungsgutschein" },
                   ].map((d, i) => (
@@ -140,7 +139,7 @@ export function KurseListe() {
               color: "#0f2744",
             }}
           >
-            Alle Kurse sind 100% über den Bildungsgutschein finanzierbar.
+            Alle Weiterbildungen sind 100% über den Bildungsgutschein finanzierbar.
           </p>
           <Link
             href="/bildungsgutschein"

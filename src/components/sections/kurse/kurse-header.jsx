@@ -35,15 +35,14 @@ export function KurseHeader() {
               lineHeight: 1.2,
             }}
           >
-            Zertifizierte Online-Kurse –{" "}
+            Zertifizierte Online-Weiterbildungen –{" "}
             <em style={{ fontStyle: "italic" }}>gefördert & anerkannt.</em>
           </h1>
           <p
             className="mb-10 leading-[1.7]"
             style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", maxWidth: 480 }}
           >
-            Alle Kurse sind AZAV-zertifiziert, vollständig über den Bildungsgutschein finanzierbar
-            und starten jeden Montag.
+            Alle Weiterbildungen sind AZAV-zertifiziert und vollständig über den Bildungsgutschein finanzierbar.
           </p>
           <div className="flex flex-wrap gap-5">
             <Link
@@ -51,12 +50,6 @@ export function KurseHeader() {
               className="inline-block border-[1.5px] border-white px-7 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-white transition-colors hover:bg-white hover:text-[#111827]"
             >
               Kostenlose Beratung buchen
-            </Link>
-            <Link
-              href="#kurse"
-              className="inline-flex items-center gap-1 border-b border-white/60 pb-0.5 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-white/80 transition-colors hover:border-white hover:text-white"
-            >
-              Alle Kurse ansehen →
             </Link>
           </div>
         </div>
