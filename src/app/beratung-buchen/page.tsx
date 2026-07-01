@@ -2,8 +2,97 @@
 "use client";
 
 import type { Metadata } from "next";
-import { HubSpotCalendar } from "@/components/sections/beratung-buchen/hubspot-calendar";
 import React, { useState } from "react";
+
+function ContactForm() {
+  const [status, setStatus] = useState<"idle"|"sending"|"success"|"error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+    const form = e.currentTarget;
+    const res = await fetch("https://formspree.io/f/mrerpgqa", {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
+    if (res.ok) {
+      setStatus("success");
+      form.reset();
+    } else {
+      setStatus("error");
+    }
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col gap-5 rounded-2xl border border-[#e5e7eb] bg-white p-8 shadow-sm"
+    >
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="flex flex-col gap-1.5">
+          <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em]" style={{ color: "#475467" }}>
+            Name *
+          </label>
+          <input
+            type="text" name="name" required placeholder="Dein Name"
+            className="border-b border-[#d1d5db] bg-transparent py-2.5 text-sm outline-none transition-colors focus:border-[#004B76]"
+            style={{ color: "#111827" }}
+          />
+        </div>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em]" style={{ color: "#475467" }}>
+            E-Mail *
+          </label>
+          <input
+            type="email" name="email" required placeholder="deine@email.de"
+            className="border-b border-[#d1d5db] bg-transparent py-2.5 text-sm outline-none transition-colors focus:border-[#004B76]"
+            style={{ color: "#111827" }}
+          />
+        </div>
+      </div>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em]" style={{ color: "#475467" }}>
+          Telefon
+        </label>
+        <input
+          type="tel" name="telefon" placeholder="+49 …"
+          className="border-b border-[#d1d5db] bg-transparent py-2.5 text-sm outline-none transition-colors focus:border-[#004B76]"
+          style={{ color: "#111827" }}
+        />
+      </div>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-[0.75rem] font-semibold uppercase tracking-[0.08em]" style={{ color: "#475467" }}>
+          Nachricht *
+        </label>
+        <textarea
+          name="nachricht" required rows={4}
+          placeholder="Was interessiert dich? Welchen Bereich möchtest du erkunden?"
+          className="resize-none border-b border-[#d1d5db] bg-transparent py-2.5 text-sm outline-none transition-colors focus:border-[#004B76]"
+          style={{ color: "#111827" }}
+        />
+      </div>
+      <p className="text-[0.78rem]" style={{ color: "#9ca3af" }}>* Pflichtfelder</p>
+      {status === "success" ? (
+        <div className="rounded-lg px-4 py-3 text-sm font-medium" style={{ background: "#ecfdf3", color: "#027a48" }}>
+          Danke! Wir melden uns innerhalb von 24 Stunden bei dir.
+        </div>
+      ) : (
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="border-[1.5px] border-[#004B76] px-7 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] transition-colors hover:bg-[#004B76] hover:text-white disabled:opacity-50"
+          style={{ color: "#004B76" }}
+        >
+          {status === "sending" ? "Wird gesendet …" : "Beratung anfragen"}
+        </button>
+      )}
+      {status === "error" && (
+        <p className="text-sm" style={{ color: "#dc2626" }}>Etwas ist schiefgelaufen. Bitte versuche es erneut.</p>
+      )}
+    </form>
+  );
+}
 
 const vorteile = [
   {
@@ -35,7 +124,7 @@ const faqs = [
   },
   {
     q: "Wie schnell bekomme ich einen Termin?",
-    a: "Über unseren Online-Kalender findest du meist schon innerhalb von 24–48 Stunden einen passenden Termin.",
+    a: "Nach deiner Anfrage melden wir uns innerhalb von 24 Stunden bei dir und stimmen gemeinsam einen passenden Termin ab.",
   },
 ];
 
@@ -142,63 +231,56 @@ export default function BeratungBuchenPage() {
         </div>
       </section>
 
-      {/* HubSpot Calendar */}
+      {/* Kontaktformular */}
       <section className="py-24" style={{ background: "#ffffff" }}>
         <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-          <div className="mb-12 text-center">
-            <span
-              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-              style={{ color: "#D4AF37" }}
-            >
-              Terminbuchung
-            </span>
-            <h2
-              style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
-                fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 400,
-                color: "#0f2744",
-              }}
-            >
-              Wähle deinen Wunschtermin
-            </h2>
-          </div>
-          <div className="mx-auto max-w-2xl overflow-hidden rounded-2xl border border-[#e5e7eb] bg-white shadow-sm">
-            <HubSpotCalendar />
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
+            {/* Left: Text */}
+            <div className="lg:pt-2">
+              <span
+                className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
+                style={{ color: "#D4AF37" }}
+              >
+                Kostenlose Beratung
+              </span>
+              <h2
+                className="mb-6"
+                style={{
+                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: 400,
+                  color: "#0f2744",
+                }}
+              >
+                Schreib uns – wir melden uns bei dir.
+              </h2>
+              <p className="mb-8 leading-[1.7]" style={{ color: "#475467" }}>
+                Teile ein paar Details mit uns und wir melden uns innerhalb von 24 Stunden mit den nächsten Schritten bei dir. Kostenlos. Unverbindlich. Persönlich.
+              </p>
+              <div className="flex flex-col gap-4">
+                {[
+                  "Keine Wartezeit – wir melden uns innerhalb von 24 h",
+                  "Kostenlos & unverbindlich",
+                  "Gespräch per Telefon oder Videocall",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <div
+                      className="flex size-5 shrink-0 items-center justify-center rounded-full"
+                      style={{ background: "#004B76" }}
+                    >
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                        <path d="M1 4l2.5 2.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <span style={{ fontSize: "0.9rem", color: "#475467" }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-      {/* Testimonial */}
-      <section className="py-24" style={{ background: "#004B76" }}>
-        <div className="mx-auto max-w-[800px] px-6 md:px-12 text-center">
-          <div className="mb-6 flex justify-center gap-1">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <svg key={i} width="20" height="20" viewBox="0 0 20 20" fill="#D4AF37">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            ))}
+            {/* Right: Form */}
+            <ContactForm />
           </div>
-          <p
-            className="mb-8 leading-[1.7]"
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(1.1rem, 2vw, 1.4rem)",
-              fontStyle: "italic",
-              color: "rgba(255,255,255,0.9)",
-            }}
-          >
-            „Die Beratung war super verständlich und hat mir den Weg zum Bildungsgutschein leicht gemacht.
-            Nach dem ersten Gespräch hatte ich einen klaren Plan – und zwei Wochen später hielt ich meinen
-            genehmigten Bildungsgutschein in der Hand."
-          </p>
-          <p
-            className="text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-            style={{ color: "#ffffff" }}
-          >
-            Fatima K.
-          </p>
-          <p style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.5)" }}>jetzt Online Marketing Managerin</p>
         </div>
       </section>
 
