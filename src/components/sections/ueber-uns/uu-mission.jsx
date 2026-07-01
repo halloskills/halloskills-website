@@ -5,7 +5,7 @@ import React from "react";
 const werte = [
   { title: "AZAV-zertifiziert", body: "Unsere Kurse erfüllen höchste Qualitätsstandards." },
   { title: "Praxisnah", body: "Wir vermitteln Skills, die Arbeitgeber heute wirklich suchen." },
-  { title: "Persönlich", body: "Kein anonymes E-Learning – jeder Teilnehmende hat einen festen Ansprechpartner." },
+  { title: "Persönlich", body: "Kein anonymes E-Learning, jeder Teilnehmende hat einen festen Ansprechpartner." },
   { title: "Wirksam", body: "87% unserer Absolvent:innen finden nach der Weiterbildung einen neuen Job." },
 ];
 
@@ -35,13 +35,13 @@ export function UeberUnsMission() {
             <p className="mb-5 leading-[1.7]" style={{ color: "#475467" }}>
               Wir sind ein Team aus Bildungsexpert:innen, Karriereberater:innen und
               Branchenkenner:innen. Unser Ziel ist es nicht, möglichst viele Kurse
-              zu verkaufen – sondern möglichst vielen Menschen einen echten
+              zu verkaufen, sondern möglichst vielen Menschen einen echten
               Karriereschritt zu ermöglichen.
             </p>
             <p className="mb-10 leading-[1.7]" style={{ color: "#475467" }}>
               Wir glauben, dass eine geförderte Weiterbildung nicht bedeutet,
               Abstriche bei der Qualität zu machen. AZAV-zertifiziert, praxisnah,
-              mit persönlicher Betreuung – das ist unser Standard.
+              mit persönlicher Betreuung. Das ist unser Standard.
             </p>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               {werte.map((w, i) => (

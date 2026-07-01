@@ -37,7 +37,7 @@ export default function Hero() {
           >
             Arbeitslos? Starte deine{" "}
             <span style={{ color: "#004B76" }}>geförderte Weiterbildung</span>{" "}
-            – 100% kostenlos.
+            , 100% kostenlos.
           </motion.h1>
 
           {/* Subtext */}
@@ -48,7 +48,7 @@ export default function Hero() {
             className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl"
           >
             Mit HalloSkills findest du die passende Online-Weiterbildung für deinen Traumjob.
-            Projektmanagement, Online Marketing oder KI & Digitalisierung –
+            Projektmanagement, Online Marketing oder KI & Digitalisierung,
             AZAV-zertifiziert und vollständig über den Bildungsgutschein finanziert.
           </motion.p>
 
@@ -85,7 +85,7 @@ export default function Hero() {
             {[
               "✓ Bildungsgutschein wird vollständig übernommen",
               "✓ AZAV-zertifizierter Bildungsträger",
-              "✓ 100% online – flexibel von zuhause",
+              "✓ 100% online, flexibel von zuhause",
               "✓ Anerkanntes Zertifikat inklusive",
             ].map((item) => (
               <span key={item} className="text-sm text-gray-600">

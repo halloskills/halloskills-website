@@ -8,13 +8,13 @@ const schritte = [
     num: "01",
     label: "Schritt 1",
     title: "Beratung bei HalloSkills buchen",
-    body: "Wir erstellen mit dir ein passendes Angebot und erklären dir genau, welche Unterlagen du brauchst – kostenlos und unverbindlich.",
+    body: "Wir erstellen mit dir ein passendes Angebot und erklären dir genau, welche Unterlagen du brauchst, kostenlos und unverbindlich.",
   },
   {
     num: "02",
     label: "Schritt 2",
     title: "Termin bei Agentur für Arbeit",
-    body: "Du gehst optimal vorbereitet in dein Gespräch – mit unserer Unterlagen-Checkliste und bewährten Argumentationshilfen.",
+    body: "Du gehst optimal vorbereitet in dein Gespräch, mit unserer Unterlagen-Checkliste und bewährten Argumentationshilfen.",
   },
   {
     num: "03",

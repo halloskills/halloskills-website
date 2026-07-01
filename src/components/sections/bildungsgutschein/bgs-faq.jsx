@@ -6,7 +6,7 @@ import React, { useState } from "react";
 const faqs = [
   {
     q: "Wer hat Anspruch auf einen Bildungsgutschein?",
-    a: "Du hast Anspruch, wenn du arbeitslos oder arbeitssuchend bei der Agentur für Arbeit oder dem Jobcenter gemeldet bist, von Arbeitslosigkeit bedroht bist oder dich in Kurzarbeit befindest. Dein Sachbearbeiter entscheidet final – wir helfen dir, überzeugend aufzutreten.",
+    a: "Du hast Anspruch, wenn du arbeitslos oder arbeitssuchend bei der Agentur für Arbeit oder dem Jobcenter gemeldet bist, von Arbeitslosigkeit bedroht bist oder dich in Kurzarbeit befindest. Dein Sachbearbeiter entscheidet final, wir helfen dir, überzeugend aufzutreten.",
   },
   {
     q: "Wie lange ist der Bildungsgutschein gültig?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Bekomme ich einen Bildungsgutschein, wenn ich noch arbeite?",
-    a: "Möglicherweise ja – wenn dein Job gefährdet ist oder du dich beruflich umorientieren musst. In unserem Beratungsgespräch klären wir deine individuelle Situation.",
+    a: "Möglicherweise ja, wenn dein Job gefährdet ist oder du dich beruflich umorientieren musst. In unserem Beratungsgespräch klären wir deine individuelle Situation.",
   },
   {
     q: "Was passiert, wenn mein Antrag abgelehnt wird?",
@@ -52,7 +52,7 @@ export function BgsFaq() {
               Häufige Fragen zum Bildungsgutschein
             </h2>
             <p className="mb-8 leading-[1.7]" style={{ color: "#475467" }}>
-              Lass uns gemeinsam deinen Bildungsgutschein beantragen. Kostenlose Erstberatung – wir bereiten dich Schritt für Schritt vor.
+              Lass uns gemeinsam deinen Bildungsgutschein beantragen. Kostenlose Erstberatung, wir bereiten dich Schritt für Schritt vor.
             </p>
             <Link
               href="/beratung-buchen"

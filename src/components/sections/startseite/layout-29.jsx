@@ -6,7 +6,7 @@ import React from "react";
 const vorteile = [
   {
     title: "Komplett gefördert",
-    text: "Agentur für Arbeit oder Jobcenter übernimmt 100% der Kurskosten. Du zahlst nichts – nicht für den Kurs, nicht für das Zertifikat.",
+    text: "Agentur für Arbeit oder Jobcenter übernimmt 100% der Kurskosten. Du zahlst nichts: nicht für den Kurs, nicht für das Zertifikat.",
   },
   {
     title: "100% online & flexibel",

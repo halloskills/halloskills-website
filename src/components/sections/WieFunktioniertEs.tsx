@@ -5,7 +5,7 @@ const schritte = [
   {
     nr: "01",
     title: "Beratung buchen",
-    desc: "Wir klären in einem kostenlosen 20-minütigen Gespräch deine Situation, deine Ziele und welcher Kurs perfekt zu dir passt. Kein Verkaufsgespräch – echte Beratung.",
+    desc: "Wir klären in einem kostenlosen 20-minütigen Gespräch deine Situation, deine Ziele und welcher Kurs perfekt zu dir passt. Kein Verkaufsgespräch, echte Beratung.",
   },
   {
     nr: "02",

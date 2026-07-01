@@ -2,13 +2,13 @@ import FadeUp from "@/components/ui/FadeUp";
 
 const testimonials = [
   {
-    quote: "Die Beratung hat mich sofort überzeugt. Ich habe viele Anbieter kontaktiert, aber bei HalloSkills wurde wirklich auf meine Situation eingegangen. Kein Standard-Pitch – echte Beratung.",
+    quote: "Die Beratung hat mich sofort überzeugt. Ich habe viele Anbieter kontaktiert, aber bei HalloSkills wurde wirklich auf meine Situation eingegangen. Kein Standard-Pitch, echte Beratung.",
     name: "Fatima K.",
     kurs: "Online Marketing Managerin",
     sterne: 5,
   },
   {
-    quote: "Vom ersten Gespräch bis zum Job – immer begleitet. Was mich am meisten beeindruckt hat: Das Team war nicht nur während des Kurses da, sondern hat mich aktiv bei der Jobsuche unterstützt.",
+    quote: "Vom ersten Gespräch bis zum Job, immer begleitet. Was mich am meisten beeindruckt hat: Das Team war nicht nur während des Kurses da, sondern hat mich aktiv bei der Jobsuche unterstützt.",
     name: "Marcus T.",
     kurs: "Projektmanager",
     sterne: 5,

@@ -3,11 +3,11 @@
 import React from "react";
 
 const vorteile = [
-  "Flexibles Online-Lernen – keine Präsenzpflicht",
+  "Flexibles Online-Lernen, keine Präsenzpflicht",
   "Persönliche Lernbegleitung während des gesamten Kurses",
   "Bundesweit anerkannte Abschlüsse mit Zertifikat",
   "Lebenslanger Zugriff auf alle Kursinhalte",
-  "Flexible Startzeiten – individuell abgestimmt",
+  "Flexible Startzeiten, individuell abgestimmt",
   "100% Kostenübernahme durch Bildungsgutschein",
 ];
 
@@ -35,7 +35,7 @@ export function KurseVorteile() {
               Was jede Weiterbildung bei uns beinhaltet
             </h2>
             <p className="mb-10 leading-[1.7]" style={{ color: "#475467" }}>
-              Egal welche Weiterbildung du wählst – diese Vorteile gelten für alle HalloSkills-Weiterbildungen.
+              Egal welche Weiterbildung du wählst, gelten diese Vorteile für alle HalloSkills-Weiterbildungen.
             </p>
             <ul className="flex flex-col gap-5">
               {vorteile.map((v, i) => (

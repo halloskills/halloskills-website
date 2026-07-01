@@ -12,7 +12,7 @@ export function UeberUnsTestimonial() {
         </div>
         <p className="mb-6 text-h5 font-bold italic">
           "HalloSkills hat meine Erwartungen weit übertroffen. Die Inhalte sind
-          aktuell, die Betreuung ist persönlich – und das alles komplett kostenlos.
+          aktuell, die Betreuung ist persönlich, und das alles komplett kostenlos.
           Eine der besten Entscheidungen meines Lebens."
         </p>
         <p className="font-semibold">Winda Ü.</p>

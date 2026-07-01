@@ -3,10 +3,10 @@
 import React from "react";
 
 const vorteile = [
-  { title: "100% Kostenübernahme", body: "Keine versteckten Gebühren – weder für den Kurs noch für das Zertifikat oder die Lernmaterialien." },
+  { title: "100% Kostenübernahme", body: "Keine versteckten Gebühren, weder für den Kurs noch für das Zertifikat oder die Lernmaterialien." },
   { title: "Bundesweit gültig", body: "Einlösbar bei allen AZAV-zertifizierten Trägern wie HalloSkills." },
   { title: "Für alle unsere Kurse", body: "Gilt für Projektmanagement, Online Marketing und KI & Digitalisierung." },
-  { title: "Schnelle Bewilligung", body: "Meist innerhalb von 1–2 Wochen genehmigt – du kannst schnell starten." },
+  { title: "Schnelle Bewilligung", body: "Meist innerhalb von 1–2 Wochen genehmigt, du kannst schnell starten." },
 ];
 
 export function BgsErklaerung() {
@@ -36,7 +36,7 @@ export function BgsErklaerung() {
             <p className="mb-10 leading-[1.7]" style={{ color: "#475467" }}>
               Der Bildungsgutschein ist ein staatliches Fördermittel, mit dem die Agentur für
               Arbeit oder das Jobcenter die Kosten für deine Weiterbildung vollständig übernimmt.
-              Du zahlst nichts – nicht für den Kurs, nicht für das Zertifikat, nicht für die Lernmaterialien.
+              Du zahlst nichts: nicht für den Kurs, nicht für das Zertifikat, nicht für die Lernmaterialien.
             </p>
             <div className="flex flex-col gap-6">
               {vorteile.map((v, i) => (

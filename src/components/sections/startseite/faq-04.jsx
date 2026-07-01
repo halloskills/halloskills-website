@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "Kann ich die Kurse von zuhause aus machen?",
-    a: "Ja, alle unsere Kurse finden zu 100% online statt. Du brauchst nur einen Computer mit Internetanschluss. Kein Pendeln, keine festen Anwesenheitspflichten – du lernst in deinem eigenen Tempo.",
+    a: "Ja, alle unsere Kurse finden zu 100% online statt. Du brauchst nur einen Computer mit Internetanschluss. Kein Pendeln, keine festen Anwesenheitspflichten, du lernst in deinem eigenen Tempo.",
   },
   {
     q: "Wie lange dauern die Kurse?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     q: "Helft ihr mir auch nach dem Kurs bei der Jobsuche?",
-    a: "Ja. Wir unterstützen dich aktiv mit Bewerbungscoaching, Interview-Vorbereitung und unserem Arbeitgeber-Netzwerk. Das ist bei HalloSkills inklusive – ohne Aufpreis.",
+    a: "Ja. Wir unterstützen dich aktiv mit Bewerbungscoaching, Interview-Vorbereitung und unserem Arbeitgeber-Netzwerk. Das ist bei HalloSkills inklusive, ohne Aufpreis.",
   },
 ];
 

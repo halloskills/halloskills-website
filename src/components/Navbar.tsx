@@ -20,7 +20,7 @@ function AnrufenDialog() {
       <DialogContent className="max-w-sm p-8 bg-white">
         <h3 className="mb-2 font-serif text-xl font-bold text-neutral-darkest">Jetzt mit uns sprechen</h3>
         <p className="mb-6 text-sm text-neutral-dark">
-          Rufe uns direkt an oder hinterlasse deine Nummer – wir melden uns heute noch.
+          Rufe uns direkt an oder hinterlasse deine Nummer, wir melden uns heute noch.
         </p>
         <a
           href="tel:+4930000000"

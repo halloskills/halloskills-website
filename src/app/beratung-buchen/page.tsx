@@ -121,7 +121,7 @@ const vorteile = [
   },
   {
     title: "Bildungsgutschein-Support",
-    body: "Wir begleiten dich durch den gesamten Antragsprozess – von der Vorbereitung bis zur Genehmigung.",
+    body: "Wir begleiten dich durch den gesamten Antragsprozess, von der Vorbereitung bis zur Genehmigung.",
   },
   {
     title: "Persönliche Betreuung",
@@ -272,14 +272,14 @@ export default function BeratungBuchenPage() {
                   color: "#0f2744",
                 }}
               >
-                Schreib uns – wir melden uns bei dir.
+                Schreib uns, wir melden uns bei dir.
               </h2>
               <p className="mb-8 leading-[1.7]" style={{ color: "#475467" }}>
                 Teile ein paar Details mit uns und wir melden uns innerhalb von 24 Stunden mit den nächsten Schritten bei dir. Kostenlos. Unverbindlich. Persönlich.
               </p>
               <div className="flex flex-col gap-4">
                 {[
-                  "Keine Wartezeit – wir melden uns innerhalb von 24 h",
+                  "Keine Wartezeit: wir melden uns innerhalb von 24 h",
                   "Kostenlos & unverbindlich",
                   "Gespräch per Telefon oder Videocall",
                 ].map((item) => (

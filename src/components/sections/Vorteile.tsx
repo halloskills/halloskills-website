@@ -5,12 +5,12 @@ const vorteile = [
   {
     icon: "💰",
     title: "Komplett gefördert",
-    desc: "Dank Bildungsgutschein zahlst du keinen einzigen Euro. Wir übernehmen die Kommunikation mit der Agentur für Arbeit – kein Papierchaos für dich.",
+    desc: "Dank Bildungsgutschein zahlst du keinen einzigen Euro. Wir übernehmen die Kommunikation mit der Agentur für Arbeit, kein Papierchaos für dich.",
   },
   {
     icon: "👤",
     title: "Persönliche Betreuung",
-    desc: "Von der ersten Beratung bis zum Jobstart hast du einen festen Ansprechpartner. Kein Call-Center, keine Warteschleifen – echte Begleitung.",
+    desc: "Von der ersten Beratung bis zum Jobstart hast du einen festen Ansprechpartner. Kein Call-Center, keine Warteschleifen, echte Begleitung.",
   },
   {
     icon: "🌐",
@@ -20,7 +20,7 @@ const vorteile = [
   {
     icon: "💼",
     title: "Direkte Jobvermittlung",
-    desc: "Nach dem Abschluss helfen wir dir aktiv beim Einstieg in den Arbeitsmarkt – mit Bewerbungscoaching und direktem Kontakt zu Arbeitgebern.",
+    desc: "Nach dem Abschluss helfen wir dir aktiv beim Einstieg in den Arbeitsmarkt, mit Bewerbungscoaching und direktem Kontakt zu Arbeitgebern.",
   },
 ];
 
@@ -39,12 +39,12 @@ export default function Vorteile() {
                 className="text-3xl sm:text-4xl font-bold mb-6"
                 style={{ fontFamily: "Georgia, serif", color: "#0f2744" }}
               >
-                Mehr als eine Weiterbildung –{" "}
+                Mehr als eine Weiterbildung,{" "}
                 <span style={{ color: "#004B76" }}>ein echter Neustart.</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Wir hören dir zu und nehmen uns die Zeit zu verstehen, wo du deine Ziele siehst.
-                Dann bauen wir gemeinsam genau deine Weiterbildung – individuell angepasst, nicht von der Stange.
+                Dann bauen wir gemeinsam genau deine Weiterbildung, individuell angepasst, nicht von der Stange.
               </p>
               <Link
                 href="/beratung-buchen"

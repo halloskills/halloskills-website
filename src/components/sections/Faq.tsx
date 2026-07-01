@@ -14,11 +14,11 @@ const faqs = [
   },
   {
     frage: "Wie läuft die Weiterbildung ab?",
-    antwort: "Alle Kurse sind 100% online. Du lernst flexibel von zuhause, hast Zugriff auf Live-Sessions, aufgezeichnete Inhalte und persönliche Betreuung – alles auf einer Plattform. Kein Laptop? Wir leihen dir einen für die gesamte Weiterbildung.",
+    antwort: "Alle Kurse sind 100% online. Du lernst flexibel von zuhause, hast Zugriff auf Live-Sessions, aufgezeichnete Inhalte und persönliche Betreuung, alles auf einer Plattform. Kein Laptop? Wir leihen dir einen für die gesamte Weiterbildung.",
   },
   {
     frage: "Bekomme ich nach der Weiterbildung ein Zertifikat?",
-    antwort: "Ja. Du erhältst ein bundesweit anerkanntes Abschlusszertifikat sowie Teilzertifikate für abgeschlossene Module – ideal für deinen Lebenslauf.",
+    antwort: "Ja. Du erhältst ein bundesweit anerkanntes Abschlusszertifikat sowie Teilzertifikate für abgeschlossene Module, ideal für deinen Lebenslauf.",
   },
   {
     frage: "Wie schnell kann ich starten?",

@@ -35,7 +35,7 @@ export function BgsHeader() {
               lineHeight: 1.2,
             }}
           >
-            Deine Weiterbildung –{" "}
+            Deine Weiterbildung,{" "}
             <em style={{ fontStyle: "italic" }}>100% kostenlos.</em>
           </h1>
           <p

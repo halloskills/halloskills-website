@@ -35,7 +35,7 @@ export function KurseHeader() {
               lineHeight: 1.2,
             }}
           >
-            Zertifizierte Online-Weiterbildungen –{" "}
+            Zertifizierte Online-Weiterbildungen,{" "}
             <em style={{ fontStyle: "italic" }}>gefördert & anerkannt.</em>
           </h1>
           <p

@@ -8,7 +8,7 @@ const steps = [
     num: "01",
     label: "Schritt 1",
     title: "Beratung buchen",
-    text: "Wir klären deine Situation, deine Ziele und welche Weiterbildung perfekt zu dir passt. Kostenlos und unverbindlich – in 20 Minuten.",
+    text: "Wir klären deine Situation, deine Ziele und welche Weiterbildung perfekt zu dir passt. Kostenlos und unverbindlich, in 20 Minuten.",
   },
   {
     num: "02",

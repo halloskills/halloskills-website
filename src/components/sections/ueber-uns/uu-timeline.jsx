@@ -4,9 +4,9 @@ import React from "react";
 
 const meilensteine = [
   { jahr: "2021", title: "Gründung von HalloSkills", body: "Gegründet mit einer klaren Idee: Arbeitssuchende verdienen bessere Chancen. Die ersten Teilnehmenden starteten ihre Weiterbildung." },
-  { jahr: "2022", title: "AZAV-Zertifizierung erhalten", body: "Unsere Kurse wurden offiziell zertifiziert – damit sind Bildungsgutscheine bei uns vollständig einlösbar." },
-  { jahr: "2023", title: "500 Absolvent:innen – 87% direkt in den Job", body: "Ein entscheidender Meilenstein: 87% unserer Absolvent:innen fanden nach der Weiterbildung eine neue Stelle." },
-  { jahr: "2024", title: "KI & Digitalisierung als dritter Kursschwerpunkt", body: "Wir erweiterten unser Angebot um den Bereich KI & digitale Transformation – der Nachfrage entsprechend." },
+  { jahr: "2022", title: "AZAV-Zertifizierung erhalten", body: "Unsere Kurse wurden offiziell zertifiziert, damit sind Bildungsgutscheine bei uns vollständig einlösbar." },
+  { jahr: "2023", title: "500 Absolvent:innen, 87% direkt in den Job", body: "Ein entscheidender Meilenstein: 87% unserer Absolvent:innen fanden nach der Weiterbildung eine neue Stelle." },
+  { jahr: "2024", title: "KI & Digitalisierung als dritter Kursschwerpunkt", body: "Wir erweiterten unser Angebot um den Bereich KI & digitale Transformation, der Nachfrage entsprechend." },
   { jahr: "2025", title: "1.500+ erfolgreiche Absolvent:innen", body: "Über 1.500 Menschen haben mit HalloSkills ihre Karriere neu gestartet. Das Wachstum geht weiter." },
 ];
 

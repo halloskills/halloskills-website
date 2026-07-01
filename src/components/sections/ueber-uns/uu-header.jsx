@@ -42,7 +42,7 @@ export function UeberUnsHeader() {
             style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", maxWidth: 520 }}
           >
             HalloSkills wurde gegründet, um Arbeitssuchenden die digitalen Skills zu geben,
-            die der Arbeitsmarkt heute wirklich braucht – kostenlos, persönlich, mit echtem Ergebnis.
+            die der Arbeitsmarkt heute wirklich braucht, kostenlos, persönlich, mit echtem Ergebnis.
           </p>
         </div>
       </div>

@@ -138,7 +138,7 @@ export default async function BlogPostPage({ params }: Props) {
             Bereit für deinen Karriereschritt?
           </h2>
           <p className="mb-8 leading-[1.7]" style={{ color: "rgba(255,255,255,0.75)", fontSize: "1rem" }}>
-            Wir beraten dich kostenlos und unverbindlich – und zeigen dir, ob du den
+            Wir beraten dich kostenlos und unverbindlich, und zeigen dir, ob du den
             Bildungsgutschein für deine Weiterbildung nutzen kannst.
           </p>
           <Link

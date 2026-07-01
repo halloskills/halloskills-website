@@ -179,7 +179,7 @@ export default async function KursDetailPage({
             Bereit, deine Karriere in die eigene Hand zu nehmen?
           </h2>
           <p className="mb-8 text-medium">
-            Starte mit einer kostenlosen Erstberatung – wir begleiten dich von der
+            Starte mit einer kostenlosen Erstberatung, wir begleiten dich von der
             Beantragung des Bildungsgutscheins bis zum Kursabschluss.
           </p>
           <Link

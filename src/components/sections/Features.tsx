@@ -4,7 +4,7 @@ const features = [
   {
     icon: "🎓",
     title: "Vollständig gefördert",
-    desc: "Dank Bildungsgutschein zahlst du keinen einzigen Euro – weder für den Kurs noch für Materialien.",
+    desc: "Dank Bildungsgutschein zahlst du keinen einzigen Euro, weder für den Kurs noch für Materialien.",
   },
   {
     icon: "🏅",
@@ -14,7 +14,7 @@ const features = [
   {
     icon: "💻",
     title: "100% online",
-    desc: "Lerne flexibel von zuhause – ohne Präsenzpflicht, mit lebenslangem Zugriff auf alle Inhalte.",
+    desc: "Lerne flexibel von zuhause, ohne Präsenzpflicht, mit lebenslangem Zugriff auf alle Inhalte.",
   },
   {
     icon: "🤝",

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 const bereiche = [
   {
     title: "Karriereberatung",
-    body: "Du begleitest Menschen auf dem Weg in ihre neue Karriere — vom ersten Gespräch bis zur Vermittlung.",
+    body: "Du begleitest Menschen auf dem Weg in ihre neue Karriere, vom ersten Gespräch bis zur Vermittlung.",
     icon: "💬",
   },
   {
@@ -16,7 +16,7 @@ const bereiche = [
   },
   {
     title: "Marketing & Kommunikation",
-    body: "Du bringst HalloSkills nach außen — digital, authentisch und nah an unserer Zielgruppe.",
+    body: "Du bringst HalloSkills nach außen: digital, authentisch und nah an unserer Zielgruppe.",
     icon: "📣",
   },
   {
@@ -163,7 +163,7 @@ export default function JobsPage() {
               <em style={{ fontStyle: "italic" }}>das etwas bewegt.</em>
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7, maxWidth: 480 }}>
-              Wir sind noch am Anfang — und genau das macht es spannend. Wenn du Teil von etwas Neuem sein willst, freuen wir uns von dir zu hören.
+              Wir sind noch am Anfang, und genau das macht es spannend. Wenn du Teil von etwas Neuem sein willst, freuen wir uns von dir zu hören.
             </p>
           </div>
         </div>
@@ -239,7 +239,7 @@ export default function JobsPage() {
                 Wir suchen Menschen, die mitgestalten wollen.
               </h2>
               <p className="leading-[1.7]" style={{ color: "#475467" }}>
-                Schreib uns, wer du bist und was dich antreibt — hänge gerne deinen Lebenslauf an. Wenn es passt, finden wir gemeinsam einen Weg.
+                Schreib uns, wer du bist und was dich antreibt. Hänge gerne deinen Lebenslauf an. Wenn es passt, finden wir gemeinsam einen Weg.
               </p>
             </div>
             <JobsForm />

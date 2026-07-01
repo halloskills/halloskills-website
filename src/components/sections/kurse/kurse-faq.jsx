@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: "Bekomme ich Unterstützung während des Kurses?",
-    a: "Ja. Du hast einen festen Lernbegleiter, der dir bei Fragen hilft und dich durch die Inhalte führt – per Chat, Video-Call oder E-Mail.",
+    a: "Ja. Du hast einen festen Lernbegleiter, der dir bei Fragen hilft und dich durch die Inhalte führt, per Chat, Video-Call oder E-Mail.",
   },
 ];
 

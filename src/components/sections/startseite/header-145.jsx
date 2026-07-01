@@ -37,7 +37,7 @@ export function Header145() {
               letterSpacing: "-0.08rem",
             }}
           >
-            Deine geförderte Weiterbildung –{" "}
+            Deine geförderte Weiterbildung,{" "}
             <em style={{ fontStyle: "italic" }}>100% kostenlos.</em>
           </h1>
           <p
@@ -45,7 +45,7 @@ export function Header145() {
             style={{ color: "rgba(255,255,255,0.85)", fontSize: "1rem" }}
           >
             Mit HalloSkills findest du die passende Online-Weiterbildung für deinen
-            Traumjob. Projektmanagement, Online Marketing oder KI &amp; Digitalisierung –
+            Traumjob. Projektmanagement, Online Marketing oder KI &amp; Digitalisierung,
             AZAV-zertifiziert und vollständig über den Bildungsgutschein finanziert.
           </p>
           <div className="flex flex-wrap gap-4">

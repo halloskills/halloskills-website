@@ -12,13 +12,13 @@ const team = [
   {
     name: "Andrea Müller",
     role: "Head of Beratung",
-    bio: "Begleitet Teilnehmende von der ersten Beratung bis zum Jobstart – persönlich und engagiert.",
+    bio: "Begleitet Teilnehmende von der ersten Beratung bis zum Jobstart, persönlich und engagiert.",
     img: "/images/team/andrea.png",
   },
   {
     name: "Christian Bauer",
     role: "Head of Education",
-    bio: "Entwickelt Kursinhalte, die praxisnah und aktuell sind – immer am Puls des Arbeitsmarkts.",
+    bio: "Entwickelt Kursinhalte, die praxisnah und aktuell sind, immer am Puls des Arbeitsmarkts.",
     img: "/images/team/christian.png",
   },
 ];

@@ -6,7 +6,7 @@ const kurse = [
     slug: "projektmanagement",
     tag: "Projektmanagement",
     tagColor: "#004B76",
-    title: "Projektmanagement – Klassisch, agil & digital",
+    title: "Projektmanagement - klassisch, agil & digital",
     desc: "Klassisches & agiles Projektmanagement, Scrum, PRINCE2, digitale PM-Tools. Du verlässt den Kurs mit einem anerkannten Zertifikat und dem Know-how, das Arbeitgeber heute wirklich suchen.",
     dauer: "12–28 Wochen",
     start: "Jeden Montag",
