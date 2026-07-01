@@ -82,7 +82,7 @@ export function Layout485() {
 
             <ul className="list-none">
               {steps.map((s, i) => {
-                const isActive = activeStep === i && i > 0;
+                const isActive = activeStep === i;
                 return (
                   <li
                     key={s.num}

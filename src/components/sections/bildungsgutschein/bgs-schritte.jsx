@@ -69,7 +69,7 @@ export function BgsSchritte() {
         <div className="mx-auto max-w-[720px]">
           <ul className="list-none">
             {schritte.map((s, i) => {
-              const isActive = activeStep === i && i > 0;
+              const isActive = activeStep === i;
               return (
                 <li
                   key={s.num}
