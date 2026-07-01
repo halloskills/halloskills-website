@@ -173,7 +173,7 @@ export function Testimonial14() {
                 Wir stellen ein!
               </span>
               <p style={{ fontSize: "0.95rem", color: "#475467", maxWidth: 560 }}>
-                Du willst ein junges Bildungs-Startup von Anfang an mitgestalten? Wir freuen uns über Initiativbewerbungen aus allen Bereichen.
+                Wir bauen etwas Sinnvolles — und suchen Menschen, die dabei sein wollen.
               </p>
             </div>
             <Link
