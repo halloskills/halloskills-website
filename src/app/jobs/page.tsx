@@ -86,6 +86,21 @@ function JobsForm() {
         placeholder="Warum möchtest du zu HalloSkills? *"
         className="w-full resize-none rounded-xl border border-[#d1d5db] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#004B76] placeholder:text-[#9ca3af]"
       />
+
+      {/* CV Upload */}
+      <div>
+        <label className="mb-1.5 block text-[0.72rem] font-semibold uppercase tracking-[0.08em]" style={{ color: "#475467" }}>
+          Lebenslauf anhängen (optional)
+        </label>
+        <input
+          type="file"
+          name="cv"
+          accept=".pdf,.doc,.docx"
+          className="w-full rounded-xl border border-[#d1d5db] bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-[#004B76] file:mr-4 file:rounded-lg file:border-0 file:bg-[#004B76] file:px-3 file:py-1 file:text-xs file:font-semibold file:text-white file:cursor-pointer"
+        />
+        <p className="mt-1.5 text-[0.75rem]" style={{ color: "#9ca3af" }}>PDF, DOC oder DOCX · max. 5 MB</p>
+      </div>
+
       <label className="flex items-start gap-3 cursor-pointer pt-1">
         <input type="checkbox" name="dsgvo" required className="mt-0.5 shrink-0 accent-[#004B76]" />
         <span style={{ fontSize: "0.8rem", color: "#475467", lineHeight: 1.6 }}>
@@ -142,7 +157,7 @@ export default function JobsPage() {
               <em style={{ fontStyle: "italic" }}>das etwas bewegt.</em>
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7, maxWidth: 480 }}>
-              Wir sind noch am Anfang — und genau das macht es spannend. Aktuell haben wir keine offenen Stellen ausgeschrieben, freuen uns aber sehr über Initiativbewerbungen.
+              Wir sind noch am Anfang — und genau das macht es spannend. Wenn du Teil von etwas Neuem sein willst, freuen wir uns von dir zu hören.
             </p>
           </div>
         </div>
@@ -215,10 +230,10 @@ export default function JobsPage() {
                   color: "#0f2744",
                 }}
               >
-                Überzeuge uns — auch ohne offene Stelle.
+                Zeig uns, wer du bist.
               </h2>
               <p className="leading-[1.7]" style={{ color: "#475467" }}>
-                Schreib uns, wer du bist und warum du zu HalloSkills passt. Wir speichern deine Bewerbung und melden uns, sobald eine passende Stelle frei wird.
+                Schreib uns, wer du bist und warum du zu HalloSkills passt — hänge gerne deinen Lebenslauf an. Wir melden uns, sobald eine passende Stelle frei wird.
               </p>
             </div>
             <JobsForm />
