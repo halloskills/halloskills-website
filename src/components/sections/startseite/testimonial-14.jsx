@@ -173,8 +173,7 @@ export function Testimonial14() {
                 Wir stellen ein!
               </span>
               <p style={{ fontSize: "0.95rem", color: "#475467", maxWidth: 560 }}>
-                Bei HalloSkills findest du Jobs mit Sinn. Wir beraten dich bei der Wahl
-                der richtigen Weiterbildung und machen aus deinen Wünschen einen klaren Plan.
+                Du willst ein junges Bildungs-Startup von Anfang an mitgestalten? Wir freuen uns über Initiativbewerbungen aus allen Bereichen.
               </p>
             </div>
             <Link
