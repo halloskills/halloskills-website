@@ -1,25 +1,26 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
-const testimonials = [
+const team = [
   {
-    quote: "Ich habe viele Anbieter kontaktiert, aber bei HalloSkills wurde wirklich auf meine Situation eingegangen. Kein Standard-Pitch – echte Beratung.",
-    name: "Fatima K.",
-    role: "Online Marketing Managerin",
-    photo: "/images/team/andrea.png",
+    name: "Nina Eglinsky",
+    role: "IT Lead",
+    bio: "Verantwortlich für die digitale Infrastruktur und Lernplattform von HalloSkills.",
+    img: "/images/team/nina.png",
   },
   {
-    quote: "Was mich am meisten beeindruckt hat: Das Team war nicht nur während des Kurses da, sondern hat mich aktiv bei der Jobsuche unterstützt.",
-    name: "Marcus T.",
-    role: "Projektmanager",
-    photo: "/images/team/christian.png",
+    name: "Andrea Müller",
+    role: "Head of Beratung",
+    bio: "Begleitet Teilnehmende von der ersten Beratung bis zum Jobstart – persönlich und engagiert.",
+    img: "/images/team/andrea.png",
   },
   {
-    quote: "Ich hätte nicht gedacht, dass eine kostenlose Weiterbildung so hochwertig sein kann. Die Inhalte sind aktuell, praxisnah und sofort anwendbar.",
-    name: "Sandra L.",
-    role: "KI & Automatisierung",
-    photo: "/images/team/konrad.png",
+    name: "Christian Bauer",
+    role: "Head of Education",
+    bio: "Entwickelt Kursinhalte, die praxisnah und aktuell sind – immer am Puls des Arbeitsmarkts.",
+    img: "/images/team/christian.png",
   },
 ];
 
@@ -27,52 +28,59 @@ export function Testimonial14() {
   return (
     <section className="py-24" style={{ background: "#004B76" }}>
       <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-        <div className="mb-16 max-w-[600px]">
-          <span
-            className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
-            style={{ color: "#D4AF37" }}
+        <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <span
+              className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
+              style={{ color: "#D4AF37" }}
+            >
+              Das Team
+            </span>
+            <h2
+              style={{
+                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                fontWeight: 400,
+                color: "#ffffff",
+              }}
+            >
+              Menschen hinter HalloSkills
+            </h2>
+          </div>
+          <Link
+            href="mailto:jobs@halloskills.de"
+            className="shrink-0 border-[1.5px] border-white px-7 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-white transition-colors hover:bg-white hover:text-[#111827]"
           >
-            Erfolgsgeschichten
-          </span>
-          <h2
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-              fontWeight: 400,
-              color: "#ffffff",
-            }}
-          >
-            Was unsere Absolvent:innen sagen
-          </h2>
+            Join the team →
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {testimonials.map((t) => (
+          {team.map((person) => (
             <div
-              key={t.name}
-              className="flex flex-col rounded-2xl p-8"
-              style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)" }}
+              key={person.name}
+              className="flex flex-col items-center rounded-xl p-8 text-center"
+              style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
             >
-              <p
-                className="mb-8 flex-1 leading-[1.7]"
-                style={{ color: "rgba(255,255,255,0.85)", fontSize: "0.95rem", fontStyle: "italic" }}
-              >
-                "{t.quote}"
-              </p>
-              <div className="flex items-center gap-4 border-t pt-6" style={{ borderColor: "rgba(255,255,255,0.12)" }}>
+              <div className="mb-5 overflow-hidden rounded-full" style={{ width: 96, height: 96 }}>
                 <img
-                  src={t.photo}
-                  alt={t.name}
-                  className="size-12 rounded-full object-cover object-top"
-                  style={{ border: "2px solid rgba(255,255,255,0.2)" }}
+                  src={person.img}
+                  alt={person.name}
+                  className="h-full w-full object-cover"
                 />
-                <div>
-                  <p className="text-[0.72rem] font-bold uppercase tracking-[0.12em]" style={{ color: "#ffffff" }}>
-                    {t.name}
-                  </p>
-                  <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.65)" }}>{t.role}</p>
-                </div>
               </div>
+              <h3
+                className="mb-1 text-[0.75rem] font-semibold uppercase tracking-[0.1em]"
+                style={{ color: "#ffffff" }}
+              >
+                {person.name}
+              </h3>
+              <p className="mb-4 text-[0.8rem]" style={{ color: "rgba(255,255,255,0.5)" }}>
+                {person.role}
+              </p>
+              <p style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.6 }}>
+                {person.bio}
+              </p>
             </div>
           ))}
         </div>

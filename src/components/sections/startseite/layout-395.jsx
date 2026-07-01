@@ -62,7 +62,7 @@ export function Layout395() {
             className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
-            Angebote
+            Unsere Weiterbildungen
           </span>
           <h2
             style={{
@@ -84,7 +84,7 @@ export function Layout395() {
               <img
                 src={k.img}
                 alt={k.title}
-                className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
               {/* Static overlay at bottom */}
               <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-5">
@@ -150,14 +150,14 @@ export function Layout395() {
               color: "#111827",
             }}
           >
-            Alle Kurse sind 100% über den Bildungsgutschein finanzierbar.
+            Alle Weiterbildungen sind 100% über den Bildungsgutschein finanzierbar.
           </p>
           <div className="hidden h-8 w-px bg-[#e5e7eb] md:block" />
           <Link
-            href="/kurse"
+            href="/bildungsgutschein"
             className="border-b border-[#111827] pb-0.5 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-[#111827] transition-colors hover:border-regal-blue hover:text-regal-blue"
           >
-            Alle Kurse ansehen
+            So funktioniert die Förderung →
           </Link>
         </div>
       </div>

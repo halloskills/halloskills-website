@@ -9,12 +9,10 @@ export function Header145() {
       className="relative flex min-h-[92vh] items-center overflow-hidden"
       style={{ backgroundColor: "#004B76" }}
     >
-      {/* Real photo background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/images/bilder/hero.png')", opacity: 0.92 }}
       />
-      {/* Directional overlay — dark on left, transparent on right */}
       <div
         className="absolute inset-0"
         style={{
@@ -22,15 +20,13 @@ export function Header145() {
             "linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0) 100%)",
         }}
       />
-
-      {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 md:px-12">
         <div className="max-w-[560px]">
           <span
             className="mb-5 block text-[0.75rem] font-semibold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
-            100% Kostenfrei · AZAV-zertifiziert · Sofort starten
+            100% Kostenfrei · AZAV-zertifiziert
           </span>
           <h1
             className="mb-5 leading-[1.1] text-white"
@@ -63,7 +59,7 @@ export function Header145() {
               href="/kurse"
               className="inline-block border-[1.5px] border-white bg-transparent px-7 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-white transition-colors hover:bg-white hover:text-[#111827]"
             >
-              Kurse entdecken
+              Weiterbildungen entdecken
             </Link>
           </div>
         </div>

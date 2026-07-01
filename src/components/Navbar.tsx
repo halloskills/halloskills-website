@@ -97,7 +97,7 @@ function CallbackForm() {
 const navLinks = [
   { label: "Kurse", href: "/kurse" },
   { label: "Bildungsgutschein", href: "/bildungsgutschein" },
-  { label: "Blog", href: "/blog" },
+  { label: "Magazin", href: "/blog" },
   { label: "Über uns", href: "/ueber-uns" },
 ];
 

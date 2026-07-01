@@ -43,7 +43,7 @@ export function Cta1() {
                 href="/kurse"
                 className="inline-flex items-center gap-1 border-b border-[#111827] pb-0.5 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-[#111827] transition-colors hover:border-regal-blue hover:text-regal-blue"
               >
-                Kurse entdecken →
+                Weiterbildungen entdecken →
               </Link>
             </div>
           </div>
