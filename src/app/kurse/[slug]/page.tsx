@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { KURSE, KURSE_LIST } from "@/lib/kurse-data";
+import { KursSchritte } from "@/components/sections/kurse/kurs-schritte";
 
 export async function generateStaticParams() {
   return KURSE_LIST.map((k) => ({ slug: k.slug }));
@@ -209,79 +210,8 @@ export default async function KursDetailPage({
         </div>
       </section>
 
-      {/* 3-Schritte */}
-      <section className="py-24" style={{ background: "#ffffff" }}>
-        <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-          <div className="mb-14 text-center">
-            <span
-              className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-              style={{ color: "#D4AF37" }}
-            >
-              So funktioniert es
-            </span>
-            <h2
-              style={{
-                fontFamily: "Georgia, 'Times New Roman', serif",
-                fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 400,
-                color: "#0f2744",
-              }}
-            >
-              Dein Weg zum Kursstart
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {[
-              { n: "1", t: "Beratung buchen", b: "Wir prüfen gemeinsam deine Eignung und erstellen dein individuelles Angebot." },
-              { n: "2", t: "Bildungsgutschein beantragen", b: "Mit unserer Hilfe gehst du optimal vorbereitet zur Agentur für Arbeit." },
-              { n: "3", t: "Onboarding & Start", b: "Du erhältst alle Zugänge und startest am nächsten verfügbaren Termin." },
-            ].map((step, i) => (
-              <div key={step.n} className="flex flex-col items-center text-center">
-                <div
-                  className="mb-5 flex size-12 items-center justify-center rounded-full text-lg font-semibold text-white"
-                  style={{ background: "#004B76" }}
-                >
-                  {step.n}
-                </div>
-                <h3
-                  className="mb-3"
-                  style={{
-                    fontFamily: "Georgia, 'Times New Roman', serif",
-                    fontSize: "1.1rem",
-                    fontWeight: 400,
-                    color: "#0f2744",
-                  }}
-                >
-                  {step.t}
-                </h3>
-                <p style={{ fontSize: "0.9rem", color: "#475467", lineHeight: 1.7 }}>{step.b}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonial */}
-      <section className="py-24" style={{ background: "#004B76" }}>
-        <div className="mx-auto max-w-[760px] px-6 text-center md:px-12">
-          <p
-            className="mb-8 italic"
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(1.2rem, 2.5vw, 1.5rem)",
-              fontWeight: 400,
-              color: "#ffffff",
-              lineHeight: 1.6,
-            }}
-          >
-            &ldquo;{kurs.testimonial.text}&rdquo;
-          </p>
-          <p className="mb-1 text-[0.8rem] font-bold uppercase tracking-[0.1em]" style={{ color: "#D4AF37" }}>
-            {kurs.testimonial.author}
-          </p>
-          <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.875rem" }}>{kurs.testimonial.role}</p>
-        </div>
-      </section>
+      {/* 3-Schritte Scroll-Animation */}
+      <KursSchritte />
 
       {/* FAQ */}
       <section className="py-24" style={{ background: "#f5f7f9" }}>
