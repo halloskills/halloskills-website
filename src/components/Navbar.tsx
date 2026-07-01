@@ -98,7 +98,6 @@ const navLinks = [
   { label: "Kurse", href: "/kurse" },
   { label: "Bildungsgutschein", href: "/bildungsgutschein" },
   { label: "Magazin", href: "/blog" },
-  { label: "Über uns", href: "/ueber-uns" },
 ];
 
 export function Navbar2() {

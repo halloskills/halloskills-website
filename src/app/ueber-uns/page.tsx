@@ -7,6 +7,7 @@ import { UeberUnsTestimonial } from "@/components/sections/ueber-uns/uu-testimon
 import { UeberUnsCta } from "@/components/sections/ueber-uns/uu-cta";
 
 export const metadata: Metadata = {
+  robots: "noindex, nofollow",
   title: "Über uns – Wer wir sind & warum wir das machen | HalloSkills",
   description:
     "HalloSkills macht Weiterbildung für Arbeitssuchende zugänglich. AZAV-zertifiziert, praxisnah, persönlich. Lerne unser Team kennen.",
