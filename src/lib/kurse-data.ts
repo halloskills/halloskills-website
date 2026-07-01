@@ -10,15 +10,16 @@ export type Kurs = {
   testimonial: { text: string; author: string; role: string };
   metaTitle: string;
   metaDescription: string;
+  img?: string;
 };
 
 export const KURSE: Record<string, Kurs> = {
   projektmanagement: {
     slug: "projektmanagement",
-    title: "Projektmanagement – Klassisch, agil & digital",
+    title: "Projektmanagement - Klassisch, agil & digital",
     subtitle: "Projektmanagement",
     description:
-      "Entwickle deine Fähigkeiten im klassischen und agilen Projektmanagement. Du lernst digitale Tools, die deinen Workflow auf das nächste Level heben – und verlässt den Kurs mit einem anerkannten Zertifikat.",
+      "Entwickle deine Fähigkeiten im klassischen und agilen Projektmanagement. Du lernst digitale Tools, die deinen Workflow auf das nächste Level heben - und verlässt den Kurs mit einem anerkannten Zertifikat.",
     dauer: "12–28 Wochen",
     inhalte: [
       "Klassisches Projektmanagement: Planung, Steuerung, Abschluss",
@@ -28,7 +29,7 @@ export const KURSE: Record<string, Kurs> = {
       "Praxisprojekte mit echtem Bezug zum Arbeitsmarkt",
     ],
     vorteile: [
-      "100% online – lerne wann und wo du willst",
+      "100% online - lerne wann und wo du willst",
       "Persönliche Lernbegleitung inklusive",
       "Bundesweit anerkanntes AZAV-Zertifikat",
       "Flexible Zeiteinteilung: Vollzeit oder Teilzeit",
@@ -53,16 +54,17 @@ export const KURSE: Record<string, Kurs> = {
       author: "Thomas R.",
       role: "jetzt Projektmanager bei einem Berliner Start-up",
     },
-    metaTitle: "Projektmanagement Weiterbildung – 100% kostenlos mit Bildungsgutschein | HalloSkills",
+    metaTitle: "Projektmanagement Weiterbildung - 100% kostenlos mit Bildungsgutschein | HalloSkills",
     metaDescription:
-      "AZAV-zertifizierter Projektmanagement-Kurs – vollständig gefördert. Scrum, Kanban, digitale PM-Tools. Start jeden Montag. Jetzt kostenlose Beratung buchen.",
+      "AZAV-zertifizierter Projektmanagement-Kurs - vollständig gefördert. Scrum, Kanban, digitale PM-Tools. Start jeden Montag. Jetzt kostenlose Beratung buchen.",
+    img: "/images/bilder/kurs-bueromanagement.png",
   },
   "online-marketing": {
     slug: "online-marketing",
     title: "Online Marketing Manager:in",
     subtitle: "Online Marketing",
     description:
-      "SEO, Social Media, Performance Marketing, Google Ads und KI-Tools im Marketing – vollständig online, vollständig gefördert. Starte deine Karriere im digitalen Marketing.",
+      "SEO, Social Media, Performance Marketing, Google Ads und KI-Tools im Marketing - vollständig online, vollständig gefördert. Starte deine Karriere im digitalen Marketing.",
     dauer: "24–36 Wochen",
     inhalte: [
       "SEO & Content Marketing",
@@ -72,7 +74,7 @@ export const KURSE: Record<string, Kurs> = {
       "Analytics, Reporting & Conversion Optimierung",
     ],
     vorteile: [
-      "100% online – lerne flexibel von zuhause",
+      "100% online - lerne flexibel von zuhause",
       "Persönliche Lernbegleitung inklusive",
       "AZAV-Zertifikat + Google Ads Zertifizierung",
       "Inhalte werden quartalsweise aktualisiert",
@@ -89,24 +91,25 @@ export const KURSE: Record<string, Kurs> = {
       },
       {
         q: "Sind die Inhalte auf dem neuesten Stand?",
-        a: "Ja. Wir aktualisieren die Inhalte quartalsweise – besonders im Bereich KI & Social Media.",
+        a: "Ja. Wir aktualisieren die Inhalte quartalsweise - besonders im Bereich KI & Social Media.",
       },
     ],
     testimonial: {
-      text: "Die Beratung hat mich sofort überzeugt. Kein Standard-Pitch – echte, individuelle Beratung.",
+      text: "Die Beratung hat mich sofort überzeugt. Kein Standard-Pitch - echte, individuelle Beratung.",
       author: "Fatima K.",
       role: "Online Marketing Managerin",
     },
-    metaTitle: "Online Marketing Weiterbildung – 100% kostenlos mit Bildungsgutschein | HalloSkills",
+    metaTitle: "Online Marketing Weiterbildung - 100% kostenlos mit Bildungsgutschein | HalloSkills",
     metaDescription:
-      "AZAV-zertifizierter Online Marketing Kurs – vollständig gefördert. SEO, Social Media, Google Ads, KI-Tools. Start jeden Montag. Jetzt Beratung buchen.",
+      "AZAV-zertifizierter Online Marketing Kurs - vollständig gefördert. SEO, Social Media, Google Ads, KI-Tools. Start jeden Montag. Jetzt Beratung buchen.",
+    img: "/images/bilder/kurs-ecommerce.png",
   },
   "ki-digitalisierung": {
     slug: "ki-digitalisierung",
     title: "KI & digitale Transformation",
     subtitle: "KI & Digitalisierung",
     description:
-      "KI-Grundlagen, Automatisierung, Prompt Engineering und digitale Geschäftsprozesse – für alle, die in der digitalen Welt von morgen arbeiten wollen.",
+      "KI-Grundlagen, Automatisierung, Prompt Engineering und digitale Geschäftsprozesse - für alle, die in der digitalen Welt von morgen arbeiten wollen.",
     dauer: "10–20 Wochen",
     inhalte: [
       "KI-Grundlagen & Machine Learning Überblick",
@@ -120,7 +123,7 @@ export const KURSE: Record<string, Kurs> = {
       "Sofort anwendbare Tools & Techniken",
       "Inhalte werden monatlich aktualisiert",
       "AZAV-Zertifikat für KI & Digitalisierung",
-      "100% online – lerne in deinem eigenen Tempo",
+      "100% online - lerne in deinem eigenen Tempo",
     ],
     faq: [
       {
@@ -133,7 +136,7 @@ export const KURSE: Record<string, Kurs> = {
       },
       {
         q: "Wie aktuell sind die KI-Inhalte?",
-        a: "Sehr aktuell – die Inhalte werden monatlich aktualisiert, da KI sich sehr schnell entwickelt.",
+        a: "Sehr aktuell - die Inhalte werden monatlich aktualisiert, da KI sich sehr schnell entwickelt.",
       },
     ],
     testimonial: {
@@ -141,9 +144,10 @@ export const KURSE: Record<string, Kurs> = {
       author: "Sandra L.",
       role: "KI & Automatisierung",
     },
-    metaTitle: "KI & Digitalisierung Weiterbildung – 100% kostenlos mit Bildungsgutschein | HalloSkills",
+    metaTitle: "KI & Digitalisierung Weiterbildung - 100% kostenlos mit Bildungsgutschein | HalloSkills",
     metaDescription:
-      "AZAV-zertifizierter KI & Digitalisierung Kurs – vollständig gefördert. Prompt Engineering, Automatisierung, digitale Transformation. Start jeden Montag.",
+      "AZAV-zertifizierter KI & Digitalisierung Kurs - vollständig gefördert. Prompt Engineering, Automatisierung, digitale Transformation. Start jeden Montag.",
+    img: "/images/bilder/kurs-gesundheitswesen.png",
   },
 };
 
