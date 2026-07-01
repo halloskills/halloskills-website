@@ -70,7 +70,7 @@ function JobsForm() {
       <input type="tel" name="telefon" placeholder="Telefon" className={inputCls} />
       <div className="relative">
         <select name="bereich" required defaultValue="" className={`${inputCls} appearance-none cursor-pointer`}>
-          <option value="" disabled>Bereich der Initiativbewerbung *</option>
+          <option value="" disabled>In welchem Bereich siehst du dich? *</option>
           <option value="beratung">Karriereberatung</option>
           <option value="education">Education & Kursentwicklung</option>
           <option value="marketing">Marketing & Kommunikation</option>
@@ -90,7 +90,7 @@ function JobsForm() {
       {/* CV Upload */}
       <div>
         <label className="mb-1.5 block text-[0.72rem] font-semibold uppercase tracking-[0.08em]" style={{ color: "#475467" }}>
-          Lebenslauf anhängen (optional)
+          Lebenslauf anhängen
         </label>
         <label
           className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-[#d1d5db] bg-white py-6 transition-colors hover:border-[#004B76]"
