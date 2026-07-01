@@ -173,7 +173,7 @@ export function Testimonial14() {
                 Wir stellen ein!
               </span>
               <p style={{ fontSize: "0.95rem", color: "#475467", maxWidth: 560 }}>
-                Wir bauen etwas Sinnvolles — und suchen Menschen, die dabei sein wollen.
+                Wir geben Menschen eine zweite Chance. Hilf uns dabei.
               </p>
             </div>
             <Link
