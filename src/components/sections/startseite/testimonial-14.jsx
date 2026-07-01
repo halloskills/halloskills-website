@@ -173,7 +173,7 @@ export function Testimonial14() {
                 Wir stellen ein!
               </span>
               <p style={{ fontSize: "0.95rem", color: "#475467", maxWidth: 560 }}>
-                Wir geben Menschen eine zweite Chance. Hilf uns dabei.
+                Werde Teil unseres Teams und gestalte mit uns die Zukunft der geförderten Weiterbildung. Wir freuen uns auf Menschen, die etwas bewegen möchten.
               </p>
             </div>
             <Link
