@@ -83,6 +83,13 @@ function ContactForm() {
         <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#9ca3af]">⌄</span>
       </div>
 
+      <textarea
+        name="nachricht"
+        rows={3}
+        placeholder="Deine Nachricht (optional)"
+        className="w-full resize-none rounded-xl border border-[#d1d5db] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#004B76] placeholder:text-[#9ca3af]"
+      />
+
       {/* DSGVO */}
       <label className="flex items-start gap-3 cursor-pointer pt-1">
         <input type="checkbox" name="dsgvo" required className="mt-0.5 shrink-0 accent-[#004B76]" />
