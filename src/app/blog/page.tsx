@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { POSTS, calcReadingTime } from "@/lib/blog-data";
-import { NewsletterForm } from "@/components/NewsletterForm";
 import React, { useState } from "react";
 
 const CATEGORIES = ["Alle", ...Array.from(new Set(POSTS.map((p) => p.category)))];
+const PAGE_SIZE = 6;
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("Alle");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered = activeCategory === "Alle"
     ? POSTS
@@ -16,6 +17,13 @@ export default function BlogPage() {
 
   const featured = filtered[0];
   const rest = filtered.slice(1);
+  const visibleRest = rest.slice(0, visibleCount - 1);
+  const hasMore = visibleCount - 1 < rest.length;
+
+  const handleCategoryChange = (cat: string) => {
+    setActiveCategory(cat);
+    setVisibleCount(PAGE_SIZE);
+  };
 
   return (
     <>
@@ -37,7 +45,7 @@ export default function BlogPage() {
             className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
-            Unser Blog
+            Magazin
           </span>
           <h1
             style={{
@@ -48,8 +56,8 @@ export default function BlogPage() {
               lineHeight: 1.2,
             }}
           >
-            Wissen für deinen{" "}
-            <em style={{ fontStyle: "italic" }}>Karriereschritt.</em>
+            Dein Ratgeber für{" "}
+            <em style={{ fontStyle: "italic" }}>Weiterbildung & Neustart.</em>
           </h1>
         </div>
       </section>
@@ -57,12 +65,12 @@ export default function BlogPage() {
       {/* Category filter */}
       <div className="sticky top-[64px] z-10 border-b border-[#e5e7eb] bg-white/95 backdrop-blur-sm">
         <div className="mx-auto max-w-[1200px] overflow-x-auto px-6 md:px-12">
-          <div className="flex gap-1 py-3">
+          <div className="flex gap-2 py-4">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className="shrink-0 rounded-full px-4 py-1.5 text-[0.78rem] font-semibold uppercase tracking-[0.06em] transition-colors"
+                onClick={() => handleCategoryChange(cat)}
+                className="shrink-0 rounded-full px-5 py-2 text-[0.78rem] font-semibold uppercase tracking-[0.06em] transition-colors"
                 style={
                   activeCategory === cat
                     ? { background: "#004B76", color: "#ffffff" }
@@ -89,7 +97,7 @@ export default function BlogPage() {
           {featured && (
             <Link
               href={`/blog/${featured.slug}`}
-              className="group mb-10 grid grid-cols-1 overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md lg:grid-cols-2"
+              className="group mb-8 grid grid-cols-1 overflow-hidden rounded-2xl bg-white shadow-sm transition-shadow hover:shadow-md lg:grid-cols-2"
             >
               <img
                 src={featured.image}
@@ -134,9 +142,9 @@ export default function BlogPage() {
           )}
 
           {/* Grid */}
-          {rest.length > 0 && (
+          {visibleRest.length > 0 && (
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {rest.map((post) => (
+              {visibleRest.map((post) => (
                 <article key={post.slug} className="group flex flex-col overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-md">
                   <Link href={`/blog/${post.slug}`}>
                     <img
@@ -186,37 +194,18 @@ export default function BlogPage() {
               ))}
             </div>
           )}
-        </div>
-      </section>
 
-      {/* Newsletter CTA */}
-      <section className="py-24" style={{ background: "#111827" }}>
-        <div className="mx-auto max-w-[700px] px-6 md:px-12 text-center">
-          <span
-            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-            style={{ color: "#D4AF37" }}
-          >
-            Newsletter
-          </span>
-          <h2
-            className="mb-5"
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(1.8rem, 3vw, 2.4rem)",
-              fontWeight: 400,
-              color: "#ffffff",
-            }}
-          >
-            Kein Artikel mehr verpassen.
-          </h2>
-          <p className="mb-8 leading-[1.7]" style={{ color: "rgba(255,255,255,0.6)", fontSize: "1rem" }}>
-            Zweimal im Monat: die besten Tipps zu Weiterbildung, Karriere und dem
-            digitalen Arbeitsmarkt – direkt in dein Postfach.
-          </p>
-          <NewsletterForm />
-          <p className="mt-3 text-[0.78rem]" style={{ color: "rgba(255,255,255,0.3)" }}>
-            Kein Spam. Jederzeit abmeldbar.
-          </p>
+          {/* Load more */}
+          {hasMore && (
+            <div className="mt-12 flex justify-center">
+              <button
+                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
+                className="border-[1.5px] border-[#111827] px-8 py-3 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-[#111827] transition-colors hover:bg-[#111827] hover:text-white"
+              >
+                Weitere Beiträge anzeigen
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
