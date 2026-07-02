@@ -7,10 +7,11 @@ const kurse = [
   {
     slug: "projektmanagement",
     tag: "Projektmanagement",
-    title: "Projekte führen wie ein Profi",
+    title: "Mit Teamarbeit erfolgreich sein",
     dauer: "12–28 Wochen",
     start: "Jeden Montag",
-    img: "/images/bilder/kurs-bueromanagement.png",
+    img: "/images/bilder/projektmanagerin-whiteboard-postits.png",
+    imgPosition: "20% center",
     details: [
       { label: "Dauer", value: "12–28 Wochen" },
       { label: "Start", value: "Jeden Montag" },
@@ -21,10 +22,10 @@ const kurse = [
   {
     slug: "online-marketing",
     tag: "Online Marketing",
-    title: "Online Marketing meistern",
+    title: "Menschen digital begeistern",
     dauer: "24–36 Wochen",
     start: "Jeden Montag",
-    img: "/images/bilder/kurs-ecommerce.png",
+    img: "/images/bilder/managerin-schwarzer-pullover-imac.png",
     details: [
       { label: "Dauer", value: "24–36 Wochen" },
       { label: "Start", value: "Jeden Montag" },
@@ -35,12 +36,12 @@ const kurse = [
   {
     slug: "ki-digitalisierung",
     tag: "KI & Digitalisierung",
-    title: "KI und digitale Transformation",
-    dauer: "10–20 Wochen",
+    title: "Neue Technologien entdecken",
+    dauer: "4 Wochen",
     start: "Jeden Montag",
-    img: "/images/bilder/kurs-gesundheitswesen.png",
+    img: "/images/bilder/mann-airpods-khaki-dual-monitor.png",
     details: [
-      { label: "Dauer", value: "10–20 Wochen" },
+      { label: "Dauer", value: "4 Wochen" },
       { label: "Start", value: "Jeden Montag" },
       { label: "Abschluss", value: "Zertifikat" },
       { label: "Förderung", value: "100% Bildungsgutschein" },
@@ -62,7 +63,7 @@ export function Layout395() {
             className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
-            Unsere Weiterbildungen
+            Unsere Online-Lehrgänge
           </span>
           <h2
             style={{
@@ -72,7 +73,7 @@ export function Layout395() {
               color: "#0f2744",
             }}
           >
-            Unsere Top-Weiterbildungen
+            Abwechslungsreiche Weiterbildungen bei HalloSkills
           </h2>
         </div>
 
@@ -85,6 +86,7 @@ export function Layout395() {
                 src={k.img}
                 alt={k.title}
                 className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                style={k.imgPosition ? { objectPosition: k.imgPosition } : undefined}
               />
               {/* Static overlay at bottom */}
               <div className="absolute bottom-0 left-0 right-0 bg-white/95 p-5">
@@ -150,7 +152,7 @@ export function Layout395() {
               color: "#0f2744",
             }}
           >
-            Alle Weiterbildungen sind 100% über den Bildungsgutschein finanzierbar.
+            Alle Weiterbildungen finden komplett im Homeoffice statt und sind zu 100% über den Bildungsgutschein finanzierbar.
           </p>
           <div className="hidden h-8 w-px bg-[#e5e7eb] md:block" />
           <Link

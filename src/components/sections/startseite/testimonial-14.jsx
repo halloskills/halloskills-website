@@ -10,12 +10,12 @@ const team = [
     img: "/images/team/heiko.png",
   },
   {
-    name: "Andrea",
+    name: "Yvonne",
     role: "Bildungsleitung",
     img: "/images/team/andrea.png",
   },
   {
-    name: "Konrad",
+    name: "Severin",
     role: "Qualitätsmanagement",
     img: "/images/team/konrad.png",
   },
@@ -36,7 +36,7 @@ const team = [
   },
 ];
 
-const VISIBLE = 5;
+const VISIBLE = 4;
 
 export function Testimonial14() {
   const [offset, setOffset] = useState(0);
@@ -62,12 +62,12 @@ export function Testimonial14() {
               color: "#ffffff",
             }}
           >
-            Wir bieten einen Einstieg in die digitale Arbeitswelt
+            Wir bieten einen entspannten Einstieg in die digitale Arbeitswelt
           </h2>
           <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>
-            Wir glauben, dass sich Bildung der modernen Welt anpassen muss. Mit unseren
-            Weiterbildungen bieten wir Teilnehmenden frische Perspektiven, Future Skills
-            und eine spannende Lernatmosphäre.
+            Wir sind überzeugt, dass sich qualitativ hochwertige Bildung mit den Anforderungen
+            der modernen Arbeitswelt verbinden lässt. Mit unseren Weiterbildungen bieten wir
+            Teilnehmenden frische Perspektiven, Future Skills und eine spannende Lernatmosphäre.
           </p>
         </div>
 
@@ -87,32 +87,35 @@ export function Testimonial14() {
                 className="shrink-0 text-left"
                 style={{ flex: `0 0 calc(${100 / VISIBLE}% - ${(48 * (VISIBLE - 1)) / VISIBLE}px)` }}
               >
-                <img
-                  src={person.img}
-                  alt={person.name}
-                  className="mb-4 object-cover object-top"
-                  style={{
-                    width: 100,
-                    height: 100,
-                    borderRadius: "50%",
-                    display: "block",
-                    border: "2px solid rgba(255,255,255,0.2)",
-                  }}
-                />
-                <div
-                  style={{
-                    fontSize: "0.72rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: "#ffffff",
-                    marginBottom: 4,
-                  }}
-                >
-                  {person.name}
-                </div>
-                <div style={{ fontSize: "0.875rem", color: "rgba(255,255,255,0.65)", fontWeight: 400 }}>
-                  {person.role}
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <img
+                    src={person.img}
+                    alt={person.name}
+                    className="object-cover object-top shrink-0"
+                    style={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: "50%",
+                      border: "1.5px solid rgba(255,255,255,0.2)",
+                    }}
+                  />
+                  <div>
+                    <div
+                      style={{
+                        fontSize: "0.72rem",
+                        fontWeight: 700,
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        color: "#ffffff",
+                        marginBottom: 3,
+                      }}
+                    >
+                      {person.name}
+                    </div>
+                    <div style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.65)", fontWeight: 400 }}>
+                      {person.role}
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

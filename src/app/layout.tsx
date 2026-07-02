@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.halloskills.de"),
   title: "HalloSkills | Kostenlose Weiterbildung mit Bildungsgutschein – AZAV-zertifiziert",
   description:
     "Geförderte Online-Weiterbildungen für Arbeitssuchende. Projektmanagement, Online Marketing, KI & Digitalisierung – 100% kostenlos mit Bildungsgutschein. Jetzt Beratung buchen.",
@@ -29,6 +30,14 @@ export const metadata: Metadata = {
       "100% geförderte Online-Weiterbildungen für Arbeitssuchende. AZAV-zertifiziert. Jetzt kostenlose Beratung buchen.",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "/images/bilder/hero.png",
+        width: 1200,
+        height: 630,
+        alt: "HalloSkills – Kostenlose Weiterbildung mit Bildungsgutschein",
+      },
+    ],
   },
 };
 

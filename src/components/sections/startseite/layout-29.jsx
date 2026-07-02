@@ -5,20 +5,20 @@ import React from "react";
 
 const vorteile = [
   {
-    title: "Komplett gefördert",
-    text: "Agentur für Arbeit oder Jobcenter übernimmt 100% der Kurskosten. Du zahlst nichts: nicht für den Kurs, nicht für das Zertifikat.",
-  },
-  {
-    title: "100% online & flexibel",
-    text: "Lerne von zuhause aus, im eigenen Tempo. Kein Pendeln, keine festen Anwesenheitszeiten, Familie und Lernen vereinen.",
+    title: "Kostenlose Weiterbildungen",
+    text: "Die Agentur für Arbeit, das Jobcenter oder die Rentenversicherung übernehmen die kompletten Kosten. Lehrgänge und Zertifikate sind für dich kostenlos.",
   },
   {
     title: "AZAV-zertifiziert",
-    text: "Unsere Kurse erfüllen staatliche Qualitätsstandards. Das Zertifikat ist bundesweit anerkannt und von Arbeitgebern geschätzt.",
+    text: "Du nimmst an Kursen teil, die staatliche Qualitätsanforderungen erfüllen. Das Zertifikat ist bundesweit anerkannt und von Arbeitgebern geschätzt.",
   },
   {
-    title: "Persönliche Betreuung",
-    text: "Kein anonymes E-Learning. Jeder Teilnehmende hat einen festen Ansprechpartner von der Beratung bis zum Jobstart.",
+    title: "100% online & flexibel",
+    text: "Du lernst von zuhause aus in einem abwechslungsreichen Mix aus Online-Seminaren, Gruppenarbeiten und Self-Learning. Keine Fahrtwege und perfekt für die Vereinbarkeit von Familie und Beruf.",
+  },
+  {
+    title: "Persönliche Beratung",
+    text: "Du hast jederzeit kompetente und freundliche Personen an deiner Seite, die dich vom Erstkontakt bis zum Berufseinstieg begleiten.",
   },
 ];
 
@@ -43,7 +43,7 @@ export function Layout29() {
                 color: "#0f2744",
               }}
             >
-              Warum HalloSkills?
+              HalloSkills ist immer an deiner Seite
             </h2>
           </div>
           <Link

@@ -34,7 +34,7 @@ export default function BlogPage() {
       >
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/bilder/kurs-ecommerce.png')", opacity: 0.2 }}
+          style={{ backgroundImage: "url('/images/bilder/managerin-schwarzer-pullover-imac.png')", opacity: 0.2 }}
         />
         <div
           className="absolute inset-0"

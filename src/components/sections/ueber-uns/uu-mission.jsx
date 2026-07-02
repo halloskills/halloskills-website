@@ -64,7 +64,7 @@ export function UeberUnsMission() {
           </div>
           <div>
             <img
-              src="/images/bilder/standorte.png"
+              src="/images/bilder/beraterin-orange-pullover-laptop.png"
               className="w-full rounded-2xl object-cover"
               alt="HalloSkills Team"
               style={{ aspectRatio: "16/12" }}

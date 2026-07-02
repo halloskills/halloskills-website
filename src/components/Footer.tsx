@@ -17,10 +17,10 @@ const cols = [
   {
     heading: "Unternehmen",
     links: [
-      { label: "Über uns", href: "/ueber-uns" },
-      { label: "Blog", href: "/blog" },
+      { label: "Magazin", href: "/blog" },
       { label: "Bildungsgutschein", href: "/bildungsgutschein" },
       { label: "Beratung buchen", href: "/beratung-buchen" },
+      { label: "Jobs", href: "/jobs" },
     ],
   },
 ];
@@ -85,9 +85,9 @@ export function Footer4() {
         {/* Bottom bar */}
         <div className="flex flex-col items-start justify-between gap-4 pt-8 md:flex-row md:items-center">
           <p style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.35)" }}>
-            © 2025 HalloSkills. Alle Rechte vorbehalten.
+            © 2026 HalloSkills. Alle Rechte vorbehalten.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-6">
             {[
               { label: "Datenschutz", href: "/datenschutz" },
               { label: "Impressum", href: "/impressum" },
@@ -102,6 +102,13 @@ export function Footer4() {
                 {l.label}
               </Link>
             ))}
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("halloskills:open-cookie"))}
+              style={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.35)", background: "none", border: "none", padding: 0, cursor: "pointer" }}
+              className="transition-colors hover:text-white"
+            >
+              Cookie-Einstellungen
+            </button>
           </div>
         </div>
       </div>

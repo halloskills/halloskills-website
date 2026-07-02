@@ -25,14 +25,14 @@ export function Logo3() {
               }}
             >
               Wir begleiten dich in{" "}
-              <em style={{ fontStyle: "italic" }}>deine neue Karriere.</em>
+              <em style={{ fontStyle: "italic" }}>deine neue Karriere</em>
             </h2>
           </div>
           <div>
             <p className="mb-8 leading-[1.8]" style={{ color: "#475467", fontSize: "1.05rem" }}>
-              HalloSkills unterstützt dich bei deinem beruflichen Neustart: Wir beraten dich
-              bei der Förderung, vermitteln dir zukunftsfähige Skills und begleiten dich beim
-              Start in einen gut bezahlten Job mit Aufstiegschancen.
+              HalloSkills unterstützt dich bei deinem beruflichen Durchbruch: Wir beraten dich
+              bei der Förderung, bieten interessante Lehrgänge an, vermitteln zukunftsfähige
+              Skills und begleiten dich beim Start in einen gut bezahlten Job mit Aufstiegschancen.
             </p>
             <Link
               href="/beratung-buchen"

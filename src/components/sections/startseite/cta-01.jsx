@@ -51,7 +51,7 @@ export function Cta1() {
           {/* Right: image */}
           <div>
             <img
-              src="/images/bilder/standorte.png"
+              src="/images/bilder/beraterin-orange-pullover-laptop.png"
               alt="Weiterbildung starten"
               className="w-full rounded-2xl object-cover"
               style={{ aspectRatio: "16/10" }}

@@ -24,7 +24,7 @@ const steps = [
   },
 ];
 
-export function KursSchritte() {
+export function KursSchritte({ img = "/images/bilder/prozess.png" }) {
   const [activeStep, setActiveStep] = useState(null);
   const stepRefs = useRef([]);
 
@@ -51,7 +51,7 @@ export function KursSchritte() {
           {/* Left: image */}
           <div className="relative">
             <img
-              src="/images/bilder/prozess.png"
+              src={img}
               alt="Dein Weg zum Kursstart"
               className="w-full rounded-2xl object-cover"
               style={{ aspectRatio: "3/4" }}

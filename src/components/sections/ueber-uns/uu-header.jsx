@@ -10,7 +10,7 @@ export function UeberUnsHeader() {
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/bilder/standorte.png')", opacity: 0.25 }}
+        style={{ backgroundImage: "url('/images/bilder/beraterin-orange-pullover-laptop.png')", opacity: 0.25 }}
       />
       <div
         className="absolute inset-0"

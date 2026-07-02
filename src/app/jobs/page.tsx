@@ -32,7 +32,7 @@ function JobsForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
-    const res = await fetch("https://formspree.io/f/mrerpgqa", {
+    const res = await fetch("https://formspree.io/f/xjgqpkbj", {
       method: "POST",
       body: new FormData(e.currentTarget),
       headers: { Accept: "application/json" },

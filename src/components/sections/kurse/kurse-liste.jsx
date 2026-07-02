@@ -12,7 +12,7 @@ const kurse = [
     dauer: "12–28 Wochen",
     start: "Jeden Montag",
     abschluss: "Zertifikat + Scrum PSM",
-    img: "/images/bilder/kurs-bueromanagement.png",
+    img: "/images/bilder/projektmanagerin-whiteboard-postits.png",
   },
   {
     slug: "online-marketing",
@@ -22,17 +22,17 @@ const kurse = [
     dauer: "24–36 Wochen",
     start: "Jeden Montag",
     abschluss: "Zertifikat + Google Ads",
-    img: "/images/bilder/kurs-ecommerce.png",
+    img: "/images/bilder/managerin-schwarzer-pullover-imac.png",
   },
   {
     slug: "ki-digitalisierung",
     kategorie: "KI & Digitalisierung",
     title: "KI-Manager/-in",
     body: "KI-Grundlagen, Automatisierung, Prompt Engineering, digitale Geschäftsprozesse.",
-    dauer: "10–20 Wochen",
+    dauer: "4 Wochen",
     start: "Jeden Montag",
     abschluss: "Zertifikat",
-    img: "/images/bilder/kurs-gesundheitswesen.png",
+    img: "/images/bilder/mann-airpods-khaki-dual-monitor.png",
   },
 ];
 

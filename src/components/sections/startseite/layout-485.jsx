@@ -8,19 +8,19 @@ const steps = [
     num: "01",
     label: "Schritt 1",
     title: "Beratung buchen",
-    text: "Wir klären deine Situation, deine Ziele und welche Weiterbildung perfekt zu dir passt. Kostenlos und unverbindlich, in 20 Minuten.",
+    text: "Wir sprechen über deine Situation, deine Ziele und die passende Weiterbildung für dich. Kostenlos und unverbindlich, in 20 Minuten erledigt.",
   },
   {
     num: "02",
     label: "Schritt 2",
     title: "Bildungsgutschein beantragen",
-    text: "Wir bereiten dich optimal auf den Termin bei der Agentur für Arbeit vor. Mit Unterlagen-Checkliste und Argumentationshilfe.",
+    text: "Wir bereiten dich mit Unterlagen und Argumentationsstützen auf deinen Termin bei der Arbeitsagentur, dem Jobcenter oder der Rentenversicherung vor.",
   },
   {
     num: "03",
     label: "Schritt 3",
     title: "Durchstarten",
-    text: "Sobald dein BGS genehmigt ist, legst du los. Persönliches Onboarding, alle Zugänge und ein engagiertes Betreuungsteam.",
+    text: "Sobald dein BGS genehmigt ist, legen wir los. Persönliches Onboarding, alle Zugänge und ein engagiertes Betreuungsteam.",
   },
 ];
 
@@ -77,7 +77,7 @@ export function Layout485() {
                 color: "#0f2744",
               }}
             >
-              In 3 Schritten zum neuen Job
+              In 3 Schritten zum beruflichen Erfolg
             </h2>
 
             <ul className="list-none">

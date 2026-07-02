@@ -6,23 +6,23 @@ import React, { useState } from "react";
 const faqs = [
   {
     q: "Wer hat Anspruch auf einen Bildungsgutschein?",
-    a: "Grundsätzlich alle Personen, die Arbeitslosengeld I oder II beziehen oder von Arbeitslosigkeit bedroht sind. Auch Beschäftigte können unter bestimmten Voraussetzungen einen BGS erhalten. Lass dich kostenlos von uns beraten.",
+    a: "Grundsätzlich haben alle Personen Anspruch auf einen Bildungsgutschein, die Arbeitslosengeld I oder II beziehen oder von Arbeitslosigkeit bedroht sind. Auch Beschäftigte können unter bestimmten Voraussetzungen einen Bildungsgutschein erhalten. Lass dich von uns kostenlos beraten, ob du einen Anspruch hast.",
   },
   {
-    q: "Was kostet mich die Weiterbildung?",
-    a: "Nichts. Wenn du den Bildungsgutschein erhältst, übernimmt die Agentur für Arbeit oder das Jobcenter alle Kurskosten vollständig. Kein Eigenbetrag, keine versteckten Gebühren.",
+    q: "Wie teuer ist eine berufliche Weiterbildung?",
+    a: "Wenn die Maßnahme über einen Bildungsgutschein gefördert wird, ist die Maßnahme für den Teilnehmer oder die Teilnehmerin kostenlos. Die Agentur für Arbeit, das Jobcenter oder die Rentenversicherung übernehmen die vollen Kosten. Du zahlst keinen Eigenbeitrag und keine versteckten Gebühren.",
   },
   {
-    q: "Kann ich die Kurse von zuhause aus machen?",
-    a: "Ja, alle unsere Kurse finden zu 100% online statt. Du brauchst nur einen Computer mit Internetanschluss. Kein Pendeln, keine festen Anwesenheitspflichten, du lernst in deinem eigenen Tempo.",
+    q: "Kann eine berufliche Weiterbildung von zuhause durchgeführt werden?",
+    a: "Ja, Kurse zur beruflichen Weiterbildung können komplett im Homeoffice stattfinden. Bei HalloSkills lernst du flexibel von zuhause. Du brauchst nur einen Computer mit Internetanschluss. Ohne Pendelzeiten und mit Lernen im eigenen Tempo.",
   },
   {
-    q: "Wie lange dauern die Kurse?",
-    a: "Je nach Kurs und persönlichem Tempo: Projektmanagement 12–28 Wochen, Online Marketing 24–36 Wochen, KI & Digitalisierung 10–20 Wochen. Alle Kurse starten jeden Montag.",
+    q: "Wie lange dauern die Kurse für berufliche Weiterbildung?",
+    a: "Lehrgänge in der beruflichen Weiterbildung haben eine Laufzeit von wenigen Wochen bis zu mehreren Monaten. Bei HalloSkills dauern die Kurse 12–28 Wochen (Projektmanagement), 24–36 Wochen (Online Marketing) oder 4 Wochen (KI & Digitalisierung). Gemeinsam finden wir den perfekten Kurs für dich!",
   },
   {
-    q: "Helft ihr mir auch nach dem Kurs bei der Jobsuche?",
-    a: "Ja. Wir unterstützen dich aktiv mit Bewerbungscoaching, Interview-Vorbereitung und unserem Arbeitgeber-Netzwerk. Das ist bei HalloSkills inklusive, ohne Aufpreis.",
+    q: "Hilft HalloSkills nach dem Kurs bei der Jobsuche?",
+    a: "Ja, wir bieten dir Unterstützung, nach einer absolvierten Weiterbildung einen neuen Job zu finden. Du bekommst Bewerbungscoachings, Interview-Vorbereitung und Zugang zu unserem Arbeitgeber-Netzwerk.",
   },
 ];
 
@@ -50,10 +50,10 @@ export function Faq4() {
                 color: "#0f2744",
               }}
             >
-              Häufige Fragen
+              Antworten auf deine Fragen
             </h2>
             <p className="mb-8 leading-[1.7]" style={{ color: "#475467" }}>
-              Du hast weitere Fragen? Wir beraten dich kostenlos und persönlich.
+              Du brauchst noch Hilfe? Wir beraten dich kostenlos und unverbindlich.
             </p>
             <Link
               href="/beratung-buchen"

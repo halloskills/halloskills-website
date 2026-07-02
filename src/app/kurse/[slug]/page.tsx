@@ -52,6 +52,12 @@ export default async function KursDetailPage({
         className="relative flex min-h-[55vh] items-center overflow-hidden"
         style={{ backgroundColor: "#004B76" }}
       >
+        {kurs.img && (
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url('${kurs.img}')`, opacity: 0.35 }}
+          />
+        )}
         <div
           className="absolute inset-0"
           style={{ background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 100%)" }}
@@ -192,7 +198,7 @@ export default async function KursDetailPage({
             {kurs.vorteile.map((v, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 rounded-xl bg-white p-6"
+                className="flex items-start gap-4 rounded-xl bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 style={{ border: "1px solid #e5e7eb" }}
               >
                 <div
@@ -211,7 +217,7 @@ export default async function KursDetailPage({
       </section>
 
       {/* 3-Schritte Scroll-Animation */}
-      <KursSchritte />
+      <KursSchritte img={kurs.stepsImg ?? "/images/bilder/prozess.png"} />
 
       {/* FAQ */}
       <section className="py-24" style={{ background: "#f5f7f9" }}>

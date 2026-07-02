@@ -6,9 +6,12 @@ import Link from "next/link";
 type ConsentState = {
   analytics: boolean;
   marketing: boolean;
+  timestamp: string;
+  version: string;
 };
 
 const COOKIE_KEY = "halloskills_consent";
+const CONSENT_VERSION = "1";
 
 function loadConsent(): ConsentState | null {
   if (typeof window === "undefined") return null;
@@ -20,11 +23,15 @@ function loadConsent(): ConsentState | null {
   }
 }
 
-function saveConsent(state: ConsentState) {
-  localStorage.setItem(COOKIE_KEY, JSON.stringify(state));
-  // Feuert GTM dataLayer Event – GTM muss noch eingebunden werden
+function saveConsent(state: Omit<ConsentState, "timestamp" | "version">) {
+  const full: ConsentState = {
+    ...state,
+    timestamp: new Date().toISOString(),
+    version: CONSENT_VERSION,
+  };
+  localStorage.setItem(COOKIE_KEY, JSON.stringify(full));
   if (typeof window !== "undefined" && (window as any).dataLayer) {
-    (window as any).dataLayer.push({ event: "consent_update", consent: state });
+    (window as any).dataLayer.push({ event: "consent_update", consent: full });
   }
 }
 
@@ -37,9 +44,17 @@ export function CookieBanner() {
   useEffect(() => {
     const existing = loadConsent();
     if (!existing) setShow(true);
-  }, []);
 
-  if (!show) return null;
+    const handler = () => {
+      const current = loadConsent();
+      setAnalytics(current?.analytics ?? false);
+      setMarketing(current?.marketing ?? false);
+      setShowDetails(false);
+      setShow(true);
+    };
+    window.addEventListener("halloskills:open-cookie", handler);
+    return () => window.removeEventListener("halloskills:open-cookie", handler);
+  }, []);
 
   const acceptAll = () => {
     saveConsent({ analytics: true, marketing: true });
@@ -55,6 +70,8 @@ export function CookieBanner() {
     saveConsent({ analytics, marketing });
     setShow(false);
   };
+
+  if (!show) return null;
 
   return (
     <div

@@ -26,7 +26,7 @@ const kurse = [
     tagColor: "#D4AF37",
     title: "KI & digitale Transformation",
     desc: "KI-Grundlagen, Automatisierung, Prompt Engineering und digitale Geschäftsprozesse. Werde fit für den Arbeitsmarkt von morgen.",
-    dauer: "10–20 Wochen",
+    dauer: "4 Wochen",
     start: "Jeden Montag",
   },
 ];

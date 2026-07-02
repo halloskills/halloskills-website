@@ -3,11 +3,10 @@
 import React from "react";
 
 const vorteile = [
-  "Flexibles Online-Lernen, keine Präsenzpflicht",
+  "Online-Lernen, keine Präsenzpflicht",
   "Persönliche Lernbegleitung während des gesamten Kurses",
   "Bundesweit anerkannte Abschlüsse mit Zertifikat",
   "Lebenslanger Zugriff auf alle Kursinhalte",
-  "Flexible Startzeiten, individuell abgestimmt",
   "100% Kostenübernahme durch Bildungsgutschein",
 ];
 
@@ -55,10 +54,10 @@ export function KurseVorteile() {
           </div>
           <div>
             <img
-              src="/images/bilder/kurs-bueromanagement.png"
+              src="/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png"
               className="w-full rounded-2xl object-cover"
               alt="HalloSkills Kursvorteile"
-              style={{ aspectRatio: "4/3" }}
+              style={{ aspectRatio: "3/4" }}
             />
           </div>
         </div>
