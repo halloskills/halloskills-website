@@ -51,7 +51,6 @@ export default function ImpressumPage() {
 
             <h2>Kontakt</h2>
             <p>
-              Telefon: +49 40 000 000 00<br />
               E-Mail: <a href="mailto:admin@halloskills.de">admin@halloskills.de</a>
             </p>
 
