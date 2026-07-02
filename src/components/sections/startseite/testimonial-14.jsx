@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const team = [
   {
@@ -36,11 +36,22 @@ const team = [
   },
 ];
 
-const VISIBLE = 4;
-
 export function Testimonial14() {
   const [offset, setOffset] = useState(0);
-  const maxOffset = Math.max(0, team.length - VISIBLE);
+  const [visible, setVisible] = useState(4);
+
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth < 640) setVisible(1);
+      else if (window.innerWidth < 1024) setVisible(2);
+      else setVisible(4);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  const maxOffset = Math.max(0, team.length - visible);
 
   return (
     <section className="pt-24 pb-0" style={{ background: "#004B76" }}>
@@ -77,7 +88,7 @@ export function Testimonial14() {
             className="flex"
             style={{
               gap: 48,
-              transform: `translateX(calc(-${offset} * (100% / ${VISIBLE} + ${48 / VISIBLE}px)))`,
+              transform: `translateX(calc(-${offset} * (100% / ${visible} + ${48 / visible}px)))`,
               transition: "transform 0.5s cubic-bezier(0.4,0,0.2,1)",
             }}
           >
@@ -85,7 +96,7 @@ export function Testimonial14() {
               <div
                 key={person.name}
                 className="shrink-0 text-left"
-                style={{ flex: `0 0 calc(${100 / VISIBLE}% - ${(48 * (VISIBLE - 1)) / VISIBLE}px)` }}
+                style={{ flex: `0 0 calc(${100 / visible}% - ${(48 * (visible - 1)) / visible}px)` }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <img
