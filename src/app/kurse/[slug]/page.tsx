@@ -16,7 +16,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const kurs = KURSE[slug];
   if (!kurs) return {};
-  return { title: kurs.metaTitle, description: kurs.metaDescription };
+  return {
+    title: kurs.metaTitle,
+    description: kurs.metaDescription,
+    openGraph: {
+      title: kurs.metaTitle,
+      description: kurs.metaDescription,
+      images: kurs.img ? [{ url: kurs.img, width: 1200, height: 630, alt: kurs.title }] : undefined,
+    },
+  };
 }
 
 export default async function KursDetailPage({
