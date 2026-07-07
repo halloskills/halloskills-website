@@ -58,7 +58,7 @@ function JobsForm() {
       <label className="flex cursor-pointer items-start gap-3 pt-1">
         <input type="checkbox" name="dsgvo" required className="mt-0.5 shrink-0 accent-[#004B76]" />
         <span style={{ fontSize: "0.8rem", color: "#475467", lineHeight: 1.6 }}>
-          Ich willige ein, dass HalloSkills meine Daten zur Bearbeitung meiner Bewerbung speichert und mich kontaktiert. Weitere Infos in den{" "}
+          Ich willige ein, dass HalloSkills GmbH meine Daten zur Bearbeitung meiner Bewerbung speichert und mich kontaktiert. Weitere Infos in den{" "}
           <a href="/datenschutz-bewerber" style={{ color: "#004B76", textDecoration: "underline" }}>Datenschutzhinweisen für Bewerber</a>. *
         </span>
       </label>
