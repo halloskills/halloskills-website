@@ -8,9 +8,11 @@ function JobsForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
+    const formData = new FormData(e.currentTarget);
+    formData.delete("cv");
     const res = await fetch("https://formspree.io/f/xjgqpkbj", {
       method: "POST",
-      body: new FormData(e.currentTarget),
+      body: formData,
       headers: { Accept: "application/json" },
     });
     setStatus(res.ok ? "success" : "error");
@@ -52,25 +54,6 @@ function JobsForm() {
         className="w-full resize-none rounded-xl border border-[#d1d5db] bg-white px-4 py-3 text-sm outline-none transition-colors focus:border-[#004B76] placeholder:text-[#9ca3af]"
       />
 
-      {/* CV Upload */}
-      <div>
-        <label className="mb-1.5 block text-[0.72rem] font-semibold uppercase tracking-[0.08em]" style={{ color: "#475467" }}>
-          Lebenslauf anhängen
-        </label>
-        <label
-          className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-[#d1d5db] bg-white py-6 transition-colors hover:border-[#004B76]"
-          htmlFor="cv-upload"
-        >
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#004B76" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-            <polyline points="17 8 12 3 7 8"/>
-            <line x1="12" y1="3" x2="12" y2="15"/>
-          </svg>
-          <span className="text-sm font-medium" style={{ color: "#004B76" }}>Datei auswählen</span>
-          <span className="text-[0.75rem]" style={{ color: "#9ca3af" }}>PDF, DOC oder DOCX · max. 5 MB</span>
-          <input id="cv-upload" type="file" name="cv" accept=".pdf,.doc,.docx" className="hidden" />
-        </label>
-      </div>
 
       <label className="flex cursor-pointer items-start gap-3 pt-1">
         <input type="checkbox" name="dsgvo" required className="mt-0.5 shrink-0 accent-[#004B76]" />
@@ -334,7 +317,7 @@ export default function JobsPage() {
                 Wir suchen Menschen, die mitgestalten wollen.
               </h2>
               <p className="leading-[1.7]" style={{ color: "#475467" }}>
-                Schreib uns, wer du bist und was dich antreibt. Hänge gerne deinen Lebenslauf an. Wir freuen uns, von dir zu hören.
+                Schreib uns, wer du bist und was dich antreibt. Wir freuen uns, von dir zu hören.
               </p>
             </div>
             <JobsForm />
