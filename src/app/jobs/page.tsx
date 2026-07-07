@@ -1,30 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import type { Metadata } from "next";
-
-const bereiche = [
-  {
-    title: "Karriereberatung",
-    body: "Du begleitest Menschen auf dem Weg in ihre neue Karriere, vom ersten Gespräch bis zur Vermittlung.",
-    icon: "💬",
-  },
-  {
-    title: "Education & Kursentwicklung",
-    body: "Du entwickelst und verbesserst unsere Kurskonzepte und sorgst für hohe Lernqualität.",
-    icon: "📚",
-  },
-  {
-    title: "Marketing & Kommunikation",
-    body: "Du bringst HalloSkills nach außen: digital, authentisch und nah an unserer Zielgruppe.",
-    icon: "📣",
-  },
-  {
-    title: "Produkt & Technologie",
-    body: "Du gestaltest die digitale Infrastruktur und Lernplattform, auf der unsere Weiterbildungen laufen.",
-    icon: "⚙️",
-  },
-];
 
 function JobsForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -54,7 +30,7 @@ function JobsForm() {
           Danke für deine Bewerbung!
         </h3>
         <p style={{ fontSize: "0.9rem", color: "#475467", lineHeight: 1.7 }}>
-          Wir melden uns, sobald eine passende Stelle frei wird.
+          Wir melden uns so schnell wie möglich bei dir.
         </p>
       </div>
     );
@@ -68,17 +44,6 @@ function JobsForm() {
       </div>
       <input type="email" name="email" required placeholder="E-Mail *" className={inputCls} />
       <input type="tel" name="telefon" placeholder="Telefon" className={inputCls} />
-      <div className="relative">
-        <select name="bereich" required defaultValue="" className={`${inputCls} appearance-none cursor-pointer`}>
-          <option value="" disabled>In welchem Bereich siehst du dich? *</option>
-          <option value="beratung">Karriereberatung</option>
-          <option value="education">Education & Kursentwicklung</option>
-          <option value="marketing">Marketing & Kommunikation</option>
-          <option value="tech">Produkt & Technologie</option>
-          <option value="sonstiges">Sonstiges</option>
-        </select>
-        <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#9ca3af]">⌄</span>
-      </div>
       <textarea
         name="nachricht"
         required
@@ -107,7 +72,7 @@ function JobsForm() {
         </label>
       </div>
 
-      <label className="flex items-start gap-3 cursor-pointer pt-1">
+      <label className="flex cursor-pointer items-start gap-3 pt-1">
         <input type="checkbox" name="dsgvo" required className="mt-0.5 shrink-0 accent-[#004B76]" />
         <span style={{ fontSize: "0.8rem", color: "#475467", lineHeight: 1.6 }}>
           Ich willige ein, dass HalloSkills meine Daten zur Bearbeitung meiner Bewerbung speichert und mich kontaktiert. Weitere Infos in den{" "}
@@ -117,10 +82,9 @@ function JobsForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="mt-2 w-full rounded-xl border-[1.5px] border-[#004B76] px-7 py-3.5 text-[0.8rem] font-semibold uppercase tracking-[0.1em] transition-colors hover:bg-[#004B76] hover:text-white disabled:opacity-50"
-        style={{ color: "#004B76" }}
+        className="mt-2 w-full rounded-xl border-[1.5px] border-[#004B76] px-7 py-3.5 text-[0.8rem] font-semibold uppercase tracking-[0.1em] text-[#004B76] transition-colors hover:bg-[#004B76] hover:text-white disabled:opacity-50"
       >
-        {status === "sending" ? "Wird gesendet …" : "Initiativbewerbung absenden"}
+        {status === "sending" ? "Wird gesendet …" : "Bewerbung absenden"}
       </button>
       {status === "error" && (
         <p className="text-sm" style={{ color: "#dc2626" }}>Etwas ist schiefgelaufen. Bitte versuche es erneut.</p>
@@ -130,6 +94,8 @@ function JobsForm() {
 }
 
 export default function JobsPage() {
+  const [jobOpen, setJobOpen] = useState(false);
+
   return (
     <>
       {/* Header */}
@@ -169,15 +135,15 @@ export default function JobsPage() {
         </div>
       </section>
 
-      {/* Bereiche */}
+      {/* Stellenanzeigen */}
       <section className="py-24" style={{ background: "#f5f7f9" }}>
         <div className="mx-auto max-w-[1200px] px-6 md:px-12">
-          <div className="mb-14 text-center">
+          <div className="mb-14">
             <span
               className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-              style={{ color: "#D4AF37" }}
+              style={{ color: "#D4AF37", fontFamily: "DM Sans, sans-serif" }}
             >
-              Offene Bereiche
+              Offene Stellen
             </span>
             <h2
               style={{
@@ -187,46 +153,175 @@ export default function JobsPage() {
                 color: "#0f2744",
               }}
             >
-              Wo könntest du dich einbringen?
+              Jetzt bewerben
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {bereiche.map((b) => (
-              <div
-                key={b.title}
-                className="rounded-xl bg-white p-8"
-                style={{ border: "1px solid #e5e7eb" }}
-              >
-                <div className="mb-4 text-2xl">{b.icon}</div>
-                <h3
-                  className="mb-3"
+
+          {/* Kategorie: Werkstudenten */}
+          <div className="mb-6 flex items-center gap-3">
+            <span
+              style={{
+                fontFamily: "Georgia, 'Times New Roman', serif",
+                fontSize: "1.15rem",
+                fontWeight: 400,
+                color: "#0f2744",
+              }}
+            >
+              Werkstudenten
+            </span>
+            <span
+              className="flex size-6 items-center justify-center rounded-full text-[0.72rem] font-semibold"
+              style={{ background: "#e5e7eb", color: "#475467" }}
+            >
+              1
+            </span>
+          </div>
+
+          {/* Job Row */}
+          <div className="overflow-hidden rounded-2xl border border-[#e5e7eb] bg-white">
+            {/* Clickable Row */}
+            <button
+              onClick={() => setJobOpen((o) => !o)}
+              className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-[#f9fafb]"
+              style={{ borderBottom: jobOpen ? "1px solid #e5e7eb" : "none" }}
+            >
+              <div>
+                <p
+                  className="mb-1.5"
                   style={{
                     fontFamily: "Georgia, 'Times New Roman', serif",
-                    fontSize: "1.1rem",
+                    fontSize: "1rem",
                     fontWeight: 400,
                     color: "#0f2744",
                   }}
                 >
-                  {b.title}
-                </h3>
-                <p style={{ fontSize: "0.9rem", color: "#475467", lineHeight: 1.7 }}>{b.body}</p>
+                  Werkstudent Digital &amp; Learning Operations (m/w/d)
+                </p>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                  {[
+                    { icon: "📍", label: "Hamburg / Remote" },
+                    { icon: "🕐", label: "10–40 Std. / Woche" },
+                    { icon: "💼", label: "Werkstudium · Praktikum · Freelance" },
+                  ].map((f) => (
+                    <span key={f.label} className="flex items-center gap-1.5 text-[0.78rem]" style={{ color: "#6b7280" }}>
+                      <span>{f.icon}</span>
+                      {f.label}
+                    </span>
+                  ))}
+                </div>
               </div>
-            ))}
+              <span
+                className="shrink-0 text-lg transition-transform"
+                style={{ color: "#004B76", transform: jobOpen ? "rotate(90deg)" : "rotate(0deg)" }}
+              >
+                →
+              </span>
+            </button>
+
+            {/* Expanded Details */}
+            {jobOpen && (
+              <div>
+                <div className="grid grid-cols-1 gap-10 px-8 py-10 md:px-10 lg:grid-cols-2">
+                  {/* Aufgaben */}
+                  <div>
+                    <h4
+                      className="mb-5 text-[0.72rem] font-bold uppercase tracking-[0.12em]"
+                      style={{ color: "#D4AF37", fontFamily: "DM Sans, sans-serif" }}
+                    >
+                      Aufgabenprofil
+                    </h4>
+                    <ul className="flex flex-col gap-3">
+                      {[
+                        "Unterstützung im digitalen Tagesgeschäft rund um Website, Lernplattform, Content, Marketing und interne Organisation",
+                        "Mitarbeit an SEO-, GEO- und Website-Optimierungen (Keyword-Recherche, Meta-Daten, Onpage)",
+                        "Pflege und Weiterentwicklung von Website- und Lernplattform-Inhalten",
+                        "Erstellung und Überarbeitung von Texten für Website, Social Media und Präsentationen",
+                        "Recherche und Aufbereitung von Themen rund um berufliche Bildung und Arbeitsmarkt",
+                        "Unterstützung bei Marketing-, Kommunikations- und technischen Aufgaben",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div
+                            className="mt-1 flex size-4 shrink-0 items-center justify-center rounded-full"
+                            style={{ background: "#004B76" }}
+                          >
+                            <svg width="8" height="6" viewBox="0 0 10 8" fill="none">
+                              <path d="M1 4l2.5 2.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </div>
+                          <span style={{ fontSize: "0.875rem", color: "#475467", lineHeight: 1.6 }}>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Anforderungen */}
+                  <div>
+                    <h4
+                      className="mb-5 text-[0.72rem] font-bold uppercase tracking-[0.12em]"
+                      style={{ color: "#D4AF37", fontFamily: "DM Sans, sans-serif" }}
+                    >
+                      Das solltest du mitbringen
+                    </h4>
+                    <ul className="flex flex-col gap-3">
+                      {[
+                        "Student oder Berufseinsteiger mit Fokus auf Wirtschaft, Marketing oder IT",
+                        "Interesse an digitalen Themen: Marketing, Website, Content, SEO und KI",
+                        "Bereitschaft, dich eigenständig in neue Themenfelder einzuarbeiten",
+                        "Zuverlässige, gründliche Arbeitsweise – auch bei kleinteiligen Aufgaben",
+                        "Kommunikativ und in der Lage, deinen Fortschritt regelmäßig zu teilen",
+                        "Sicherer Umgang mit Microsoft Office (Word, Excel, PowerPoint, Teams, SharePoint)",
+                        "Mindestens 10 Stunden pro Woche verfügbar",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <div
+                            className="mt-1 flex size-4 shrink-0 items-center justify-center rounded-full"
+                            style={{ background: "#004B76" }}
+                          >
+                            <svg width="8" height="6" viewBox="0 0 10 8" fill="none">
+                              <path d="M1 4l2.5 2.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </div>
+                          <span style={{ fontSize: "0.875rem", color: "#475467", lineHeight: 1.6 }}>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                {/* About + CTA */}
+                <div className="px-8 pb-10 md:px-10">
+                  <div
+                    className="mb-6 rounded-xl p-6"
+                    style={{ background: "#f5f7f9", border: "1px solid #e5e7eb" }}
+                  >
+                    <h4
+                      className="mb-3 text-[0.72rem] font-bold uppercase tracking-[0.12em]"
+                      style={{ color: "#D4AF37", fontFamily: "DM Sans, sans-serif" }}
+                    >
+                      Über HalloSkills
+                    </h4>
+                    <p style={{ fontSize: "0.875rem", color: "#475467", lineHeight: 1.7 }}>
+                      HalloSkills ist ein Träger für berufliche Erwachsenenbildung mit Ursprung in Hamburg. Als Anbieter hochwertiger Bildungslehrgänge helfen wir Erwachsenen dabei, ihren Wissenshorizont zu erweitern und sich besser in den Arbeitsmarkt zu integrieren. Mit einem jungen, wachsenden Team bringen wir frischen Wind in den Bildungsmarkt.
+                    </p>
+                  </div>
+                  <a
+                    href="#bewerben"
+                    className="inline-block border-[1.5px] border-[#004B76] px-6 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.1em] text-[#004B76] transition-colors hover:bg-[#004B76] hover:text-white"
+                  >
+                    Jetzt bewerben →
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
 
       {/* Formular */}
-      <section className="py-24" style={{ background: "#ffffff" }}>
+      <section id="bewerben" className="py-24" style={{ background: "#ffffff" }}>
         <div className="mx-auto max-w-[1200px] px-6 md:px-12">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
             <div className="lg:pt-2">
-              <span
-                className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-                style={{ color: "#D4AF37" }}
-              >
-                Initiativbewerbung
-              </span>
               <h2
                 className="mb-6"
                 style={{
@@ -239,7 +334,7 @@ export default function JobsPage() {
                 Wir suchen Menschen, die mitgestalten wollen.
               </h2>
               <p className="leading-[1.7]" style={{ color: "#475467" }}>
-                Schreib uns, wer du bist und was dich antreibt. Hänge gerne deinen Lebenslauf an. Wenn es passt, finden wir gemeinsam einen Weg.
+                Schreib uns, wer du bist und was dich antreibt. Hänge gerne deinen Lebenslauf an. Wir freuen uns, von dir zu hören.
               </p>
             </div>
             <JobsForm />
