@@ -110,20 +110,10 @@ export default function DatenschutzBewerberPage() {
             </ul>
             <p>Eine Weitergabe Ihrer Bewerbungsdaten zu Werbezwecken oder ein Verkauf Ihrer Daten findet nicht statt.</p>
 
-            <h2>7. Einsatz von Recruiting-Plattformen, insbesondere JOIN</h2>
-            <p>Wir nutzen für die Veröffentlichung von Stellenanzeigen und die Verwaltung von Bewerbungen die Plattform JOIN. Anbieterin ist:</p>
-            <p>
-              JOIN Solutions AG<br />
-              Eichenstrasse 2<br />
-              8808 Pfäffikon SZ<br />
-              Schweiz
-            </p>
-            <p>Soweit JOIN personenbezogene Daten im Rahmen des von uns genutzten Bewerbermanagements verarbeitet, erfolgt dies als Auftragsverarbeitung nach unseren Weisungen auf Grundlage einer Vereinbarung zur Auftragsverarbeitung.</p>
-            <p>Weitere Informationen zur Datenverarbeitung durch JOIN:</p>
-            <ul>
-              <li><a href="https://help.join.com/german/rechtliches-und-datenschutz/datenschutzerklarung" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von JOIN</a></li>
-              <li><a href="https://join.com/de/dpa" target="_blank" rel="noopener noreferrer">Datenverarbeitungsvereinbarung von JOIN</a></li>
-            </ul>
+            <h2>7. Einsatz von Recruiting-Plattformen</h2>
+            <p>Wir nutzen für die Veröffentlichung von Stellenanzeigen und die Verwaltung von Bewerbungen unter Umständen Recruiting-Plattformen.</p>
+            <p>Soweit die Recruiting-Plattformen personenbezogene Daten im Rahmen des von uns genutzten Bewerbermanagements verarbeiten, erfolgt dies als Auftragsverarbeitung nach unseren Weisungen.</p>
+            <p>Weitere Informationen zur Datenverarbeitung finden sich auf den Websites der jeweiligen Recruiting-Plattformen.</p>
 
             <h2>8. Drittlandübermittlungen</h2>
             <p>Im Rahmen digitaler Bewerbungsprozesse kann es vorkommen, dass personenbezogene Daten durch eingesetzte Dienstleister in Ländern außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums verarbeitet werden. Soweit Daten in die Schweiz übermittelt werden, erfolgt dies auf Grundlage eines Angemessenheitsbeschlusses der Europäischen Kommission. Für andere Drittländer erfolgt eine Übermittlung nur, wenn die gesetzlichen Voraussetzungen erfüllt sind.</p>

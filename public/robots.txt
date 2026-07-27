@@ -1,2 +1,6 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Disallow: /datenschutz-bewerber/
+
+Sitemap: https://www.halloskills.de/sitemap.xml
