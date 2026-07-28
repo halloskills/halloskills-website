@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Wie lange ist der Bildungsgutschein gültig?",
-    a: "Der Bildungsgutschein ist in der Regel 3 Monate gültig und muss in dieser Zeit bei einem AZAV-zertifizierten Träger wie HalloSkills eingelöst werden.",
+    a: "Der Bildungsgutschein ist in der Regel 3 Monate gültig und muss in dieser Zeit bei einem zugelassenen Bildungsträger wie HalloSkills eingelöst werden.",
   },
   {
     q: "Was ist AVGS?",

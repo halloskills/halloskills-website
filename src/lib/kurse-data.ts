@@ -33,7 +33,7 @@ export const KURSE: Record<string, Kurs> = {
     vorteile: [
       "100% online",
       "Persönlicher Lernbegleiter während der gesamten Weiterbildung",
-      "AZAV-zertifizierter Abschluss mit Zertifikat",
+      "Anerkanntes Abschlusszertifikat",
       "Inklusive Scrum PSM I & II Prüfungsvorbereitung",
       "Lebenslanger Zugriff auf alle Kursmaterialien mit Updates",
     ],
@@ -44,7 +44,7 @@ export const KURSE: Record<string, Kurs> = {
       },
       {
         q: "Welches Zertifikat bekomme ich?",
-        a: "Du erhältst ein AZAV-anerkanntes Abschlusszertifikat. Zusätzlich bereitest du dich auf die offizielle Scrum-Zertifizierung PSM I & II vor.",
+        a: "Du erhältst ein anerkanntes Abschlusszertifikat. Zusätzlich bereitest du dich auf die offizielle Scrum-Zertifizierung PSM I & II vor.",
       },
       {
         q: "Kann ich den Kurs neben einem Job machen?",
@@ -58,7 +58,7 @@ export const KURSE: Record<string, Kurs> = {
     },
     metaTitle: "Projektmanager/-in Weiterbildung - 100% kostenlos mit Bildungsgutschein | HalloSkills",
     metaDescription:
-      "AZAV-zertifizierte Projektmanagement-Weiterbildung, 28 Wochen, vollständig gefördert. Klassisches & agiles PM, Scrum PSM I & II. Jetzt kostenlose Beratung buchen.",
+      "Projektmanagement-Weiterbildung, 28 Wochen, vollständig gefördert. Klassisches & agiles PM, Scrum PSM I & II. Jetzt kostenlose Beratung buchen.",
     img: "/images/bilder/projektmanagerin-whiteboard-postits.png",
     stepsImg: "/images/bilder/projektmanagerin-laptop-gantt.png",
   },
@@ -81,7 +81,7 @@ export const KURSE: Record<string, Kurs> = {
     vorteile: [
       "100% online",
       "Persönlicher Lernbegleiter während der gesamten Weiterbildung",
-      "AZAV-zertifizierter Abschluss",
+      "Anerkanntes Abschlusszertifikat",
       "Vorbereitung auf Google Ads Zertifizierung",
       "Lebenslanger Zugriff auf alle Kursmaterialien mit Updates",
     ],
@@ -92,7 +92,7 @@ export const KURSE: Record<string, Kurs> = {
       },
       {
         q: "Welches Zertifikat bekomme ich?",
-        a: "Du erhältst ein AZAV-anerkanntes Abschlusszertifikat sowie eine Vorbereitung auf die Google Ads Zertifizierung.",
+        a: "Du erhältst ein anerkanntes Abschlusszertifikat sowie eine Vorbereitung auf die Google Ads Zertifizierung.",
       },
       {
         q: "Sind die Inhalte aktuell?",
@@ -106,7 +106,7 @@ export const KURSE: Record<string, Kurs> = {
     },
     metaTitle: "Online-Marketing Manager/-in Weiterbildung - 100% kostenlos mit Bildungsgutschein | HalloSkills",
     metaDescription:
-      "AZAV-zertifizierte Online Marketing Weiterbildung, 36 Wochen, vollständig gefördert. SEO, Social Media, Google Ads, KI-Tools. Jetzt Beratung buchen.",
+      "Online Marketing Weiterbildung, 36 Wochen, vollständig gefördert. SEO, Social Media, Google Ads, KI-Tools. Jetzt Beratung buchen.",
     img: "/images/bilder/managerin-schwarzer-pullover-imac.png",
     stepsImg: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
   },
@@ -127,7 +127,7 @@ export const KURSE: Record<string, Kurs> = {
     vorteile: [
       "Kein technisches Vorwissen nötig",
       "100% online",
-      "AZAV-zertifizierter Abschluss",
+      "Anerkanntes Abschlusszertifikat",
       "Lebenslanger Zugriff auf alle Kursmaterialien mit Updates",
       "Persönlicher Lernbegleiter inklusive",
     ],
@@ -138,7 +138,7 @@ export const KURSE: Record<string, Kurs> = {
       },
       {
         q: "Welches Zertifikat bekomme ich?",
-        a: "Du erhältst eine AZAV-anerkannte Teilnahmebescheinigung für den KI-Manager-Kurs.",
+        a: "Du erhältst eine anerkannte Teilnahmebescheinigung für den KI-Manager-Kurs.",
       },
       {
         q: "Wie aktuell sind die KI-Inhalte?",
@@ -152,7 +152,7 @@ export const KURSE: Record<string, Kurs> = {
     },
     metaTitle: "KI-Manager/-in Weiterbildung - 100% kostenlos mit Bildungsgutschein | HalloSkills",
     metaDescription:
-      "AZAV-zertifizierte KI-Manager Weiterbildung, 4 Wochen, vollständig gefördert. KI-Strategie, Daten-Governance, Change Management. Jetzt Beratung buchen.",
+      "KI-Manager Weiterbildung, 4 Wochen, vollständig gefördert. KI-Strategie, Daten-Governance, Change Management. Jetzt Beratung buchen.",
     img: "/images/bilder/mann-airpods-khaki-dual-monitor.png",
     stepsImg: "/images/bilder/online-marketing-managerin-gelbes-blazer.png",
   },

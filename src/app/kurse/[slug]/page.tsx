@@ -107,7 +107,7 @@ export default async function KursDetailPage({
             <div className="mb-10 flex flex-wrap gap-3">
               {[
                 `⏱ ${kurs.dauer}`,
-                "✓ AZAV-zertifiziert",
+                "✓ Staatlich gefördert",
                 "💻 100% Online",
                 "🎓 Bildungsgutschein",
               ].map((b) => (

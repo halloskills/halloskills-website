@@ -24,7 +24,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-6"
             style={{ backgroundColor: "#99CDD1", color: "#004B76" }}
           >
-            <span>✓</span> AZAV-zertifiziert · 100% gefördert
+            <span>✓</span> 100% staatlich gefördert
           </motion.div>
 
           {/* Headline */}
@@ -49,7 +49,7 @@ export default function Hero() {
           >
             Mit HalloSkills findest du die passende Online-Weiterbildung für deinen Traumjob.
             Projektmanagement, Online Marketing oder KI & Digitalisierung,
-            AZAV-zertifiziert und vollständig über den Bildungsgutschein finanziert.
+            Vollständig über den Bildungsgutschein finanziert.
           </motion.p>
 
           {/* CTAs */}
@@ -84,7 +84,7 @@ export default function Hero() {
           >
             {[
               "✓ Bildungsgutschein wird vollständig übernommen",
-              "✓ AZAV-zertifizierter Bildungsträger",
+              "✓ Staatlich anerkannter Bildungsträger",
               "✓ 100% online, flexibel von zuhause",
               "✓ Anerkanntes Zertifikat inklusive",
             ].map((item) => (

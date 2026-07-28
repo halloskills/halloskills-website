@@ -7,7 +7,7 @@ import { KurseFaq } from "@/components/sections/kurse/kurse-faq";
 export const metadata: Metadata = {
   title: "Online-Kurse mit Bildungsgutschein – Projektmanagement, Marketing, KI | HalloSkills",
   description:
-    "AZAV-zertifizierte Online-Weiterbildungen – vollständig gefördert. Projektmanagement, Online Marketing und KI & Digitalisierung. Start jeden Montag.",
+    "Vollständig geförderte Online-Weiterbildungen – Projektmanagement, Online Marketing und KI & Digitalisierung. Start jeden Montag.",
 };
 
 export default function KursePage() {

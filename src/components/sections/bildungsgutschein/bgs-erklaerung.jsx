@@ -4,7 +4,7 @@ import React from "react";
 
 const vorteile = [
   { title: "100% Kostenübernahme", body: "Keine versteckten Gebühren, weder für den Kurs noch für das Zertifikat oder die Lernmaterialien." },
-  { title: "Bundesweit gültig", body: "Einlösbar bei allen AZAV-zertifizierten Trägern wie HalloSkills." },
+  { title: "Bundesweit gültig", body: "Einlösbar bei zugelassenen Bildungsträgern wie HalloSkills." },
   { title: "Für alle unsere Kurse", body: "Gilt für Projektmanagement, Online Marketing und KI & Digitalisierung." },
   { title: "Schnelle Bewilligung", body: "Meist innerhalb von 1–2 Wochen genehmigt, du kannst schnell starten." },
 ];

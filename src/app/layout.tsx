@@ -12,13 +12,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.halloskills.de"),
-  title: "HalloSkills | Kostenlose Weiterbildung mit Bildungsgutschein – AZAV-zertifiziert",
+  title: "HalloSkills | Kostenlose Weiterbildung mit Bildungsgutschein",
   description:
     "Geförderte Online-Weiterbildungen für Arbeitssuchende. Projektmanagement, Online Marketing, KI & Digitalisierung – 100% kostenlos mit Bildungsgutschein. Jetzt Beratung buchen.",
   keywords: [
     "Bildungsgutschein",
     "geförderte Weiterbildung",
-    "AZAV zertifiziert",
+
     "Projektmanagement Kurs",
     "Online Marketing Weiterbildung",
     "KI Digitalisierung",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HalloSkills | Kostenlose Weiterbildung mit Bildungsgutschein",
     description:
-      "100% geförderte Online-Weiterbildungen für Arbeitssuchende. AZAV-zertifiziert. Jetzt kostenlose Beratung buchen.",
+      "100% geförderte Online-Weiterbildungen für Arbeitssuchende. Jetzt kostenlose Beratung buchen.",
     locale: "de_DE",
     type: "website",
     images: [

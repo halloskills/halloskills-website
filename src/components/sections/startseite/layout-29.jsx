@@ -9,7 +9,7 @@ const vorteile = [
     text: "Die Agentur für Arbeit, das Jobcenter oder die Rentenversicherung übernehmen die kompletten Kosten. Lehrgänge und Zertifikate sind für dich kostenlos.",
   },
   {
-    title: "AZAV-zertifiziert",
+    title: "Anerkannte Zertifikate",
     text: "Du nimmst an Kursen teil, die staatliche Qualitätsanforderungen erfüllen. Das Zertifikat ist bundesweit anerkannt und von Arbeitgebern geschätzt.",
   },
   {

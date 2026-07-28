@@ -47,7 +47,7 @@ export default function AgbPage() {
               Cremon 11, 20457 Hamburg<br />
               E-Mail: <a href="mailto:info@halloskills.de">info@halloskills.de</a>
             </p>
-            <p>Vertragsgegenstand ist die Erbringung von Online-Bildungsdienstleistungen in Form von AZAV-akkreditierten Kursen, die von der Bundesagentur für Arbeit gefördert werden können.</p>
+            <p>Vertragsgegenstand ist die Erbringung von Online-Bildungsdienstleistungen in Form von Kursen, die von der Bundesagentur für Arbeit gefördert werden können.</p>
 
             <h2>§ 3 Vertragsschluss</h2>
             <p>Der Vertrag kommt durch die schriftliche Anmeldung des Teilnehmers und die schriftliche Bestätigung durch HalloSkills zustande. HalloSkills ist berechtigt, ein Angebot ohne Angabe von Gründen abzulehnen.</p>

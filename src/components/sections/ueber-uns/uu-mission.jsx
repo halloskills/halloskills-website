@@ -3,7 +3,7 @@
 import React from "react";
 
 const werte = [
-  { title: "AZAV-zertifiziert", body: "Unsere Kurse erfüllen höchste Qualitätsstandards." },
+  { title: "Qualitätsgeprüft", body: "Unsere Kurse erfüllen höchste Qualitätsstandards." },
   { title: "Praxisnah", body: "Wir vermitteln Skills, die Arbeitgeber heute wirklich suchen." },
   { title: "Persönlich", body: "Kein anonymes E-Learning, jeder Teilnehmende hat einen festen Ansprechpartner." },
   { title: "Wirksam", body: "87% unserer Absolvent:innen finden nach der Weiterbildung einen neuen Job." },
@@ -40,7 +40,7 @@ export function UeberUnsMission() {
             </p>
             <p className="mb-10 leading-[1.7]" style={{ color: "#475467" }}>
               Wir glauben, dass eine geförderte Weiterbildung nicht bedeutet,
-              Abstriche bei der Qualität zu machen. AZAV-zertifiziert, praxisnah,
+              Abstriche bei der Qualität zu machen. Praxisnah,
               mit persönlicher Betreuung. Das ist unser Standard.
             </p>
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">

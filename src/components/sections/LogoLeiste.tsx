@@ -1,7 +1,7 @@
 import FadeUp from "@/components/ui/FadeUp";
 
 const partner = [
-  { name: "AZAV-zertifiziert", abbr: "AZAV" },
+
   { name: "Agentur für Arbeit", abbr: "ArbA" },
   { name: "Jobcenter", abbr: "JC" },
   { name: "SGB II / SGB III", abbr: "SGB" },
@@ -14,7 +14,7 @@ export default function LogoLeiste() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp>
           <p className="text-center text-sm font-medium text-gray-400 uppercase tracking-wider mb-8">
-            Unsere Zertifizierungen & anerkannte Förderpartner
+            Anerkannte Förderpartner
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {partner.map((p) => (

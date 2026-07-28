@@ -8,8 +8,8 @@ const features = [
   },
   {
     icon: "🏅",
-    title: "AZAV-zertifiziert",
-    desc: "Anerkanntes Abschlusszertifikat inkl. Teilzertifikate für abgeschlossene Module.",
+    title: "Anerkanntes Zertifikat",
+    desc: "Du erhältst ein anerkanntes Abschlusszertifikat inkl. Teilzertifikate für abgeschlossene Module.",
   },
   {
     icon: "💻",

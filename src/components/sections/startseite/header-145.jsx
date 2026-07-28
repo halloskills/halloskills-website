@@ -26,7 +26,7 @@ export function Header145() {
             className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
             style={{ color: "#D4AF37" }}
           >
-            100% Kostenfrei · AZAV-zertifiziert
+            100% Kostenfrei · Staatlich gefördert
           </span>
           <h1
             className="mb-5 leading-[1.1] text-white"
@@ -45,8 +45,8 @@ export function Header145() {
             style={{ color: "rgba(255,255,255,0.85)", fontSize: "1rem" }}
           >
             Bei HalloSkills erlangst du Aufstiegschancen bequem im Homeoffice. Du findest
-            bei uns spannende Online-Weiterbildungen für deinen Traumjob. AZAV-zertifiziert,
-            flexibel und über den Bildungsgutschein finanzierbar.
+            bei uns spannende Online-Weiterbildungen für deinen Traumjob. Flexibel,
+            praxisnah und über den Bildungsgutschein finanzierbar.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link

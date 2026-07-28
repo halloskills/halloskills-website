@@ -853,7 +853,7 @@ export const POSTS: BlogPost[] = [
 <li>Das Keyword in der Überschrift (erhöht Relevanz und Quality Score)</li>
 <li>Klaren Nutzen kommunizieren: Was bekommt der Nutzer?</li>
 <li>Call-to-Action: „Jetzt anfragen", „Kostenlos testen", „Heute starten"</li>
-<li>Alleinstellungsmerkmale hervorheben: „AZAV-zertifiziert", „100% staatlich gefördert", „Kostenlose Beratung"</li>
+<li>Alleinstellungsmerkmale hervorheben: „100% staatlich gefördert", „Kostenlose Beratung", „Anerkanntes Zertifikat"</li>
 </ul>
 
 <h2>Typische Anfängerfehler – und wie du sie vermeidest</h2>
@@ -1309,8 +1309,8 @@ export const POSTS: BlogPost[] = [
 <p>10 Monate Jobsuche, viele Bewerbungen, wenig Rücklauf. Das ist keine Ausnahme – das ist die Realität für viele Menschen im Karrierewechsel, die ohne gezielte Qualifizierung auf einen veränderten Arbeitsmarkt treffen.</p>
 
 <h2>Der Wendepunkt: Bildungsgutschein und Online-Weiterbildung</h2>
-<p>Der entscheidende Hinweis kam von der Arbeitsvermittlerin: der Bildungsgutschein. Mit diesem staatlichen Fördermittel der Bundesagentur für Arbeit kann eine vollständige AZAV-zertifizierte Weiterbildung finanziert werden – ohne Eigenanteil, ohne Kreditaufnahme.</p>
-<p>Nach einer Recherche entschied Fatima sich für eine Online-Weiterbildung zur Online Marketing Managerin bei einem AZAV-zertifizierten Anbieter. Die Wahl fiel auf einen Kurs, der genau die Skills abdeckte, die in den Stellenanzeigen gefragt waren: SEO, Google Ads, Social Media Marketing, Content Marketing, E-Mail Marketing und Analytics.</p>
+<p>Der entscheidende Hinweis kam von der Arbeitsvermittlerin: der Bildungsgutschein. Mit diesem staatlichen Fördermittel der Bundesagentur für Arbeit kann eine vollständige, geförderte Weiterbildung finanziert werden – ohne Eigenanteil, ohne Kreditaufnahme.</p>
+<p>Nach einer Recherche entschied Fatima sich für eine Online-Weiterbildung zur Online Marketing Managerin bei einem zugelassenen Anbieter. Die Wahl fiel auf einen Kurs, der genau die Skills abdeckte, die in den Stellenanzeigen gefragt waren: SEO, Google Ads, Social Media Marketing, Content Marketing, E-Mail Marketing und Analytics.</p>
 <p>Das Beste daran: Der Bildungsgutschein übernahm alle Kosten. Fatima musste keinen Cent selbst bezahlen.</p>
 
 <h2>Die Weiterbildung: 28 Wochen, vollständig online</h2>
@@ -1327,7 +1327,7 @@ export const POSTS: BlogPost[] = [
 
 <h2>Was dieser Weg zeigt</h2>
 <p>Fatimas Geschichte ist kein Einzelfall – sie zeigt ein Muster, das sich wiederholt: Menschen mit kaufmännischem oder kommunikativem Hintergrund haben oft genau die Eigenschaften, die im Online Marketing gefragt sind. Was fehlt, sind die digitalen Fachkenntnisse. Diese lassen sich in einer gezielten Weiterbildung in wenigen Monaten aufbauen – vollständig finanziert durch den Bildungsgutschein.</p>
-<p>Der entscheidende erste Schritt: Recherchiere AZAV-zertifizierte Weiterbildungsanbieter in deinem Bereich, hol dir den Bildungsgutschein – und fang an.</p>
+<p>Der entscheidende erste Schritt: Recherchiere geförderte Weiterbildungsanbieter in deinem Bereich, hol dir den Bildungsgutschein – und fang an.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und finde heraus, was für dich möglich ist.</p>
     `,

@@ -4,7 +4,7 @@ import CountUp from "@/components/ui/CountUp";
 const stats = [
   { value: 87, suffix: " %", label: "unserer Absolvent:innen finden nach der Weiterbildung einen neuen Job" },
   { value: 1500, suffix: "+", label: "Teilnehmende haben ihre Weiterbildung mit uns erfolgreich abgeschlossen" },
-  { value: 3, suffix: "", label: "Kursschwerpunkte, alle AZAV-zertifiziert und vollständig gefördert" },
+  { value: 3, suffix: "", label: "Kursschwerpunkte, alle vollständig über den Bildungsgutschein gefördert" },
   { value: 100, suffix: " %", label: "Kostenübernahme durch Bildungsgutschein oder AVGS, du zahlst nichts" },
 ];
 
