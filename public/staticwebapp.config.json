@@ -11,19 +11,11 @@
   },
   "routes": [
     {
-      "route": "/kurse/bueromanagement",
-      "redirect": "/kurse",
-      "statusCode": 301
+      "route": "/coming-soon.html"
     },
     {
-      "route": "/kurse/ecommerce",
-      "redirect": "/kurse",
-      "statusCode": 301
-    },
-    {
-      "route": "/kurse/gesundheitswesen",
-      "redirect": "/kurse",
-      "statusCode": 301
+      "route": "/*",
+      "rewrite": "/coming-soon.html"
     }
   ],
   "globalHeaders": {
