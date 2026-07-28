@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Datenschutzhinweise für Bewerber | HalloSkills",
   description: "Datenschutzhinweise für Bewerberinnen und Bewerber der HalloSkills GmbH",
-  robots: "noindex",
 };
 
 export default function DatenschutzBewerberPage() {
