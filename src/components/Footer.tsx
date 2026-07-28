@@ -44,7 +44,7 @@ export function Footer4() {
               className="mb-6 h-10 w-auto"
             />
             <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.7, maxWidth: 320 }}>
-              Geförderte Online-Weiterbildungen für einen Job mit Zukunftsperspektive.
+              Online-Weiterbildungen für einen Job mit Zukunftsperspektive.
               Mit Bildungsgutschein förderbar.
             </p>
           </div>
