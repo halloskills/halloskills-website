@@ -3,8 +3,8 @@ import FadeUp from "@/components/ui/FadeUp";
 const features = [
   {
     icon: "🎓",
-    title: "Vollständig gefördert",
-    desc: "Dank Bildungsgutschein zahlst du keinen einzigen Euro, weder für den Kurs noch für Materialien.",
+    title: "Bildungsgutschein möglich",
+    desc: "Viele unserer Kurse sind über den Bildungsgutschein der Agentur für Arbeit förderbar – sprich uns an.",
   },
   {
     icon: "🏅",

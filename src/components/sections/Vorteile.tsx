@@ -4,8 +4,8 @@ import Link from "next/link";
 const vorteile = [
   {
     icon: "💰",
-    title: "Komplett gefördert",
-    desc: "Dank Bildungsgutschein zahlst du keinen einzigen Euro. Wir übernehmen die Kommunikation mit der Agentur für Arbeit, kein Papierchaos für dich.",
+    title: "Förderung möglich",
+    desc: "Viele unserer Kurse können über den Bildungsgutschein gefördert werden. Wir beraten dich zu deinen Möglichkeiten.",
   },
   {
     icon: "👤",

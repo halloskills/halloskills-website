@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.halloskills.de"),
   title: "HalloSkills | Kostenlose Weiterbildung mit Bildungsgutschein",
   description:
-    "Geförderte Online-Weiterbildungen für Arbeitssuchende. Projektmanagement, Online Marketing, KI & Digitalisierung – 100% kostenlos mit Bildungsgutschein. Jetzt Beratung buchen.",
+    "Online-Weiterbildungen für Arbeitssuchende in Projektmanagement, Online Marketing und KI & Digitalisierung. Jetzt Beratung buchen.",
   keywords: [
     "Bildungsgutschein",
     "geförderte Weiterbildung",

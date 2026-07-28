@@ -7,7 +7,7 @@ const vorteile = [
   "Persönliche Lernbegleitung während des gesamten Kurses",
   "Bundesweit anerkannte Abschlüsse mit Zertifikat",
   "Lebenslanger Zugriff auf alle Kursinhalte",
-  "100% Kostenübernahme durch Bildungsgutschein",
+  "Förderung über Bildungsgutschein möglich",
 ];
 
 export function KurseVorteile() {

@@ -38,7 +38,7 @@ export function Header145() {
             }}
           >
             Dein digitaler Karrieresprung,{" "}
-            <em style={{ fontStyle: "italic" }}>100% kostenlos.</em>
+            <em style={{ fontStyle: "italic" }}>mit Bildungsgutschein.</em>
           </h1>
           <p
             className="mb-9 max-w-[460px] leading-[1.7]"

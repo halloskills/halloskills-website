@@ -42,7 +42,7 @@ export function KurseHeader() {
             className="mb-10 leading-[1.7]"
             style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", maxWidth: 480 }}
           >
-            Alle Weiterbildungen sind vollständig über den Bildungsgutschein finanzierbar.
+            Unsere Weiterbildungen können über den Bildungsgutschein gefördert werden.
           </p>
           <div className="flex flex-wrap gap-5">
             <Link

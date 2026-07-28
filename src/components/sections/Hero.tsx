@@ -24,7 +24,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-6"
             style={{ backgroundColor: "#99CDD1", color: "#004B76" }}
           >
-            <span>✓</span> 100% staatlich gefördert
+            <span>✓</span> Mit Bildungsgutschein förderbar
           </motion.div>
 
           {/* Headline */}
@@ -37,7 +37,7 @@ export default function Hero() {
           >
             Arbeitslos? Starte deine{" "}
             <span style={{ color: "#004B76" }}>geförderte Weiterbildung</span>{" "}
-            , 100% kostenlos.
+            – mit Bildungsgutschein förderbar.
           </motion.h1>
 
           {/* Subtext */}
@@ -83,7 +83,7 @@ export default function Hero() {
             className="flex flex-wrap gap-x-6 gap-y-3"
           >
             {[
-              "✓ Bildungsgutschein wird vollständig übernommen",
+              "✓ Bildungsgutschein als Förderung möglich",
               "✓ Staatlich anerkannter Bildungsträger",
               "✓ 100% online, flexibel von zuhause",
               "✓ Anerkanntes Zertifikat inklusive",

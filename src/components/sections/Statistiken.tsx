@@ -4,8 +4,7 @@ import CountUp from "@/components/ui/CountUp";
 const stats = [
   { value: 87, suffix: " %", label: "unserer Absolvent:innen finden nach der Weiterbildung einen neuen Job" },
   { value: 1500, suffix: "+", label: "Teilnehmende haben ihre Weiterbildung mit uns erfolgreich abgeschlossen" },
-  { value: 3, suffix: "", label: "Kursschwerpunkte, alle vollständig über den Bildungsgutschein gefördert" },
-  { value: 100, suffix: " %", label: "Kostenübernahme durch Bildungsgutschein oder AVGS, du zahlst nichts" },
+  { value: 3, suffix: "", label: "Kursschwerpunkte: Projektmanagement, Online Marketing, KI & Digitalisierung" },
 ];
 
 export default function Statistiken() {
@@ -23,7 +22,7 @@ export default function Statistiken() {
           </div>
         </FadeUp>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {stats.map((s, i) => (
             <FadeUp key={i} delay={i * 0.1}>
               <div className="text-center p-6">

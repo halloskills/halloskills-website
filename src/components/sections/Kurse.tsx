@@ -44,7 +44,7 @@ export default function Kurse() {
               Unsere Top-Weiterbildungen
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Drei Schwerpunkte. Alle vollständig gefördert.
+              Drei Schwerpunkte. Mit Bildungsgutschein förderbar.
             </p>
           </div>
         </FadeUp>

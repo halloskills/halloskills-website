@@ -7,7 +7,7 @@ import { BgsFaq } from "@/components/sections/bildungsgutschein/bgs-faq";
 export const metadata: Metadata = {
   title: "Bildungsgutschein 2025 – So bekommst du deine kostenlose Weiterbildung | HalloSkills",
   description:
-    "Alles über den Bildungsgutschein: Anspruch, Antrag, Ablauf. HalloSkills begleitet dich von der Beratung bis zur Genehmigung. 100% kostenlos.",
+    "Alles über den Bildungsgutschein: Anspruch, Antrag, Ablauf. HalloSkills begleitet dich von der Beratung bis zur Genehmigung.",
 };
 
 export default function BildungsgutscheinPage() {

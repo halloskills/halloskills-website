@@ -23,6 +23,7 @@ const vorteile = [
 ];
 
 export function Layout29() {
+  return null;
   return (
     <section className="py-24" style={{ background: "#f5f7f9" }}>
       <div className="mx-auto max-w-[1200px] px-6 md:px-12">

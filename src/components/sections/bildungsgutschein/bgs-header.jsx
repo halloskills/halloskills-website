@@ -35,15 +35,15 @@ export function BgsHeader() {
               lineHeight: 1.2,
             }}
           >
-            Deine Weiterbildung,{" "}
-            <em style={{ fontStyle: "italic" }}>100% kostenlos.</em>
+            Weiterbildung mit{" "}
+            <em style={{ fontStyle: "italic" }}>Bildungsgutschein.</em>
           </h1>
           <p
             className="mb-10 leading-[1.7]"
             style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", maxWidth: 480 }}
           >
-            Der Bildungsgutschein der Agentur für Arbeit übernimmt alle Kosten.
-            Wir erklären dir, wer Anspruch hat und wie du ihn bekommst.
+            Der Bildungsgutschein der Agentur für Arbeit kann Weiterbildungskosten übernehmen.
+            Wir erklären dir, wer Anspruch haben kann und wie du ihn beantragst.
           </p>
           <div className="flex flex-wrap gap-5">
             <Link
