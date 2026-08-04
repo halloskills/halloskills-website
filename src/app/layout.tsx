@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
-import { Navbar2 } from "@/components/Navbar";
-import { Footer4 } from "@/components/Footer";
+import { SiteChrome } from "@/components/SiteChrome";
 import { CookieBanner } from "@/components/CookieBanner";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+});
+
+// Rebrand 2026 — als CSS-Variable, damit nur der .hs-v2 Scope sie nutzt
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -47,11 +54,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="h-full scroll-smooth">
+    <html lang="de" className={`h-full scroll-smooth ${montserrat.variable}`}>
       <body className="min-h-full flex flex-col antialiased">
-        <Navbar2 />
-        <main className="flex-1">{children}</main>
-        <Footer4 />
+        <SiteChrome>{children}</SiteChrome>
         <CookieBanner />
       </body>
     </html>
