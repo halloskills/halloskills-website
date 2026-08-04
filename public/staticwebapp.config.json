@@ -14,6 +14,27 @@
       "route": "/coming-soon.html"
     },
     {
+      "route": "/startseite-neu"
+    },
+    {
+      "route": "/startseite-neu/*"
+    },
+    {
+      "route": "/_next/*"
+    },
+    {
+      "route": "/images/*"
+    },
+    {
+      "route": "/favicon.ico"
+    },
+    {
+      "route": "/icon.png"
+    },
+    {
+      "route": "/apple-icon.png"
+    },
+    {
       "route": "/*",
       "rewrite": "/coming-soon.html"
     }
