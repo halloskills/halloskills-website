@@ -46,7 +46,7 @@ export function Logo({
 const btnBase =
   "inline-flex items-center justify-center gap-2 rounded-full whitespace-nowrap text-[0.875rem] font-[600] transition-all duration-200 active:scale-[0.97]";
 
-export const btnPrimary = `${btnBase} bg-hs-navy px-7 py-3.5 text-white hover:bg-hs-blue shadow-hs-soft`;
+export const btnPrimary = `${btnBase} bg-hs-navy px-7 py-3.5 text-white hover:bg-hs-pink shadow-hs-soft`;
 
 export const btnWeiss = `${btnBase} bg-white px-7 py-3.5 text-hs-navy border border-hs-line hover:border-hs-violet hover:text-hs-violet shadow-hs-soft`;
 
