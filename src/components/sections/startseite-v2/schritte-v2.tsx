@@ -86,7 +86,7 @@ const schritte = [
 
 export function SchritteV2() {
   return (
-    <section className="bg-hs-soft px-6 py-20 md:px-10 lg:py-24">
+    <section className="px-6 py-20 md:px-10 lg:py-24">
       <div className="mx-auto max-w-[1200px]">
         {/* Kopf */}
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
