@@ -76,6 +76,31 @@
   --color-ebony-darker: #06090f;
   --color-ebony-darkest: #05070b;
 
+  /* ── Rebrand 2026 · Design System v1.0 ──
+     Parallel zum alten System. Alte Tokens (gold, regal-blue, Georgia)
+     bleiben aktiv, damit bestehende Seiten unverändert funktionieren.
+     Neue Komponenten nutzen ausschliesslich die hs-* Tokens. */
+  --color-hs-navy: #0e2841;
+  --color-hs-blue: #004b76;
+  --color-hs-pink: #ff2d7a;
+  --color-hs-violet: #7861ff;
+  --color-hs-lightblue: #e6f0fa;
+  --color-hs-soft: #f8fafc;
+  --color-hs-ink: #0f172a;
+  --color-hs-body: #334155;
+  --color-hs-muted: #64748b;
+  --color-hs-border: #cbd5e1;
+  --color-hs-line: #e2e8f0;
+
+  --radius-hs-card: 24px;
+  --radius-hs-input: 20px;
+  --radius-hs-image: 32px;
+  --radius-hs-hero: 48px;
+  --radius-hs-glass: 28px;
+
+  --shadow-hs-soft: 0 8px 30px rgba(14, 40, 65, 0.08);
+  --shadow-hs-float: 0 20px 60px rgba(14, 40, 65, 0.12);
+
   --font-weight-bold: 500;
 
   --text-h1: 2.75rem;
@@ -346,6 +371,118 @@
     border-radius: 0 0.375rem 0.375rem 0;
     font-style: italic;
     color: var(--color-regal-blue-dark);
+  }
+}
+
+/* ── Rebrand 2026 · Scope für Seiten im neuen Design ──
+   Hebt die globalen Base-Styles (Georgia-Headings, font-weight-bold: 500)
+   nur innerhalb dieses Scopes auf. Alles ausserhalb bleibt unberührt. */
+.hs-v2 {
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  color: var(--color-hs-body);
+}
+
+.hs-v2 h1,
+.hs-v2 h2,
+.hs-v2 h3,
+.hs-v2 h4,
+.hs-v2 h5,
+.hs-v2 h6 {
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-hs-navy);
+}
+
+/* font-bold ist global auf 500 gesetzt — im neuen Design echtes Bold. */
+.hs-v2 .font-bold {
+  font-weight: 700;
+}
+
+/* ── Sprachwelt „Hallo ___." — rotierendes Claim-Wort ──
+   Der Sizer steht im Textfluss und hält Breite plus Höhe, damit beim
+   Wortwechsel nichts springt. Die Wörter selbst liegen absolut darüber. */
+.hs-claim {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.hs-claim-sizer {
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.hs-claim-wort {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  opacity: 0;
+  background: linear-gradient(100deg, #7861ff 0%, #ff2d7a 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: hs-claim-rotate 14s infinite;
+}
+
+@keyframes hs-claim-rotate {
+  0% {
+    opacity: 0;
+    transform: translateY(0.26em);
+  }
+  3%,
+  17% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  20%,
+  100% {
+    opacity: 0;
+    transform: translateY(-0.26em);
+  }
+}
+
+.hs-v2 :where(a, button):focus-visible {
+  outline: 2px solid var(--color-hs-violet);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+/* Horizontales Kurs-Karussell: Scroll-Snap ohne sichtbare Scrollbar */
+@utility hs-snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@utility hs-snap-item {
+  scroll-snap-align: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hs-v2 *,
+  .hs-v2 *::before,
+  .hs-v2 *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Ohne diese Ausnahme würde die abgebrochene Animation alle Claim-Wörter
+     auf opacity: 0 zurücksetzen — der Hero wäre wortlos. Erstes Wort bleibt. */
+  .hs-v2 .hs-claim-wort {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .hs-v2 .hs-claim-wort[data-erstes="true"] {
+    opacity: 1 !important;
   }
 }
 

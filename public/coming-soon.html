@@ -4,58 +4,431 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>HalloSkills – Bald hier</title>
+  <title>HalloSkills – Weiterbildungen ab Herbst 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #004b76;
-      color: #fff;
-      min-height: 100vh;
+      font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+      background: #f5f7f9;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    /* ── NAVBAR ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 80px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      justify-content: space-between;
     }
-    .card {
-      text-align: center;
-      max-width: 480px;
-    }
-    .eyebrow {
-      font-size: 0.7rem;
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-cta {
+      display: inline-block;
+      background: #004b76;
+      border: 1.5px solid #004b76;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #003c5e; border-color: #003c5e; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-color: #004b76;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/images/bilder/hero.png');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.92;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    .hero-inner { max-width: 560px; }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #d4af37;
-      margin-bottom: 1.5rem;
+      margin-bottom: 20px;
     }
-    h1 {
+    .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 400;
-      font-size: clamp(2rem, 6vw, 3rem);
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
+      font-size: clamp(2.4rem, 5vw, 3.75rem);
+      line-height: 1.1;
+      letter-spacing: -0.08rem;
+      color: #fff;
+      margin-bottom: 20px;
     }
-    p {
+    .hero h1 em { font-style: italic; }
+    .hero-sub {
       font-size: 1rem;
       line-height: 1.7;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 2.5rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 36px;
+      max-width: 460px;
     }
-    .domain {
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 16px; }
+
+    .btn-primary {
+      display: inline-block;
+      background: #fff;
+      border: 1.5px solid #fff;
+      color: #111827;
+      font-family: inherit;
       font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      color: rgba(255,255,255,0.4);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-primary:hover { background: transparent; color: #fff; }
+
+    .btn-outline-white {
+      display: inline-block;
+      background: transparent;
+      border: 1.5px solid #fff;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline-white:hover { background: #fff; color: #111827; }
+
+    /* ── KURSE SECTION ── */
+    .kurse-section {
+      padding: 96px 48px;
+      background: #f5f7f9;
+    }
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-label {
+      display: block;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #d4af37;
+      margin-bottom: 20px;
+    }
+    .section-heading {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      color: #0f2744;
+      margin-bottom: 56px;
+    }
+
+    /* ── KURS CARDS ── */
+    .kurs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .kurs-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 12px;
+      text-decoration: none;
+      cursor: default;
+    }
+
+    .kurs-card img {
+      aspect-ratio: 3 / 4;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .kurs-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .kurs-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      padding: 20px;
+    }
+
+    .kurs-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #004b76;
+      margin-bottom: 8px;
+    }
+
+    .kurs-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #0f2744;
+      line-height: 1.3;
+    }
+
+    .kurs-details {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      margin-top: 0;
+      transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease;
+    }
+
+    .kurs-card:hover .kurs-details {
+      max-height: 200px;
+      opacity: 1;
+      margin-top: 16px;
+    }
+
+    .kurs-detail-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      border-top: 1px solid #e5e7eb;
+      padding: 8px 0;
+      font-size: 0.875rem;
+    }
+
+    .kurs-detail-label { color: #475467; }
+    .kurs-detail-value { color: #111827; }
+
+    /* ── JOBS SECTION ── */
+    .jobs-section {
+      padding: 96px 48px;
+      background: #111827;
+    }
+    .jobs-section .section-label { color: #d4af37; text-align: left; }
+    .jobs-section .section-heading {
+      text-align: left;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .jobs-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background: #fff;
+      border: 1.5px solid #fff;
+      color: #111827;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 36px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-white:hover { background: transparent; color: #fff; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111827;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 24px 48px;
+      text-align: center;
+    }
+    footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .kurs-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+    }
+    @media (max-width: 640px) {
+      .nav-inner, .hero-content, .kurse-section, .jobs-section, footer { padding-left: 20px; padding-right: 20px; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <p class="eyebrow">HalloSkills GmbH</p>
-    <h1>Bald hier: HalloSkills</h1>
-    <p>Wir bereiten etwas vor. Schau bald wieder vorbei.</p>
-    <span class="domain">halloskills.de</span>
-  </div>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="/images/logo-primary.svg" alt="HalloSkills" />
+      </a>
+      <a class="nav-cta" href="https://halloskills.jobs.personio.de" target="_blank" rel="noopener">
+        Jobs ansehen
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <span class="eyebrow">Online-Weiterbildungen · Ab Herbst 2026</span>
+        <h1>Dein nächster Schritt,<br><em>kaufmännisch. online.</em></h1>
+        <p class="hero-sub">
+          HalloSkills bietet praxisnahe Online-Weiterbildungen für kaufmännische Berufe — flexibel, kompakt und auf den Punkt.
+        </p>
+        <div class="hero-btns">
+          <a class="btn-primary" href="#weiterbildungen">Weiterbildungen entdecken</a>
+          <a class="btn-outline-white" href="https://halloskills.jobs.personio.de" target="_blank" rel="noopener">Jobs ansehen</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KURSE -->
+  <section class="kurse-section" id="weiterbildungen">
+    <div class="section-inner">
+      <span class="section-label">Unsere Online-Lehrgänge</span>
+      <h2 class="section-heading">Was dich bei HalloSkills erwartet</h2>
+
+      <div class="kurs-grid">
+
+        <div class="kurs-card">
+          <img src="/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png" alt="Kauffrau für Büromanagement" />
+          <div class="kurs-overlay">
+            <p class="kurs-tag">Büromanagement</p>
+            <h3 class="kurs-title">Kauffrau / Kaufmann für Büromanagement</h3>
+            <div class="kurs-details">
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Dauer</span>
+                <span class="kurs-detail-value">6 Monate</span>
+              </div>
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Format</span>
+                <span class="kurs-detail-value">100% online</span>
+              </div>
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Start</span>
+                <span class="kurs-detail-value">Ab Herbst 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kurs-card">
+          <img src="/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png" alt="Industriekaufmann" />
+          <div class="kurs-overlay">
+            <p class="kurs-tag">Industrie</p>
+            <h3 class="kurs-title">Industriekaufmann / Industriekauffrau</h3>
+            <div class="kurs-details">
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Dauer</span>
+                <span class="kurs-detail-value">6 Monate</span>
+              </div>
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Format</span>
+                <span class="kurs-detail-value">100% online</span>
+              </div>
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Start</span>
+                <span class="kurs-detail-value">Ab Herbst 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kurs-card">
+          <img src="/images/bilder/beraterin-orange-pullover-laptop.png" alt="Bankkauffrau" />
+          <div class="kurs-overlay">
+            <p class="kurs-tag">Bankwesen</p>
+            <h3 class="kurs-title">Bankkauffrau / Bankkaufmann</h3>
+            <div class="kurs-details">
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Dauer</span>
+                <span class="kurs-detail-value">6 Monate</span>
+              </div>
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Format</span>
+                <span class="kurs-detail-value">100% online</span>
+              </div>
+              <div class="kurs-detail-row">
+                <span class="kurs-detail-label">Start</span>
+                <span class="kurs-detail-value">Ab Herbst 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JOBS -->
+  <section class="jobs-section">
+    <div class="section-inner">
+      <span class="section-label">Wir wachsen</span>
+      <h2 class="section-heading">Werde Teil des Teams</h2>
+      <p class="jobs-sub">
+        HalloSkills baut etwas auf — und sucht Menschen, die Lust haben, dabei zu sein. Schau dir unsere offenen Stellen an.
+      </p>
+      <a class="btn-white" href="https://halloskills.jobs.personio.de" target="_blank" rel="noopener">
+        Offene Stellen ansehen
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 HalloSkills GmbH · halloskills.de</p>
+  </footer>
+
 </body>
 </html>
