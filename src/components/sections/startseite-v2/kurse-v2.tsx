@@ -6,17 +6,18 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { PfeilKnopf, btnPrimary } from "./hs-ui";
 
 /**
- * Die drei kaufmännischen Weiterbildungen, Start Herbst 2026.
+ * Die drei kaufmännischen Lehrgänge, Start Herbst 2026.
+ * Anzeigewort ist "Lehrgang" — die URL /kurse bleibt bewusst unverändert.
  *
  * TODO(rebrand): `href` zeigt noch auf die Kursübersicht — die Detailseiten
- * entstehen erst, wenn `src/lib/kurse-data.ts` auf die neuen Kurse umgestellt ist
- * (aktuell liegen dort noch Projektmanagement / Online-Marketing / KI).
+ * entstehen erst, wenn `src/lib/kurse-data.ts` auf die neuen Lehrgänge
+ * umgestellt ist (aktuell liegen dort noch Projektmanagement / Online-Marketing / KI).
  */
 const kurse = [
   {
     slug: "bueromanagement",
     titel: "Kauffrau / Kaufmann für Büromanagement",
-    meta: ["6 Monate", "100% online", "Zertifikat"],
+    meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
     href: "/kurse",
     trending: true,
@@ -24,7 +25,7 @@ const kurse = [
   {
     slug: "industriekaufmann",
     titel: "Industriekauffrau / Industriekaufmann",
-    meta: ["6 Monate", "100% online", "Zertifikat"],
+    meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
     href: "/kurse",
     trending: false,
@@ -32,7 +33,7 @@ const kurse = [
   {
     slug: "bankkaufmann",
     titel: "Bankkauffrau / Bankkaufmann",
-    meta: ["6 Monate", "100% online", "Zertifikat"],
+    meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
     href: "/kurse",
     trending: false,
@@ -140,21 +141,22 @@ export function KurseV2() {
         {/* ── Textspalte ── */}
         <div>
           <span className="inline-flex rounded-full bg-hs-lightblue px-4 py-1.5 text-[0.75rem] font-[600] text-hs-blue">
-            Unsere Weiterbildungen
+            Online-Umschulungsinhalte
           </span>
 
           <h2 className="mt-6 text-[clamp(1.75rem,4vw,2.6rem)] leading-[1.14]">
-            Finde den Kurs, der dich wirklich{" "}
+            Finde den Lehrgang, der dich wirklich{" "}
             <span className="text-hs-pink">weiterbringt.</span>
           </h2>
 
           <p className="mt-5 max-w-[380px] text-[1rem] leading-[1.65] text-hs-body">
-            Drei kaufmännische Weiterbildungen, jeweils sechs Monate, komplett online —
-            mit persönlicher Begleitung bis zum Abschluss.
+            Die Inhalte von drei klassischen Umschulungen — bei uns in jeweils sechs
+            statt 24 Monaten, komplett online und mit persönlicher Begleitung bis
+            zum Abschluss.
           </p>
 
           <Link href="/kurse" className={`${btnPrimary} mt-8`}>
-            Alle Kurse entdecken
+            Alle Lehrgänge entdecken
             <span aria-hidden="true">→</span>
           </Link>
 
@@ -164,7 +166,7 @@ export function KurseV2() {
               type="button"
               onClick={() => blaettern(-1)}
               disabled={!kannZurueck}
-              aria-label="Vorheriger Kurs"
+              aria-label="Vorheriger Lehrgang"
               className="flex size-11 items-center justify-center rounded-full border border-hs-line bg-white text-hs-navy shadow-hs-soft transition-all hover:border-hs-navy disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-hs-line"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -181,7 +183,7 @@ export function KurseV2() {
               type="button"
               onClick={() => blaettern(1)}
               disabled={!kannVor}
-              aria-label="Nächster Kurs"
+              aria-label="Nächster Lehrgang"
               className="flex size-11 items-center justify-center rounded-full border border-hs-line bg-white text-hs-navy shadow-hs-soft transition-all hover:border-hs-navy disabled:cursor-not-allowed disabled:opacity-35 disabled:hover:border-hs-line"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -202,7 +204,7 @@ export function KurseV2() {
           ref={scrollerRef}
           className="hs-snap-x -mx-6 flex gap-5 overflow-x-auto px-6 pb-2 lg:mx-0 lg:px-0"
           role="group"
-          aria-label="Kurse, horizontal scrollbar"
+          aria-label="Lehrgänge, horizontal scrollbar"
           tabIndex={0}
         >
           {kurse.map((kurs) => (

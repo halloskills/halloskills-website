@@ -17,8 +17,8 @@ const CLAIM_LAENGSTES = "Möglichkeiten.";
 const CLAIM_TAKT_SEKUNDEN = 2.8;
 
 const fakten = [
+  { titel: "6 Monate", text: "Statt 24 Monate" },
   { titel: "100% Online", text: "Lerne von überall" },
-  { titel: "6 Monate", text: "Kompakt & praxisnah" },
   { titel: "1:1 Betreuung", text: "Echte Expert:innen" },
 ];
 
@@ -125,7 +125,7 @@ export function HeroV2() {
                   fill="currentColor"
                 />
               </svg>
-              Praxisnah. Flexibel. Persönlich.
+              Online-Umschulungsinhalte · in 6 statt 24 Monaten
             </span>
 
             <h1 className="mt-7 text-[clamp(2.5rem,5.8vw,4rem)] leading-[1.06]">
@@ -150,8 +150,9 @@ export function HeroV2() {
             </h1>
 
             <p className="mt-6 max-w-[440px] text-[1.0625rem] leading-[1.65] text-hs-body">
-              Kaufmännische Online-Weiterbildungen, die dich wirklich weiterbringen —
-              in sechs Monaten zum anerkannten Abschluss. Start im Herbst 2026.
+              Die Inhalte einer klassischen Umschulung — bei uns in 6 statt 24 Monaten,
+              100% online und von zu Hause. Mit HalloSkills-Zertifikat. Start im
+              Herbst 2026.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3.5">
@@ -204,7 +205,7 @@ export function HeroV2() {
             >
               <Image
                 src="/images/bilder/managerin-schwarzer-pullover-imac.png"
-                alt="Teilnehmerin arbeitet am Rechner an ihrer Online-Weiterbildung"
+                alt="Teilnehmerin arbeitet am Rechner an ihrem Online-Lehrgang"
                 width={900}
                 height={1000}
                 preload

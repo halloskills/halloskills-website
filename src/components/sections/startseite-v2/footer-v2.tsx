@@ -4,9 +4,9 @@ import { Logo } from "./hs-ui";
 
 const spalten = [
   {
-    titel: "Weiterbildungen",
+    titel: "Lehrgänge",
     links: [
-      { label: "Alle Kurse", href: "/kurse" },
+      { label: "Alle Lehrgänge", href: "/kurse" },
       { label: "Büromanagement", href: "/kurse" },
       { label: "Industrie", href: "/kurse" },
       { label: "Bankwesen", href: "/kurse" },
@@ -67,8 +67,8 @@ export function FooterV2() {
               <Logo variante="hell" className="h-8" />
             </Link>
             <p className="mt-5 max-w-[300px] text-[0.875rem] leading-[1.7] text-white/70">
-              Kaufmännische Online-Weiterbildungen — praxisnah, flexibel und
-              persönlich begleitet. Start im Herbst 2026.
+              Online-Umschulungsinhalte in 6 statt 24 Monaten — praxisnah,
+              flexibel und persönlich begleitet. Start im Herbst 2026.
             </p>
           </div>
 

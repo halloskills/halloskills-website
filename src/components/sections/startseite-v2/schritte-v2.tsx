@@ -65,8 +65,8 @@ const schritte = [
     nr: "01",
     ikon: <IkonBuch />,
     ton: "bg-hs-pink/10 text-hs-pink",
-    titel: "Kurs wählen",
-    text: "Wähle die Weiterbildung, die zu deinen Zielen passt.",
+    titel: "Lehrgang wählen",
+    text: "Wähle den Lehrgang, der zu deinen Zielen passt.",
   },
   {
     nr: "02",
@@ -80,7 +80,7 @@ const schritte = [
     ikon: <IkonZertifikat />,
     ton: "bg-hs-lightblue text-hs-blue",
     titel: "Zertifikat erhalten",
-    text: "Erhalte einen anerkannten Abschluss und bringe deine Karriere voran.",
+    text: "Erhalte dein HalloSkills-Zertifikat und bringe deine Karriere voran.",
   },
 ];
 

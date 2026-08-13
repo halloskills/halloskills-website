@@ -24,7 +24,7 @@ const warumHalloskills = [
 type NavGruppe = { label: string; href: string; kinder?: { label: string; href: string }[] };
 
 const navGruppen: NavGruppe[] = [
-  { label: "Kurse", href: "/kurse", kinder: weiterbildungen },
+  { label: "Lehrgänge", href: "/kurse", kinder: weiterbildungen },
   { label: "Warum HalloSkills?", href: "/ueber-uns", kinder: warumHalloskills },
   { label: "Ratgeber", href: "/blog" },
 ];
@@ -160,7 +160,7 @@ export function NavV2() {
             href="/kurse"
             className="text-[0.875rem] font-[500] text-hs-body transition-colors hover:text-hs-navy"
           >
-            Kurse ansehen
+            Lehrgänge ansehen
           </Link>
           <Link href="/beratung-buchen" className={`${btnPrimary} px-6 py-3`}>
             Beratung sichern

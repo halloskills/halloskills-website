@@ -46,7 +46,7 @@ export function CtaV2() {
             </h2>
             <p className="mt-2.5 max-w-[520px] text-[0.9375rem] leading-[1.6] text-hs-body">
               Die Plätze für den Start im Herbst 2026 sind begrenzt. Im kostenlosen
-              Gespräch finden wir heraus, welche Weiterbildung zu dir passt.
+              Gespräch finden wir heraus, welcher Lehrgang zu dir passt.
             </p>
           </div>
         </div>

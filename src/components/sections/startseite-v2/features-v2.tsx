@@ -90,8 +90,8 @@ const features = [
   {
     ikon: <IkonSiegel />,
     ton: "bg-[#d9f2f4] text-[#217b83]",
-    titel: "Anerkannter Abschluss",
-    text: "Ein Zertifikat, das im Bewerbungsprozess zählt.",
+    titel: "HalloSkills-Zertifikat",
+    text: "Belegt deinen Lernerfolg und zählt im Bewerbungsprozess.",
     href: "/kurse",
   },
 ];
@@ -107,8 +107,12 @@ export function FeaturesV2() {
         }}
       >
         <h2 className="mx-auto max-w-[620px] text-center text-[clamp(1.6rem,3.6vw,2.35rem)] leading-[1.2] text-balance">
-          Weiterbildung, die zu deinem Leben passt.
+          Umschulungsinhalte, die zu deinem Leben passen.
         </h2>
+        <p className="mx-auto mt-4 max-w-[560px] text-center text-[0.9375rem] leading-[1.65] text-hs-body">
+          Kein zweijähriger Kraftakt, kein Pendeln zur Berufsschule — bei uns lernst
+          du die gleichen Inhalte online, kompakt und mit persönlicher Begleitung.
+        </p>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
