@@ -1,8 +1,8 @@
 import React from "react";
-import type { KursNeu } from "@/lib/kurse-neu-data";
+import type { Kurs } from "@/lib/kurse-data";
 import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
 
-export function KursModuleV2({ kurs }: { kurs: KursNeu }) {
+export function KursModuleV2({ kurs }: { kurs: Kurs }) {
   return (
     <section id="module" className="scroll-mt-28 px-6 pb-10 md:px-10">
       <div

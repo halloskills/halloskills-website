@@ -2,7 +2,7 @@
  * Inhalte der Beratungsseite im Design System v1.0.
  *
  * Die Formular-Auswahl "interesse" listet die drei aktuellen Lehrgänge
- * (siehe kurse-neu-data.ts) statt der alten Kurse (Projektmanagement,
+ * (siehe kurse-data.ts) statt der alten Kurse (Projektmanagement,
  * Online Marketing, KI & Digitalisierung) — Stand des Rebrands.
  */
 

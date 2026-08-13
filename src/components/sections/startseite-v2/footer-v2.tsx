@@ -7,16 +7,16 @@ const spalten = [
     titel: "Lehrgänge",
     links: [
       { label: "Alle Lehrgänge", href: "/kurse" },
-      { label: "Büromanagement", href: "/kurse-neu/bueromanagement" },
-      { label: "Industriewirtschaft", href: "/kurse-neu/industriekaufmann" },
-      { label: "Bankwesen", href: "/kurse-neu/bankkaufmann" },
+      { label: "Büromanagement", href: "/kurse/bueromanagement" },
+      { label: "Industriewirtschaft", href: "/kurse/industriekaufmann" },
+      { label: "Bankwesen", href: "/kurse/bankkaufmann" },
     ],
   },
   {
     titel: "Angebot",
     links: [
       { label: "Bildungsgutschein", href: "/bildungsgutschein" },
-      { label: "Beratung buchen", href: "/beratung-buchen-neu" },
+      { label: "Beratung buchen", href: "/beratung-buchen" },
       { label: "So funktioniert's", href: "/#so-funktioniert-es" },
     ],
   },

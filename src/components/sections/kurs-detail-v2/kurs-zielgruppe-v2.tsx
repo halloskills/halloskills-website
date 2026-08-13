@@ -1,5 +1,5 @@
 import React from "react";
-import type { KursNeu } from "@/lib/kurse-neu-data";
+import type { Kurs } from "@/lib/kurse-data";
 import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
 
 function CheckIkon() {
@@ -16,7 +16,7 @@ function CheckIkon() {
   );
 }
 
-export function KursZielgruppeV2({ kurs }: { kurs: KursNeu }) {
+export function KursZielgruppeV2({ kurs }: { kurs: Kurs }) {
   return (
     <section className="px-6 py-16 md:px-10 lg:py-20">
       <div className="mx-auto max-w-[720px] text-center">

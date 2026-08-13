@@ -78,7 +78,7 @@ const features = [
     ton: "bg-hs-pink/10 text-hs-pink",
     titel: "Persönliche Betreuung",
     text: "Echte Expert:innen begleiten dich auf deinem Weg.",
-    href: "/beratung-buchen-neu",
+    href: "/beratung-buchen",
   },
   {
     ikon: <IkonUhr />,

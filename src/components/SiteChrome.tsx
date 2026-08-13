@@ -9,7 +9,15 @@ import { Footer4 } from "@/components/Footer";
  * Für alle übrigen Routen bleibt das bestehende Chrome unverändert aktiv.
  * Sobald der Rebrand komplett ist, kann diese Umschaltung entfallen.
  */
-const EIGENES_CHROME = ["/startseite-neu", "/kurse-neu", "/beratung-buchen-neu"];
+const EIGENES_CHROME = [
+  "/startseite-neu",
+  "/kurse",
+  "/beratung-buchen",
+  "/impressum",
+  "/datenschutz",
+];
+// TODO: "/blog" ergänzen, sobald der Ratgeber im neuen Design steht
+// (Inhalte hängen an der offenen AZAV-Frage, siehe Chat).
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() ?? "/";

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import type { KursNeu } from "@/lib/kurse-neu-data";
+import type { Kurs } from "@/lib/kurse-data";
 import { btnPrimary, btnWeiss } from "@/components/sections/startseite-v2/hs-ui";
 
 const fakten = [
@@ -29,7 +29,7 @@ function CheckKreis() {
   );
 }
 
-export function KursHeroV2({ kurs }: { kurs: KursNeu }) {
+export function KursHeroV2({ kurs }: { kurs: Kurs }) {
   return (
     <section className="relative overflow-hidden">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
@@ -69,7 +69,7 @@ export function KursHeroV2({ kurs }: { kurs: KursNeu }) {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3.5">
-              <Link href="/beratung-buchen-neu" className={btnPrimary}>
+              <Link href="/beratung-buchen" className={btnPrimary}>
                 Beratung sichern
                 <span aria-hidden="true">→</span>
               </Link>

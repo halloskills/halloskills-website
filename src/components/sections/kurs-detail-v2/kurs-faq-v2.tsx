@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import type { KursNeu } from "@/lib/kurse-neu-data";
+import type { Kurs } from "@/lib/kurse-data";
 
 function Chevron({ offen }: { offen: boolean }) {
   return (
@@ -24,7 +24,7 @@ function Chevron({ offen }: { offen: boolean }) {
   );
 }
 
-export function KursFaqV2({ faq }: { faq: KursNeu["faq"] }) {
+export function KursFaqV2({ faq }: { faq: Kurs["faq"] }) {
   const [offen, setOffen] = useState(0);
 
   return (

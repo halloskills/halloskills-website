@@ -6,11 +6,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Logo, btnPrimary } from "./hs-ui";
 
 // Kurze Themen-Labels statt geschützter Berufsbezeichnung — konsistent mit
-// den Footer-Links und der Produktbenennung in kurse-neu-data.ts.
+// den Footer-Links und der Produktbenennung in kurse-data.ts.
 const weiterbildungen = [
-  { label: "Büromanagement", href: "/kurse-neu/bueromanagement" },
-  { label: "Industriewirtschaft", href: "/kurse-neu/industriekaufmann" },
-  { label: "Bankwesen", href: "/kurse-neu/bankkaufmann" },
+  { label: "Büromanagement", href: "/kurse/bueromanagement" },
+  { label: "Industriewirtschaft", href: "/kurse/industriekaufmann" },
+  { label: "Bankwesen", href: "/kurse/bankkaufmann" },
 ];
 
 const warumHalloskills = [
@@ -160,7 +160,7 @@ export function NavV2() {
           >
             Lehrgänge ansehen
           </Link>
-          <Link href="/beratung-buchen-neu" className={`${btnPrimary} px-6 py-3`}>
+          <Link href="/beratung-buchen" className={`${btnPrimary} px-6 py-3`}>
             Beratung sichern
             <span aria-hidden="true">→</span>
           </Link>
@@ -252,7 +252,7 @@ export function NavV2() {
               </div>
             ))}
             <Link
-              href="/beratung-buchen-neu"
+              href="/beratung-buchen"
               onClick={() => setMobilOffen(false)}
               className={`${btnPrimary} mt-2 w-full`}
             >

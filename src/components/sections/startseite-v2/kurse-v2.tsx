@@ -9,8 +9,8 @@ import { PfeilKnopf, btnPrimary } from "./hs-ui";
  * Die drei kaufmännischen Lehrgänge, Start Herbst 2026.
  * Anzeigewort ist "Lehrgang" — die URL /kurse bleibt bewusst unverändert.
  *
- * `href` zeigt auf die neuen Detailseiten unter /kurse-neu/<slug>
- * (src/app/kurse-neu/[slug]/page.tsx, Inhalte in kurse-neu-data.ts).
+ * `href` zeigt auf die neuen Detailseiten unter /kurse/<slug>
+ * (src/app/kurse/[slug]/page.tsx, Inhalte in kurse-data.ts).
  * Das bestehende /kurse/[slug] (kurse-data.ts, altes Design) ist davon
  * unberührt.
  */
@@ -18,11 +18,11 @@ const kurse = [
   {
     slug: "bueromanagement",
     // Themen-Substantiv statt geschützter Berufsbezeichnung als Produktname
-    // — konsistent mit src/lib/kurse-neu-data.ts, siehe Kommentar dort.
+    // — konsistent mit src/lib/kurse-data.ts, siehe Kommentar dort.
     titel: "Lehrgang Büromanagement",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
-    href: "/kurse-neu/bueromanagement",
+    href: "/kurse/bueromanagement",
     trending: true,
   },
   {
@@ -30,7 +30,7 @@ const kurse = [
     titel: "Lehrgang Industriewirtschaft",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
-    href: "/kurse-neu/industriekaufmann",
+    href: "/kurse/industriekaufmann",
     trending: false,
   },
   {
@@ -38,7 +38,7 @@ const kurse = [
     titel: "Lehrgang Bankwesen",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
-    href: "/kurse-neu/bankkaufmann",
+    href: "/kurse/bankkaufmann",
     trending: false,
   },
 ];

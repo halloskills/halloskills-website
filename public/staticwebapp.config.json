@@ -26,13 +26,28 @@
       "route": "/startseite-neu/*"
     },
     {
-      "route": "/kurse-neu/*"
+      "route": "/kurse"
     },
     {
-      "route": "/beratung-buchen-neu"
+      "route": "/kurse/*"
     },
     {
-      "route": "/beratung-buchen-neu/*"
+      "route": "/beratung-buchen"
+    },
+    {
+      "route": "/beratung-buchen/*"
+    },
+    {
+      "route": "/impressum"
+    },
+    {
+      "route": "/impressum/*"
+    },
+    {
+      "route": "/datenschutz"
+    },
+    {
+      "route": "/datenschutz/*"
     },
     {
       "route": "/_next/*"

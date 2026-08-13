@@ -156,7 +156,7 @@ export function HeroV2() {
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3.5">
-              <Link href="/beratung-buchen-neu" className={btnPrimary}>
+              <Link href="/beratung-buchen" className={btnPrimary}>
                 Beratung sichern
                 <span aria-hidden="true">→</span>
               </Link>

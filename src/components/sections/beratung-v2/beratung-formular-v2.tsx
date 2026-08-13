@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { LEHRGANG_OPTIONEN } from "@/lib/beratung-neu-data";
+import { LEHRGANG_OPTIONEN } from "@/lib/beratung-data";
 
 /**
  * Formspree-Endpoint und Feldnamen unverändert aus der bestehenden

@@ -1,48 +1,38 @@
 import type { Metadata } from "next";
+import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
+import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
+import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 
 export const metadata: Metadata = {
   title: "Impressum | HalloSkills",
   description: "Impressum der HalloSkills GmbH",
+  robots: { index: false, follow: false },
 };
 
 export default function ImpressumPage() {
   return (
-    <>
-      <section
-        className="relative flex min-h-[30vh] items-center overflow-hidden"
-        style={{ backgroundColor: "#004B76" }}
-      >
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-16 md:px-12 md:py-20">
-          <span
-            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-            style={{ color: "#D4AF37" }}
-          >
-            Rechtliches
-          </span>
-          <h1
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
-              color: "#ffffff",
-              lineHeight: 1.2,
-            }}
-          >
-            Impressum
-          </h1>
+    <div className="hs-v2 bg-white">
+      <NavV2 />
+
+      <section className="px-6 pb-6 pt-14 md:px-10 lg:pt-20">
+        <div className="mx-auto max-w-[760px]">
+          <Eyebrow ton="blau">Rechtliches</Eyebrow>
+          <h1 className="mt-6 text-[clamp(2rem,4vw,2.75rem)] leading-[1.15]">Impressum</h1>
         </div>
       </section>
 
-      <section className="py-20" style={{ background: "#ffffff" }}>
-        <div className="mx-auto max-w-[760px] px-6 md:px-12">
-          <div className="legal-content">
+      <section className="px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-[760px]">
+          <div className="hs-legal">
             <h2>HalloSkills GmbH</h2>
             <p>
-              Cremon 11<br />
+              Cremon 11
+              <br />
               20457 Hamburg
             </p>
             <p>
-              Handelsregister: HRB 198168<br />
+              Handelsregister: HRB 198168
+              <br />
               Registergericht: Hamburg
             </p>
 
@@ -60,12 +50,12 @@ export default function ImpressumPage() {
               vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
 
-            <p style={{ color: "#9ca3af", fontSize: "0.85rem", marginTop: "3rem" }}>
-              Quelle: e-recht24.de
-            </p>
+            <p className="mt-12 text-[0.85rem] text-hs-muted">Quelle: e-recht24.de</p>
           </div>
         </div>
       </section>
-    </>
+
+      <FooterV2 />
+    </div>
   );
 }

@@ -1,161 +1,268 @@
+/**
+ * Inhalte der drei Lehrgänge im Design System v1.0.
+ *
+ * Die Module sind eine eigene, sinngemäße Zusammenfassung der Positionen aus
+ * den amtlichen Ausbildungsrahmenplänen (Anlage der jeweiligen Ausbildungs-
+ * verordnung) — keine wörtliche Wiedergabe. Quellen (Stand August 2026):
+ *
+ *  - Büromanagement: BüroMKfAusbV 2025 (Neufassung Februar 2025)
+ *    https://www.gesetze-im-internet.de/b_romkfausbv_2025/
+ *  - Industriekaufmann/-frau: IndKflAusbV 2024
+ *    https://www.gesetze-im-internet.de/indkflausbv/
+ *  - Bankkaufmann/-frau: BankkflAusbV 2020
+ *    https://www.gesetze-im-internet.de/bankkflausbv/
+ *
+ * Bewusst keine Aussage wie "identisch mit dem Rahmenplan" oder "staatlich
+ * anerkannt" — der Abschluss ist ein HalloSkills-Zertifikat, keine IHK-
+ * Prüfung. Siehe Memory rebrand-content-constraints und die Vergleichs-
+ * Sektion (vergleich-v2.tsx) auf der Startseite.
+ *
+ * NAMENSGEBUNG: `titel` verwendet bewusst NICHT die geschützten
+ * Ausbildungsberufsbezeichnungen ("Kauffrau/Kaufmann für Büromanagement",
+ * "Industriekauffrau/-mann", "Bankkauffrau/-mann") als eigenen Produktnamen,
+ * sondern ein Themen-Substantiv ("Lehrgang Büromanagement" / "Lehrgang
+ * Industriewirtschaft" / "Lehrgang Bankwesen") — analog zum Fernlehrinstitut
+ * ILS, das ebenfalls "Fernstudium Büromanagement" statt der Berufsbe-
+ * zeichnung als Produktnamen führt. Die echten Berufsbezeichnungen bleiben
+ * im Fließtext erlaubt (Subline, fuerWen, FAQ), wo sie beschreibend und
+ * vergleichend verwendet werden, nicht als Eigenname.
+ * Trotzdem vor dem öffentlichen Launch juristisch prüfen lassen — diese
+ * Einschätzung ist keine Rechtsberatung.
+ */
+
+export type KursModul = {
+  titel: string;
+  text: string;
+};
+
 export type Kurs = {
   slug: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  dauer: string;
-  inhalte: string[];
-  vorteile: string[];
-  faq: { q: string; a: string }[];
-  testimonial: { text: string; author: string; role: string };
+  kategorie: string;
+  titel: string;
+  eyebrow: string;
+  subline: string;
+  bild: string;
+  bildAlt: string;
+  fuerWen: string[];
+  module: KursModul[];
+  faq: { frage: string; antwort: string }[];
   metaTitle: string;
   metaDescription: string;
-  img?: string;
-  stepsImg?: string;
 };
 
-export const KURSE: Record<string, Kurs> = {
-  projektmanagement: {
-    slug: "projektmanagement",
-    title: "Projektmanager/-in",
-    subtitle: "Projektmanagement",
-    description:
-      "Von der digitalen Grundlage bis zum agilen Profi: Du lernst klassisches und agiles Projektmanagement, Microsoft Office und moderne PM-Tools. Inklusive Scrum-Zertifizierung (PSM I & II).",
-    dauer: "28 Wochen",
-    inhalte: [
-      "Digitalisierung: Computer- und Internetgrundlagen, Automatisierung & KI-Einführung",
-      "Microsoft Office: Word, Excel, Outlook, PowerPoint (Basis & Aufbau)",
-      "Klassisches Projektmanagement: Initiierung, Planung, Steuerung & Abschluss",
-      "Agiles Projektmanagement: Scrum, Kanban, agile Führung & Qualitätsmanagement",
-      "Vorbereitung auf die offizielle Scrum-Zertifizierung (PSM I & II)",
-      "Bonus: KI-Kurs für alle geförderten Teilnehmenden inklusive",
+export const KURSE: Kurs[] = [
+  {
+    slug: "bueromanagement",
+    kategorie: "Büromanagement",
+    // Produktname bewusst ohne geschützte Ausbildungsberufsbezeichnung —
+    // siehe OFFENE FRAGE oben. Themen-Substantiv statt Berufstitel, wie bei
+    // ILS ("Fernstudium Büromanagement" statt "Kaufmann für Büromanagement").
+    titel: "Lehrgang Büromanagement",
+    eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
+    subline:
+      "Die zentralen Themen der IHK-Ausbildung zum Büromanagement — kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Zertifikat.",
+    bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
+    bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Büromanagement",
+    fuerWen: [
+      "Du willst im Büro, in der Verwaltung oder im Sekretariat arbeiten.",
+      "Du organisierst gerne, behältst den Überblick und kommunizierst klar.",
+      "Du möchtest ohne Berufsschule und ohne Pendeln zum Ausbildungsbetrieb lernen.",
     ],
-    vorteile: [
-      "100% online",
-      "Persönlicher Lernbegleiter während der gesamten Weiterbildung",
-      "Anerkanntes Abschlusszertifikat",
-      "Inklusive Scrum PSM I & II Prüfungsvorbereitung",
-      "Lebenslanger Zugriff auf alle Kursmaterialien mit Updates",
+    module: [
+      {
+        titel: "Informationsmanagement & digitale Werkzeuge",
+        text: "Kommunikationssysteme, Textverarbeitung, Präsentationen und Dokumentenmanagement sicher im Büroalltag einsetzen.",
+      },
+      {
+        titel: "Bürowirtschaftliche Abläufe",
+        text: "Büromaterial, Postbearbeitung und Dokumentenverwaltung organisieren.",
+      },
+      {
+        titel: "Koordination & Terminmanagement",
+        text: "Termine planen, Sitzungen vorbereiten und bei Projekten mitarbeiten.",
+      },
+      {
+        titel: "Kundenbeziehungen & Auftragsbearbeitung",
+        text: "Kundenanfragen, Auftragsabwicklung und Reklamationen kundenorientiert bearbeiten.",
+      },
+      {
+        titel: "Beschaffung",
+        text: "Bedarf ermitteln, Bezugsquellen vergleichen und Bestellungen auslösen.",
+      },
+      {
+        titel: "Personalbezogene Aufgaben",
+        text: "Einsatzplanung, Reisekostenabrechnung und Personalstatistiken führen.",
+      },
+      {
+        titel: "Kaufmännische Steuerung",
+        text: "Grundlagen aus Rechnungswesen, Investitionsrechnung und Kostenstrukturen.",
+      },
+      {
+        titel: "Vertiefung nach Wahl",
+        text: "Wie in der klassischen Ausbildung wählbar: Vertiefung in einem Schwerpunkt, etwa Assistenz, Einkauf oder Personalwirtschaft.",
+      },
     ],
     faq: [
       {
-        q: "Brauche ich Vorkenntnisse im Projektmanagement?",
-        a: "Nein. Der Kurs startet mit den digitalen Grundlagen und baut systematisch auf. Er ist sowohl für Einsteiger als auch für Berufserfahrene geeignet.",
+        frage: "Ist das eine offizielle IHK-Ausbildung?",
+        antwort:
+          "Nein. Du lernst die zentralen Themen der klassischen IHK-Ausbildung zum Büromanagement, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung.",
       },
       {
-        q: "Welches Zertifikat bekomme ich?",
-        a: "Du erhältst ein anerkanntes Abschlusszertifikat. Zusätzlich bereitest du dich auf die offizielle Scrum-Zertifizierung PSM I & II vor.",
+        frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
+        antwort:
+          "Das prüfen wir gemeinsam im kostenlosen Beratungsgespräch — je nach deiner persönlichen Situation.",
       },
       {
-        q: "Kann ich den Kurs neben einem Job machen?",
-        a: "Der Kurs ist als Vollzeit-Weiterbildung konzipiert (28 Wochen). Für eine Förderung durch den Bildungsgutschein ist in der Regel Vollzeit vorgesehen. Im Beratungsgespräch klären wir deine individuelle Situation.",
+        frage: "Brauche ich Vorkenntnisse?",
+        antwort:
+          "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
     ],
-    testimonial: {
-      text: "Dieser Kurs hat meinen Lebenslauf komplett verändert. Die Inhalte sind aktuell, praxisnah und direkt anwendbar.",
-      author: "Thomas R.",
-      role: "jetzt Projektmanager bei einem Berliner Start-up",
-    },
-    metaTitle: "Projektmanager/-in Weiterbildung – mit Bildungsgutschein förderbar | HalloSkills",
+    metaTitle: "Lehrgang Büromanagement — online in 6 Monaten | HalloSkills",
     metaDescription:
-      "Projektmanagement-Weiterbildung, 28 Wochen, mit Bildungsgutschein förderbar. Klassisches & agiles PM, Scrum PSM I & II. Jetzt Beratung buchen.",
-    img: "/images/bilder/projektmanagerin-whiteboard-postits.png",
-    stepsImg: "/images/bilder/projektmanagerin-laptop-gantt.png",
+      "Die Inhalte der IHK-Ausbildung zum Büromanagement — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
   },
-  "online-marketing": {
-    slug: "online-marketing",
-    title: "Online-Marketing Manager/-in",
-    subtitle: "Online Marketing",
-    description:
-      "Von der Marketingstrategie bis zur Social-Media-Kampagne: Du lernst SEO, SEA, Content, E-Mail-Marketing, Analytics und KI-Tools. Mit Google-Zertifizierung und persönlichem Lernbegleiter.",
-    dauer: "36 Wochen",
-    inhalte: [
-      "Strategisches Marketingmanagement: Ziele, Methoden & Marketing-Mix",
-      "Online Marketing: SEO, SEA, E-Mail, Affiliate & Analytics",
-      "Social Media Management: Strategie, Community, Content & Werbung",
-      "Suchmaschinenmarketing: Keyword-Optimierung, Google Ads & Performance-Messung",
-      "Digitale Medien: Content-Strategie, Video-Produktion & rechtliche Grundlagen",
-      "Projektmanagement & Kommunikation: Projektgrundlagen & Präsentation",
-      "Premium-KI-Modul inklusive",
+  {
+    slug: "industriekaufmann",
+    kategorie: "Industrie",
+    titel: "Lehrgang Industriewirtschaft",
+    eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
+    subline:
+      "Die zentralen Themen der IHK-Ausbildung zum Industriekaufmann — kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Zertifikat.",
+    bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
+    bildAlt: "Teilnehmer arbeitet an seinem Online-Lehrgang zum Industriekaufmann",
+    fuerWen: [
+      "Du willst in Einkauf, Produktion, Vertrieb oder Controlling eines Industriebetriebs arbeiten.",
+      "Du denkst gerne in Zahlen und Prozessen und behältst Lieferketten im Blick.",
+      "Du möchtest ohne Berufsschule und ohne Pendeln zum Ausbildungsbetrieb lernen.",
     ],
-    vorteile: [
-      "100% online",
-      "Persönlicher Lernbegleiter während der gesamten Weiterbildung",
-      "Anerkanntes Abschlusszertifikat",
-      "Vorbereitung auf Google Ads Zertifizierung",
-      "Lebenslanger Zugriff auf alle Kursmaterialien mit Updates",
+    module: [
+      {
+        titel: "Leistungserstellung planen & koordinieren",
+        text: "Prozesse der Wertschöpfungskette verstehen und die Leistungserstellung dokumentieren.",
+      },
+      {
+        titel: "Logistik & Lagerprozesse",
+        text: "Logistikketten, Lagerkonzepte und Transportmittel planen und bewerten.",
+      },
+      {
+        titel: "Beschaffung planen & steuern",
+        text: "Bedarfsermittlung, Lieferantenmanagement und Bestellverwaltung.",
+      },
+      {
+        titel: "Marketingmaßnahmen",
+        text: "Marktanalyse, Marketing-Mix und die Kontrolle der Wirksamkeit von Maßnahmen.",
+      },
+      {
+        titel: "Vertriebsprozesse",
+        text: "Auftragserfassung und Terminkoordination mit internen und externen Stellen.",
+      },
+      {
+        titel: "Personalprozesse",
+        text: "Personalbedarf ermitteln, Rekrutierung begleiten und Entgeltabrechnung verstehen.",
+      },
+      {
+        titel: "Kaufmännische Steuerung & Controlling",
+        text: "Buchführung, Kosten-Leistungsrechnung, Controlling und Finanzierung.",
+      },
+      {
+        titel: "Vertiefung im Einsatzgebiet",
+        text: "Wie in der klassischen Ausbildung wählbar: Vertiefung z. B. in Vertrieb, Beschaffung, Logistik oder Personalwirtschaft.",
+      },
     ],
     faq: [
       {
-        q: "Brauche ich Marketing-Vorkenntnisse?",
-        a: "Nein. Der Kurs startet bei den Grundlagen und baut systematisch auf. Auch Quereinsteiger starten erfolgreich.",
+        frage: "Ist das eine offizielle IHK-Ausbildung?",
+        antwort:
+          "Nein. Du lernst die zentralen Themen der klassischen IHK-Ausbildung zum Industriekaufmann, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung.",
       },
       {
-        q: "Welches Zertifikat bekomme ich?",
-        a: "Du erhältst ein anerkanntes Abschlusszertifikat sowie eine Vorbereitung auf die Google Ads Zertifizierung.",
+        frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
+        antwort:
+          "Das prüfen wir gemeinsam im kostenlosen Beratungsgespräch — je nach deiner persönlichen Situation.",
       },
       {
-        q: "Sind die Inhalte aktuell?",
-        a: "Ja. Die Inhalte werden regelmäßig aktualisiert, besonders in den Bereichen KI, Social Media und Performance Marketing.",
+        frage: "Brauche ich Vorkenntnisse?",
+        antwort:
+          "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
     ],
-    testimonial: {
-      text: "Die Beratung hat mich sofort überzeugt. Kein Standard-Pitch, echte, individuelle Beratung.",
-      author: "Fatima K.",
-      role: "Online Marketing Managerin",
-    },
-    metaTitle: "Online-Marketing Manager/-in Weiterbildung – mit Bildungsgutschein förderbar | HalloSkills",
+    metaTitle: "Lehrgang Industriewirtschaft — online in 6 Monaten | HalloSkills",
     metaDescription:
-      "Online Marketing Weiterbildung, 36 Wochen, mit Bildungsgutschein förderbar. SEO, Social Media, Google Ads, KI-Tools. Jetzt Beratung buchen.",
-    img: "/images/bilder/managerin-schwarzer-pullover-imac.png",
-    stepsImg: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
+      "Die Inhalte der IHK-Ausbildung zum Industriekaufmann — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
   },
-  "ki-digitalisierung": {
-    slug: "ki-digitalisierung",
-    title: "KI-Manager/-in",
-    subtitle: "KI & Digitalisierung",
-    description:
-      "Lerne, wie du KI strategisch in Unternehmen einsetzt: von der KI-Strategie über Daten-Governance bis hin zu Change Management und Implementierung. Kompakt und praxisorientiert.",
-    dauer: "4 Wochen",
-    inhalte: [
-      "KI-Strategie & Business Value: Prioritätsrahmen, generative KI-Anwendungsfälle & Stakeholder-Kommunikation",
-      "KI-Architektur & Integration: Systemarchitekturen, ERP/CRM-Integration, Copilot vs. Agent",
-      "Daten-Governance & DSGVO: Dateninfrastruktur, RAG-Architektur & KI-Act-Risikoklassifizierung",
-      "KI-Implementierung & Change Management: Einführungsstrategien, KPI-Messung & Skalierung",
-      "Bonus: Umfassender KI-Grundlagenkurs inklusive",
+  {
+    slug: "bankkaufmann",
+    kategorie: "Bankwesen",
+    titel: "Lehrgang Bankwesen",
+    eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
+    subline:
+      "Die zentralen Themen der IHK-Ausbildung zum Bankkaufmann — kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Zertifikat.",
+    bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
+    bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Bankwesen",
+    fuerWen: [
+      "Du willst Kund:innen bei Bank- und Finanzthemen beraten.",
+      "Du gehst gerne sorgfältig mit Zahlen, Verträgen und Verantwortung um.",
+      "Du möchtest ohne Berufsschule und ohne Pendeln zum Ausbildungsbetrieb lernen.",
     ],
-    vorteile: [
-      "Kein technisches Vorwissen nötig",
-      "100% online",
-      "Anerkanntes Abschlusszertifikat",
-      "Lebenslanger Zugriff auf alle Kursmaterialien mit Updates",
-      "Persönlicher Lernbegleiter inklusive",
+    module: [
+      {
+        titel: "Serviceleistungen & Kundenkommunikation",
+        text: "Kundenorientiert kommunizieren, Reklamationen bearbeiten, Datenschutz beachten.",
+      },
+      {
+        titel: "Kunden beraten & Kundenbeziehungen aufbauen",
+        text: "Kundensituationen analysieren, passende Lösungen erarbeiten und neue Kund:innen gewinnen.",
+      },
+      {
+        titel: "Zahlungsverkehr & Kontoführung",
+        text: "Konten eröffnen und führen, Zahlungsverkehr im In- und Ausland abwickeln.",
+      },
+      {
+        titel: "Geldanlage: Sparformen & Wertpapiere",
+        text: "Anlagemöglichkeiten von klassischen Sparformen bis Aktien, Renten und Fonds erklären.",
+      },
+      {
+        titel: "Vorsorge & Absicherung",
+        text: "Soziale Sicherungssysteme und private Vorsorgeprodukte einordnen.",
+      },
+      {
+        titel: "Kredit- & Finanzierungsgeschäft",
+        text: "Konsumentenkredite, Kreditwürdigkeit und Sicherheiten bewerten.",
+      },
+      {
+        titel: "Baufinanzierung & gewerbliche Finanzierungen",
+        text: "Immobilienfinanzierung sowie Finanzierungsarten für Geschäftskund:innen verstehen.",
+      },
+      {
+        titel: "Kaufmännische Steuerung & Projektarbeit",
+        text: "Kosten-Leistungsrechnung anwenden und projektorientiert arbeiten.",
+      },
     ],
     faq: [
       {
-        q: "Brauche ich technische Vorkenntnisse?",
-        a: "Nein. Grundlegende PC-Kenntnisse reichen aus. Der Kurs richtet sich an alle, die KI strategisch verstehen und einsetzen wollen.",
+        frage: "Ist das eine offizielle IHK-Ausbildung?",
+        antwort:
+          "Nein. Du lernst die zentralen Themen der klassischen IHK-Ausbildung zum Bankkaufmann, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung.",
       },
       {
-        q: "Welches Zertifikat bekomme ich?",
-        a: "Du erhältst eine anerkannte Teilnahmebescheinigung für den KI-Manager-Kurs.",
+        frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
+        antwort:
+          "Das prüfen wir gemeinsam im kostenlosen Beratungsgespräch — je nach deiner persönlichen Situation.",
       },
       {
-        q: "Wie aktuell sind die KI-Inhalte?",
-        a: "Sehr aktuell. Die Inhalte werden laufend aktualisiert, da KI sich schnell weiterentwickelt. Du hast lebenslangen Zugriff auf alle Updates.",
+        frage: "Brauche ich Vorkenntnisse?",
+        antwort:
+          "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
     ],
-    testimonial: {
-      text: "100% gefördert und trotzdem Topqualität. Die Inhalte sind aktuell, praxisnah und sofort anwendbar.",
-      author: "Sandra L.",
-      role: "KI & Automatisierung",
-    },
-    metaTitle: "KI-Manager/-in Weiterbildung – mit Bildungsgutschein förderbar | HalloSkills",
+    metaTitle: "Lehrgang Bankwesen — online in 6 Monaten | HalloSkills",
     metaDescription:
-      "KI-Manager Weiterbildung, 4 Wochen, mit Bildungsgutschein förderbar. KI-Strategie, Daten-Governance, Change Management. Jetzt Beratung buchen.",
-    img: "/images/bilder/mann-airpods-khaki-dual-monitor.png",
-    stepsImg: "/images/bilder/online-marketing-managerin-gelbes-blazer.png",
+      "Die Inhalte der IHK-Ausbildung zum Bankkaufmann — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
   },
-};
+];
 
-export const KURSE_LIST = Object.values(KURSE);
+export function findeKurs(slug: string): Kurs | undefined {
+  return KURSE.find((k) => k.slug === slug);
+}
