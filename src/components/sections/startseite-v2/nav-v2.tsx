@@ -160,7 +160,7 @@ export function NavV2() {
           >
             Lehrgänge ansehen
           </Link>
-          <Link href="/beratung-buchen" className={`${btnPrimary} px-6 py-3`}>
+          <Link href="/beratung-buchen-neu" className={`${btnPrimary} px-6 py-3`}>
             Beratung sichern
             <span aria-hidden="true">→</span>
           </Link>
@@ -252,7 +252,7 @@ export function NavV2() {
               </div>
             ))}
             <Link
-              href="/beratung-buchen"
+              href="/beratung-buchen-neu"
               onClick={() => setMobilOffen(false)}
               className={`${btnPrimary} mt-2 w-full`}
             >

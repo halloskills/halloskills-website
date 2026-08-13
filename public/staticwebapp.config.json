@@ -29,6 +29,12 @@
       "route": "/kurse-neu/*"
     },
     {
+      "route": "/beratung-buchen-neu"
+    },
+    {
+      "route": "/beratung-buchen-neu/*"
+    },
+    {
       "route": "/_next/*"
     },
     {

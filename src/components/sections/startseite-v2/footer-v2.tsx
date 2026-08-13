@@ -16,7 +16,7 @@ const spalten = [
     titel: "Angebot",
     links: [
       { label: "Bildungsgutschein", href: "/bildungsgutschein" },
-      { label: "Beratung buchen", href: "/beratung-buchen" },
+      { label: "Beratung buchen", href: "/beratung-buchen-neu" },
       { label: "So funktioniert's", href: "/#so-funktioniert-es" },
     ],
   },

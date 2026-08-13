@@ -51,7 +51,7 @@ export function CtaV2() {
           </div>
         </div>
 
-        <Link href="/beratung-buchen" className={`${btnPrimary} relative shrink-0`}>
+        <Link href="/beratung-buchen-neu" className={`${btnPrimary} relative shrink-0`}>
           Beratung sichern
           <span aria-hidden="true">→</span>
         </Link>
