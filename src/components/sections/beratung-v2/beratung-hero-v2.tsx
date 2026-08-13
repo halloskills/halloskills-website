@@ -79,7 +79,8 @@ export function BeratungHeroV2() {
 
             <p className="mt-6 max-w-[460px] text-[1.0625rem] leading-[1.65] text-hs-body">
               In einem persönlichen Gespräch finden wir gemeinsam heraus, welcher Lehrgang
-              zu dir passt — und ob eine Förderung über den Bildungsgutschein möglich ist.
+              zu dir passt — und ob du grundsätzlich für einen Bildungsgutschein infrage
+              kommst.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3.5">

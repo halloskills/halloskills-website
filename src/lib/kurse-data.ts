@@ -111,7 +111,7 @@ export const KURSE: Kurs[] = [
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
         antwort:
-          "Das prüfen wir gemeinsam im kostenlosen Beratungsgespräch — je nach deiner persönlichen Situation.",
+          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob du grundsätzlich für einen Bildungsgutschein infrage kommst — die AZAV-geförderte Teilnahme an unseren Lehrgängen selbst ist erst nach Abschluss der Zertifizierung möglich.",
       },
       {
         frage: "Brauche ich Vorkenntnisse?",
@@ -180,7 +180,7 @@ export const KURSE: Kurs[] = [
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
         antwort:
-          "Das prüfen wir gemeinsam im kostenlosen Beratungsgespräch — je nach deiner persönlichen Situation.",
+          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob du grundsätzlich für einen Bildungsgutschein infrage kommst — die AZAV-geförderte Teilnahme an unseren Lehrgängen selbst ist erst nach Abschluss der Zertifizierung möglich.",
       },
       {
         frage: "Brauche ich Vorkenntnisse?",
@@ -249,7 +249,7 @@ export const KURSE: Kurs[] = [
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
         antwort:
-          "Das prüfen wir gemeinsam im kostenlosen Beratungsgespräch — je nach deiner persönlichen Situation.",
+          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob du grundsätzlich für einen Bildungsgutschein infrage kommst — die AZAV-geförderte Teilnahme an unseren Lehrgängen selbst ist erst nach Abschluss der Zertifizierung möglich.",
       },
       {
         frage: "Brauche ich Vorkenntnisse?",
