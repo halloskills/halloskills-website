@@ -26,6 +26,9 @@
       "route": "/startseite-neu/*"
     },
     {
+      "route": "/kurse-neu/*"
+    },
+    {
       "route": "/_next/*"
     },
     {
