@@ -13,17 +13,10 @@ const weiterbildungen = [
   { label: "Bankwesen", href: "/kurse/bankkaufmann" },
 ];
 
-const warumHalloskills = [
-  { label: "So funktioniert's", href: "/#so-funktioniert-es" },
-  { label: "Über uns", href: "/ueber-uns" },
-  { label: "Jobs bei HalloSkills", href: "/jobs" },
-];
-
 type NavGruppe = { label: string; href: string; kinder?: { label: string; href: string }[] };
 
 const navGruppen: NavGruppe[] = [
   { label: "Lehrgänge", href: "/kurse", kinder: weiterbildungen },
-  { label: "Warum HalloSkills?", href: "/ueber-uns", kinder: warumHalloskills },
   { label: "Ratgeber", href: "/blog" },
 ];
 
