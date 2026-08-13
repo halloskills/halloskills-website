@@ -5,14 +5,12 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { Logo, btnPrimary } from "./hs-ui";
 
-/**
- * TODO(rebrand): Sobald die neuen Kurs-Detailseiten existieren (siehe
- * `src/lib/kurse-data.ts`), hier auf /kurse/<slug> umstellen.
- */
+// Kurze Themen-Labels statt geschützter Berufsbezeichnung — konsistent mit
+// den Footer-Links und der Produktbenennung in kurse-neu-data.ts.
 const weiterbildungen = [
-  { label: "Kauffrau/-mann für Büromanagement", href: "/kurse" },
-  { label: "Industriekauffrau/-mann", href: "/kurse" },
-  { label: "Bankkauffrau/-mann", href: "/kurse" },
+  { label: "Büromanagement", href: "/kurse-neu/bueromanagement" },
+  { label: "Industriewirtschaft", href: "/kurse-neu/industriekaufmann" },
+  { label: "Bankwesen", href: "/kurse-neu/bankkaufmann" },
 ];
 
 const warumHalloskills = [

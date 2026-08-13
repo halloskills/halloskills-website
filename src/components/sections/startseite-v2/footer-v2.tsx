@@ -7,9 +7,9 @@ const spalten = [
     titel: "Lehrgänge",
     links: [
       { label: "Alle Lehrgänge", href: "/kurse" },
-      { label: "Büromanagement", href: "/kurse" },
-      { label: "Industrie", href: "/kurse" },
-      { label: "Bankwesen", href: "/kurse" },
+      { label: "Büromanagement", href: "/kurse-neu/bueromanagement" },
+      { label: "Industriewirtschaft", href: "/kurse-neu/industriekaufmann" },
+      { label: "Bankwesen", href: "/kurse-neu/bankkaufmann" },
     ],
   },
   {

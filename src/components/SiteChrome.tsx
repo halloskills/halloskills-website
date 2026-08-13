@@ -9,7 +9,7 @@ import { Footer4 } from "@/components/Footer";
  * Für alle übrigen Routen bleibt das bestehende Chrome unverändert aktiv.
  * Sobald der Rebrand komplett ist, kann diese Umschaltung entfallen.
  */
-const EIGENES_CHROME = ["/startseite-neu"];
+const EIGENES_CHROME = ["/startseite-neu", "/kurse-neu"];
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() ?? "/";

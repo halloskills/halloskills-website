@@ -9,33 +9,36 @@ import { PfeilKnopf, btnPrimary } from "./hs-ui";
  * Die drei kaufmännischen Lehrgänge, Start Herbst 2026.
  * Anzeigewort ist "Lehrgang" — die URL /kurse bleibt bewusst unverändert.
  *
- * TODO(rebrand): `href` zeigt noch auf die Kursübersicht — die Detailseiten
- * entstehen erst, wenn `src/lib/kurse-data.ts` auf die neuen Lehrgänge
- * umgestellt ist (aktuell liegen dort noch Projektmanagement / Online-Marketing / KI).
+ * `href` zeigt auf die neuen Detailseiten unter /kurse-neu/<slug>
+ * (src/app/kurse-neu/[slug]/page.tsx, Inhalte in kurse-neu-data.ts).
+ * Das bestehende /kurse/[slug] (kurse-data.ts, altes Design) ist davon
+ * unberührt.
  */
 const kurse = [
   {
     slug: "bueromanagement",
-    titel: "Kauffrau / Kaufmann für Büromanagement",
+    // Themen-Substantiv statt geschützter Berufsbezeichnung als Produktname
+    // — konsistent mit src/lib/kurse-neu-data.ts, siehe Kommentar dort.
+    titel: "Lehrgang Büromanagement",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
-    href: "/kurse",
+    href: "/kurse-neu/bueromanagement",
     trending: true,
   },
   {
     slug: "industriekaufmann",
-    titel: "Industriekauffrau / Industriekaufmann",
+    titel: "Lehrgang Industriewirtschaft",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
-    href: "/kurse",
+    href: "/kurse-neu/industriekaufmann",
     trending: false,
   },
   {
     slug: "bankkaufmann",
-    titel: "Bankkauffrau / Bankkaufmann",
+    titel: "Lehrgang Bankwesen",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
-    href: "/kurse",
+    href: "/kurse-neu/bankkaufmann",
     trending: false,
   },
 ];
