@@ -38,6 +38,12 @@
       "route": "/beratung-buchen/*"
     },
     {
+      "route": "/blog"
+    },
+    {
+      "route": "/blog/*"
+    },
+    {
       "route": "/impressum"
     },
     {

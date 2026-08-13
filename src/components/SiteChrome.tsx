@@ -13,11 +13,10 @@ const EIGENES_CHROME = [
   "/startseite-neu",
   "/kurse",
   "/beratung-buchen",
+  "/blog",
   "/impressum",
   "/datenschutz",
 ];
-// TODO: "/blog" ergänzen, sobald der Ratgeber im neuen Design steht
-// (Inhalte hängen an der offenen AZAV-Frage, siehe Chat).
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
   const pathname = usePathname() ?? "/";
