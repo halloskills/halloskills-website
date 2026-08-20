@@ -45,12 +45,12 @@ function CheckKreis() {
 function FortschrittsKarte() {
   return (
     <div className="w-[176px] rounded-hs-glass border border-white/80 bg-gradient-to-br from-white/70 to-white/40 p-4 shadow-hs-float backdrop-blur-2xl sm:w-[215px] sm:p-5 lg:w-[240px]">
-      <p className="text-[0.9rem] font-[600] leading-snug text-hs-navy">
-        Deine Lernplattform
+      <p className="text-[0.9rem] font-[700] leading-snug text-hs-navy">
+        Karriere-Boost
       </p>
       {/* hs-body statt hs-muted: die Karte liegt auf dem Foto, Grau hält
           den Kontrast dort nicht (gemessen 1,98:1 gegen 5,1:1). */}
-      <p className="mt-0.5 text-[0.7rem] font-[500] text-hs-body">Vorschau</p>
+      <p className="mt-0.5 text-[0.7rem] font-[400] text-hs-body">starten</p>
 
       <svg
         viewBox="0 0 200 64"
@@ -84,7 +84,7 @@ function FortschrittsKarte() {
       </svg>
 
       <div className="mt-3 flex items-baseline justify-between">
-        <span className="text-[0.72rem] font-[500] text-hs-body">Modul 4 von 6</span>
+        <span className="text-[0.72rem] font-[500] text-hs-body">Dein Fortschritt</span>
         <span className="text-[0.78rem] font-bold tabular-nums text-hs-navy">68%</span>
       </div>
       <div

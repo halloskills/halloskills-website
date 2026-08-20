@@ -121,7 +121,7 @@ export function NavV2() {
       <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-6 rounded-full border border-white/70 bg-gradient-to-b from-white/80 to-white/62 px-5 py-3 shadow-hs-soft backdrop-blur-2xl backdrop-saturate-150 md:px-6">
         {/* Logo */}
         <Link
-          href="/startseite-neu"
+          href="/"
           className="flex shrink-0 items-center"
           aria-label="HalloSkills Startseite"
         >

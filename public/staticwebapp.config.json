@@ -20,10 +20,7 @@
       "route": "/sitemap.xml"
     },
     {
-      "route": "/startseite-neu"
-    },
-    {
-      "route": "/startseite-neu/*"
+      "route": "/"
     },
     {
       "route": "/kurse"

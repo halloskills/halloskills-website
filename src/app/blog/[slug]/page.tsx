@@ -63,7 +63,7 @@ export default async function BlogPostSeite({
       <section className="px-6 pb-8 pt-10 md:px-10 lg:pt-14">
         <div className="mx-auto max-w-[760px]">
           <nav aria-label="Breadcrumb" className="mb-8 text-[0.8rem] text-hs-muted">
-            <Link href="/startseite-neu" className="hover:text-hs-navy">
+            <Link href="/" className="hover:text-hs-navy">
               Start
             </Link>
             <span className="mx-2">/</span>

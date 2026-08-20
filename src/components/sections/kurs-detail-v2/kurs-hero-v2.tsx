@@ -41,7 +41,7 @@ export function KursHeroV2({ kurs }: { kurs: Kurs }) {
       <div className="mx-auto max-w-[1200px] px-6 pb-16 pt-10 md:px-10 lg:pb-20 lg:pt-14">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-8 text-[0.8rem] text-hs-muted">
-          <Link href="/startseite-neu" className="hover:text-hs-navy">
+          <Link href="/" className="hover:text-hs-navy">
             Start
           </Link>
           <span className="mx-2">/</span>

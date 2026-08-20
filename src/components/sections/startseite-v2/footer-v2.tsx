@@ -60,7 +60,7 @@ export function FooterV2() {
           {/* Marke */}
           <div>
             <Link
-              href="/startseite-neu"
+              href="/"
               className="inline-flex items-center"
               aria-label="HalloSkills Startseite"
             >

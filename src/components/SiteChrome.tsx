@@ -10,7 +10,7 @@ import { Footer4 } from "@/components/Footer";
  * Sobald der Rebrand komplett ist, kann diese Umschaltung entfallen.
  */
 const EIGENES_CHROME = [
-  "/startseite-neu",
+  "/",
   "/kurse",
   "/beratung-buchen",
   "/blog",
