@@ -161,14 +161,6 @@ export function HeroV2() {
                 <span aria-hidden="true">→</span>
               </Link>
               <Link href="#so-funktioniert-es" className={btnWeiss}>
-                <span
-                  aria-hidden="true"
-                  className="inline-flex size-6 items-center justify-center rounded-full bg-hs-lightblue text-hs-blue"
-                >
-                  <svg width="9" height="9" viewBox="0 0 10 10" fill="currentColor">
-                    <path d="M2 1l6 4-6 4V1Z" />
-                  </svg>
-                </span>
                 So funktioniert&apos;s
               </Link>
             </div>

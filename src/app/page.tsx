@@ -26,11 +26,11 @@ export default function Startseite() {
     <div className="hs-v2 bg-white">
       <NavV2 />
       <HeroV2 />
+      <VergleichV2 />
       <FeaturesV2 />
       <KurseV2 />
-      <VergleichV2 />
-      <CtaV2 />
       <SchritteV2 />
+      <CtaV2 />
       <JobsV2 />
       <FooterV2 />
     </div>
