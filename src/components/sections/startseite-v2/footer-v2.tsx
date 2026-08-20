@@ -14,26 +14,17 @@ const spalten = [
   },
   {
     titel: "Angebot",
-    links: [
-      { label: "Bildungsgutschein", href: "/bildungsgutschein" },
-      { label: "Beratung buchen", href: "/beratung-buchen" },
-      { label: "So funktioniert's", href: "/#so-funktioniert-es" },
-    ],
+    links: [{ label: "Beratung buchen", href: "/beratung-buchen" }],
   },
   {
     titel: "Ratgeber",
-    links: [
-      { label: "Alle Beiträge", href: "/blog" },
-      { label: "Über uns", href: "/ueber-uns" },
-      { label: "Jobs", href: "https://halloskills.jobs.personio.de" },
-    ],
+    links: [{ label: "Alle Beiträge", href: "/blog" }],
   },
   {
     titel: "Rechtliches",
     links: [
       { label: "Impressum", href: "/impressum" },
       { label: "Datenschutz", href: "/datenschutz" },
-      { label: "AGB", href: "/agb" },
     ],
   },
 ];
@@ -41,7 +32,6 @@ const spalten = [
 const rechtsleiste = [
   { label: "Impressum", href: "/impressum" },
   { label: "Datenschutz", href: "/datenschutz" },
-  { label: "AGB", href: "/agb" },
 ];
 
 export function FooterV2() {
