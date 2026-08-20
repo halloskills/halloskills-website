@@ -5,12 +5,12 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { Logo, btnPrimary } from "./hs-ui";
 
-// Kurze Themen-Labels statt geschützter Berufsbezeichnung — konsistent mit
-// den Footer-Links und der Produktbenennung in kurse-data.ts.
+// Kurzlabels konsistent mit den Footer-Links und der Produktbenennung
+// in kurse-data.ts ("Weiterbildung Bürokaufmann/-frau" etc.).
 const weiterbildungen = [
   { label: "Büromanagement", href: "/kurse/bueromanagement" },
-  { label: "Industriewirtschaft", href: "/kurse/industriekaufmann" },
-  { label: "Bankwesen", href: "/kurse/bankkaufmann" },
+  { label: "Industriekaufmann", href: "/kurse/industriekaufmann" },
+  { label: "Bankkaufmann", href: "/kurse/bankkaufmann" },
 ];
 
 type NavGruppe = { label: string; href: string; kinder?: { label: string; href: string }[] };

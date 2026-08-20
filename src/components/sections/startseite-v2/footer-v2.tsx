@@ -8,8 +8,8 @@ const spalten = [
     links: [
       { label: "Alle Lehrgänge", href: "/kurse" },
       { label: "Büromanagement", href: "/kurse/bueromanagement" },
-      { label: "Industriewirtschaft", href: "/kurse/industriekaufmann" },
-      { label: "Bankwesen", href: "/kurse/bankkaufmann" },
+      { label: "Industriekaufmann", href: "/kurse/industriekaufmann" },
+      { label: "Bankkaufmann", href: "/kurse/bankkaufmann" },
     ],
   },
   {
@@ -25,7 +25,7 @@ const spalten = [
     links: [
       { label: "Alle Beiträge", href: "/blog" },
       { label: "Über uns", href: "/ueber-uns" },
-      { label: "Jobs", href: "/jobs" },
+      { label: "Jobs", href: "https://halloskills.jobs.personio.de" },
     ],
   },
   {
@@ -80,16 +80,21 @@ export function FooterV2() {
                   {spalte.titel}
                 </p>
                 <ul className="mt-4 flex flex-col gap-3">
-                  {spalte.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-[0.875rem] text-white/80 transition-colors hover:text-white"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
+                  {spalte.links.map((link) => {
+                    const extern = link.href.startsWith("http");
+                    return (
+                      <li key={link.label}>
+                        <Link
+                          href={link.href}
+                          target={extern ? "_blank" : undefined}
+                          rel={extern ? "noopener" : undefined}
+                          className="text-[0.875rem] text-white/80 transition-colors hover:text-white"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </nav>
             ))}

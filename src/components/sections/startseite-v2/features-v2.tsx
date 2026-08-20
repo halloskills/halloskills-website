@@ -83,8 +83,8 @@ const features = [
   {
     ikon: <IkonUhr />,
     ton: "bg-hs-lightblue text-hs-blue",
-    titel: "Flexibel & 100% online",
-    text: "Lerne, wann und wo es für dich passt.",
+    titel: "100% Online",
+    text: "Lerne von zuhause.",
     href: "/kurse",
   },
   {
@@ -110,7 +110,7 @@ export function FeaturesV2() {
           Umschulungsinhalte, die zu deinem Leben passen.
         </h2>
         <p className="mx-auto mt-4 max-w-[560px] text-center text-[0.9375rem] leading-[1.65] text-hs-body">
-          Kein zweijähriger Kraftakt, kein Pendeln zur Berufsschule — bei uns lernst
+          Kein zweijähriger Kraftakt, kein Pendeln zum Schulungsraum — bei uns lernst
           du die gleichen Inhalte online, kompakt und mit persönlicher Begleitung.
         </p>
 

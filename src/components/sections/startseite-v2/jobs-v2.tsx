@@ -47,7 +47,12 @@ export function JobsV2() {
             mitgestalten wollen. Schau dir an, welche Stellen offen sind.
           </p>
 
-          <Link href="/jobs" className={`${btnPrimary} mt-8`}>
+          <Link
+            href="https://halloskills.jobs.personio.de"
+            target="_blank"
+            rel="noopener"
+            className={`${btnPrimary} mt-8`}
+          >
             Offene Stellen ansehen
             <span aria-hidden="true">→</span>
           </Link>

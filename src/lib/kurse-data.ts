@@ -17,15 +17,13 @@
  * Prüfung. Siehe Memory rebrand-content-constraints und die Vergleichs-
  * Sektion (vergleich-v2.tsx) auf der Startseite.
  *
- * NAMENSGEBUNG: `titel` verwendet bewusst NICHT die geschützten
- * Ausbildungsberufsbezeichnungen ("Kauffrau/Kaufmann für Büromanagement",
- * "Industriekauffrau/-mann", "Bankkauffrau/-mann") als eigenen Produktnamen,
- * sondern ein Themen-Substantiv ("Lehrgang Büromanagement" / "Lehrgang
- * Industriewirtschaft" / "Lehrgang Bankwesen") — analog zum Fernlehrinstitut
- * ILS, das ebenfalls "Fernstudium Büromanagement" statt der Berufsbe-
- * zeichnung als Produktnamen führt. Die echten Berufsbezeichnungen bleiben
- * im Fließtext erlaubt (Subline, fuerWen, FAQ), wo sie beschreibend und
- * vergleichend verwendet werden, nicht als Eigenname.
+ * NAMENSGEBUNG (Stand: Zertifizierungsprozess läuft noch, Entscheidung der
+ * Fachseite): `titel` heißt vorerst "Weiterbildung Bürokaufmann/-frau" /
+ * "Weiterbildung Industriekaufmann/-frau" / "Weiterbildung Bankkaufmann/-frau".
+ * Sobald die AZAV-Zertifizierung abgeschlossen ist, auf "Abschluss
+ * Bürokaufmann/-frau (HS)" etc. umstellen (ebenso metaTitle).
+ * Die Bezeichnungen sind nicht die geschützten Ausbildungsberufe selbst,
+ * sondern kennzeichnen das eigene Weiterbildungs-/Zertifikatsangebot.
  * Trotzdem vor dem öffentlichen Launch juristisch prüfen lassen — diese
  * Einschätzung ist keine Rechtsberatung.
  */
@@ -54,19 +52,19 @@ export const KURSE: Kurs[] = [
   {
     slug: "bueromanagement",
     kategorie: "Büromanagement",
-    // Produktname bewusst ohne geschützte Ausbildungsberufsbezeichnung —
-    // siehe OFFENE FRAGE oben. Themen-Substantiv statt Berufstitel, wie bei
-    // ILS ("Fernstudium Büromanagement" statt "Kaufmann für Büromanagement").
-    titel: "Lehrgang Büromanagement",
+    // Namensgebung auf Wunsch der Fachseite (Stand: Zertifizierungsprozess
+    // läuft noch): "Weiterbildung X" bis zum Abschluss der AZAV-
+    // Zertifizierung, danach "Abschluss X (HS)".
+    titel: "Weiterbildung Bürokaufmann/-frau",
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
-      "Die zentralen Themen der IHK-Ausbildung zum Büromanagement — kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Zertifikat.",
+      "Die Themen der beruflichen Umschulung zum Bürokaufmann/-frau — als Weiterbildung kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
     bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Büromanagement",
     fuerWen: [
       "Du willst im Büro, in der Verwaltung oder im Sekretariat arbeiten.",
       "Du organisierst gerne, behältst den Überblick und kommunizierst klar.",
-      "Du möchtest ohne Berufsschule und ohne Pendeln zum Ausbildungsbetrieb lernen.",
+      "Du möchtest ohne Pendeln zum Schulungsraum und Praxisbetrieb lernen.",
     ],
     module: [
       {
@@ -104,9 +102,9 @@ export const KURSE: Kurs[] = [
     ],
     faq: [
       {
-        frage: "Ist das eine offizielle IHK-Ausbildung?",
+        frage: "Ist das eine offizielle berufliche Umschulung?",
         antwort:
-          "Nein. Du lernst die zentralen Themen der klassischen IHK-Ausbildung zum Büromanagement, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung.",
+          "Nein. Du lernst die zentralen Themen der beruflichen Umschulung zum Bürokaufmann/-frau, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung. Ein offizieller Berufsabschluss wird dadurch nicht erworben.",
       },
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
@@ -119,23 +117,23 @@ export const KURSE: Kurs[] = [
           "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
     ],
-    metaTitle: "Lehrgang Büromanagement — online in 6 Monaten | HalloSkills",
+    metaTitle: "Weiterbildung Bürokaufmann/-frau — online in 6 Monaten | HalloSkills",
     metaDescription:
-      "Die Inhalte der IHK-Ausbildung zum Büromanagement — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
+      "Die Inhalte der beruflichen Umschulung zum Bürokaufmann/-frau — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
   },
   {
     slug: "industriekaufmann",
     kategorie: "Industrie",
-    titel: "Lehrgang Industriewirtschaft",
+    titel: "Weiterbildung Industriekaufmann/-frau",
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
-      "Die zentralen Themen der IHK-Ausbildung zum Industriekaufmann — kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Zertifikat.",
+      "Die Themen der beruflichen Umschulung zum Industriekaufmann/-frau — als Weiterbildung kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
     bildAlt: "Teilnehmer arbeitet an seinem Online-Lehrgang zum Industriekaufmann",
     fuerWen: [
       "Du willst in Einkauf, Produktion, Vertrieb oder Controlling eines Industriebetriebs arbeiten.",
       "Du denkst gerne in Zahlen und Prozessen und behältst Lieferketten im Blick.",
-      "Du möchtest ohne Berufsschule und ohne Pendeln zum Ausbildungsbetrieb lernen.",
+      "Du möchtest ohne Pendeln zum Schulungsraum und Praxisbetrieb lernen.",
     ],
     module: [
       {
@@ -173,9 +171,9 @@ export const KURSE: Kurs[] = [
     ],
     faq: [
       {
-        frage: "Ist das eine offizielle IHK-Ausbildung?",
+        frage: "Ist das eine offizielle berufliche Umschulung?",
         antwort:
-          "Nein. Du lernst die zentralen Themen der klassischen IHK-Ausbildung zum Industriekaufmann, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung.",
+          "Nein. Du lernst die zentralen Themen der beruflichen Umschulung zum Industriekaufmann/-frau, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung. Ein offizieller Berufsabschluss wird dadurch nicht erworben.",
       },
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
@@ -188,23 +186,23 @@ export const KURSE: Kurs[] = [
           "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
     ],
-    metaTitle: "Lehrgang Industriewirtschaft — online in 6 Monaten | HalloSkills",
+    metaTitle: "Weiterbildung Industriekaufmann/-frau — online in 6 Monaten | HalloSkills",
     metaDescription:
-      "Die Inhalte der IHK-Ausbildung zum Industriekaufmann — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
+      "Die Inhalte der beruflichen Umschulung zum Industriekaufmann/-frau — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
   },
   {
     slug: "bankkaufmann",
     kategorie: "Bankwesen",
-    titel: "Lehrgang Bankwesen",
+    titel: "Weiterbildung Bankkaufmann/-frau",
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
-      "Die zentralen Themen der IHK-Ausbildung zum Bankkaufmann — kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Zertifikat.",
+      "Die Themen der beruflichen Umschulung zum Bankkaufmann/-frau — als Weiterbildung kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
     bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Bankwesen",
     fuerWen: [
       "Du willst Kund:innen bei Bank- und Finanzthemen beraten.",
       "Du gehst gerne sorgfältig mit Zahlen, Verträgen und Verantwortung um.",
-      "Du möchtest ohne Berufsschule und ohne Pendeln zum Ausbildungsbetrieb lernen.",
+      "Du möchtest ohne Pendeln zum Schulungsraum und Praxisbetrieb lernen.",
     ],
     module: [
       {
@@ -242,9 +240,9 @@ export const KURSE: Kurs[] = [
     ],
     faq: [
       {
-        frage: "Ist das eine offizielle IHK-Ausbildung?",
+        frage: "Ist das eine offizielle berufliche Umschulung?",
         antwort:
-          "Nein. Du lernst die zentralen Themen der klassischen IHK-Ausbildung zum Bankkaufmann, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung.",
+          "Nein. Du lernst die zentralen Themen der beruflichen Umschulung zum Bankkaufmann/-frau, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung. Ein offizieller Berufsabschluss wird dadurch nicht erworben.",
       },
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
@@ -257,9 +255,9 @@ export const KURSE: Kurs[] = [
           "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
     ],
-    metaTitle: "Lehrgang Bankwesen — online in 6 Monaten | HalloSkills",
+    metaTitle: "Weiterbildung Bankkaufmann/-frau — online in 6 Monaten | HalloSkills",
     metaDescription:
-      "Die Inhalte der IHK-Ausbildung zum Bankkaufmann — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
+      "Die Inhalte der beruflichen Umschulung zum Bankkaufmann/-frau — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
   },
 ];
 

@@ -17,7 +17,7 @@ export function KursModuleV2({ kurs }: { kurs: Kurs }) {
             Die zentralen Themen deines Lehrgangs
           </h2>
           <p className="mt-4 text-[0.9375rem] leading-[1.65] text-hs-body">
-            Orientiert an den Kernthemen der klassischen IHK-Ausbildung — kompakt
+            Orientiert an den Kernthemen der beruflichen Umschulung — kompakt
             aufbereitet für 6 statt 24 Monate.
           </p>
         </div>

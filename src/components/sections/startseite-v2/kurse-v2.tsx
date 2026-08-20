@@ -17,9 +17,8 @@ import { PfeilKnopf, btnPrimary } from "./hs-ui";
 const kurse = [
   {
     slug: "bueromanagement",
-    // Themen-Substantiv statt geschützter Berufsbezeichnung als Produktname
-    // — konsistent mit src/lib/kurse-data.ts, siehe Kommentar dort.
-    titel: "Lehrgang Büromanagement",
+    // Namensgebung konsistent mit src/lib/kurse-data.ts, siehe Kommentar dort.
+    titel: "Weiterbildung Bürokaufmann/-frau",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
     href: "/kurse/bueromanagement",
@@ -27,7 +26,7 @@ const kurse = [
   },
   {
     slug: "industriekaufmann",
-    titel: "Lehrgang Industriewirtschaft",
+    titel: "Weiterbildung Industriekaufmann/-frau",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
     href: "/kurse/industriekaufmann",
@@ -35,7 +34,7 @@ const kurse = [
   },
   {
     slug: "bankkaufmann",
-    titel: "Lehrgang Bankwesen",
+    titel: "Weiterbildung Bankkaufmann/-frau",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
     bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
     href: "/kurse/bankkaufmann",

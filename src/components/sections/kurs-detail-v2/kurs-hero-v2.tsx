@@ -6,7 +6,7 @@ import { btnPrimary, btnWeiss } from "@/components/sections/startseite-v2/hs-ui"
 
 const fakten = [
   { titel: "6 Monate", text: "Statt 24 Monate" },
-  { titel: "100% Online", text: "Lerne von überall" },
+  { titel: "100% Online", text: "Lerne von zuhause" },
   { titel: "1:1 Betreuung", text: "Echte Expert:innen" },
 ];
 

@@ -18,7 +18,7 @@ const CLAIM_TAKT_SEKUNDEN = 2.8;
 
 const fakten = [
   { titel: "6 Monate", text: "Statt 24 Monate" },
-  { titel: "100% Online", text: "Lerne von überall" },
+  { titel: "100% Online", text: "Lerne von zuhause" },
   { titel: "1:1 Betreuung", text: "Echte Expert:innen" },
 ];
 

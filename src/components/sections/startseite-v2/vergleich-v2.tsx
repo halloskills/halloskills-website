@@ -13,8 +13,10 @@ import { Eyebrow } from "./hs-ui";
 const zeilen = [
   { label: "Dauer", umschulung: "24 Monate", hs: "6 Monate" },
   { label: "Format", umschulung: "Meist vor Ort", hs: "100% online" },
-  { label: "Inhalte", umschulung: "IHK-Lehrplan", hs: "Gleiche Praxisinhalte" },
-  { label: "Abschluss", umschulung: "IHK-Zertifizierung", hs: "HalloSkills-Zertifikat" },
+  // Kein Vergleich nötig — beide Seiten lernen denselben Rahmenlehrplan,
+  // deshalb ein gemeinsames Feld statt zwei unterschiedlicher Werte.
+  { label: "Inhalte", gemeinsam: "Rahmenlehrplan für den Ausbildungsberuf" },
+  { label: "Abschluss", umschulung: "IHK-Prüfung", hs: "HalloSkills-Zertifikat" },
 ];
 
 function CheckIkon() {
@@ -73,18 +75,26 @@ export function VergleichV2() {
               <div className="px-5 py-4 text-[0.8rem] font-[600] text-hs-navy sm:px-7 sm:text-[0.875rem]">
                 {z.label}
               </div>
-              <div className="px-4 py-4 text-center text-[0.8rem] text-hs-muted sm:px-6 sm:text-[0.9rem]">
-                {z.umschulung}
-              </div>
-              <div className="relative px-4 py-4 sm:px-6">
-                <span className="absolute inset-x-3 inset-y-0.5 -z-10 bg-white sm:inset-x-4" />
-                <span className="flex items-center justify-center gap-1.5 text-center text-[0.8rem] font-[600] text-hs-navy sm:text-[0.9rem]">
-                  <span className="text-hs-pink">
-                    <CheckIkon />
-                  </span>
-                  {z.hs}
-                </span>
-              </div>
+              {z.gemeinsam ? (
+                <div className="col-span-2 px-4 py-4 text-center text-[0.8rem] font-[600] text-hs-navy sm:px-6 sm:text-[0.9rem]">
+                  {z.gemeinsam}
+                </div>
+              ) : (
+                <>
+                  <div className="px-4 py-4 text-center text-[0.8rem] text-hs-muted sm:px-6 sm:text-[0.9rem]">
+                    {z.umschulung}
+                  </div>
+                  <div className="relative px-4 py-4 sm:px-6">
+                    <span className="absolute inset-x-3 inset-y-0.5 -z-10 bg-white sm:inset-x-4" />
+                    <span className="flex items-center justify-center gap-1.5 text-center text-[0.8rem] font-[600] text-hs-navy sm:text-[0.9rem]">
+                      <span className="text-hs-pink">
+                        <CheckIkon />
+                      </span>
+                      {z.hs}
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
           ))}
         </div>
