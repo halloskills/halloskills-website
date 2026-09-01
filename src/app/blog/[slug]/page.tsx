@@ -22,7 +22,6 @@ export async function generateMetadata({
   return {
     title: `${post.title} | HalloSkills Ratgeber`,
     description: post.excerpt,
-    robots: { index: false, follow: false },
     openGraph: { images: [post.image] },
   };
 }

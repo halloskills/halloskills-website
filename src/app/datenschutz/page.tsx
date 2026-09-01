@@ -6,7 +6,6 @@ import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 export const metadata: Metadata = {
   title: "Datenschutzerklärung | HalloSkills",
   description: "Datenschutzerklärung der HalloSkills GmbH",
-  robots: { index: false, follow: false },
 };
 
 export default function DatenschutzPage() {

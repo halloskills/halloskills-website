@@ -25,14 +25,11 @@ export async function generateMetadata({
   return {
     title: kurs.metaTitle,
     description: kurs.metaDescription,
-    robots: { index: false, follow: false },
   };
 }
 
 /**
- * Lehrgangs-Detailseiten im Design System v1.0. Noch nicht indexiert,
- * die Website ist insgesamt noch im Wartungsmodus (siehe generateMetadata
- * und public/staticwebapp.config.json).
+ * Lehrgangs-Detailseiten im Design System v1.0.
  */
 export default async function KursDetail({
   params,

@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Ratgeber | HalloSkills",
   description:
     "Praktische Tipps zu Bildungsgutschein, Bewerbung und Weiterbildung — vom HalloSkills-Team.",
-  robots: { index: false, follow: false },
 };
 
 export default function BlogUebersicht() {

@@ -13,11 +13,6 @@ export const metadata: Metadata = {
   title: "HalloSkills",
   description:
     "Online-Umschulungsinhalte in 6 statt 24 Monaten — praxisnah, flexibel und persönlich begleitet. Start im Herbst 2026.",
-  // Weiterhin noindex — die Website ist gesamthaft noch nicht offiziell
-  // live geschaltet (robots.txt steht sitewide auf Disallow: /). Sag
-  // Bescheid, wenn die Startseite jetzt auch für Suchmaschinen sichtbar
-  // werden soll, dann muss das zusammen mit robots.txt geändert werden.
-  robots: { index: false, follow: false },
 };
 
 /** Startseite im Design System v1.0 (Rebrand 2026). */

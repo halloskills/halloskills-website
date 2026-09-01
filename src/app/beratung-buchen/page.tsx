@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   title: "Kostenlose Beratung buchen | HalloSkills",
   description:
     "Jetzt kostenloses Erstgespräch buchen. Wir beraten dich zu unseren Lehrgängen, dem Bildungsgutschein und dem passenden nächsten Schritt. Unverbindlich & persönlich.",
-  robots: { index: false, follow: false },
 };
 
 /**

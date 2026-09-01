@@ -31,19 +31,49 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.halloskills.de/bildungsgutschein/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.halloskills.de/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.halloskills.de/jobs/</loc>
+    <loc>https://www.halloskills.de/blog/bildungsgutschein-beantragen/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.halloskills.de/blog/arbeitslosengeld-weiterbildung/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.halloskills.de/blog/remote-arbeit-tipps/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.halloskills.de/blog/lebenslauf-tipps-2025/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.halloskills.de/blog/umschulung-vs-weiterbildung/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.halloskills.de/blog/digitalisierung-arbeitsmarkt-2025/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.halloskills.de/blog/vorstellungsgespraech-tipps/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.halloskills.de/blog/jobsuche-digital-strategien/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.halloskills.de/impressum/</loc>
@@ -52,11 +82,6 @@
   </url>
   <url>
     <loc>https://www.halloskills.de/datenschutz/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.halloskills.de/agb/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

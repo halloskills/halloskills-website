@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: "Unsere Lehrgänge | HalloSkills",
   description:
     "Drei Online-Lehrgänge mit Umschulungsinhalten — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat.",
-  robots: { index: false, follow: false },
 };
 
 export default function KurseUebersicht() {
