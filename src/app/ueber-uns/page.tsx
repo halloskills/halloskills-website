@@ -18,7 +18,7 @@ export default function UeberUnsPage() {
         <div className="mx-auto max-w-[760px]">
           <Eyebrow ton="blau">Über uns</Eyebrow>
           <h1 className="mt-6 text-[clamp(2rem,4vw,2.75rem)] leading-[1.15]">
-            Leitbild der HalloSkills GmbH
+            Unser Leitbild
           </h1>
         </div>
       </section>
@@ -183,10 +183,6 @@ export default function UeberUnsPage() {
               arbeitsmarktrelevante Anforderungen oder wesentliche
               Rückmeldungen aus Teilnehmerbefragungen und Beschwerden ändern.
               Änderungen werden dokumentiert und intern kommuniziert.
-            </p>
-
-            <p className="mt-12 text-[0.85rem] text-hs-muted">
-              Stand: 24.08.2026 · Version 1.0
             </p>
           </div>
         </div>
