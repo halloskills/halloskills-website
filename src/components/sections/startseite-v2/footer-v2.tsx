@@ -18,7 +18,10 @@ const spalten = [
   },
   {
     titel: "Ratgeber",
-    links: [{ label: "Alle Beiträge", href: "/blog" }],
+    links: [
+      { label: "Alle Beiträge", href: "/blog" },
+      { label: "Über uns", href: "/ueber-uns" },
+    ],
   },
   {
     titel: "Rechtliches",

@@ -18,6 +18,7 @@ type NavGruppe = { label: string; href: string; kinder?: { label: string; href: 
 const navGruppen: NavGruppe[] = [
   { label: "Lehrgänge", href: "/kurse", kinder: weiterbildungen },
   { label: "Ratgeber", href: "/blog" },
+  { label: "Über uns", href: "/ueber-uns" },
 ];
 
 function Chevron({ offen }: { offen: boolean }) {

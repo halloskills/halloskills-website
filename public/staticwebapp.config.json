@@ -53,6 +53,9 @@
       "route": "/datenschutz/*"
     },
     {
+      "route": "/ueber-uns"
+    },
+    {
       "route": "/_next/*"
     },
     {

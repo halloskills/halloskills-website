@@ -16,6 +16,7 @@ const EIGENES_CHROME = [
   "/blog",
   "/impressum",
   "/datenschutz",
+  "/ueber-uns",
 ];
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {

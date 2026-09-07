@@ -76,6 +76,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.halloskills.de/ueber-uns/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://www.halloskills.de/impressum/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
