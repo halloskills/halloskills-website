@@ -123,7 +123,7 @@ export function BeratungFormularV2() {
     return (
       <div
         id="formular"
-        className="scroll-mt-28 flex min-h-[420px] flex-col items-center justify-center rounded-hs-card border border-hs-line bg-white p-10 text-center shadow-hs-soft"
+        className="scroll-mt-28 flex min-h-[740px] flex-col items-center justify-center rounded-hs-card border border-hs-line bg-white p-10 text-center shadow-hs-soft"
       >
         <HakenKreis />
         <h3 className="text-[1.2rem] font-[600] text-hs-navy">Vielen Dank!</h3>
@@ -139,7 +139,7 @@ export function BeratungFormularV2() {
   return (
     <div
       id="formular"
-      className="scroll-mt-28 rounded-hs-card border border-hs-line bg-white p-8 shadow-hs-soft"
+      className="scroll-mt-28 flex min-h-[740px] flex-col rounded-hs-card border border-hs-line bg-white p-8 shadow-hs-soft"
     >
       {/* Fortschritt */}
       <div className="mb-7">
@@ -166,7 +166,7 @@ export function BeratungFormularV2() {
       </div>
 
       {!istKontaktSchritt ? (
-        <div>
+        <div className="flex flex-1 flex-col justify-center">
           <h3 className="text-[1.15rem] font-[600] leading-[1.3] text-hs-navy">
             {SCHRITTE[schritt].frage}
           </h3>
@@ -192,7 +192,7 @@ export function BeratungFormularV2() {
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-1 flex-col justify-center gap-4">
           <h3 className="text-[1.15rem] font-[600] leading-[1.3] text-hs-navy">
             Wie erreichen wir dich?
           </h3>

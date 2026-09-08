@@ -33,8 +33,8 @@ const vorteile = [
     text: "Kein Standard-Paket. Wir schauen gemeinsam, was zu dir, deinen Zielen und deiner Lebenssituation passt.",
   },
   {
-    titel: "Bildungsgutschein-Support",
-    text: "Wir begleiten dich durch den gesamten Antragsprozess, von der Vorbereitung bis zur Genehmigung.",
+    titel: "Passender Fachbereich",
+    text: "Anhand deiner Antworten empfehlen wir dir den Lehrgang, der wirklich zu deiner Situation passt.",
   },
   {
     titel: "Persönliche Betreuung",
