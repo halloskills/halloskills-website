@@ -190,11 +190,11 @@
       display: block;
       background: currentColor;
     }
-    /* Pill: oben voll gerundet, unten links eckig (0), unten rechts 0,34 × Breite.
-       Verhältnisse aus der Original-SVG abgemessen: beide Pills gleich breit,
-       Höhen 1,75 × Breite (kurz) und 2,65 × Breite (lang). */
-    .pill-tall  { width: 20px; height: 53px; border-radius: 999px 999px 7px 0; }
-    .pill-short { width: 20px; height: 35px; border-radius: 999px 999px 7px 0; }
+    /* Beide Pills: oben und unten rechts voll gerundet (Radius = halbe
+       Breite), nur unten links eckig (0) — die lange Pill hat exakt die
+       gleiche Form wie die kurze, nur höher. Beide Pills gleich breit. */
+    .pill-tall  { width: 20px; height: 53px; border-radius: 999px 999px 999px 0; }
+    .pill-short { width: 20px; height: 35px; border-radius: 999px 999px 999px 0; }
 
     .logo-wordmark {
       display: flex;
@@ -381,12 +381,19 @@
     .formen-item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
     .formen-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
 
-    /* Gleiche Verhältnisse wie das Logo: gleich breit, Höhen 1,75 / 2,65,
-       unten rechts 0,34 × Breite, unten links eckig. */
-    .shape-pill-tall  { width: 52px; height: 138px; border-radius: 999px 999px 18px 0; background: var(--blue); }
-    .shape-pill-short { width: 52px; height: 91px;  border-radius: 999px 999px 18px 0; background: var(--blue); }
-    .shape-pill-grad  { width: 52px; height: 138px; border-radius: 999px 999px 18px 0; background: var(--grad-brand); }
-    .shape-pill-combo { width: 52px; height: 91px;  border-radius: 999px 999px 18px 0; background: var(--violet); }
+    /* Gleiche Verhältnisse wie das Logo: gleich breit, Höhen 1,75 / 2,65.
+       Alle Varianten haben die gleiche Form wie die kurze Pill: oben und
+       unten rechts voll gerundet, nur unten links eckig (0) — die langen
+       Varianten sind einfach höher. */
+    .shape-pill-tall  { width: 52px; height: 138px; border-radius: 999px 999px 999px 0; background: var(--grad-brand); }
+    .shape-pill-short { width: 52px; height: 91px;  border-radius: 999px 999px 999px 0; background: var(--violet); }
+
+    /* Normale Pill: rundum voll gerundet (klassische Kapselform), wie bei
+       Buttons und Badges verwendet — bewusst ohne die eckige Ecke. */
+    .shape-pill-normal { width: 52px; height: 91px; border-radius: 999px; background: var(--blue); }
+
+    /* Kreis: einfache Vollform ohne Ecken, ergänzt die Pill-Familie. */
+    .shape-circle { width: 72px; height: 72px; border-radius: 50%; background: var(--pink); }
 
     .shape-bildmaske {
       width: 140px; height: 180px;
@@ -646,38 +653,21 @@
     </div>
   </div>
 
-  <!-- Logo form breakdown -->
+  <!-- Logo form breakdown — exakte Pfade aus Logomark-pt1.svg / -pt2.svg -->
   <div style="margin-top: 40px; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-card); padding: 40px;">
     <p style="font-size: .65rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 32px;">Logoform — Aufbau</p>
-    <div style="display: flex; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
-        <div class="logo-mark" style="color: #004B76; transform: scale(2); margin: 24px;">
-          <span class="pill pill-short"></span>
-          <span class="pill pill-tall"></span>
-        </div>
-        <span style="font-size: .65rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .1em;">Logomark</span>
-      </div>
-      <div style="color: var(--text-muted); font-size: 1.5rem; font-weight: 300; align-self: center;">=</div>
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <div style="display: flex; align-items: flex-end; gap: 12px;">
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-            <span class="pill pill-short" style="background: var(--blue); transform: scale(1.5); margin: 12px;"></span>
-            <span style="font-size: .6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600;">Kurze Pill</span>
-          </div>
-          <span style="color: var(--text-muted); margin-bottom: 20px;">+</span>
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-            <span class="pill pill-tall" style="background: var(--blue); transform: scale(1.5); margin: 12px;"></span>
-            <span style="font-size: .6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600;">Lange Pill</span>
-          </div>
-        </div>
-        <p style="font-size: .75rem; color: var(--text-muted); max-width: 320px; line-height: 1.7;">
-          Oben vollständig gerundet (Radius = halbe Breite), unten rechts
-          <strong>0,34 × Breite</strong>, <strong>unten links eckig (0)</strong>.
-          Beide Pills sind <strong>gleich breit</strong> und stehen auf einer
-          gemeinsamen Grundlinie — nur die Höhen unterscheiden sich:
-          1,75 × Breite (kurz) und 2,65 × Breite (lang).
-        </p>
-      </div>
+
+    <div style="display: flex; align-items: flex-end; gap: 56px; flex-wrap: wrap; color: var(--blue);">
+      <svg width="72" height="72" viewBox="0 0 623 623" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1156 1773.5C1156 1944.43 1017.43 2083 846.5 2083 743.333 2083 640.167 2083 537 2083 537 1979.83 537 1876.67 537 1773.5 537 1602.57 675.568 1464 846.5 1464 1017.43 1464 1156 1602.57 1156 1773.5Z" fill="currentColor" transform="translate(-536 -1462)"/>
+      </svg>
+      <svg width="72" height="188" viewBox="0 0 623 1627" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1317 771.499C1317 600.568 1455.57 462 1626.5 462L1626.5 462C1797.43 462 1936 600.568 1936 771.499L1936 1771.5C1936 1942.43 1797.43 2081 1626.5 2081 1455.57 2081 1317 1942.43 1317 1771.5Z" fill="currentColor" transform="translate(-1315 -458)"/>
+      </svg>
+      <div style="color: var(--text-muted); font-size: 2rem; font-weight: 300; margin-bottom: 60px;">=</div>
+      <svg width="120" height="140" viewBox="0 0 1390 1627" xmlns="http://www.w3.org/2000/svg">
+        <path d="M620 1315.5C620 1486.43 481.43 1625 310.5 1625 207.333 1625 104.167 1625 1 1625 1 1521.83 1 1418.67 1 1315.5 1 1144.57 139.568 1006 310.5 1006 481.43 1006 620 1144.57 620 1315.5Z M762 313.499C762 142.568 900.57 4 1071.5 4L1071.5 4C1242.43 4 1381 142.568 1381 313.499L1381 1313.5C1381 1484.43 1242.43 1623 1071.5 1623 900.57 1623 762 1484.43 762 1313.5Z" fill="currentColor"/>
+      </svg>
     </div>
   </div>
 </section>
@@ -1096,19 +1086,19 @@
   <div class="formen-row">
     <div class="formen-item">
       <div class="shape-pill-short"></div>
-      <span class="formen-label">Kurze Pill<br>Blue</span>
+      <span class="formen-label">Kurze Pill<br>Violet</span>
     </div>
     <div class="formen-item">
       <div class="shape-pill-tall"></div>
-      <span class="formen-label">Lange Pill<br>Blue</span>
+      <span class="formen-label">Lange Pill<br>Brand Grad</span>
     </div>
     <div class="formen-item">
-      <div class="shape-pill-grad"></div>
-      <span class="formen-label">Pill<br>Brand Grad</span>
+      <div class="shape-pill-normal"></div>
+      <span class="formen-label">Normale Pill<br>Blue</span>
     </div>
     <div class="formen-item">
-      <div class="shape-pill-combo"></div>
-      <span class="formen-label">Pill<br>Violet</span>
+      <div class="shape-circle"></div>
+      <span class="formen-label">Kreis<br>Pink</span>
     </div>
     <div class="formen-item">
       <div class="shape-bildmaske">
