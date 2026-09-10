@@ -7,12 +7,46 @@ import { Eyebrow, PfeilKnopf, btnPrimary } from "@/components/sections/startseit
 import { VergleichV2 } from "@/components/sections/startseite-v2/vergleich-v2";
 import { CtaV2 } from "@/components/sections/startseite-v2/cta-v2";
 import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
+import { KursFaqV2 } from "@/components/sections/kurs-detail-v2/kurs-faq-v2";
 
 export const metadata: Metadata = {
-  title: "Unsere Lehrgänge | HalloSkills",
+  title: "Kaufmännische Weiterbildungen online | HalloSkills",
   description:
-    "Drei Online-Lehrgänge mit Umschulungsinhalten — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat.",
+    "Entdecke die HalloSkills Lehrgänge für Büro, Industrie und Bankwesen: Umschulungsinhalte in 6 Monaten, 100% online und mit persönlicher Begleitung.",
 };
+
+const LEHRGAENGE_FAQ = [
+  {
+    frage: "Welche Lehrgänge bietet HalloSkills an?",
+    antwort:
+      "Aktuell kannst du bei HalloSkills zwischen drei Lehrgängen wählen: Weiterbildung Bürokaufmann/-frau, Weiterbildung Industriekaufmann/-frau und Weiterbildung Bankkaufmann/-frau. Alle drei vermitteln dir die Inhalte einer klassischen Umschulung kompakt in 6 Monaten.",
+  },
+  {
+    frage: "Finden alle Lehrgänge online statt?",
+    antwort:
+      "Ja. Alle HalloSkills-Lehrgänge finden 100% online statt. Du kannst von zu Hause lernen und musst nicht regelmäßig zu einem Schulungsort fahren.",
+  },
+  {
+    frage: "Wie lange dauern die Lehrgänge?",
+    antwort:
+      "Alle drei Lehrgänge dauern 6 Monate. Du lernst die entsprechenden Umschulungsinhalte kompakt und wirst während des Lehrgangs persönlich begleitet.",
+  },
+  {
+    frage: "Welchen Abschluss bekomme ich?",
+    antwort:
+      "Nach deinem Lehrgang erhältst du ein HalloSkills-Zertifikat. Wichtig zu wissen: Das HalloSkills-Zertifikat ist kein IHK-Abschluss.",
+  },
+  {
+    frage: "Sind die Lehrgänge auch für Quereinsteiger geeignet?",
+    antwort:
+      "Je nach Lehrgang kann ein Einstieg auch gut zu dir passen, wenn du bisher in einem anderen Bereich gearbeitet hast. Auf der jeweiligen Lehrgangsseite findest du die Voraussetzungen. Und wenn du noch unsicher bist, schauen wir im Beratungsgespräch gemeinsam, was zu dir passen könnte.",
+  },
+  {
+    frage: "Welcher Lehrgang passt zu mir?",
+    antwort:
+      "Das hängt vor allem davon ab, welche Aufgaben dir liegen und wohin du dich beruflich entwickeln möchtest. Du musst das aber nicht schon genau wissen — wir helfen dir gern dabei, die drei Möglichkeiten einzuordnen.",
+  },
+];
 
 export default function KurseUebersicht() {
   return (
@@ -77,6 +111,7 @@ export default function KurseUebersicht() {
       </section>
 
       <VergleichV2 />
+      <KursFaqV2 faq={LEHRGAENGE_FAQ} />
       <CtaV2 />
       <FooterV2 />
     </div>

@@ -237,17 +237,17 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "lebenslauf-tipps-2025",
-    title: "Lebenslauf 2025: Was Personaler wirklich sehen wollen",
+    title: "Lebenslauf 2026: Was Personaler wirklich sehen wollen",
     category: "Karriere",
     readingTime: "7 min",
     date: "2025-06-08",
     image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=60",
     excerpt:
-      "Ein guter Lebenslauf entscheidet über Interview oder Ablehnung. Wir zeigen dir, was 2025 drinstehen muss – und was definitiv raus sollte.",
+      "Ein guter Lebenslauf entscheidet über Interview oder Ablehnung. Wir zeigen dir, was 2026 drinstehen muss – und was definitiv raus sollte.",
     content: `
 <h2>Der Lebenslauf als deine wichtigste Marketingseite</h2>
 <p>Personaler verbringen im Schnitt nur 7–10 Sekunden mit einem Lebenslauf. In dieser kurzen Zeit entscheiden sie: Einladen oder ablehnen. Dein Lebenslauf muss auf den ersten Blick überzeugen – klar strukturiert, relevant, ohne Füllstoff.</p>
-<p>2025 gelten andere Regeln als noch vor fünf Jahren. Digitale Skills und KI-Kenntnisse sind gefragter denn je. Gleichzeitig werden Lebensläufe oft zuerst von ATS-Systemen (Applicant Tracking Systems) gelesen, bevor ein Mensch sie sieht. Wer das nicht weiß, bewirbt sich am Ziel vorbei.</p>
+<p>2026 gelten andere Regeln als noch vor fünf Jahren. Digitale Skills und KI-Kenntnisse sind gefragter denn je. Gleichzeitig werden Lebensläufe oft zuerst von ATS-Systemen (Applicant Tracking Systems) gelesen, bevor ein Mensch sie sieht. Wer das nicht weiß, bewirbt sich am Ziel vorbei.</p>
 
 <h2>Die richtige Struktur</h2>
 <p>Ein zeitgemäßer Lebenslauf hat folgende Abschnitte in dieser Reihenfolge:</p>
@@ -259,7 +259,7 @@ export const POSTS: BlogPost[] = [
 <li>Skills: Tools, Sprachen, Zertifikate</li>
 </ul>
 
-<h2>Was 2025 unbedingt drinstehen muss</h2>
+<h2>Was 2026 unbedingt drinstehen muss</h2>
 
 <h3>Digitale Skills konkret nennen</h3>
 <p>Nicht: „Gute Kenntnisse in MS Office." Stattdessen: „Excel (Pivot-Tabellen, SVERWEIS, Power Query), HubSpot CRM (Marketing Automation, Lead Nurturing), Google Analytics 4 (Dashboards, Conversion-Tracking)."</p>
@@ -287,7 +287,7 @@ export const POSTS: BlogPost[] = [
 <li><strong>Länge:</strong> Max. 2 Seiten für Erfahrene, 1 Seite für Einsteiger:innen</li>
 <li><strong>Format:</strong> PDF immer, Word nur wenn explizit verlangt</li>
 <li><strong>ATS-freundlich:</strong> Klare Struktur, keine Tabellen für Kerninfos, keine Kopfzeilen/Fußzeilen für wichtige Daten</li>
-<li><strong>Dateiname:</strong> Lebenslauf_Vorname_Nachname_2025.pdf</li>
+<li><strong>Dateiname:</strong> Lebenslauf_Vorname_Nachname_2026.pdf</li>
 </ul>
 
 <h2>Weiterbildung richtig präsentieren</h2>
@@ -295,7 +295,7 @@ export const POSTS: BlogPost[] = [
 <blockquote>Kauffrau/-mann für Büromanagement (HalloSkills-Zertifikat) · HalloSkills · 2026<br>Schwerpunkte: Büroorganisation, Kommunikation, Rechnungswesen</blockquote>
 
 <h2>Das LinkedIn-Profil als Ergänzung</h2>
-<p>Dein LinkedIn-Profil ist 2025 genauso wichtig wie dein Lebenslauf. Recruiter suchen aktiv auf LinkedIn. Stelle sicher, dass Lebenslauf und Profil konsistent sind – gleiche Jobs, gleiche Zeiträume, gleiche Ergebnisse.</p>
+<p>Dein LinkedIn-Profil ist 2026 genauso wichtig wie dein Lebenslauf. Recruiter suchen aktiv auf LinkedIn. Stelle sicher, dass Lebenslauf und Profil konsistent sind – gleiche Jobs, gleiche Zeiträume, gleiche Ergebnisse.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir unterstützen dich nach der Weiterbildung aktiv bei deiner Bewerbung.</p>
     `,
@@ -498,19 +498,19 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "jobsuche-digital-strategien",
-    title: "Moderne Jobsuche: So findest du 2025 den richtigen Job",
+    title: "Moderne Jobsuche: So findest du 2026 den richtigen Job",
     category: "Karriere",
     readingTime: "6 min",
     date: "2025-08-15",
     image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=60",
     excerpt:
-      "Stepstone und Indeed allein reichen nicht mehr. Wir zeigen dir, wo und wie du 2025 wirklich erfolgreich Stellen findest – inkl. Hidden Job Market.",
+      "Stepstone und Indeed allein reichen nicht mehr. Wir zeigen dir, wo und wie du 2026 wirklich erfolgreich Stellen findest – inkl. Hidden Job Market.",
     content: `
 <h2>Der sichtbare und der versteckte Stellenmarkt</h2>
 <p>Experten schätzen, dass nur 30–40% aller offenen Stellen öffentlich ausgeschrieben werden. Die übrigen 60–70% werden über Netzwerke, Empfehlungen, Direktansprache oder interne Besetzungen gefüllt – das ist der sogenannte Hidden Job Market.</p>
-<p>Wer ausschließlich auf Stepstone und Indeed schaut, sieht also weniger als die Hälfte aller verfügbaren Stellen. Erfolgreiche Jobsuche 2025 kombiniert mehrere Strategien – öffentliche Portale, Netzwerk und Direktbewerbung.</p>
+<p>Wer ausschließlich auf Stepstone und Indeed schaut, sieht also weniger als die Hälfte aller verfügbaren Stellen. Erfolgreiche Jobsuche 2026 kombiniert mehrere Strategien – öffentliche Portale, Netzwerk und Direktbewerbung.</p>
 
-<h2>Die besten Jobportale 2025</h2>
+<h2>Die besten Jobportale 2026</h2>
 <ul>
 <li><strong>LinkedIn:</strong> Pflichtprogramm, besonders für digitale und kaufmännische Berufe. Recruiter suchen hier aktiv nach Kandidat:innen.</li>
 <li><strong>Stepstone:</strong> Das stärkste deutsche Stellenportal, besonders für Fachkräfte und Führungspositionen</li>

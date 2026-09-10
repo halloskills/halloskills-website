@@ -22,7 +22,7 @@ function CheckKreis() {
 }
 
 const punkte = [
-  "Keine Wartezeit: wir melden uns innerhalb von 24h",
+  "Keine Wartezeit: wir melden uns innerhalb von 24 h",
   "Kostenlos & unverbindlich",
   "Gespräch per Telefon oder Videocall",
 ];
@@ -33,7 +33,7 @@ const vorteile = [
     text: "Kein Standard-Paket. Wir schauen gemeinsam, was zu dir, deinen Zielen und deiner Lebenssituation passt.",
   },
   {
-    titel: "Passender Fachbereich",
+    titel: "Passender Lehrgang",
     text: "Anhand deiner Antworten empfehlen wir dir den Lehrgang, der wirklich zu deiner Situation passt.",
   },
   {
@@ -77,7 +77,13 @@ export function BeratungFormularSektionV2() {
         </div>
 
         {/* Formular */}
-        <BeratungFormularV2 />
+        <div>
+          <p className="mb-4 text-[0.85rem] leading-[1.6] text-hs-muted">
+            Du musst noch nicht wissen, welcher Lehrgang der richtige ist.
+            Genau das finden wir gemeinsam heraus.
+          </p>
+          <BeratungFormularV2 />
+        </div>
       </div>
     </section>
   );

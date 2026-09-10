@@ -43,6 +43,7 @@ export type Kurs = {
   bildAlt: string;
   fuerWen: string[];
   module: KursModul[];
+  danach: KursModul[];
   faq: { frage: string; antwort: string }[];
   metaTitle: string;
   metaDescription: string;
@@ -97,29 +98,62 @@ export const KURSE: Kurs[] = [
       },
       {
         titel: "Vertiefung nach Wahl",
-        text: "Wie in der klassischen Ausbildung wählbar: Vertiefung in einem Schwerpunkt, etwa Assistenz, Einkauf oder Personalwirtschaft.",
+        text: "Du vertiefst einen Schwerpunkt — zum Beispiel Assistenz, Einkauf oder Personalwirtschaft.",
+      },
+    ],
+    danach: [
+      {
+        titel: "Büro & Verwaltung",
+        text: "Dokumente organisieren, Abläufe koordinieren und den Büroalltag im Blick behalten.",
+      },
+      {
+        titel: "Assistenz & Organisation",
+        text: "Termine planen, Meetings vorbereiten und Teams im Tagesgeschäft unterstützen.",
+      },
+      {
+        titel: "Kundenservice & Auftragsbearbeitung",
+        text: "Anfragen bearbeiten, Aufträge begleiten und mit Kund:innen kommunizieren.",
+      },
+      {
+        titel: "Einkauf & Personal",
+        text: "Je nach Schwerpunkt auch Aufgaben in Beschaffung oder Personalorganisation übernehmen.",
       },
     ],
     faq: [
       {
         frage: "Ist das eine offizielle berufliche Umschulung?",
         antwort:
-          "Nein. Du lernst die zentralen Themen der beruflichen Umschulung zum Bürokaufmann/-frau, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung. Ein offizieller Berufsabschluss wird dadurch nicht erworben.",
+          "HalloSkills ist keine klassische IHK-Umschulung. Du lernst die zentralen Themen der beruflichen Umschulung zum Bürokaufmann/-frau kompakt in 6 Monaten und schließt deinen Lehrgang mit einem HalloSkills-Abschlusszertifikat ab. Damit kannst du im Bewerbungsprozess zeigen, welche fachlichen Inhalte du erfolgreich gelernt hast. Der Unterschied zur klassischen Umschulung liegt im Abschluss: Statt einer IHK-Prüfung erhältst du das HalloSkills-Abschlusszertifikat.",
       },
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
         antwort:
-          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob du grundsätzlich für einen Bildungsgutschein infrage kommst — die AZAV-geförderte Teilnahme an unseren Lehrgängen selbst ist erst nach Abschluss der Zertifizierung möglich.",
+          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob ein Bildungsgutschein grundsätzlich für dich infrage kommt. Eine Förderung unserer Lehrgänge über den Bildungsgutschein ist erst möglich, sobald die dafür erforderlichen AZAV-Zulassungen vorliegen.",
       },
       {
         frage: "Brauche ich Vorkenntnisse?",
         antwort:
           "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
+      {
+        frage: "Findet die Weiterbildung komplett online statt?",
+        antwort:
+          "Ja. Der Lehrgang findet 100% online statt und du kannst von zu Hause lernen. Du musst nicht regelmäßig zu einem Schulungsort fahren.",
+      },
+      {
+        frage: "Wie lange dauert die Weiterbildung Bürokaufmann/-frau?",
+        antwort:
+          "Der Lehrgang dauert 6 Monate. Du lernst die Umschulungsinhalte damit deutlich kompakter als in einer zweijährigen Umschulung.",
+      },
+      {
+        frage: "Welchen Abschluss bekomme ich?",
+        antwort:
+          "Am Ende erhältst du ein HalloSkills-Abschlusszertifikat. Es bestätigt deinen erfolgreichen Lehrgang und zeigt, welche Inhalte du gelernt hast. Im Bewerbungsprozess kannst du damit deine neu erworbenen Kenntnisse belegen. Es ist kein IHK-Abschluss.",
+      },
     ],
-    metaTitle: "Weiterbildung Bürokaufmann/-frau — online in 6 Monaten | HalloSkills",
+    metaTitle: "Weiterbildung Bürokauffrau & Bürokaufmann online | HalloSkills",
     metaDescription:
-      "Die Inhalte der beruflichen Umschulung zum Bürokaufmann/-frau — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
+      "Weiterbildung Bürokaufmann/-frau bei HalloSkills: Umschulungsinhalte in 6 Monaten, 100% online, von zu Hause und mit persönlicher Betreuung.",
   },
   {
     slug: "industriekaufmann",
@@ -166,29 +200,62 @@ export const KURSE: Kurs[] = [
       },
       {
         titel: "Vertiefung im Einsatzgebiet",
-        text: "Wie in der klassischen Ausbildung wählbar: Vertiefung z. B. in Vertrieb, Beschaffung, Logistik oder Personalwirtschaft.",
+        text: "Du vertiefst einen Bereich — zum Beispiel Vertrieb, Beschaffung, Logistik oder Personalwirtschaft.",
+      },
+    ],
+    danach: [
+      {
+        titel: "Einkauf & Beschaffung",
+        text: "Bedarfe planen, Angebote vergleichen und Bestellungen begleiten.",
+      },
+      {
+        titel: "Vertrieb & Kunden",
+        text: "Aufträge koordinieren, Kund:innen betreuen und Vertriebsprozesse unterstützen.",
+      },
+      {
+        titel: "Logistik & Produktion",
+        text: "Lieferketten, Lagerprozesse und betriebliche Abläufe im Blick behalten.",
+      },
+      {
+        titel: "Controlling & Unternehmenssteuerung",
+        text: "Zahlen auswerten, Kosten verstehen und kaufmännische Entscheidungen unterstützen.",
       },
     ],
     faq: [
       {
         frage: "Ist das eine offizielle berufliche Umschulung?",
         antwort:
-          "Nein. Du lernst die zentralen Themen der beruflichen Umschulung zum Industriekaufmann/-frau, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung. Ein offizieller Berufsabschluss wird dadurch nicht erworben.",
+          "HalloSkills ist keine klassische IHK-Umschulung. Du lernst die zentralen Themen der beruflichen Umschulung zum Industriekaufmann/-frau kompakt in 6 Monaten und schließt deinen Lehrgang mit einem HalloSkills-Abschlusszertifikat ab. Damit kannst du im Bewerbungsprozess zeigen, welche fachlichen Inhalte du erfolgreich gelernt hast. Der Unterschied zur klassischen Umschulung liegt im Abschluss: Statt einer IHK-Prüfung erhältst du das HalloSkills-Abschlusszertifikat.",
       },
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
         antwort:
-          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob du grundsätzlich für einen Bildungsgutschein infrage kommst — die AZAV-geförderte Teilnahme an unseren Lehrgängen selbst ist erst nach Abschluss der Zertifizierung möglich.",
+          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob ein Bildungsgutschein grundsätzlich für dich infrage kommt. Eine Förderung unserer Lehrgänge über den Bildungsgutschein ist erst möglich, sobald die dafür erforderlichen AZAV-Zulassungen vorliegen.",
       },
       {
         frage: "Brauche ich Vorkenntnisse?",
         antwort:
           "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
+      {
+        frage: "Findet die Weiterbildung komplett online statt?",
+        antwort:
+          "Ja. Der Lehrgang findet 100% online statt und du kannst von zu Hause lernen. Du musst nicht regelmäßig zu einem Schulungsort fahren.",
+      },
+      {
+        frage: "Wie lange dauert die Weiterbildung Industriekaufmann/-frau?",
+        antwort:
+          "Der Lehrgang dauert 6 Monate. Du lernst die Umschulungsinhalte damit deutlich kompakter als in einer zweijährigen Umschulung.",
+      },
+      {
+        frage: "Welchen Abschluss bekomme ich?",
+        antwort:
+          "Am Ende erhältst du ein HalloSkills-Abschlusszertifikat. Es bestätigt deinen erfolgreichen Lehrgang und zeigt, welche Inhalte du gelernt hast. Im Bewerbungsprozess kannst du damit deine neu erworbenen Kenntnisse belegen. Es ist kein IHK-Abschluss.",
+      },
     ],
-    metaTitle: "Weiterbildung Industriekaufmann/-frau — online in 6 Monaten | HalloSkills",
+    metaTitle: "Weiterbildung Industriekaufmann/-frau online | HalloSkills",
     metaDescription:
-      "Die Inhalte der beruflichen Umschulung zum Industriekaufmann/-frau — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
+      "Weiterbildung Industriekaufmann/-frau bei HalloSkills: Umschulungsinhalte in 6 Monaten, 100% online, von zu Hause und mit persönlicher Betreuung.",
   },
   {
     slug: "bankkaufmann",
@@ -238,26 +305,59 @@ export const KURSE: Kurs[] = [
         text: "Kosten-Leistungsrechnung anwenden und projektorientiert arbeiten.",
       },
     ],
+    danach: [
+      {
+        titel: "Kundenberatung & Service",
+        text: "Kund:innen zu Konten, Zahlungsverkehr und Finanzthemen begleiten und serviceorientiert unterstützen.",
+      },
+      {
+        titel: "Konten & Zahlungsverkehr",
+        text: "Vorgänge rund um Kontoführung und Zahlungsverkehr bearbeiten und Kund:innen bei Fragen weiterhelfen.",
+      },
+      {
+        titel: "Finanzierung & Kredit",
+        text: "Finanzierungsanfragen einordnen, Unterlagen prüfen und bei Kreditprozessen unterstützen.",
+      },
+      {
+        titel: "Geldanlage & Vorsorge",
+        text: "Wissen rund um Sparformen, Wertpapiere und Vorsorgeprodukte im Berufsalltag einsetzen.",
+      },
+    ],
     faq: [
       {
         frage: "Ist das eine offizielle berufliche Umschulung?",
         antwort:
-          "Nein. Du lernst die zentralen Themen der beruflichen Umschulung zum Bankkaufmann/-frau, schließt den Lehrgang aber mit einem HalloSkills-Zertifikat ab — nicht mit einer IHK-Prüfung. Ein offizieller Berufsabschluss wird dadurch nicht erworben.",
+          "HalloSkills ist keine klassische IHK-Umschulung. Du lernst die zentralen Themen der beruflichen Umschulung zum Bankkaufmann/-frau kompakt in 6 Monaten und schließt deinen Lehrgang mit einem HalloSkills-Abschlusszertifikat ab. Damit kannst du im Bewerbungsprozess zeigen, welche fachlichen Inhalte du erfolgreich gelernt hast. Der Unterschied zur klassischen Umschulung liegt im Abschluss: Statt einer IHK-Prüfung erhältst du das HalloSkills-Abschlusszertifikat.",
       },
       {
         frage: "Kann ich den Lehrgang über den Bildungsgutschein finanzieren?",
         antwort:
-          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob du grundsätzlich für einen Bildungsgutschein infrage kommst — die AZAV-geförderte Teilnahme an unseren Lehrgängen selbst ist erst nach Abschluss der Zertifizierung möglich.",
+          "HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Im kostenlosen Beratungsgespräch schauen wir gern gemeinsam, ob ein Bildungsgutschein grundsätzlich für dich infrage kommt. Eine Förderung unserer Lehrgänge über den Bildungsgutschein ist erst möglich, sobald die erforderliche AZAV-Zulassung für Träger und Maßnahme vorliegt.",
       },
       {
         frage: "Brauche ich Vorkenntnisse?",
         antwort:
           "Nein. Der Lehrgang ist so aufgebaut, dass du auch ohne kaufmännische Vorerfahrung einsteigen kannst.",
       },
+      {
+        frage: "Findet die Weiterbildung komplett online statt?",
+        antwort:
+          "Ja. Der Lehrgang findet 100% online statt und du kannst von zu Hause lernen. Du musst nicht regelmäßig zu einem Schulungsort fahren.",
+      },
+      {
+        frage: "Wie lange dauert die Weiterbildung Bankkaufmann/-frau?",
+        antwort:
+          "Der Lehrgang dauert 6 Monate. Du lernst die Umschulungsinhalte damit deutlich kompakter als in einer zweijährigen Umschulung.",
+      },
+      {
+        frage: "Welchen Abschluss bekomme ich?",
+        antwort:
+          "Am Ende erhältst du dein HalloSkills-Abschlusszertifikat. Es bestätigt deinen erfolgreichen Lehrgang und die Inhalte, die du gelernt hast.",
+      },
     ],
-    metaTitle: "Weiterbildung Bankkaufmann/-frau — online in 6 Monaten | HalloSkills",
+    metaTitle: "Weiterbildung Bankkaufmann/-frau online | HalloSkills",
     metaDescription:
-      "Die Inhalte der beruflichen Umschulung zum Bankkaufmann/-frau — in 6 statt 24 Monaten, 100% online, mit HalloSkills-Zertifikat. Start Herbst 2026.",
+      "Weiterbildung Bankkaufmann/-frau bei HalloSkills: Umschulungsinhalte in 6 Monaten, 100% online, von zu Hause und mit persönlicher Betreuung.",
   },
 ];
 

@@ -27,7 +27,7 @@ export const BERATUNG_FAQ = [
   {
     frage: "Welche Unterlagen brauche ich für das Gespräch?",
     antwort:
-      "Für das erste Gespräch brauchst du nichts. Wenn du den Bildungsgutschein beantragen möchtest, helfen wir dir danach mit einer vollständigen Unterlagen-Checkliste.",
+      "Für das erste Gespräch brauchst du nichts. Wenn du später einen Bildungsgutschein beantragen möchtest, erklären wir dir, welche Unterlagen du dafür brauchst.",
   },
   {
     frage: "Wie schnell bekomme ich einen Termin?",

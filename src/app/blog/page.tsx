@@ -7,9 +7,9 @@ import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
 import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 
 export const metadata: Metadata = {
-  title: "Ratgeber | HalloSkills",
+  title: "Ratgeber zu Weiterbildung, Karriere & Bildungsgutschein | HalloSkills",
   description:
-    "Praktische Tipps zu Bildungsgutschein, Bewerbung und Weiterbildung — vom HalloSkills-Team.",
+    "Tipps rund um Weiterbildung, Bildungsgutschein, Bewerbung, Jobsuche und berufliche Neuorientierung. Verständlich erklärt im HalloSkills Ratgeber.",
 };
 
 export default function BlogUebersicht() {

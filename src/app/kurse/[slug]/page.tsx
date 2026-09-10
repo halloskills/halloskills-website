@@ -5,6 +5,7 @@ import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
 import { KursHeroV2 } from "@/components/sections/kurs-detail-v2/kurs-hero-v2";
 import { KursZielgruppeV2 } from "@/components/sections/kurs-detail-v2/kurs-zielgruppe-v2";
 import { KursModuleV2 } from "@/components/sections/kurs-detail-v2/kurs-module-v2";
+import { KursDanachV2 } from "@/components/sections/kurs-detail-v2/kurs-danach-v2";
 import { VergleichV2 } from "@/components/sections/startseite-v2/vergleich-v2";
 import { KursFaqV2 } from "@/components/sections/kurs-detail-v2/kurs-faq-v2";
 import { CtaV2 } from "@/components/sections/startseite-v2/cta-v2";
@@ -46,6 +47,7 @@ export default async function KursDetail({
       <KursHeroV2 kurs={kurs} />
       <KursZielgruppeV2 kurs={kurs} />
       <KursModuleV2 kurs={kurs} />
+      <KursDanachV2 kurs={kurs} />
       <VergleichV2 />
       <KursFaqV2 faq={kurs.faq} />
       <CtaV2 />

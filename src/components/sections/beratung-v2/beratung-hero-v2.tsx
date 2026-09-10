@@ -5,7 +5,7 @@ import { btnPrimary, btnWeiss } from "@/components/sections/startseite-v2/hs-ui"
 
 const fakten = [
   { titel: "Kostenlos", text: "& unverbindlich" },
-  { titel: "24h Rückmeldung", text: "Kein Warten" },
+  { titel: "24 h Rückmeldung", text: "Kein Warten" },
   { titel: "Telefon oder Video", text: "Wie es dir passt" },
 ];
 

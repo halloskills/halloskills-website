@@ -28,7 +28,7 @@ export function KursFaqV2({ faq }: { faq: Kurs["faq"] }) {
   const [offen, setOffen] = useState(0);
 
   return (
-    <section className="px-6 py-20 md:px-10 lg:py-24">
+    <section id="faq" className="scroll-mt-28 px-6 py-20 md:px-10 lg:py-24">
       <div className="mx-auto max-w-[760px]">
         <h2 className="text-center text-[clamp(1.6rem,3.6vw,2.35rem)] leading-[1.2] text-balance">
           Häufige Fragen

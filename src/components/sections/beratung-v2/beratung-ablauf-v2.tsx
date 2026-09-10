@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { PfeilKnopf } from "@/components/sections/startseite-v2/hs-ui";
 
 function IkonFormular() {
@@ -45,13 +46,17 @@ const schritte = [
     ton: "bg-hs-pink/10 text-hs-pink",
     titel: "Formular ausfüllen",
     text: "Ein paar Angaben zu deiner Situation und deinem Wunschthema — dauert keine 2 Minuten.",
+    href: "#formular",
+    label: "Zum Formular",
   },
   {
     nr: "02",
     ikon: <IkonGlocke />,
     ton: "bg-hs-violet/10 text-hs-violet",
-    titel: "Rückmeldung innerhalb von 24h",
+    titel: "Rückmeldung innerhalb von 24 h",
     text: "Wir melden uns bei dir und stimmen einen Termin ab, der zu deinem Alltag passt.",
+    href: "#faq",
+    label: "Wie schnell geht's?",
   },
   {
     nr: "03",
@@ -59,6 +64,8 @@ const schritte = [
     ton: "bg-hs-lightblue text-hs-blue",
     titel: "Kostenloses Gespräch",
     text: "Per Telefon oder Video klären wir deine Möglichkeiten — unverbindlich und persönlich.",
+    href: "#faq",
+    label: "So läuft's ab",
   },
 ];
 
@@ -104,9 +111,13 @@ export function BeratungAblaufV2() {
                   </span>
                   <h3 className="mt-1.5 text-[1.0625rem] font-[600] leading-snug">{s.titel}</h3>
                   <p className="mt-2 text-[0.85rem] leading-[1.6] text-hs-muted">{s.text}</p>
-                  <span className="mt-5 flex">
+                  <Link
+                    href={s.href}
+                    aria-label={s.label}
+                    className="group mt-5 inline-flex w-fit"
+                  >
                     <PfeilKnopf />
-                  </span>
+                  </Link>
                 </div>
               </div>
             </li>
