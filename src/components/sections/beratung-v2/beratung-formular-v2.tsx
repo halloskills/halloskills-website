@@ -166,7 +166,7 @@ export function BeratungFormularV2() {
       </div>
 
       {!istKontaktSchritt ? (
-        <div className="flex flex-1 flex-col justify-center">
+        <div className="flex flex-1 flex-col">
           <h3 className="text-[1.15rem] font-[600] leading-[1.3] text-hs-navy">
             {SCHRITTE[schritt].frage}
           </h3>
@@ -192,7 +192,7 @@ export function BeratungFormularV2() {
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-1 flex-col justify-center gap-4">
+        <form onSubmit={handleSubmit} className="flex flex-1 flex-col gap-4">
           <h3 className="text-[1.15rem] font-[600] leading-[1.3] text-hs-navy">
             Wie erreichen wir dich?
           </h3>
