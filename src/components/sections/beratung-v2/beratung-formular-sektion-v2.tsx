@@ -46,36 +46,30 @@ export function BeratungFormularSektionV2() {
   return (
     <section className="px-6 py-20 md:px-10 lg:py-24">
       <div className="mx-auto max-w-[1200px]">
-        {/* Überschrift & Intro */}
-        <div className="max-w-[640px]">
-          <Eyebrow>Kostenlose Beratung</Eyebrow>
-          <h2 className="mt-6 text-[clamp(1.75rem,3.6vw,2.5rem)] leading-[1.16] text-balance">
-            Schreib uns, wir melden uns bei dir.
-          </h2>
-          <p className="mt-5 text-[1rem] leading-[1.65] text-hs-body">
-            Teile ein paar Details mit uns und wir melden uns innerhalb von 24 Stunden mit
-            den nächsten Schritten bei dir. Kostenlos. Unverbindlich. Persönlich.
-          </p>
-        </div>
-
-        {/* Trust Points & Formular */}
-        <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:items-start">
-          <div className="flex flex-col gap-4 lg:pt-2">
-            {punkte.map((p) => (
-              <div key={p} className="flex items-center gap-3">
-                <CheckKreis />
-                <span className="text-[0.9rem] text-hs-body">{p}</span>
-              </div>
-            ))}
-          </div>
-
+        {/* Überschrift, Trust Points & Formular */}
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>
-            <p className="mb-4 text-[0.85rem] leading-[1.6] text-hs-muted">
-              Du musst noch nicht wissen, welcher Lehrgang der richtige ist.
-              Genau das finden wir gemeinsam heraus.
+            <Eyebrow>Kostenlose Beratung</Eyebrow>
+            <h2 className="mt-6 text-[clamp(1.75rem,3.6vw,2.5rem)] leading-[1.16] text-balance">
+              Schreib uns, wir melden uns bei dir.
+            </h2>
+            <p className="mt-5 max-w-[440px] text-[1rem] leading-[1.65] text-hs-body">
+              Teile ein paar Details mit uns und wir melden uns innerhalb von 24 Stunden mit
+              den nächsten Schritten bei dir. Du musst noch nicht wissen, welcher Lehrgang
+              der richtige ist. Genau das finden wir gemeinsam heraus.
             </p>
-            <BeratungHubspotFormularV2 />
+
+            <div className="mt-8 flex flex-col gap-4">
+              {punkte.map((p) => (
+                <div key={p} className="flex items-center gap-3">
+                  <CheckKreis />
+                  <span className="text-[0.9rem] text-hs-body">{p}</span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          <BeratungHubspotFormularV2 />
         </div>
 
         {/* Vorteile */}
