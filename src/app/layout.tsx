@@ -102,6 +102,18 @@ export default function RootLayout({
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}
+        {/* HubSpot-Tracking-Code — bewusst als type="text/plain" im HTML
+            vorhanden (damit HubSpots eigener Install-Check das Skript im
+            Quelltext findet), aber inaktiv. HubSpotLoader.tsx aktiviert es
+            erst nach erteilter Marketing-Zustimmung. */}
+        <script
+          id="hs-script-loader"
+          type="text/plain"
+          data-consent="marketing"
+          async
+          defer
+          src="//js-eu1.hs-scripts.com/148403220.js"
+        />
         <SiteChrome>{children}</SiteChrome>
         <CookieBanner />
         <HubSpotLoader />

@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 
-const HUBSPOT_SCRIPT_SRC = "//js-eu1.hs-scripts.com/148403220.js";
 const SCRIPT_ID = "hs-script-loader";
 
 type ConsentState = { analytics: boolean; marketing: boolean };
@@ -17,21 +16,25 @@ function hasMarketingConsent(): boolean {
   }
 }
 
+/**
+ * Aktiviert den inerten HubSpot-Platzhalter aus layout.tsx (type="text/plain")
+ * durch Ersetzen mit einem echten, ausführbaren <script>-Tag. Der Platzhalter
+ * bleibt beim ersten Laden im Quelltext stehen, damit HubSpots eigener
+ * Install-Check das Skript findet, auch ohne Consent.
+ */
 function loadHubSpot() {
-  if (document.getElementById(SCRIPT_ID)) return;
-  const script = document.createElement("script");
-  script.id = SCRIPT_ID;
-  script.type = "text/javascript";
-  script.async = true;
-  script.defer = true;
-  script.src = HUBSPOT_SCRIPT_SRC;
-  document.body.appendChild(script);
+  const placeholder = document.getElementById(SCRIPT_ID);
+  if (!placeholder || placeholder.getAttribute("type") !== "text/plain") return;
+
+  const real = document.createElement("script");
+  real.id = SCRIPT_ID;
+  real.type = "text/javascript";
+  real.async = true;
+  real.defer = true;
+  real.src = placeholder.getAttribute("src") || "";
+  placeholder.replaceWith(real);
 }
 
-/**
- * Lädt den HubSpot-Tracking-Code nur, wenn Marketing-Cookies zugestimmt
- * wurde (siehe CookieBanner.tsx) — kein automatisches Laden ohne Consent.
- */
 export function HubSpotLoader() {
   useEffect(() => {
     if (hasMarketingConsent()) loadHubSpot();
