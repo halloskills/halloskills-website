@@ -1,6 +1,6 @@
 import React from "react";
 import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
-import { BeratungFormularV2 } from "./beratung-formular-v2";
+import { BeratungHubspotFormularV2 } from "./beratung-hubspot-formular-v2";
 
 function CheckKreis() {
   return (
@@ -82,7 +82,7 @@ export function BeratungFormularSektionV2() {
             Du musst noch nicht wissen, welcher Lehrgang der richtige ist.
             Genau das finden wir gemeinsam heraus.
           </p>
-          <BeratungFormularV2 />
+          <BeratungHubspotFormularV2 />
         </div>
       </div>
     </section>
