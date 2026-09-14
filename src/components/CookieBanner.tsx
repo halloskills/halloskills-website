@@ -33,6 +33,9 @@ function saveConsent(state: Omit<ConsentState, "timestamp" | "version">) {
   if (typeof window !== "undefined" && (window as any).dataLayer) {
     (window as any).dataLayer.push({ event: "consent_update", consent: full });
   }
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent("halloskills:consent-saved", { detail: full }));
+  }
 }
 
 export function CookieBanner() {

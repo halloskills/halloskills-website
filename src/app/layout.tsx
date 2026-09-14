@@ -4,6 +4,7 @@ import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { SiteChrome } from "@/components/SiteChrome";
 import { CookieBanner } from "@/components/CookieBanner";
+import { HubSpotLoader } from "@/components/HubSpotLoader";
 
 const GTM_ID = "GTM-WJQK9TC8";
 
@@ -103,6 +104,7 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
         <SiteChrome>{children}</SiteChrome>
         <CookieBanner />
+        <HubSpotLoader />
       </body>
     </html>
   );
