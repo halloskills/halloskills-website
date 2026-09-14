@@ -12,7 +12,7 @@ export function BeratungHubspotFormularV2() {
   return (
     <div
       id="formular"
-      className="scroll-mt-28 rounded-hs-card border border-hs-line bg-white p-8 shadow-hs-soft"
+      className="scroll-mt-28 min-h-[560px] rounded-hs-card border border-hs-line bg-white p-8 shadow-hs-soft"
     >
       <Script src="https://js-eu1.hsforms.net/forms/embed/148403220.js" strategy="afterInteractive" />
       <div

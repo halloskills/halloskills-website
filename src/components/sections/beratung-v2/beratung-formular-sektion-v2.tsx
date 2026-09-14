@@ -58,16 +58,8 @@ export function BeratungFormularSektionV2() {
           </p>
         </div>
 
-        {/* Formular & Trust Points */}
+        {/* Trust Points & Formular */}
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:items-start">
-          <div>
-            <p className="mb-4 text-[0.85rem] leading-[1.6] text-hs-muted">
-              Du musst noch nicht wissen, welcher Lehrgang der richtige ist.
-              Genau das finden wir gemeinsam heraus.
-            </p>
-            <BeratungHubspotFormularV2 />
-          </div>
-
           <div className="flex flex-col gap-4 lg:pt-2">
             {punkte.map((p) => (
               <div key={p} className="flex items-center gap-3">
@@ -75,6 +67,14 @@ export function BeratungFormularSektionV2() {
                 <span className="text-[0.9rem] text-hs-body">{p}</span>
               </div>
             ))}
+          </div>
+
+          <div>
+            <p className="mb-4 text-[0.85rem] leading-[1.6] text-hs-muted">
+              Du musst noch nicht wissen, welcher Lehrgang der richtige ist.
+              Genau das finden wir gemeinsam heraus.
+            </p>
+            <BeratungHubspotFormularV2 />
           </div>
         </div>
 
