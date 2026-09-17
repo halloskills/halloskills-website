@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { btnPrimary } from "./hs-ui";
@@ -19,26 +20,29 @@ export function CtaV2() {
         />
 
         <div className="relative flex items-start gap-5">
-          <span
-            aria-hidden="true"
-            className="hidden size-14 shrink-0 items-center justify-center rounded-[18px] bg-white text-hs-pink shadow-hs-soft sm:flex"
-          >
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 2.8l7.2 2.8v5.6c0 4.4-3 8.2-7.2 9.9-4.2-1.7-7.2-5.5-7.2-9.9V5.6L12 2.8Z"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinejoin="round"
+          {/* Bild-Duo: zeigt zwei Teilnehmende, die bereits erfolgreich lernen */}
+          <div className="relative hidden shrink-0 sm:block">
+            <div className="size-16 overflow-hidden rounded-[18px] border-2 border-white shadow-hs-soft">
+              <Image
+                src="/images/bilder/mann-mit-laptop.png"
+                alt="Teilnehmer lernt mit seinem Laptop"
+                width={160}
+                height={160}
+                sizes="64px"
+                className="size-full object-cover"
               />
-              <path
-                d="M8.8 11.9l2.3 2.3 4.1-4.3"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            </div>
+            <div className="absolute -bottom-3 -right-3 size-14 overflow-hidden rounded-[16px] border-2 border-white shadow-hs-soft">
+              <Image
+                src="/images/bilder/dunkelhaarige-frau-mit-laptop.png"
+                alt="Teilnehmerin lernt mit ihrem Laptop"
+                width={140}
+                height={140}
+                sizes="56px"
+                className="size-full object-cover"
               />
-            </svg>
-          </span>
+            </div>
+          </div>
 
           <div>
             <h2 className="text-[clamp(1.35rem,3vw,1.85rem)] leading-[1.2]">

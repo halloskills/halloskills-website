@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { PfeilKnopf } from "./hs-ui";
@@ -106,13 +107,30 @@ export function FeaturesV2() {
             "linear-gradient(160deg, #f4f2ff 0%, #fbf5fb 45%, #f6f9fd 100%)",
         }}
       >
-        <h2 className="mx-auto max-w-[620px] text-center text-[clamp(1.6rem,3.6vw,2.35rem)] leading-[1.2] text-balance">
-          Umschulungsinhalte, die zu deinem Leben passen.
-        </h2>
-        <p className="mx-auto mt-4 max-w-[560px] text-center text-[0.9375rem] leading-[1.65] text-hs-body">
-          Kein zweijähriger Kraftakt, kein Pendeln zum Schulungsraum. Bei uns lernst
-          du die gleichen Inhalte online, kompakt und mit persönlicher Begleitung.
-        </p>
+        <div className="mx-auto flex max-w-[900px] flex-col-reverse items-center gap-8 md:flex-row md:gap-10">
+          <div className="text-center md:text-left">
+            <h2 className="text-[clamp(1.6rem,3.6vw,2.35rem)] leading-[1.2] text-balance">
+              Umschulungsinhalte, die zu deinem Leben passen.
+            </h2>
+            <p className="mt-4 text-[0.9375rem] leading-[1.65] text-hs-body">
+              Kein zweijähriger Kraftakt, kein Pendeln zum Schulungsraum. Bei uns lernst
+              du die gleichen Inhalte online, kompakt und mit persönlicher Begleitung.
+            </p>
+          </div>
+          <div
+            className="relative w-[220px] shrink-0 overflow-hidden shadow-hs-float sm:w-[260px]"
+            style={{ borderRadius: "999px 999px 140px 32px" }}
+          >
+            <Image
+              src="/images/bilder/frau-mit-laptop.png"
+              alt="Teilnehmerin lernt entspannt mit ihrem Laptop"
+              width={520}
+              height={390}
+              sizes="260px"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </div>
+        </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (

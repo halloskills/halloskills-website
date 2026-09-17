@@ -47,6 +47,8 @@ export type Kurs = {
   module: KursModul[];
   danach: KursModul[];
   danachIntro?: string;
+  danachBild?: string;
+  danachBildAlt?: string;
   faq: { frage: string; antwort: ReactNode }[];
   metaTitle: string;
   metaDescription: string;
@@ -106,6 +108,8 @@ export const KURSE: Kurs[] = [
     ],
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in vielen kaufmännischen Bereichen einsetzen, zum Beispiel im Büro, in der Verwaltung, im Kundenservice oder in der Organisation.",
+    danachBild: "/images/bilder/mann-am-laptop-stehend.png",
+    danachBildAlt: "Teilnehmer schaut stehend auf seinen Laptop",
     danach: [
       {
         titel: "Büro & Verwaltung",
@@ -210,6 +214,8 @@ export const KURSE: Kurs[] = [
     ],
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen kaufmännischen Bereichen eines Unternehmens einsetzen, vom Einkauf über Vertrieb und Logistik bis zum Controlling.",
+    danachBild: "/images/bilder/frau-vertieft-am-laptop.png",
+    danachBildAlt: "Teilnehmerin schaut vertieft auf ihren Laptop",
     danach: [
       {
         titel: "Einkauf & Beschaffung",
@@ -314,6 +320,8 @@ export const KURSE: Kurs[] = [
     ],
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen Bereichen rund um Bank, Finanzen und Kundenberatung einsetzen.",
+    danachBild: "/images/bilder/aelterer-mann-am-schreibtisch.png",
+    danachBildAlt: "Teilnehmer arbeitet konzentriert an seinem Schreibtisch",
     danach: [
       {
         titel: "Kundenberatung & Service",
