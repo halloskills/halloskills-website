@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 /**
  * Inhalte der drei Lehrgänge im Design System v1.0.
  *
@@ -44,7 +46,8 @@ export type Kurs = {
   fuerWen: string[];
   module: KursModul[];
   danach: KursModul[];
-  faq: { frage: string; antwort: string }[];
+  danachIntro?: string;
+  faq: { frage: string; antwort: ReactNode }[];
   metaTitle: string;
   metaDescription: string;
 };
@@ -59,7 +62,7 @@ export const KURSE: Kurs[] = [
     titel: "Weiterbildung Bürokaufmann/-frau",
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
-      "Die Themen der beruflichen Umschulung zum Bürokaufmann/-frau — als Weiterbildung kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Abschlusszertifikat.",
+      "Du lernst die zentralen Themen der beruflichen Umschulung zum Bürokaufmann/zur Bürokauffrau (Kaufmann/Kauffrau für Büromanagement) — kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
     bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Büromanagement",
     fuerWen: [
@@ -101,6 +104,8 @@ export const KURSE: Kurs[] = [
         text: "Du vertiefst einen Schwerpunkt — zum Beispiel Assistenz, Einkauf oder Personalwirtschaft.",
       },
     ],
+    danachIntro:
+      "Nach deinem Lehrgang kannst du dein neues Wissen direkt in vielen kaufmännischen Bereichen einsetzen — zum Beispiel im Büro, in der Verwaltung, im Kundenservice oder in der Organisation.",
     danach: [
       {
         titel: "Büro & Verwaltung",
@@ -161,7 +166,7 @@ export const KURSE: Kurs[] = [
     titel: "Weiterbildung Industriekaufmann/-frau",
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
-      "Die Themen der beruflichen Umschulung zum Industriekaufmann/-frau — als Weiterbildung kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Abschlusszertifikat.",
+      "Du lernst die zentralen Themen der beruflichen Umschulung zum Industriekaufmann/zur Industriekauffrau — kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
     bildAlt: "Teilnehmer arbeitet an seinem Online-Lehrgang zum Industriekaufmann",
     fuerWen: [
@@ -203,6 +208,8 @@ export const KURSE: Kurs[] = [
         text: "Du vertiefst einen Bereich — zum Beispiel Vertrieb, Beschaffung, Logistik oder Personalwirtschaft.",
       },
     ],
+    danachIntro:
+      "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen kaufmännischen Bereichen eines Unternehmens einsetzen — vom Einkauf über Vertrieb und Logistik bis zum Controlling.",
     danach: [
       {
         titel: "Einkauf & Beschaffung",
@@ -263,7 +270,7 @@ export const KURSE: Kurs[] = [
     titel: "Weiterbildung Bankkaufmann/-frau",
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
-      "Die Themen der beruflichen Umschulung zum Bankkaufmann/-frau — als Weiterbildung kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Abschlusszertifikat.",
+      "Du lernst die zentralen Themen der beruflichen Umschulung zum Bankkaufmann/zur Bankkauffrau — kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
     bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Bankwesen",
     fuerWen: [
@@ -305,6 +312,8 @@ export const KURSE: Kurs[] = [
         text: "Kosten-Leistungsrechnung anwenden und projektorientiert arbeiten.",
       },
     ],
+    danachIntro:
+      "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen Bereichen rund um Bank, Finanzen und Kundenberatung einsetzen.",
     danach: [
       {
         titel: "Kundenberatung & Service",

@@ -24,7 +24,11 @@ function Chevron({ offen }: { offen: boolean }) {
   );
 }
 
-export function KursFaqV2({ faq }: { faq: Kurs["faq"] }) {
+export function KursFaqV2({
+  faq,
+}: {
+  faq: { frage: string; antwort: React.ReactNode }[];
+}) {
   const [offen, setOffen] = useState(0);
 
   return (

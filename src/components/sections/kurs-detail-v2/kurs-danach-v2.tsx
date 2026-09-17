@@ -12,8 +12,8 @@ export function KursDanachV2({ kurs }: { kurs: Kurs }) {
             Was kannst du nach der Weiterbildung machen?
           </h2>
           <p className="mt-4 text-[0.9375rem] leading-[1.65] text-hs-body">
-            Nach deinem Lehrgang kannst du dein neues Wissen in verschiedenen
-            Bereichen einsetzen.
+            {kurs.danachIntro ??
+              "Nach deinem Lehrgang kannst du dein neues Wissen in verschiedenen Bereichen einsetzen."}
           </p>
         </div>
 

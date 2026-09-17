@@ -48,7 +48,10 @@ export default async function KursDetail({
       <KursZielgruppeV2 kurs={kurs} />
       <KursModuleV2 kurs={kurs} />
       <KursDanachV2 kurs={kurs} />
-      <VergleichV2 />
+      <VergleichV2
+        body="Eine klassische Umschulung dauert dir zu lange oder passt einfach nicht in deinen Alltag? Bei HalloSkills lernst du die zentralen Praxisinhalte der beruflichen Umschulung — kompakt, online und von zu Hause."
+        unterschiedText="Du lernst die zentralen Praxisinhalte der beruflichen Umschulung — kompakt auf 6 Monate zugeschnitten."
+      />
       <KursFaqV2 faq={kurs.faq} />
       <CtaV2 />
       <FooterV2 />

@@ -24,6 +24,14 @@ const spalten = [
     ],
   },
   {
+    titel: "Rechner",
+    links: [
+      { label: "Arbeitslosengeld-Rechner", href: "/tools/arbeitslosengeld-rechner" },
+      { label: "Bürgergeld-Rechner", href: "/tools/buergergeld-rechner" },
+      { label: "Bildungsgutschein-Check", href: "/tools/bildungsgutschein-check" },
+    ],
+  },
+  {
     titel: "Rechtliches",
     links: [
       { label: "Impressum", href: "/impressum" },

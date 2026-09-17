@@ -33,7 +33,10 @@ function CheckIkon() {
   );
 }
 
-export function VergleichV2() {
+export function VergleichV2({
+  body,
+  unterschiedText,
+}: { body?: string; unterschiedText?: string } = {}) {
   return (
     <section className="px-6 py-20 md:px-10 lg:py-24">
       <div className="mx-auto max-w-[1200px]">
@@ -44,9 +47,8 @@ export function VergleichV2() {
             Die Inhalte einer Umschulung. In einem Viertel der Zeit.
           </h2>
           <p className="mt-5 text-[1rem] leading-[1.7] text-hs-body">
-            Eine klassische Umschulung dauert dir zu lange oder passt nicht in deinen
-            Alltag? Bei HalloSkills lernst du die gleichen Praxisinhalte — kompakt,
-            online und von zu Hause.
+            {body ??
+              "Eine klassische Umschulung dauert dir zu lange oder passt nicht in deinen Alltag? Bei HalloSkills lernst du die gleichen Praxisinhalte — kompakt, online und von zu Hause."}
           </p>
         </div>
 
@@ -102,8 +104,8 @@ export function VergleichV2() {
         {/* Der Unterschied bleibt sichtbar, nicht im Kleingedruckten */}
         <p className="mx-auto mt-6 max-w-[640px] text-center text-[0.85rem] leading-[1.7] text-hs-muted">
           Der Unterschied: Am Ende deines Lehrgangs erhältst du ein
-          HalloSkills-Zertifikat statt einer IHK-Prüfung. Die Lerninhalte sind die
-          gleichen.
+          HalloSkills-Zertifikat statt einer IHK-Prüfung.{" "}
+          {unterschiedText ?? "Die Lerninhalte sind die gleichen."}
         </p>
       </div>
     </section>

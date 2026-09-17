@@ -150,8 +150,8 @@ export function HeroV2() {
             </h1>
 
             <p className="mt-6 max-w-[440px] text-[1.0625rem] leading-[1.65] text-hs-body">
-              Die Inhalte einer klassischen Umschulung — bei uns in 6 statt 24 Monaten,
-              100% online und von zu Hause. Mit HalloSkills-Zertifikat. Start im
+              Die Inhalte einer Umschulung — bei uns als Online-Weiterbildung in 6 statt
+              24 Monaten und komplett von zu Hause. Mit HalloSkills-Zertifikat. Start im
               Herbst 2026.
             </p>
 

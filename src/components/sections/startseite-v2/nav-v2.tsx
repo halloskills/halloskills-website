@@ -15,9 +15,16 @@ const weiterbildungen = [
 
 type NavGruppe = { label: string; href: string; kinder?: { label: string; href: string }[] };
 
+const rechner = [
+  { label: "Arbeitslosengeld-Rechner", href: "/tools/arbeitslosengeld-rechner" },
+  { label: "Bürgergeld-Rechner", href: "/tools/buergergeld-rechner" },
+  { label: "Bildungsgutschein-Check", href: "/tools/bildungsgutschein-check" },
+];
+
 const navGruppen: NavGruppe[] = [
   { label: "Lehrgänge", href: "/kurse", kinder: weiterbildungen },
   { label: "Ratgeber", href: "/blog" },
+  { label: "Rechner", href: "/tools/arbeitslosengeld-rechner", kinder: rechner },
   { label: "Über uns", href: "/ueber-uns" },
 ];
 

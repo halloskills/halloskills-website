@@ -34,7 +34,7 @@ const LEHRGAENGE_FAQ = [
   {
     frage: "Welchen Abschluss bekomme ich?",
     antwort:
-      "Nach deinem Lehrgang erhältst du ein HalloSkills-Zertifikat. Wichtig zu wissen: Das HalloSkills-Zertifikat ist kein IHK-Abschluss.",
+      "Es ist kein IHK-Abschluss. Stattdessen nutzt du bei deiner Bewerbung das HalloSkills-Zertifikat. Damit belegst du deine Weiterbildung und die Umschulungsinhalte, die du bei HalloSkills gelernt hast.",
   },
   {
     frage: "Sind die Lehrgänge auch für Quereinsteiger geeignet?",
@@ -43,8 +43,15 @@ const LEHRGAENGE_FAQ = [
   },
   {
     frage: "Welcher Lehrgang passt zu mir?",
-    antwort:
-      "Das hängt vor allem davon ab, welche Aufgaben dir liegen und wohin du dich beruflich entwickeln möchtest. Du musst das aber nicht schon genau wissen — wir helfen dir gern dabei, die drei Möglichkeiten einzuordnen.",
+    antwort: (
+      <>
+        Wir helfen dir dabei, die richtige Umschulung oder Weiterbildung für dich zu finden. In einem kostenlosen Beratungsgespräch schauen wir gemeinsam, welcher Weg zu dir passt. Das Formular findest du{" "}
+        <Link href="/beratung-buchen" className="underline text-hs-blue">
+          hier
+        </Link>
+        .
+      </>
+    ),
   },
 ];
 
