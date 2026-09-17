@@ -59,6 +59,21 @@
       "route": "/ueber-uns"
     },
     {
+      "route": "/tools/*"
+    },
+    {
+      "route": "/agb"
+    },
+    {
+      "route": "/bildungsgutschein"
+    },
+    {
+      "route": "/datenschutz-bewerber"
+    },
+    {
+      "route": "/jobs"
+    },
+    {
       "route": "/_next/*"
     },
     {
