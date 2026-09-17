@@ -74,7 +74,7 @@ const FAQ = [
         vorher in die Arbeitslosenversicherung eingezahlt hast, unabhängig von deinem
         Vermögen. Bürgergeld ist dagegen eine bedürftigkeitsgeprüfte Grundsicherung
         ohne Vorleistung, dafür mit Vermögensprüfung. Läuft dein ALG-1-Anspruch aus,
-        kann im Anschluss Bürgergeld infrage kommen — eine Einschätzung dazu gibt
+        kann im Anschluss Bürgergeld infrage kommen. Eine Einschätzung dazu gibt
         unser{" "}
         <Link href="/tools/buergergeld-rechner" className="text-hs-blue underline">
           Bürgergeld-Rechner
@@ -154,7 +154,7 @@ export default function ArbeitslosengeldRechnerPage() {
         eyebrow="Ratgeber · Rechner"
         titel="Arbeitslosengeld-Rechner"
         akzent="2026"
-        intro="Trag deine Situation ein und du siehst sofort eine erste Einschätzung deines möglichen Arbeitslosengeld-1-Anspruchs (ALG 1) für 2026 — mit Leistungssatz, Anspruchsdauer und dem Effekt von Nebenverdienst."
+        intro="Trag deine Situation ein und du siehst sofort eine erste Einschätzung deines möglichen Arbeitslosengeld-1-Anspruchs (ALG 1) für 2026, mit Leistungssatz, Anspruchsdauer und dem Effekt von Nebenverdienst."
         hinweis={
           <>
             <strong className="text-hs-navy">ALG 1 ist nicht dasselbe wie Bürgergeld:</strong>{" "}
@@ -315,7 +315,7 @@ export default function ArbeitslosengeldRechnerPage() {
             </div>
 
             <div className="mt-4 rounded-hs-card border border-white/15 bg-white/10 p-4">
-              <h4 className="mb-2.5 text-[0.78rem] font-bold text-white">Anwartschaft-Check</h4>
+              <h4 className="mb-2.5 text-[0.78rem] font-bold !text-white">Anwartschaft-Check</h4>
               <p
                 className={`rounded-[10px] px-3 py-2 text-[0.8rem] font-[600] leading-[1.5] ${
                   anwartschaftStatus.ton === "ok" ? "bg-[#ecfdf5] text-[#067a5a]" : "bg-[#fdf1f1] text-[#b42323]"

@@ -424,7 +424,7 @@ export default function BildungsgutscheinCheckPage() {
             </div>
 
             <div className="mt-4 rounded-hs-card border border-white/15 bg-white/10 p-4">
-              <h4 className="mb-2.5 text-[0.78rem] font-bold text-white">Nächster sinnvoller Schritt</h4>
+              <h4 className="mb-2.5 text-[0.78rem] font-bold !text-white">Nächster sinnvoller Schritt</h4>
               <p className={`rounded-[10px] px-3 py-2 text-[0.8rem] font-[600] leading-[1.5] ${finalTipStyle}`}>
                 {ergebnis.tip}
               </p>

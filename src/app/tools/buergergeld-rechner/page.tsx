@@ -538,7 +538,7 @@ export default function BuergergeldRechnerPage() {
 
             {vermoegen > 0 && (
               <div className="mt-4 rounded-hs-card border border-white/15 bg-white/10 p-4">
-                <h4 className="mb-2.5 text-[0.78rem] font-bold text-white">Vermögens-Check</h4>
+                <h4 className="mb-2.5 text-[0.78rem] font-bold !text-white">Vermögens-Check</h4>
                 <p className="mb-2 text-[0.75rem] text-white/60">
                   Schonvermögen (Richtwert): {euro(r.schon)}
                 </p>

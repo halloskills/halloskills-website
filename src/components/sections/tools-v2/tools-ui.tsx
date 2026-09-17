@@ -253,7 +253,7 @@ export function ToolCta({ titel, text }: { titel: string; text: string }) {
             <p className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-white/70">
               Und jetzt?
             </p>
-            <h2 className="mt-2 text-[clamp(1.3rem,3vw,1.7rem)] leading-[1.25]">{titel}</h2>
+            <h2 className="mt-2 text-[clamp(1.3rem,3vw,1.7rem)] leading-[1.25] !text-white">{titel}</h2>
             <p className="mt-3 text-[0.9rem] leading-[1.6] text-white/85">{text}</p>
           </div>
           <div className="flex shrink-0 flex-col gap-3">
