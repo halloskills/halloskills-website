@@ -42,15 +42,7 @@ export function VergleichV2({
     <section className="px-6 py-20 md:px-10 lg:py-24">
       <div className="mx-auto max-w-[1200px]">
         {/* Kopf */}
-        <div className="mx-auto flex max-w-[900px] flex-col items-center gap-6 text-center sm:flex-row sm:gap-10 sm:text-left">
-          <Image
-            src="/images/bilder/uhr-24-zu-6-monate.png"
-            alt="Illustration einer Uhr: 24 Monate werden zu 6 Monaten"
-            width={280}
-            height={280}
-            sizes="(max-width: 640px) 160px, 200px"
-            className="h-[160px] w-[160px] shrink-0 object-contain sm:h-[200px] sm:w-[200px]"
-          />
+        <div className="mx-auto flex max-w-[900px] flex-col-reverse items-center gap-6 text-center sm:flex-row sm:gap-10 sm:text-left">
           <div>
             <Eyebrow>Hallo Abkürzung.</Eyebrow>
             <h2 className="mt-6 text-[clamp(1.75rem,4vw,2.6rem)] leading-[1.16] text-balance">
@@ -61,6 +53,14 @@ export function VergleichV2({
                 "Eine klassische Umschulung dauert dir zu lange oder passt nicht in deinen Alltag? Bei HalloSkills lernst du die gleichen Praxisinhalte, kompakt, online und von zu Hause."}
             </p>
           </div>
+          <Image
+            src="/images/bilder/uhr-24-zu-6-monate.png"
+            alt="Illustration einer Uhr: 24 Monate werden zu 6 Monaten"
+            width={280}
+            height={280}
+            sizes="(max-width: 640px) 160px, 200px"
+            className="h-[160px] w-[160px] shrink-0 object-contain sm:h-[200px] sm:w-[200px]"
+          />
         </div>
 
         {/* Vergleichstabelle */}
