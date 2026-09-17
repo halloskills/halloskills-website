@@ -17,6 +17,7 @@ const EIGENES_CHROME = [
   "/impressum",
   "/datenschutz",
   "/ueber-uns",
+  "/tools",
 ];
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
