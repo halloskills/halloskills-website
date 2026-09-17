@@ -216,7 +216,7 @@ export default function ArbeitslosengeldRechnerPage() {
             <ToolFormSection
               nr={3}
               titel="Beschäftigung in der Arbeitslosenversicherung & Alter"
-              hint="Gemeint sind Monate mit sozialversicherungspflichtiger Beschäftigung — nicht Kranken- oder Rentenversicherung."
+              hint="Gemeint sind Monate mit sozialversicherungspflichtiger Beschäftigung, nicht Kranken- oder Rentenversicherung."
             >
               <div className="grid gap-3.5 sm:grid-cols-3">
                 <ToolField label="Monate in der ALV (letzte 30 Monate)">
@@ -277,7 +277,7 @@ export default function ArbeitslosengeldRechnerPage() {
           <ResultsCard>
             {!beruehrt && (
               <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.04em] text-white/75">
-                Beispielrechnung — trag deine Zahlen ein
+                Beispielrechnung: trag deine Zahlen ein
               </span>
             )}
             <p className="text-[0.72rem] font-bold uppercase tracking-[0.06em] text-white/55">
@@ -327,7 +327,7 @@ export default function ArbeitslosengeldRechnerPage() {
 
             <DisclaimerNote>
               Nur eine erste Orientierung, keine verbindliche Berechnung. Deine Angaben
-              bleiben in deinem Browser — nichts wird gespeichert oder verschickt.
+              bleiben in deinem Browser. Nichts wird gespeichert oder verschickt.
               Verbindlich rechnet nur die Agentur für Arbeit.
             </DisclaimerNote>
           </ResultsCard>
@@ -412,7 +412,7 @@ export default function ArbeitslosengeldRechnerPage() {
           <p className="mt-6 max-w-[680px] text-[0.78rem] leading-[1.7] text-hs-muted">
             <strong className="text-hs-navy">Höchstbetrag 2026:</strong> Dieser Rechner
             arbeitet vereinfacht mit einem Höchstbetrag von rund 2.940 € im Monat. Die
-            tatsächliche BA-Höchstgrenze hängt zusätzlich von deiner Steuerklasse ab — für
+            tatsächliche BA-Höchstgrenze hängt zusätzlich von deiner Steuerklasse ab, für
             einen verbindlichen Wert nutze das{" "}
             <a
               href="https://www.pub.arbeitsagentur.de/start.html"
@@ -440,8 +440,8 @@ export default function ArbeitslosengeldRechnerPage() {
       </section>
 
       <ToolCta
-        titel="Hallo Zukunft. Die Zeit im Arbeitslosengeld-Bezug ist begrenzt — deine nächste Richtung nicht."
-        text="Eine Online-Weiterbildung ändert nichts an deiner aktuellen Situation von heute auf morgen. Aber sie kann der Anfang einer Richtung sein — mit den Inhalten einer klassischen Umschulung, komprimiert auf 6 statt 24 Monate."
+        titel="Hallo Zukunft. Die Zeit im Arbeitslosengeld-Bezug ist begrenzt, deine nächste Richtung nicht."
+        text="Eine Online-Weiterbildung ändert nichts an deiner aktuellen Situation von heute auf morgen. Aber sie kann der Anfang einer Richtung sein, mit den Inhalten einer klassischen Umschulung, komprimiert auf 6 statt 24 Monate."
       />
 
       <FooterV2 />

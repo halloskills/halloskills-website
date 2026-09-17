@@ -37,7 +37,7 @@ type Sonderfall = "student" | "selbststaendig" | "elternzeit" | "auslaender";
 
 const SONDERFALL_TEXT: Record<Sonderfall, string> = {
   student:
-    "Als Student:in zählst du grundsätzlich nicht zum förderfähigen Personenkreis nach SGB III. Eine Ausnahme gilt bei Studienabbruch, wenn du dich anschließend arbeitsuchend meldest — dann kann ein Bildungsgutschein infrage kommen.",
+    "Als Student:in zählst du grundsätzlich nicht zum förderfähigen Personenkreis nach SGB III. Eine Ausnahme gilt bei Studienabbruch, wenn du dich anschließend arbeitsuchend meldest, dann kann ein Bildungsgutschein infrage kommen.",
   selbststaendig:
     "Solange du selbstständig tätig bist, greift die Förderung nach SGB III nicht. Erst nach Aufgabe der Selbstständigkeit und Meldung als arbeitsuchend kannst du einen Bildungsgutschein beantragen.",
   elternzeit:
@@ -150,11 +150,11 @@ export default function BildungsgutscheinCheckPage() {
       sub = "Eine zentrale Voraussetzung fehlt noch";
       tipTon = "warn";
       if (berufsziel === "unklar") {
-        tip = "Formuliere zuerst ein möglichst konkretes Berufsziel — ohne klaren Zielberuf wird ein Bildungsgutschein in der Regel nicht bewilligt.";
+        tip = "Formuliere zuerst ein möglichst konkretes Berufsziel: ohne klaren Zielberuf wird ein Bildungsgutschein in der Regel nicht bewilligt.";
       } else if (status === "bedroht") {
         tip = "Ohne Kündigung, auslaufende Befristung oder Insolvenz des Arbeitgebers reicht „Arbeitslosigkeit droht“ allein meist nicht. Melde dich frühzeitig arbeitsuchend, sobald sich einer dieser Gründe konkretisiert.";
       } else if (status === "beschaeftigt") {
-        tip = "Ohne fehlenden Abschluss, langjährige an-/ungelernte Tätigkeit oder Kurzarbeit ist der Bildungsgutschein für Beschäftigte unwahrscheinlich — sprich stattdessen mit deinem Arbeitgeber über das Qualifizierungschancengesetz.";
+        tip = "Ohne fehlenden Abschluss, langjährige an-/ungelernte Tätigkeit oder Kurzarbeit ist der Bildungsgutschein für Beschäftigte unwahrscheinlich, sprich stattdessen mit deinem Arbeitgeber über das Qualifizierungschancengesetz.";
       } else {
         tip = "Kläre deinen Status möglichst früh mit deiner Agentur für Arbeit oder deinem Jobcenter, bevor du weiterplanst.";
       }
@@ -166,16 +166,16 @@ export default function BildungsgutscheinCheckPage() {
       tip =
         bonusCount >= 2
           ? "Du bist gut vorbereitet. Vereinbare jetzt einen Beratungstermin bei deiner Agentur für Arbeit oder deinem Jobcenter und nimm deine Unterlagen mit."
-          : "Bring zusätzlich ein paar aktuelle Stellenanzeigen für deinen Zielberuf mit ins Beratungsgespräch — das unterstreicht die Notwendigkeit der Weiterbildung.";
+          : "Bring zusätzlich ein paar aktuelle Stellenanzeigen für deinen Zielberuf mit ins Beratungsgespräch, das unterstreicht die Notwendigkeit der Weiterbildung.";
     } else {
-      verdict = "Chancen vorhanden — etwas Vorbereitung nötig";
+      verdict = "Chancen vorhanden, etwas Vorbereitung nötig";
       verdictTon = "mid";
       sub = "Die Grundvoraussetzung ist erfüllt, Details fehlen noch";
       tipTon = "info";
       if (azav !== "ja") {
         tip = "Recherchiere jetzt gezielt nach AZAV-zertifizierten Kursen und Trägern für deinen Zielberuf, zum Beispiel über das Kursnet der Arbeitsagentur.";
       } else if (berufsziel === "grob") {
-        tip = "Grenze deine grobe Richtung auf einen konkreten Zielberuf ein — je klarer, desto überzeugender im Beratungsgespräch.";
+        tip = "Grenze deine grobe Richtung auf einen konkreten Zielberuf ein: je klarer, desto überzeugender im Beratungsgespräch.";
       } else {
         tip = "Vereinbare einen Beratungstermin und bring dein Kursangebot mit Maßnahmenummer mit.";
       }
@@ -230,7 +230,7 @@ export default function BildungsgutscheinCheckPage() {
         eyebrow="Ratgeber · Check"
         titel="Bildungsgutschein-Check"
         akzent="2026"
-        intro="Drei kurze Fragen zu deiner Situation, deinem Berufsziel und dem Kurs — und du siehst sofort, wie realistisch ein Bildungsgutschein für dich aktuell ist und was dir noch fehlt."
+        intro="Drei kurze Fragen zu deiner Situation, deinem Berufsziel und dem Kurs, und du siehst sofort, wie realistisch ein Bildungsgutschein für dich aktuell ist und was dir noch fehlt."
         hinweis={
           <>
             <strong className="text-hs-navy">Der Bildungsgutschein ist eine Ermessensleistung:</strong>{" "}
@@ -317,7 +317,7 @@ export default function BildungsgutscheinCheckPage() {
             <ToolFormSection nr={2} titel="Berufsziel & Kurs">
               <ToolField
                 label="Wie konkret ist dein Berufsziel?"
-                hint={'Ein klar benannter Zielberuf ist eines der wichtigsten Argumente im Beratungsgespräch — „irgendwas mit IT" reicht in der Regel nicht.'}
+                hint={'Ein klar benannter Zielberuf ist eines der wichtigsten Argumente im Beratungsgespräch: „irgendwas mit IT" reicht in der Regel nicht.'}
               >
                 <Segmented
                   value={berufsziel}
@@ -333,7 +333,7 @@ export default function BildungsgutscheinCheckPage() {
               <div className="mt-4">
                 <ToolField
                   label="Steht dein Kurs schon fest?"
-                  hint="Ohne AZAV-Zertifizierung von Träger und Maßnahme gibt es keine Förderung — prüfbar z. B. über das Kursnet der Arbeitsagentur."
+                  hint="Ohne AZAV-Zertifizierung von Träger und Maßnahme gibt es keine Förderung, prüfbar z. B. über das Kursnet der Arbeitsagentur."
                 >
                   <Segmented
                     value={azav}
@@ -353,7 +353,7 @@ export default function BildungsgutscheinCheckPage() {
                   checked={engpass}
                   onChange={setEngpass}
                   label="Mein Zielberuf zählt zu den Engpassberufen"
-                  hint="Zum Beispiel IT, Pflege, Handwerk oder Erneuerbare Energien — hier fällt die Bewilligung erfahrungsgemäß leichter."
+                  hint="Zum Beispiel IT, Pflege, Handwerk oder Erneuerbare Energien: hier fällt die Bewilligung erfahrungsgemäß leichter."
                 />
               </div>
             </ToolFormSection>
@@ -377,7 +377,7 @@ export default function BildungsgutscheinCheckPage() {
           <ResultsCard>
             {!beruehrt && (
               <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.04em] text-white/75">
-                Beispiel — trag deine Situation ein
+                Beispiel: trag deine Situation ein
               </span>
             )}
             <p className="text-[0.72rem] font-bold uppercase tracking-[0.06em] text-white/55">
@@ -432,7 +432,7 @@ export default function BildungsgutscheinCheckPage() {
 
             <DisclaimerNote>
               Nur eine erste Orientierung, keine verbindliche Entscheidung. Deine Angaben
-              bleiben in deinem Browser — nichts wird gespeichert oder verschickt.
+              bleiben in deinem Browser. Nichts wird gespeichert oder verschickt.
               Verbindlich entscheidet nur deine Agentur für Arbeit im persönlichen
               Beratungsgespräch.
             </DisclaimerNote>
@@ -503,7 +503,7 @@ export default function BildungsgutscheinCheckPage() {
       </section>
 
       <ToolCta
-        titel="Der Bildungsgutschein ist Ermessenssache — deine Vorbereitung nicht."
+        titel="Der Bildungsgutschein ist Ermessenssache, deine Vorbereitung nicht."
         text="Eine Online-Umschulung ändert nichts an deiner aktuellen Situation von heute auf morgen. Aber sie kann der Anfang eines Weges sein, der sich unter Umständen über einen Bildungsgutschein fördern lässt."
       />
 

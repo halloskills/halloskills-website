@@ -115,7 +115,7 @@ const FAQ = [
       <>
         Bürgergeld ist eine bedürftigkeitsgeprüfte Grundsicherung ohne Vorleistung, dafür
         mit Vermögensprüfung. Arbeitslosengeld 1 ist dagegen eine Versicherungsleistung,
-        die du bekommst, weil du vorher eingezahlt hast — unabhängig von deinem Vermögen.
+        die du bekommst, weil du vorher eingezahlt hast, unabhängig von deinem Vermögen.
         Eine Einschätzung dazu gibt unser{" "}
         <Link href="/tools/arbeitslosengeld-rechner" className="text-hs-blue underline">
           Arbeitslosengeld-Rechner
@@ -273,7 +273,7 @@ export default function BuergergeldRechnerPage() {
         eyebrow="Ratgeber · Rechner"
         titel="Bürgergeld-Rechner"
         akzent="2026"
-        intro="Drei kurze Blöcke zu deinem Haushalt, deinen Wohnkosten und deinem Einkommen — und du siehst sofort eine erste Einschätzung deines möglichen Bürgergeld- bzw. Grundsicherungsgeld-Anspruchs für 2026."
+        intro="Drei kurze Blöcke zu deinem Haushalt, deinen Wohnkosten und deinem Einkommen, und du siehst sofort eine erste Einschätzung deines möglichen Bürgergeld- bzw. Grundsicherungsgeld-Anspruchs für 2026."
         hinweis={
           <>
             <strong className="text-hs-navy">Bürgergeld ist nicht dasselbe wie ALG 1:</strong>{" "}
@@ -480,7 +480,7 @@ export default function BuergergeldRechnerPage() {
           <ResultsCard>
             {!beruehrt && (
               <span className="mb-3.5 inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.04em] text-white/75">
-                Beispielrechnung — trag deine Zahlen ein
+                Beispielrechnung: trag deine Zahlen ein
               </span>
             )}
             <p className="text-[0.72rem] font-bold uppercase tracking-[0.06em] text-white/55">
@@ -491,7 +491,7 @@ export default function BuergergeldRechnerPage() {
               <span className="ml-1 text-[1.2rem] font-[600]"> € / Monat</span>
             </p>
             <p className="mb-4 mt-1 text-[0.75rem] text-white/55">
-              {r.ergebnis > 0 ? "auf Basis deiner Angaben" : "Dein Einkommen deckt euren Bedarf — kein Anspruch"}
+              {r.ergebnis > 0 ? "auf Basis deiner Angaben" : "Dein Einkommen deckt euren Bedarf, kein Anspruch"}
             </p>
 
             <div className="border-t border-white/15 pt-3">
@@ -548,7 +548,7 @@ export default function BuergergeldRechnerPage() {
                   }`}
                 >
                   {r.vermoegenOk
-                    ? "Dein angegebenes Vermögen liegt unter dem Freibetrag — es wird voraussichtlich nicht angerechnet."
+                    ? "Dein angegebenes Vermögen liegt unter dem Freibetrag, es wird voraussichtlich nicht angerechnet."
                     : `Dein Vermögen liegt rund ${euro(vermoegen - r.schon)} über dem Freibetrag. Das kann den Anspruch mindern oder ausschließen.`}
                 </p>
               </div>
@@ -556,7 +556,7 @@ export default function BuergergeldRechnerPage() {
 
             <DisclaimerNote>
               Nur eine erste Orientierung, keine verbindliche Berechnung. Deine Angaben
-              bleiben in deinem Browser — nichts wird gespeichert oder verschickt.
+              bleiben in deinem Browser. Nichts wird gespeichert oder verschickt.
               Verbindlich entscheidet nur dein Jobcenter.
             </DisclaimerNote>
           </ResultsCard>
@@ -614,8 +614,8 @@ export default function BuergergeldRechnerPage() {
       </section>
 
       <ToolCta
-        titel="Hallo Zukunft. Bürgergeld ist eine Übergangslösung — deine nächste Richtung nicht."
-        text="Eine Online-Weiterbildung ändert nichts an deiner aktuellen Situation von heute auf morgen. Aber sie kann der Anfang einer Richtung sein — mit den Inhalten einer klassischen Umschulung, komprimiert auf 6 statt 24 Monate."
+        titel="Hallo Zukunft. Bürgergeld ist eine Übergangslösung, deine nächste Richtung nicht."
+        text="Eine Online-Weiterbildung ändert nichts an deiner aktuellen Situation von heute auf morgen. Aber sie kann der Anfang einer Richtung sein, mit den Inhalten einer klassischen Umschulung, komprimiert auf 6 statt 24 Monate."
       />
 
       <FooterV2 />

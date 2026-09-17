@@ -99,7 +99,7 @@ export function SchritteV2() {
             </h2>
           </div>
           <p className="max-w-[380px] text-[0.9375rem] leading-[1.7] text-hs-muted">
-            Kein Rätselraten, kein Papierkram-Dschungel — ein klarer Weg von der
+            Kein Rätselraten, kein Papierkram-Dschungel, sondern ein klarer Weg von der
             Entscheidung bis zum Abschluss.
           </p>
         </div>

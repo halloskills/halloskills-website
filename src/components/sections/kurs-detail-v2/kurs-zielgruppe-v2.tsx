@@ -22,7 +22,7 @@ export function KursZielgruppeV2({ kurs }: { kurs: Kurs }) {
       <div className="mx-auto max-w-[720px] text-center">
         <Eyebrow ton="blau">Für wen ist der Lehrgang?</Eyebrow>
         <h2 className="mt-6 text-[clamp(1.5rem,3.4vw,2.1rem)] leading-[1.2] text-balance">
-          {kurs.titel} — das passt zu dir, wenn...
+          {kurs.titel}: das passt zu dir, wenn...
         </h2>
 
         <ul className="mt-9 flex flex-col gap-4 text-left">

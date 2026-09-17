@@ -330,7 +330,7 @@ export const POSTS: BlogPost[] = [
 <h2>Was ist eine Weiterbildung?</h2>
 <p>Eine Weiterbildung baut auf deinen bestehenden Kenntnissen auf oder ergänzt sie gezielt. Sie dauert deutlich kürzer – typischerweise 3–12 Monate – und schließt mit einem Zertifikat ab, nicht mit einem IHK-Abschluss.</p>
 <p>Weiterbildungen bei entsprechend zugelassenen Anbietern sind über den Bildungsgutschein vollständig finanzierbar. Das Ziel ist nicht ein neuer Berufsabschluss, sondern praxisrelevante Skills, die direkt auf dem Arbeitsmarkt einsetzbar sind.</p>
-<p>Ein Beispiel: HalloSkills bietet die Inhalte klassischer Umschulungen im Weiterbildungsformat an — kompakt in 6 statt 24 Monaten:</p>
+<p>Ein Beispiel: HalloSkills bietet die Inhalte klassischer Umschulungen im Weiterbildungsformat an, kompakt in 6 statt 24 Monaten:</p>
 <ul>
 <li>Büromanagement (6 Monate)</li>
 <li>Industriewirtschaft (6 Monate)</li>

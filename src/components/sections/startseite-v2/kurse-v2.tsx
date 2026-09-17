@@ -152,7 +152,7 @@ export function KurseV2() {
           </h2>
 
           <p className="mt-5 max-w-[380px] text-[1rem] leading-[1.65] text-hs-body">
-            Die Inhalte von drei klassischen Umschulungen — bei uns in jeweils sechs
+            Die Inhalte von drei klassischen Umschulungen, bei uns in jeweils sechs
             statt 24 Monaten, komplett online und mit persönlicher Begleitung bis
             zum Abschluss.
           </p>

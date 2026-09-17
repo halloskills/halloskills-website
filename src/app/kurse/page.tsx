@@ -67,7 +67,7 @@ export default function KurseUebersicht() {
             Unsere Lehrgänge.
           </h1>
           <p className="mt-5 text-[1.0625rem] leading-[1.65] text-hs-body">
-            Drei kaufmännische Lehrgänge mit den Inhalten einer klassischen Umschulung —
+            Drei kaufmännische Lehrgänge mit den Inhalten einer klassischen Umschulung,
             kompakt, online und mit persönlicher Begleitung bis zum HalloSkills-Zertifikat.
           </p>
         </div>

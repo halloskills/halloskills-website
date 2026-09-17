@@ -48,7 +48,7 @@ export function VergleichV2({
           </h2>
           <p className="mt-5 text-[1rem] leading-[1.7] text-hs-body">
             {body ??
-              "Eine klassische Umschulung dauert dir zu lange oder passt nicht in deinen Alltag? Bei HalloSkills lernst du die gleichen Praxisinhalte — kompakt, online und von zu Hause."}
+              "Eine klassische Umschulung dauert dir zu lange oder passt nicht in deinen Alltag? Bei HalloSkills lernst du die gleichen Praxisinhalte, kompakt, online und von zu Hause."}
           </p>
         </div>
 

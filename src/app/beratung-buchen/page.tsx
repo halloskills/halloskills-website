@@ -55,13 +55,13 @@ export default function BeratungBuchenPage() {
           </h2>
           <p className="mt-3 text-[0.9rem] leading-[1.65] text-hs-body">
             Du hast eine Frage zu unseren Lehrgängen oder bist dir noch
-            unsicher? Schreib uns einfach — wir melden uns bei dir.{" "}
+            unsicher? Schreib uns einfach, wir melden uns bei dir.{" "}
             <a href="mailto:admin@halloskills.de" className="text-hs-blue underline">
               admin@halloskills.de
             </a>
           </p>
           <p className="mt-4 text-[0.8rem] text-hs-muted">
-            100% online — deutschlandweit für dich da.
+            100% online, deutschlandweit für dich da.
           </p>
         </div>
       </section>

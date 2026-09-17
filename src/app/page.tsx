@@ -12,7 +12,7 @@ import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 export const metadata: Metadata = {
   title: "HalloSkills",
   description:
-    "Online-Umschulungsinhalte in 6 statt 24 Monaten — praxisnah, flexibel und persönlich begleitet. Start im Herbst 2026.",
+    "Online-Umschulungsinhalte in 6 statt 24 Monaten, praxisnah, flexibel und persönlich begleitet. Start im Herbst 2026.",
 };
 
 /** Startseite im Design System v1.0 (Rebrand 2026). */

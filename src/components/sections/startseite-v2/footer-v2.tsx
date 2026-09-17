@@ -68,7 +68,7 @@ export function FooterV2() {
               <Logo variante="hell" className="h-8" />
             </Link>
             <p className="mt-5 max-w-[300px] text-[0.875rem] leading-[1.7] text-white/70">
-              Online-Umschulungsinhalte in 6 statt 24 Monaten — praxisnah,
+              Online-Umschulungsinhalte in 6 statt 24 Monaten, praxisnah,
               flexibel und persönlich begleitet. Start im Herbst 2026.
             </p>
           </div>

@@ -45,7 +45,7 @@ const schritte = [
     ikon: <IkonFormular />,
     ton: "bg-hs-pink/10 text-hs-pink",
     titel: "Formular ausfüllen",
-    text: "Ein paar Angaben zu deiner Situation und deinem Wunschthema — dauert keine 2 Minuten.",
+    text: "Ein paar Angaben zu deiner Situation und deinem Wunschthema, dauert keine 2 Minuten.",
     href: "#formular",
     label: "Zum Formular",
   },
@@ -63,7 +63,7 @@ const schritte = [
     ikon: <IkonSprechblase />,
     ton: "bg-hs-lightblue text-hs-blue",
     titel: "Kostenloses Gespräch",
-    text: "Per Telefon oder Video klären wir deine Möglichkeiten — unverbindlich und persönlich.",
+    text: "Per Telefon oder Video klären wir deine Möglichkeiten, unverbindlich und persönlich.",
     href: "#faq",
     label: "So läuft's ab",
   },
@@ -83,7 +83,7 @@ export function BeratungAblaufV2() {
             </h2>
           </div>
           <p className="max-w-[380px] text-[0.9375rem] leading-[1.7] text-hs-muted">
-            Kein Callcenter, kein Skript — ein persönliches Gespräch mit jemandem, der sich
+            Kein Callcenter, kein Skript, sondern ein persönliches Gespräch mit jemandem, der sich
             wirklich Zeit für deine Fragen nimmt.
           </p>
         </div>
