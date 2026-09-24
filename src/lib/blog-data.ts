@@ -336,63 +336,116 @@ export const POSTS: BlogPost[] = [
     slug: "lebenslauf-tipps-2025",
     title: "Lebenslauf 2026: Was Personaler wirklich sehen wollen",
     category: "Karriere",
-    readingTime: "7 min",
-    date: "2025-06-08",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=60",
+    readingTime: "8 min",
+    date: "2026-09-24",
+    image: "/images/blog/lebenslauf-mit-stift-geschrieben.jpg",
     excerpt:
-      "Ein guter Lebenslauf entscheidet über Interview oder Ablehnung. Wir zeigen dir, was 2026 drinstehen muss – und was definitiv raus sollte.",
+      "Ein guter Lebenslauf soll nicht deine komplette Lebensgeschichte erzählen, sondern schnell zeigen, was du kannst. Was laut Bundesagentur für Arbeit und aktueller Stepstone-Studie 2026 wirklich zählt.",
     content: `
-<h2>Der Lebenslauf als deine wichtigste Marketingseite</h2>
-<p>Personaler verbringen im Schnitt nur 7–10 Sekunden mit einem Lebenslauf. In dieser kurzen Zeit entscheiden sie: Einladen oder ablehnen. Dein Lebenslauf muss auf den ersten Blick überzeugen – klar strukturiert, relevant, ohne Füllstoff.</p>
-<p>2026 gelten andere Regeln als noch vor fünf Jahren. Digitale Skills und KI-Kenntnisse sind gefragter denn je. Gleichzeitig werden Lebensläufe oft zuerst von ATS-Systemen (Applicant Tracking Systems) gelesen, bevor ein Mensch sie sieht. Wer das nicht weiß, bewirbt sich am Ziel vorbei.</p>
-
-<h2>Die richtige Struktur</h2>
-<p>Ein zeitgemäßer Lebenslauf hat folgende Abschnitte in dieser Reihenfolge:</p>
+<h2>Wichtigste Erkenntnisse</h2>
 <ul>
-<li>Kontaktdaten: Name, Telefon, E-Mail, LinkedIn-Profil, Wohnort (Stadt reicht)</li>
-<li>Profil / Zusammenfassung (2–3 Sätze, optional aber empfehlenswert)</li>
-<li>Berufserfahrung (antichronologisch – neueste zuerst)</li>
-<li>Aus- und Weiterbildung (antichronologisch)</li>
-<li>Skills: Tools, Sprachen, Zertifikate</li>
+<li>Ein moderner Lebenslauf sollte übersichtlich, relevant und möglichst auf die konkrete Stelle zugeschnitten sein.</li>
+<li>Die Bundesagentur für Arbeit empfiehlt einen tabellarischen Lebenslauf mit maximal zwei Seiten und den aktuellsten Stationen zuerst.</li>
+<li>Bei deiner Berufserfahrung zählen nicht nur Aufgaben. Zeige möglichst konkret, was du gemacht, verbessert oder erreicht hast.</li>
+<li>Hard Skills, Softwarekenntnisse, Weiterbildungen und Zertifikate sollten schnell erkennbar sein.</li>
+<li>Ein Bewerbungsfoto ist keine Pflicht.</li>
+<li>KI kann bei der Bewerbung helfen, aber Personaler achten weiterhin auf Individualität, relevante Erfahrung und authentische Angaben.</li>
 </ul>
+<p>Ein guter Lebenslauf soll nicht deine komplette Lebensgeschichte erzählen. Er soll einer Personalverantwortlichen oder einem Personalverantwortlichen möglichst schnell zeigen: Was kannst du, welche Erfahrung bringst du mit und warum passt das zur Stelle?</p>
+<p>Gerade 2026 wird das wichtiger. Digitale Bewerbungsprozesse, KI und automatisierte Vorauswahl verändern zwar die Bewerbung, die grundlegende Frage bleibt aber dieselbe: Passt dein Profil zu dem, was das Unternehmen sucht?</p>
 
-<h2>Was 2026 unbedingt drinstehen muss</h2>
-
-<h3>Digitale Skills konkret nennen</h3>
-<p>Nicht: „Gute Kenntnisse in MS Office." Stattdessen: „Excel (Pivot-Tabellen, SVERWEIS, Power Query), HubSpot CRM (Marketing Automation, Lead Nurturing), Google Analytics 4 (Dashboards, Conversion-Tracking)."</p>
-<p>Konkrete Tools und Anwendungen – das ist, wonach ATS-Systeme und Personaler suchen.</p>
-
-<h3>KI-Kompetenzen sichtbar machen</h3>
-<p>Wenn du ChatGPT, Claude, Midjourney, Copilot oder andere KI-Tools nutzt – schreib es hin. Viele Bewerber:innen nutzen diese Tools, aber kaum jemand nennt sie im Lebenslauf. Das macht dich sofort sichtbarer.</p>
-
-<h3>Ergebnisse statt Aufgaben</h3>
-<p><strong>Schwach:</strong> „Verantwortlich für Social-Media-Kanäle."<br>
-<strong>Stark:</strong> „Follower-Wachstum von 2.000 auf 8.000 in 12 Monaten durch täglichen Reels-Content."</p>
-<p>Nutze immer die Formel: Verb + Zahl + Kontext.</p>
-
-<h2>Was raus sollte</h2>
+<h2>Wie sollte ein moderner Lebenslauf 2026 aufgebaut sein?</h2>
+<img src="/images/blog/lebenslauf-und-laptop.jpg" alt="Lebenslauf auf einem Klemmbrett neben einem Laptop" />
+<p>Die Bundesagentur für Arbeit empfiehlt, den Lebenslauf tabellarisch aufzubauen, auf maximal zwei Seiten zu begrenzen und innerhalb der einzelnen Bereiche mit der aktuellsten Station zu beginnen.</p>
+<p>Ein übersichtlicher Lebenslauf Aufbau kann zum Beispiel so aussehen:</p>
 <ul>
-<li>Geburtstag, Familienstand, Nationalität – nicht mehr nötig und manche Firmen wollen es aus Antidiskriminierungsgründen gar nicht</li>
-<li>„Interessen: Lesen, Reisen, Kochen" – zu generisch, weglassen</li>
-<li>Schulzeugnisse sobald du Berufsausbildung oder Studium hast</li>
-<li>Veraltete Software-Angaben</li>
-<li>Floskeln wie „teamfähig, kommunikativ, belastbar" – zeig es lieber durch Beispiele</li>
+<li>Persönliche Daten und Kontaktdaten</li>
+<li>Optional: kurzes berufliches Profil</li>
+<li>Berufserfahrung</li>
+<li>Ausbildung oder Studium</li>
+<li>Weiterbildungen und Zertifikate</li>
+<li>Kenntnisse und Skills</li>
+<li>Optional: relevante Ehrenämter oder Interessen</li>
 </ul>
+<p>Du musst nicht zwanghaft jede Station deines Lebens ausführlich erklären. Je länger dein Berufsweg wird, desto stärker darfst du ältere und für die neue Stelle weniger relevante Informationen kürzen.</p>
 
-<h2>Format, Länge und ATS-Kompatibilität</h2>
+<h2>Lohnt sich ein Kurzprofil im Lebenslauf?</h2>
+<p>Ein kurzes Profil direkt am Anfang kann besonders hilfreich sein, wenn du bereits Berufserfahrung hast, dich beruflich neu orientierst oder als Quereinsteiger:in nicht auf den ersten Blick in ein klassisches Bewerberprofil passt.</p>
+<p>Drei bis vier Zeilen reichen meistens. Zum Beispiel:</p>
+<blockquote>Kaufmännische Mitarbeiterin mit Erfahrung in Kundenservice und Organisation. Sicher im Umgang mit Microsoft Office und digitalen Arbeitsprozessen. Aktuell Weiterbildung im Bereich Büromanagement mit dem Ziel, künftig stärker in Verwaltung und Organisation zu arbeiten.</blockquote>
+<p>Das Kurzprofil ersetzt nicht den restlichen Lebenslauf. Es gibt nur schnell Orientierung.</p>
+
+<h2>Berufserfahrung: Ergebnisse statt langer Aufgabenlisten</h2>
+<p>„Telefonate geführt, E-Mails geschrieben, Kunden betreut" sagt noch relativ wenig darüber aus, was du tatsächlich kannst. Versuche deshalb, deine Berufserfahrung konkret zu beschreiben.</p>
+<p><strong>Statt:</strong> „Verantwortlich für Kundenservice"<br>
+<strong>besser:</strong> „Telefonische und schriftliche Betreuung von Geschäftskunden, Bearbeitung von Anfragen und Koordination mit internen Fachabteilungen"</p>
+<p>Wenn du konkrete Ergebnisse nennen kannst, umso besser. Das müssen nicht immer beeindruckende Prozentzahlen sein. Auch Verantwortung, Umfang oder Verbesserungen können relevant sein. Entscheidend ist, dass eine Person beim Lesen versteht, welche Erfahrung du wirklich mitbringst.</p>
+
+<h2>Welche Skills gehören 2026 in den Lebenslauf?</h2>
+<p>Bei Hard Skills solltest du möglichst konkret werden. Dazu gehören zum Beispiel:</p>
 <ul>
-<li><strong>Länge:</strong> Max. 2 Seiten für Erfahrene, 1 Seite für Einsteiger:innen</li>
-<li><strong>Format:</strong> PDF immer, Word nur wenn explizit verlangt</li>
-<li><strong>ATS-freundlich:</strong> Klare Struktur, keine Tabellen für Kerninfos, keine Kopfzeilen/Fußzeilen für wichtige Daten</li>
-<li><strong>Dateiname:</strong> Lebenslauf_Vorname_Nachname_2026.pdf</li>
+<li>Microsoft Excel, Word oder PowerPoint</li>
+<li>SAP oder andere ERP-Systeme</li>
+<li>CRM-Systeme</li>
+<li>Buchhaltungssoftware</li>
+<li>Fremdsprachen</li>
+<li>Projektmanagement-Tools</li>
+<li>fachliche Zertifikate und Weiterbildungen</li>
 </ul>
+<p>Auch Soft Skills können wichtig sein. Begriffe wie „teamfähig", „motiviert" oder „belastbar" sind allein allerdings wenig aussagekräftig. Wenn möglich, zeige sie durch deine Erfahrung. Wer beispielsweise regelmäßig Kundengespräche geführt, Projekte koordiniert oder neue Mitarbeitende eingearbeitet hat, vermittelt Kommunikations- und Organisationsfähigkeit viel konkreter.</p>
 
-<h2>Weiterbildung richtig präsentieren</h2>
-<p>Eine abgeschlossene Weiterbildung ist kein Makel – sie ist ein starkes Signal für Eigeninitiative und aktuelle Kenntnisse. Formuliere sie prominent:</p>
+<h2>Was sagt die Stepstone-Studie über Bewerbungen mit KI?</h2>
+<p>KI gehört inzwischen ganz selbstverständlich zum Bewerbungsprozess. Eine Stepstone-Studie aus dem Jahr 2025 mit 704 Recruiter:innen und 3.495 Bewerbenden zeigt aber, warum du ChatGPT & Co. nicht einfach deine komplette Bewerbung überlassen solltest.</p>
+<p>80 % der befragten Recruiter:innen bewerteten eingehende Bewerbungen als höchstens mittelmäßig. Besonders häufig wurden Kandidat:innen aussortiert, weil relevante Fähigkeiten fehlten oder die spezifische Berufserfahrung nicht zur Stelle passte. Gleichzeitig nutzten 61 % der befragten Kandidat:innen bereits KI bei Jobsuche und Bewerbung.</p>
+<p>Interessant ist der Widerspruch: 74 % der Recruiter:innen fanden Bewerbungen durch KI professioneller gestaltet, gleichzeitig empfanden 73 % sie als weniger authentisch und 69 % als weniger individuell auf die Stelle zugeschnitten.</p>
+<p>Für deinen Lebenslauf bedeutet das: Nutze KI ruhig als Werkzeug, aber überprüfe jede Formulierung und passe deinen Lebenslauf an die konkrete Stelle an.</p>
+
+<h2>Wie machst du deinen Lebenslauf für digitale Bewerbungen geeignet?</h2>
+<p>Auch 2026 gilt: Ein ausgefallenes Design ist nicht automatisch ein besserer Lebenslauf.</p>
+<p>Die Bundesagentur für Arbeit empfiehlt ein übersichtliches und schlichtes Layout, gut lesbare Schrift und kurze, verständliche Formulierungen. Außerdem sollte der Lebenslauf individuell auf den jeweiligen Arbeitgeber zugeschnitten werden.</p>
+<p>Das hilft auch bei digitalen Bewerbungsprozessen. Verwende klare Überschriften wie Berufserfahrung, Ausbildung, Weiterbildungen und Kenntnisse und achte darauf, dass wichtige Fähigkeiten aus der Stellenanzeige tatsächlich in deinem Lebenslauf auftauchen, natürlich nur, wenn du sie wirklich besitzt.</p>
+
+<h2>Was gehört nicht mehr zwingend in den Lebenslauf?</h2>
+<p>Nicht jede Information, die früher selbstverständlich war, ist heute notwendig.</p>
+<p>Ein Bewerbungsfoto ist beispielsweise keine Pflicht. Die Bundesagentur für Arbeit weist ausdrücklich darauf hin, dass du selbst entscheiden kannst, ob du eines verwenden möchtest.</p>
+<p>Auch irrelevante Hobbys oder sehr alte berufliche Stationen müssen nicht ausführlich dargestellt werden. Konzentriere dich lieber darauf, was für deinen nächsten Job tatsächlich interessant ist.</p>
+
+<h2>Wie gehst du mit Lücken im Lebenslauf um?</h2>
+<img src="/images/blog/mann-macht-beruflichen-sprung.png" alt="Mann springt über eine Felsspalte als Sinnbild für den beruflichen Neustart" />
+<p>Lücken solltest du nicht künstlich verstecken. Auch die Bundesagentur für Arbeit empfiehlt einen offenen Umgang mit Lücken. Entscheidend ist, kurz und sachlich anzugeben, was du in dieser Zeit gemacht hast.</p>
+<p>Das kann zum Beispiel sein:</p>
+<ul>
+<li>Berufliche Neuorientierung</li>
+<li>Arbeitssuche</li>
+<li>Weiterbildung</li>
+<li>Familienphase</li>
+<li>Auslandsaufenthalt</li>
+</ul>
+<p>Du musst daraus keine Rechtfertigung schreiben. Ein Lebenslauf soll deinen Werdegang verständlich machen, nicht jede Lebensphase verteidigen.</p>
+
+<h2>Wie gibst du eine Weiterbildung im Lebenslauf an?</h2>
+<p>Eine Weiterbildung gehört in deinen Lebenslauf, wenn sie für deine berufliche Richtung relevant ist, gerade bei einem Quereinstieg oder einer beruflichen Neuorientierung.</p>
+<p>Nenne dabei möglichst: Zeitraum · Weiterbildung · Bildungsträger · wichtige Inhalte · Abschluss oder Zertifikat</p>
+<p>Bei einer HalloSkills-Weiterbildung kannst du beispielsweise den Lehrgang sowie die erworbenen fachlichen Kenntnisse und dein HalloSkills-Zertifikat angeben.</p>
 <blockquote>Kauffrau/-mann für Büromanagement (HalloSkills-Zertifikat) · HalloSkills · 2026<br>Schwerpunkte: Büroorganisation, Kommunikation, Rechnungswesen</blockquote>
+<p>So wird sichtbar, dass du nicht nur einen beruflichen Wechsel planst, sondern bereits aktiv neue Qualifikationen aufbaust. Möchtest du deine Qualifikationen gezielt erweitern? Dann schau dir unsere HalloSkills-Lehrgänge an oder vereinbare eine kostenlose Beratung.</p>
 
-<h2>Das LinkedIn-Profil als Ergänzung</h2>
-<p>Dein LinkedIn-Profil ist 2026 genauso wichtig wie dein Lebenslauf. Recruiter suchen aktiv auf LinkedIn. Stelle sicher, dass Lebenslauf und Profil konsistent sind – gleiche Jobs, gleiche Zeiträume, gleiche Ergebnisse.</p>
+<h2>Fazit</h2>
+<p>Ein moderner Lebenslauf 2026 muss nicht spektakulär aussehen. Viel wichtiger ist, dass Personaler schnell erkennen können, was du kannst und warum deine Erfahrung zur ausgeschriebenen Stelle passt.</p>
+<p>Halte den Aufbau übersichtlich, beginne mit den aktuellsten Stationen und beschreibe relevante Berufserfahrung möglichst konkret. Passe Skills und Schwerpunkte an die jeweilige Stellenanzeige an, ohne Fähigkeiten zu erfinden oder künstlich aufzublasen.</p>
+<p>Gerade in Zeiten von KI kann genau diese Individualität den Unterschied machen.</p>
+
+<h2>FAQ</h2>
+<p><strong>Wie lang sollte ein Lebenslauf 2026 sein?</strong><br>
+Die Bundesagentur für Arbeit empfiehlt eine bis maximal zwei Seiten. Je mehr Berufserfahrung du hast, desto stärker kannst du ältere und weniger relevante Stationen kürzen.</p>
+<p><strong>Sollte ein Lebenslauf chronologisch oder antichronologisch aufgebaut sein?</strong><br>
+In der Regel antichronologisch: Beginne innerhalb der einzelnen Bereiche mit deiner aktuellsten Tätigkeit und arbeite dich anschließend zurück.</p>
+<p><strong>Braucht man 2026 noch ein Bewerbungsfoto?</strong><br>
+Nein. Ein Bewerbungsfoto ist keine Pflicht. Wenn du eines verwendest, sollte es professionell wirken und zur angestrebten Position passen.</p>
+<p><strong>Sollte ich KI für meinen Lebenslauf benutzen?</strong><br>
+Du kannst KI beispielsweise zum Strukturieren, Kürzen oder Überarbeiten nutzen. Die Stepstone-Studie zeigt allerdings, dass Recruiter:innen KI-gestützte Bewerbungen teilweise als weniger individuell und weniger authentisch wahrnehmen. Prüfe deshalb jede Formulierung selbst.</p>
+<p><strong>Gehört eine Weiterbildung in den Lebenslauf?</strong><br>
+Ja, wenn sie für deine berufliche Entwicklung oder die gewünschte Stelle relevant ist. Gib Zeitraum, Weiterbildung, Anbieter und den erworbenen Abschluss beziehungsweise das Zertifikat an.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir unterstützen dich nach der Weiterbildung aktiv bei deiner Bewerbung.</p>
     `,
