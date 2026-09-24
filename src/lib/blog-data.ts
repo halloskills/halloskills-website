@@ -18,151 +18,227 @@ export function calcReadingTime(content: string): string {
 export const POSTS: BlogPost[] = [
   {
     slug: "bildungsgutschein-beantragen",
-    title: "Bildungsgutschein beantragen – Schritt für Schritt erklärt",
+    title: "Bildungsgutschein beantragen: So gehst du Schritt für Schritt vor",
     category: "Bildungsgutschein",
     readingTime: "8 min",
-    date: "2025-03-15",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop&q=60",
+    date: "2026-09-24",
+    image: "/images/blog/mann-der-nachdenkt.png",
     excerpt:
-      "Alles was du wissen musst, um deinen Bildungsgutschein erfolgreich zu beantragen. Mit Checkliste und Argumentationshilfe für das Gespräch bei der Agentur für Arbeit.",
+      "Wie beantragst du einen Bildungsgutschein, welche Voraussetzungen gelten und was hat sich seit 2025 geändert? Der komplette Ablauf Schritt für Schritt erklärt.",
     content: `
-<h2>Was ist der Bildungsgutschein?</h2>
-<p>Der Bildungsgutschein (BGS) ist ein staatliches Fördermittel der Bundesagentur für Arbeit oder des Jobcenters. Er übernimmt die vollständigen Kosten deiner Weiterbildung – inklusive Lernmaterialien, Prüfungsgebühren und bei Bedarf sogar Fahrtkosten oder Kinderbetreuungskosten. Du zahlst nichts aus eigener Tasche.</p>
-<p>Wer Arbeitslosengeld I oder II (Bürgergeld) bezieht oder von Arbeitslosigkeit bedroht ist, kann einen Bildungsgutschein beantragen. Der Schlüssel liegt im richtigen Gespräch mit deiner Arbeitsvermittlerin oder deinem Arbeitsvermittler – und in der richtigen Vorbereitung darauf.</p>
-<p>Jedes Jahr nutzen in Deutschland über 200.000 Menschen den Bildungsgutschein, um sich neu zu qualifizieren. Der Förderumfang kann mehrere Tausend Euro betragen – komplett übernommen vom Staat. Wer diese Chance nicht nutzt, lässt bares Geld liegen.</p>
-
-<h2>Wer hat Anspruch auf einen Bildungsgutschein?</h2>
-<p>Grundsätzlich können folgende Personengruppen einen Bildungsgutschein beantragen:</p>
+<h2>Wichtigste Erkenntnisse</h2>
 <ul>
-<li>Arbeitslose, die Arbeitslosengeld I (ALG I) beziehen</li>
-<li>Bürgergeld-Empfänger:innen (ALG II / Hartz IV), die beim Jobcenter gemeldet sind</li>
-<li>Arbeitnehmer:innen, die von Arbeitslosigkeit bedroht sind (z.&nbsp;B. wegen einer bevorstehenden Kündigung)</li>
-<li>Selbstständige in bestimmten Situationen</li>
+<li>Einen Bildungsgutschein bekommst du nicht automatisch. Entscheidend ist, ob die Weiterbildung für deine berufliche Situation notwendig und sinnvoll ist.</li>
+<li>Seit dem 1. Januar 2025 läuft die Entscheidung über die Förderung beruflicher Weiterbildung auch für Kundinnen und Kunden des Jobcenters über die Agentur für Arbeit.</li>
+<li>Dein Bildungsgutschein kann zeitlich befristet, regional begrenzt und auf ein bestimmtes Bildungsziel beschränkt sein.</li>
+<li>Bildungsträger und Weiterbildungsmaßnahme müssen für eine Förderung entsprechend zugelassen sein.</li>
+<li>Übernommen werden können neben Lehrgangskosten unter anderem Fahrtkosten, Kinderbetreuung sowie notwendige Unterkunft und Verpflegung.</li>
+<li>Bei bestimmten geförderten abschlussorientierten Weiterbildungen können zusätzlich Weiterbildungsgeld und Prüfungsprämien hinzukommen.</li>
 </ul>
-<p>Die genaue Entscheidung trifft immer dein:e Arbeitsvermittler:in. Es gibt keinen gesetzlichen Rechtsanspruch auf einen Bildungsgutschein – aber mit der richtigen Argumentation und Vorbereitung stehen die Chancen sehr gut.</p>
+<p>Du hast eine Weiterbildung gefunden, die dich beruflich weiterbringen könnte, möchtest die Kosten aber nicht komplett selbst tragen? Dann stößt du ziemlich schnell auf den Bildungsgutschein.</p>
+<p>Nur: Wie beantragt man ihn eigentlich? Gehst du zum Jobcenter oder zur Agentur für Arbeit? Muss dein Kurs vorher schon feststehen? Was solltest du zum Gespräch mitbringen? Und welche Kosten können überhaupt übernommen werden? Genau das schauen wir uns Schritt für Schritt an.</p>
 
-<h2>Schritt 1: Informiere dich vor dem Beratungsgespräch gründlich</h2>
-<p>Erscheine niemals unvorbereitet beim Beratungsgespräch. Das ist der häufigste Fehler, den Menschen beim Bildungsgutschein-Antrag machen. Wer nicht konkret sagen kann, welchen Kurs er machen möchte und warum dieser Kurs seine Berufsaussichten verbessert, bekommt in der Regel keinen Gutschein.</p>
-<p>Was du vorher recherchieren musst:</p>
+<h2>Was ist ein Bildungsgutschein und wie funktioniert er?</h2>
+<p>Mit einem Bildungsgutschein wird bestätigt, dass die Voraussetzungen für die Förderung einer beruflichen Weiterbildung erfüllt sind.</p>
+<p>Der Gutschein ist allerdings kein frei verwendbarer Geldbetrag, mit dem du irgendeinen Kurs deiner Wahl buchen kannst. Er kann zeitlich befristet, auf eine bestimmte Region begrenzt und auf ein konkretes Bildungsziel ausgerichtet sein.</p>
+<p>Wenn die Voraussetzungen erfüllt sind, kannst du innerhalb dieser Vorgaben eine passende zugelassene Weiterbildung auswählen. Laut Merkblatt der Bundesagentur für Arbeit müssen sowohl der Maßnahmeträger als auch die angestrebte Maßnahme für die Weiterbildungsförderung entsprechend zugelassen sein.</p>
+<p>Auch eine Umschulung kann grundsätzlich über einen Bildungsgutschein gefördert werden. Wichtig für HalloSkills ist aber die Unterscheidung: HalloSkills bietet Online-Weiterbildungen beziehungsweise Lehrgänge mit Umschulungsinhalten an. Die HalloSkills-Lehrgänge sind keine klassischen IHK-Umschulungen.</p>
+
+<h2>Was hat sich beim Bildungsgutschein seit 2025 geändert?</h2>
+<p>Dieser Punkt ist besonders wichtig, weil viele ältere Ratgeber im Internet inzwischen nicht mehr ganz aktuell sind. Seit dem 1. Januar 2025 ist die Agentur für Arbeit auch bei erwerbsfähigen Kundinnen und Kunden des Jobcenters für Beratung, Entscheidung und Förderung der beruflichen Weiterbildung zuständig. Das bedeutet aber nicht, dass das Jobcenter plötzlich gar keine Rolle mehr spielt.</p>
+<p>Wenn du Kundin oder Kunde eines Jobcenters bist, kann dein Jobcenter zunächst den Bedarf für eine Förderung feststellen und eine Vorklärung deiner Eignung durchführen. Danach wird die Agentur für Arbeit einbezogen. Sie führt die Weiterbildungsberatung durch und prüft abschließend, ob die Fördervoraussetzungen erfüllt sind.</p>
+<p><strong>Kurz gesagt:</strong> Du kannst als Jobcenter-Kundin oder -Kunde weiterhin dort starten. Die abschließende Prüfung der Weiterbildungsförderung erfolgt aber über die Agentur für Arbeit.</p>
+
+<h2>Welche Voraussetzungen gelten für einen Bildungsgutschein?</h2>
+<img src="/images/blog/infografik-voraussetzungen-bildungsgutschein.png" alt="Infografik: Welche Voraussetzungen gelten für einen Bildungsgutschein" />
+<p>Ein Bildungsgutschein wird nicht allein deshalb ausgestellt, weil du gern etwas Neues lernen möchtest. Die geplante Weiterbildung soll deine Chancen auf eine dauerhafte Eingliederung in den Arbeitsmarkt verbessern. Bei der Entscheidung können unter anderem deine bisherigen beruflichen Erfahrungen, Kenntnisse, persönlichen Voraussetzungen, deine Eignung und die Situation auf dem Arbeitsmarkt berücksichtigt werden.</p>
+<p>Eine Förderung kann beispielsweise infrage kommen, wenn:</p>
 <ul>
-<li><strong>Welche Weiterbildung du machen möchtest</strong> – z.&nbsp;B. Büromanagement, Industriewirtschaft oder Bankwesen</li>
-<li><strong>Welchen Anbieter du gewählt hast</strong> – und ob dieser für die Förderung über den Bildungsgutschein zugelassen ist</li>
-<li><strong>Welche beruflichen Perspektiven</strong> die Weiterbildung konkret eröffnet – am besten mit Stellenanzeigen belegt</li>
-<li><strong>Wie der Kurs aufgebaut ist</strong> – Dauer, Inhalte, Abschluss, Lernformat (online, vor Ort, Blended)</li>
-<li><strong>Was der Kurs kostet</strong> – damit du gegenüber dem Vermittler konkret bist</li>
+<li>du arbeitslos bist und die Weiterbildung deine Vermittlungschancen verbessern kann,</li>
+<li>dir Arbeitslosigkeit droht und eine zusätzliche Qualifikation helfen kann, sie zu vermeiden,</li>
+<li>dir Kenntnisse fehlen, die du für eine nachhaltige Beschäftigung benötigst,</li>
+<li>du unter bestimmten Voraussetzungen einen Berufsabschluss nachholen möchtest.</li>
 </ul>
+<p>Beim nachträglichen Erwerb eines Berufsabschlusses kann unter bestimmten Voraussetzungen sogar ein Rechtsanspruch auf Förderung bestehen. Deshalb wäre die pauschale Aussage „Auf einen Bildungsgutschein gibt es niemals einen Rechtsanspruch" zu einfach.</p>
+<p><strong>Wer kommt grundsätzlich für einen Bildungsgutschein infrage?</strong> Ob eine Förderung möglich ist, wird immer individuell geprüft. Entscheidend ist vor allem das Zusammenspiel von deiner aktuellen beruflichen Situation, deinem beruflichen Ziel, der geplanten Weiterbildung und deinen Chancen auf dem Arbeitsmarkt. Auch wenn du bereits beschäftigt bist, kann berufliche Weiterbildung unter bestimmten Voraussetzungen gefördert werden. Für Beschäftigte gelten allerdings teilweise andere Regeln als für Arbeitslose.</p>
 
-<h2>Schritt 2: Das Gespräch bei der Agentur für Arbeit vorbereiten</h2>
-<p>Beim Beratungsgespräch prüft dein:e Vermittler:in, ob die Weiterbildung „notwendig und zweckmäßig" ist – das ist der gesetzliche Begriff. Das klingt bürokratisch, ist aber lösbar, wenn du gut vorbereitet bist.</p>
-<p>Nutze diese Argumentationshilfe als Basis für das Gespräch:</p>
-<blockquote>„Ich möchte mich im Bereich [Thema] weiterbilden, weil aktuelle Stellenanzeigen in meiner Zielbranche genau diese Kenntnisse verlangen. Ich habe mir konkret drei Stellenanzeigen mitgebracht, die ich zeigen möchte. Der Kurs bei [Kursanbieter] ist für die Förderung zugelassen und schließt mit einem Zertifikat ab. Die Weiterbildung dauert [X] Monate und ich kann sie vollständig online von zuhause absolvieren."</blockquote>
-<p><strong>Wichtig:</strong> Zeige konkrete Stellenanzeigen, die du ausgedruckt oder digital dabei hast. Das macht deinen Antrag erheblich stärker – du zeigst damit, dass die Nachfrage auf dem Arbeitsmarkt real ist.</p>
-<p>Weitere Tipps für das Gespräch:</p>
+<h2>Wie kannst du einen Bildungsgutschein beantragen?</h2>
+<p>Der offizielle Prozess lässt sich ziemlich übersichtlich aufteilen.</p>
+<h3>Schritt 1: Kläre dein berufliches Ziel</h3>
+<p>Bevor du zum Beratungsgespräch gehst, solltest du zumindest ungefähr wissen, wohin du beruflich möchtest. Du musst noch nicht jede Einzelheit entschieden haben. Ein konkretes Ziel hilft aber enorm. Frag dich zum Beispiel:</p>
 <ul>
-<li>Sei konkret – nenn den genauen Kursnamen und Anbieter</li>
-<li>Erkläre, warum du dich für genau diesen Bereich entschieden hast (persönliche Motivation zählt)</li>
-<li>Frage aktiv: „Was brauche ich noch, damit Sie mir den Bildungsgutschein ausstellen können?"</li>
-<li>Wenn der Vermittler zögert: Bitte um einen zweiten Termin und komm dann noch besser vorbereitet</li>
+<li>In welchem Beruf oder Tätigkeitsbereich möchte ich künftig arbeiten?</li>
+<li>Welche Kenntnisse fehlen mir dafür?</li>
+<li>Welche Anforderungen finde ich in aktuellen Stellenanzeigen?</li>
+<li>Welche Weiterbildung könnte diese Lücke schließen?</li>
 </ul>
+<p>Passende Stellenanzeigen können bei der Vorbereitung helfen. Sie sind aber nicht pauschal eine gesetzlich vorgeschriebene Antragsunterlage.</p>
+<h3>Schritt 2: Vereinbare ein Beratungsgespräch</h3>
+<p>Nimm Kontakt mit deiner Agentur für Arbeit beziehungsweise deinem Jobcenter auf. Das Beratungsgespräch ist nicht nur irgendeine Formalität. Dort wird geklärt, ob eine berufliche Weiterbildung in deiner Situation notwendig sein kann und welche Förderung infrage kommt. Die Bundesagentur für Arbeit empfiehlt ausdrücklich, diese Beratung möglichst frühzeitig durchzuführen.</p>
+<h3>Schritt 3: Finde eine passende Weiterbildung</h3>
+<p>Jetzt kannst du gezielt nach einer Weiterbildung suchen, die zu deinem Bildungsziel passt. Dabei geht es nicht nur darum, dass der Anbieter grundsätzlich seriös ist. Für eine Förderung über den Bildungsgutschein müssen Träger und konkrete Maßnahme entsprechend zugelassen sein. Die Bundesagentur für Arbeit verweist für die Weiterbildungssuche unter anderem auf das Portal mein NOW. Du kannst natürlich schon vor deinem Beratungstermin recherchieren. Das ist sogar sinnvoll. Nur solltest du nicht einfach verbindlich buchen und anschließend davon ausgehen, dass die Förderung schon irgendwie klappt.</p>
+<h3>Schritt 4: Du erhältst den Bildungsgutschein</h3>
+<p>Sind die Voraussetzungen erfüllt, kann dir ein Bildungsgutschein ausgestellt werden. Darin wird unter anderem festgelegt, welches Bildungsziel gefördert wird. Außerdem kann der Gutschein zeitlich und regional begrenzt sein. Schau deshalb genau hin, ob deine gewünschte Weiterbildung tatsächlich zu den Angaben auf dem Gutschein passt.</p>
+<h3>Schritt 5: Löse den Bildungsgutschein ein</h3>
+<p>Hast du eine passende zugelassene Maßnahme gefunden, bestätigt der Bildungsträger deine Aufnahme. Die entsprechenden Unterlagen müssen innerhalb des Gültigkeitszeitraums und vor Beginn deiner Teilnahme bei der Agentur für Arbeit eingereicht werden.</p>
+<p>Die wichtigste Reihenfolge lautet also: Förderung klären → passende Maßnahme auswählen → Unterlagen einreichen → Weiterbildung starten.</p>
 
-<h2>Schritt 3: Unterlagen vollständig zusammenstellen</h2>
-<p>Diese Dokumente brauchst du für das Gespräch – je vollständiger deine Unterlagen, desto professioneller wirkst du und desto höher ist die Genehmigungswahrscheinlichkeit:</p>
+<h2>Welche Unterlagen helfen beim Beratungsgespräch?</h2>
+<img src="/images/blog/bildungsgutschein-unterlagen.png" alt="Unterlagen für den Bildungsgutschein" />
+<p>Es gibt keine allgemeine Liste nach dem Motto: „Ohne exakt diese sieben Dokumente bekommst du keinen Bildungsgutschein." Welche Unterlagen erforderlich sind, hängt von deiner individuellen Situation ab. Hilfreich können aber sein:</p>
 <ul>
-<li>Personalausweis oder Reisepass</li>
-<li>Aktueller Lebenslauf (nicht älter als 3 Monate)</li>
-<li>Nachweis über Arbeitslosigkeit oder Bedrohung durch Arbeitslosigkeit (z.&nbsp;B. Kündigungsschreiben)</li>
-<li>Kursbeschreibung des Anbieters inklusive Nachweis der Zulassung für den Bildungsgutschein</li>
-<li>Mindestens 2–3 aktuelle Stellenanzeigen aus deiner Zielbranche, die die im Kurs vermittelten Skills verlangen</li>
-<li>Optional: Empfehlungsschreiben oder Beratungsprotokoll des Kursanbieters</li>
+<li>ein aktueller Lebenslauf,</li>
+<li>Ausbildungs- und Arbeitszeugnisse,</li>
+<li>Informationen über deinen gewünschten Beruf,</li>
+<li>Angaben zur geplanten Weiterbildung, Dauer, Inhalten und Abschluss,</li>
+<li>Angaben zum Bildungsträger,</li>
+<li>passende Stellenanzeigen,</li>
+<li>eine kurze Erklärung, warum dir für dein Berufsziel bestimmte Kenntnisse fehlen.</li>
 </ul>
+<p>Du musst daraus keine riesige Akte machen. Wichtig ist vor allem, dass nachvollziehbar wird, warum diese Weiterbildung dir beruflich helfen soll.</p>
 
-<h2>Schritt 4: Den Bildungsgutschein erhalten und einlösen</h2>
-<p>Wenn dein Antrag genehmigt wird, erhältst du den Bildungsgutschein entweder in Papierform oder digital. Er enthält wichtige Informationen:</p>
+<h2>Welche Kosten kann der Bildungsgutschein übernehmen?</h2>
+<p>Bei einer geförderten Weiterbildung können deutlich mehr Kosten berücksichtigt werden als nur die Kursgebühr. Das aktuelle Merkblatt der Bundesagentur für Arbeit nennt unter anderem folgende Weiterbildungskosten:</p>
 <ul>
-<li><strong>Bildungsziel:</strong> Welche Art von Weiterbildung gefördert wird</li>
-<li><strong>Gültigkeitsdauer:</strong> Meist 3 Monate ab Ausstellungsdatum – diese Frist ist bindend!</li>
-<li><strong>Förderhöhe:</strong> Den maximalen Betrag, der übernommen wird</li>
-<li><strong>Regionaler Geltungsbereich:</strong> Bei Online-Kursen in der Regel bundesweit</li>
+<li><strong>Lehrgangskosten:</strong> Lehrgangsgebühren, notwendige Lernmittel, Arbeitskleidung und bestimmte Prüfungsgebühren</li>
+<li><strong>Fahrkosten:</strong> notwendige Fahrten zwischen Wohnung und Bildungsstätte – bei Pendelfahrten derzeit bis zu 588 € monatlich</li>
+<li><strong>Kinderbetreuung:</strong> unter bestimmten Voraussetzungen bis zu 160 € monatlich je aufsichtsbedürftigem Kind</li>
+<li><strong>Auswärtige Unterbringung:</strong> bei notwendiger Unterbringung außerhalb des Wohnorts, bis zu 420 € monatlich</li>
+<li><strong>Verpflegung:</strong> bei notwendiger auswärtiger Unterbringung, bis zu 168 € monatlich</li>
 </ul>
-<p>Reiche den Gutschein umgehend beim Kursanbieter ein. Der Anbieter meldet sich dann direkt mit der Agentur für Arbeit ab – du musst nichts weiter bezahlen oder veranlassen.</p>
+<p>Welche Kosten in deinem konkreten Fall übernommen werden, wird individuell geprüft.</p>
 
-<h2>Was tun, wenn der Antrag abgelehnt wird?</h2>
-<p>Eine Ablehnung ist kein endgültiges Nein. Rund 20–30% aller Bildungsgutschein-Anträge werden zunächst abgelehnt – viele davon erfolgreich im Widerspruch umgekehrt. Deine Möglichkeiten:</p>
+<h2>Welche zusätzliche finanzielle Unterstützung gibt es?</h2>
+<p>Bei bestimmten geförderten abschlussorientierten Weiterbildungen können zusätzliche Leistungen hinzukommen:</p>
 <ul>
-<li><strong>Widerspruch einlegen:</strong> Du hast 1 Monat Zeit. Begründe schriftlich, warum die Weiterbildung notwendig und zweckmäßig ist.</li>
-<li><strong>Neues Gespräch vereinbaren:</strong> Mit besserer Vorbereitung und mehr Dokumenten.</li>
-<li><strong>Anderen Vermittler:in ansprechen:</strong> Wenn möglich, nutze beim nächsten Termin eine:n anderen Ansprechpartner:in in der Agentur.</li>
-<li><strong>Fachkundige Stelle einschalten:</strong> Ein guter Weiterbildungsanbieter kann dir dabei helfen, deinen Widerspruch zu formulieren und die richtigen Argumente zu finden.</li>
+<li><strong>Weiterbildungsgeld:</strong> 150 € monatlich</li>
+<li><strong>Prämie für eine erfolgreiche Zwischenprüfung:</strong> 1.000 €</li>
+<li><strong>Prämie für eine erfolgreiche Abschlussprüfung:</strong> 1.500 €</li>
 </ul>
+<p><strong>Wichtig:</strong> Diese Zusatzleistungen gelten nicht automatisch für jede Weiterbildung. Sie setzen eine entsprechend geförderte abschlussorientierte Weiterbildung voraus. Sie bedeuten insbesondere nicht, dass ein aktueller HalloSkills-Lehrgang automatisch Anspruch auf Weiterbildungsgeld oder Prüfungsprämien auslöst.</p>
 
-<h2>Checkliste Bildungsgutschein auf einen Blick</h2>
+<h2>Wie lange kannst du deinen Bildungsgutschein nutzen?</h2>
+<p>Vielleicht hast du schon gelesen, dass ein Bildungsgutschein grundsätzlich drei Monate gültig sei. So pauschal solltest du dich darauf nicht verlassen. Der Bildungsgutschein wird zeitlich befristet ausgestellt. Zusätzlich kann er regional eingeschränkt und an ein bestimmtes Bildungsziel gebunden sein. Entscheidend ist deshalb die Gültigkeitsdauer, die tatsächlich auf deinem Gutschein steht.</p>
+<p>Beginnt dein gewünschter Lehrgang nicht innerhalb dieser Frist oder findest du keine geeignete Maßnahme, solltest du dich möglichst schnell wieder an die Agentur für Arbeit wenden. Das Merkblatt weist ausdrücklich darauf hin, dass ein Bildungsgutschein ansonsten verfallen kann.</p>
+
+<h2>Was solltest du bei der Wahl des Bildungsträgers beachten?</h2>
+<p>Nur weil ein Kurs interessant klingt, kann er nicht automatisch über einen Bildungsgutschein finanziert werden. Sowohl Träger als auch Maßnahme müssen die notwendigen Zulassungsvoraussetzungen erfüllen. Außerdem muss der Lehrgang zu dem Bildungsziel passen, das auf deinem Bildungsgutschein festgelegt wurde. Schau deshalb nicht nur auf Kursname und Preis. Interessant sind auch:</p>
 <ul>
-<li>✅ Kurs und Anbieter vorab recherchiert und entschieden</li>
-<li>✅ Zulassung des Anbieters für den Bildungsgutschein geprüft</li>
-<li>✅ Mindestens 3 aktuelle Stellenanzeigen gesammelt, die den Kurs rechtfertigen</li>
-<li>✅ Alle Unterlagen vollständig zusammengestellt</li>
-<li>✅ Argumentationsstrategie für das Gespräch vorbereitet</li>
-<li>✅ Kostenlose Erstberatung beim Kursanbieter vereinbart</li>
+<li>Lernform und Stundenumfang,</li>
+<li>Qualifikation der Lehrkräfte,</li>
+<li>technische Ausstattung,</li>
+<li>Betreuung während des Lehrgangs,</li>
+<li>Abschluss beziehungsweise Zertifikat,</li>
+<li>Unterstützung bei Praktikum und Jobsuche,</li>
+<li>Erfahrungen früherer Teilnehmender.</li>
 </ul>
+<p>Die Bundesagentur für Arbeit empfiehlt sogar, beim Anbieter nachzufragen, wie viele Teilnehmende des zuletzt durchgeführten Lehrgangs anschließend eine Beschäftigung gefunden haben.</p>
 
-<p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir bereiten dich Schritt für Schritt auf das Gespräch bei der Agentur für Arbeit vor.</p>
+<h2>Was kannst du tun, wenn die Förderung abgelehnt wird?</h2>
+<p>Eine Ablehnung ist erst einmal ein Grund, genauer hinzuschauen. Lies dir den Bescheid durch und prüfe, warum die Förderung nicht bewilligt wurde. Vielleicht fehlen Informationen. Vielleicht ist nicht ausreichend erkennbar, warum die Weiterbildung für dein berufliches Ziel notwendig ist. Oder die gewählte Maßnahme erfüllt die Fördervoraussetzungen nicht.</p>
+<p>Wenn du mit einem schriftlichen Bescheid nicht einverstanden bist, kannst du grundsätzlich innerhalb eines Monats nach Bekanntgabe Widerspruch einlegen. Die Entscheidung wird anschließend noch einmal überprüft. Eine allgemeine Erfolgsquote für solche Widersprüche lässt sich daraus allerdings nicht ableiten. Entscheidend ist immer dein konkreter Fall.</p>
+
+<h2>Kannst du einen HalloSkills-Lehrgang mit Bildungsgutschein finanzieren?</h2>
+<p>Ob ein Bildungsgutschein grundsätzlich für deine persönliche Situation infrage kommt, können wir gemeinsam mit dir anschauen. Eine Förderung eines HalloSkills-Lehrgangs über den Bildungsgutschein ist jedoch erst möglich, sobald die dafür erforderlichen AZAV-Zulassungen für Träger und Maßnahme vorliegen.</p>
+
+<h2>Fazit</h2>
+<p>Einen Bildungsgutschein zu beantragen klingt zunächst komplizierter, als der Ablauf eigentlich ist. Du brauchst vor allem ein nachvollziehbares berufliches Ziel, ein Beratungsgespräch und eine Weiterbildung, die geeignet ist, deine Beschäftigungschancen zu verbessern.</p>
+<p>Wenn die Voraussetzungen erfüllt sind, können nicht nur Lehrgangskosten übernommen werden. Je nach Situation kommen beispielsweise Fahrtkosten, Kinderbetreuung oder notwendige Unterkunft hinzu. Bei bestimmten abschlussorientierten Weiterbildungen sind außerdem zusätzliches Weiterbildungsgeld und Prüfungsprämien möglich.</p>
+<p>Seit 2025 solltest du außerdem wissen: Auch bei Kundinnen und Kunden des Jobcenters läuft die abschließende Prüfung der Weiterbildungsförderung über die Agentur für Arbeit.</p>
+
+<p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir schauen gemeinsam, welcher Lehrgang für dich interessant sein kann und ob ein Bildungsgutschein für deine persönliche Situation grundsätzlich infrage kommt.</p>
     `,
   },
   {
     slug: "arbeitslosengeld-weiterbildung",
-    title: "Weiterbildung während Arbeitslosengeld – was ist erlaubt?",
+    title: "Weiterbildung während Arbeitslosengeld: Was ist erlaubt?",
     category: "Bildungsgutschein",
-    readingTime: "5 min",
-    date: "2025-05-12",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&auto=format&fit=crop&q=60",
+    readingTime: "9 min",
+    date: "2026-09-24",
+    image: "/images/blog/blonde-frau-mit-laptop.png",
     excerpt:
-      "Du beziehst ALG I oder ALG II und willst dich weiterbilden? Hier erfährst du, was geht, was nicht geht und wie du beides kombinierst.",
+      "Kannst du während ALG I eine Weiterbildung machen und läuft dein Arbeitslosengeld weiter? Was bei geförderten und nicht geförderten Kursen gilt – und was beim Bürgergeld anders ist.",
     content: `
-<h2>Grundsatz: Weiterbildung und Arbeitslosengeld sind kein Widerspruch</h2>
-<p>Viele Menschen, die Arbeitslosengeld beziehen, glauben, dass sie keine Weiterbildung machen dürfen – oder zumindest keine, die länger dauert oder von der Arbeitssuche ablenkt. Das ist ein weit verbreitetes Missverständnis.</p>
-<p>Tatsächlich fördert die Bundesagentur für Arbeit Weiterbildung während der Arbeitslosigkeit ausdrücklich. Das Sozialgesetzbuch III (SGB III) enthält explizite Regelungen zur Förderung der beruflichen Weiterbildung (FbW). Der Bildungsgutschein ist das zentrale Instrument dafür.</p>
-<p>Die Logik dahinter: Wer qualifizierter ist, findet schneller einen Job – und das ist im Interesse der Agentur für Arbeit.</p>
-
-<h2>Weiterbildung mit ALG I: Was gilt?</h2>
-<p>Wenn du Arbeitslosengeld I beziehst, hast du unter bestimmten Bedingungen Anspruch auf einen Bildungsgutschein. Die Voraussetzungen:</p>
+<h2>Wichtigste Erkenntnisse</h2>
 <ul>
-<li>Die Weiterbildung muss bei einem für den Bildungsgutschein zugelassenen Anbieter stattfinden</li>
-<li>Die Weiterbildung muss „notwendig und zweckmäßig" sein – sie muss also deine Chancen auf dem Arbeitsmarkt konkret verbessern</li>
-<li>Du musst die Weiterbildung vor dem Start genehmigen lassen – nachträgliche Förderung gibt es nicht</li>
-<li>Du musst weiterhin der Arbeitsvermittlung grundsätzlich zur Verfügung stehen</li>
+<li>Du kannst während des Bezugs von Arbeitslosengeld eine Weiterbildung machen. Ob und wie dein ALG I weitergezahlt wird, hängt unter anderem davon ab, ob die Weiterbildung gefördert wird.</li>
+<li>Bei einer geförderten beruflichen Weiterbildung kann dein Arbeitslosengeld weiterlaufen, solange die Anspruchsvoraussetzungen erfüllt sind.</li>
+<li>Dein ALG-I-Restanspruch wird dabei günstiger angerechnet: Zwei Tage Arbeitslosengeld bei beruflicher Weiterbildung mindern den Anspruch grundsätzlich nur um einen Tag.</li>
+<li>Auch eine nicht geförderte Weiterbildung kann mit ALG I vereinbar sein. Sie muss aber vorher mit der Agentur für Arbeit abgestimmt werden.</li>
+<li>Ein Nebenjob ist möglich, solange du unter 15 Stunden pro Woche bleibst und die geltenden Regeln für Nebeneinkommen beachtest.</li>
+<li>Weiterbildungsgeld und Prüfungsprämien gibt es nicht automatisch bei jeder Weiterbildung.</li>
 </ul>
-<p><strong>Was mit deinem ALG I passiert:</strong> Während einer genehmigten Weiterbildungsmaßnahme läuft dein Arbeitslosengeld I weiter. Bei Maßnahmen, die länger als die Restlaufzeit deines ALG-I-Anspruchs dauern, kann der Anspruch sogar verlängert werden – das nennt sich „Nahtlosigkeitsregelung".</p>
-<p><strong>Wichtig:</strong> Wenn die Weiterbildung ganztägig stattfindet, bist du während dieser Zeit von der Pflicht zur Arbeitssuche befreit. Bei Teilzeit-Maßnahmen musst du weiterhin aktiv Stellen suchen.</p>
+<p>Du bekommst Arbeitslosengeld und möchtest die Zeit nutzen, um dich beruflich weiterzuentwickeln? Dann stellt sich schnell die Frage: Darfst du überhaupt eine Weiterbildung machen, während du ALG I beziehst?</p>
+<p>Grundsätzlich ja. Eine Weiterbildung und Arbeitslosengeld schließen sich nicht aus. Entscheidend ist aber, welche Art von Weiterbildung du machst, ob sie von der Agentur für Arbeit gefördert wird und welche Voraussetzungen in deinem konkreten Fall gelten.</p>
+<p>Besonders interessant kann eine Weiterbildung sein, wenn dir für deinen nächsten Job bestimmte Kenntnisse fehlen oder du dich beruflich neu orientieren möchtest. Unter bestimmten Voraussetzungen kann die Agentur für Arbeit die Weiterbildung fördern und dein Arbeitslosengeld während dieser Zeit weiterzahlen.</p>
 
-<h2>Weiterbildung mit ALG II (Bürgergeld): Was gilt?</h2>
-<p>Auch Bürgergeld-Empfänger:innen können Weiterbildungen über den Bildungsgutschein finanzieren. Hier ist das Jobcenter zuständig, nicht die Agentur für Arbeit. Das ändert einiges:</p>
+<h2>Bekommst du während einer Weiterbildung weiter Arbeitslosengeld?</h2>
+<img src="/images/blog/offene-hand-mit-euro-muenzen.png" alt="Offene Hand mit Euro-Münzen" />
+<p>Bei einer geförderten beruflichen Weiterbildung kann dein ALG I grundsätzlich weitergezahlt werden. Die Bundesagentur für Arbeit erklärt im Merkblatt 6 zur Förderung der beruflichen Weiterbildung, dass Arbeitslosengeld während einer geförderten Weiterbildung gezahlt wird, solange die entsprechenden Anspruchsvoraussetzungen vorliegen.</p>
+<p>Dabei handelt es sich nicht um eine zusätzliche Leistung neben deinem bisherigen Arbeitslosengeld. Dein bestehender ALG-I-Anspruch läuft vielmehr unter besonderen Regeln weiter.</p>
+<p>Eine Weiterbildung wird allerdings nicht automatisch gefördert, nur weil du arbeitslos bist. Nach § 81 SGB III kann eine berufliche Weiterbildung unter anderem gefördert werden, wenn sie notwendig ist, um dich beruflich einzugliedern oder eine drohende Arbeitslosigkeit abzuwenden, du vorher beraten wurdest und sowohl Träger als auch Maßnahme für die Förderung zugelassen sind.</p>
+
+<h2>Wann kann die Agentur für Arbeit deine Weiterbildung fördern?</h2>
+<p>Im Beratungsgespräch schaut die Agentur für Arbeit auf deine individuelle Situation. Dazu können beispielsweise dein bisheriger beruflicher Werdegang, vorhandene Kenntnisse, deine Eignung und die Arbeitsmarktchancen nach der Weiterbildung gehören. Ziel ist, dass die Qualifizierung deine Chancen auf eine dauerhafte Beschäftigung verbessert.</p>
+<p>Sind die Voraussetzungen erfüllt, kann dir ein Bildungsgutschein ausgestellt werden. Damit wird die Übernahme der Weiterbildungskosten und gegebenenfalls die Weiterzahlung des Arbeitslosengeldes zugesichert. Der Gutschein enthält ein bestimmtes Bildungsziel und kann zeitlich oder regional begrenzt sein.</p>
+<p>Auch wenn du eine Online-Weiterbildung machen möchtest, solltest du deshalb nicht nur auf das Lernformat schauen. Entscheidend für eine Förderung ist unter anderem, dass der gewählte Bildungsträger und die konkrete Maßnahme die erforderliche Zulassung besitzen und zum Bildungsziel deines Gutscheins passen.</p>
+
+<h2>Was passiert mit deinem ALG-I-Anspruch während der Weiterbildung?</h2>
+<p>Eine geförderte Weiterbildung hat einen wichtigen Vorteil: Dein verbleibender ALG-I-Anspruch wird währenddessen nicht im normalen Verhältnis von einem Tag zu einem Tag reduziert. Nach § 148 SGB III vermindert sich dein Anspruch grundsätzlich um einen Tag für jeweils zwei Tage, an denen du Arbeitslosengeld bei beruflicher Weiterbildung erhältst.</p>
 <ul>
-<li>Der Bildungsgutschein wird vom Jobcenter ausgestellt</li>
-<li>Die Genehmigung hängt mehr von der Einschätzung der Fallmanager:innen ab</li>
-<li>Es gibt oft mehr Gesprächsbedarf – gute Vorbereitung ist deshalb noch wichtiger</li>
-<li>Manchmal sind Eingliederungsvereinbarungen relevant – lies sie durch, bevor du den BGS beantragst</li>
+<li><strong>30 Tage ALG-Bezug während der Weiterbildung</strong> → Minderung des Restanspruchs um rund 15 Tage</li>
+<li><strong>60 Tage ALG-Bezug während der Weiterbildung</strong> → Minderung des Restanspruchs um rund 30 Tage</li>
+<li><strong>120 Tage ALG-Bezug während der Weiterbildung</strong> → Minderung des Restanspruchs um rund 60 Tage</li>
 </ul>
-<p>Auch hier: Während einer genehmigten Maßnahme läuft das Bürgergeld weiter. Zusätzlich kann es in manchen Fällen eine Weiterbildungsprämie oder Prämien für das Bestehen von Prüfungen geben.</p>
+<p>Wenn du also beispielsweise vier Monate ALG während einer geförderten Weiterbildung bekommst, reduziert sich dein Restanspruch grundsätzlich nur um ungefähr zwei Monate. Auch die Bundesagentur für Arbeit erläutert dieses 2:1-Prinzip in ihrem Weiterbildungsmerkblatt.</p>
+<p><strong>Schutzregelung bei knappem Restanspruch:</strong> Die 2:1-Minderung wird grundsätzlich nicht weiter vorgenommen, wenn dein ALG-I-Anspruch dadurch unter drei Monate beziehungsweise 90 Tage sinken würde. Beträgt dein Restanspruch bereits zu Beginn der Weiterbildung höchstens 90 Tage, findet diese weitere Minderung grundsätzlich nicht statt. Hattest du zu Beginn weniger als 90 Tage Restanspruch und wurdest mindestens sechs zusammenhängende Monate wegen einer beruflichen Weiterbildung gefördert, kann der Anspruch einmalig auf 90 Tage erhöht werden.</p>
+<p>Deshalb ist die Aussage, eine Weiterbildung würde dein Arbeitslosengeld einfach „verlängern", zu pauschal. Wie viel Anspruch dir tatsächlich bleibt, hängt von deiner Ausgangssituation und der Dauer der geförderten Weiterbildung ab.</p>
 
-<h2>Häufige Missverständnisse – richtiggestellt</h2>
-<p>In der Praxis tauchen immer wieder dieselben Missverständnisse auf. Hier räumen wir mit den häufigsten auf:</p>
+<h2>Kannst du auch eine nicht geförderte Weiterbildung machen?</h2>
+<p>Ja. Auch eine Weiterbildung, die nicht über § 81 SGB III gefördert wird, kann grundsätzlich mit ALG I vereinbar sein. Hier wird allerdings deine Verfügbarkeit für den Arbeitsmarkt besonders wichtig. Nach § 139 Abs. 3 SGB III schließt die Teilnahme an einer solchen beruflichen Weiterbildung die Verfügbarkeit nicht aus, wenn:</p>
 <ul>
-<li><strong>„Ich muss für jeden Job-Anruf sofort verfügbar sein, also kann ich keine Weiterbildung machen."</strong> – Bei einer genehmigten Vollzeit-Maßnahme entfällt diese Pflicht temporär. Sprich das bei der Genehmigung explizit an.</li>
-<li><strong>„Mein ALG fällt weg, wenn ich eine Weiterbildung mache."</strong> – Falsch. Bei genehmigten Maßnahmen läuft es weiter, oft sogar verlängert.</li>
-<li><strong>„Ich muss die Kurskosten vorschießen und bekomme sie erstattet."</strong> – Nein. Bei einem genehmigten Bildungsgutschein zahlt die Agentur direkt an den Anbieter. Du gibst keinen Cent aus.</li>
-<li><strong>„Online-Kurse werden nicht gefördert."</strong> – Falsch. Online-Kurse werden genau wie Präsenz-Kurse gefördert, sofern der Anbieter für die Förderung zugelassen ist.</li>
-<li><strong>„Ich bin zu alt für eine geförderte Weiterbildung."</strong> – Es gibt keine Altersobergrenze für den Bildungsgutschein. Menschen bis ins Rentenalter haben ihn erfolgreich genutzt.</li>
+<li>die Agentur für Arbeit deiner Teilnahme zustimmt,</li>
+<li>du bereit bist, die Weiterbildung abzubrechen, sobald eine berufliche Eingliederung möglich wird, und</li>
+<li>du mit dem Bildungsträger vereinbart hast, dass dieser Abbruch möglich ist.</li>
 </ul>
+<p>Melde eine nicht geförderte Weiterbildung deshalb vor Beginn bei deiner Agentur für Arbeit. Einfach einen Kurs zu starten und davon auszugehen, dass dein Arbeitslosengeld unverändert weiterläuft, kann zu Problemen führen. Wichtig ist außerdem: Die Zustimmung zur Teilnahme bedeutet nicht automatisch, dass die Agentur für Arbeit auch die Kurskosten übernimmt.</p>
 
-<h2>Was passiert, wenn ich die Weiterbildung abbreche?</h2>
-<p>Wenn du eine geförderte Weiterbildung ohne wichtigen Grund abbrichst, kann die Agentur für Arbeit eine Sperrzeit von bis zu 12 Wochen verhängen. Das ist zwar unangenehm, aber in der Praxis selten – weil die meisten Menschen, die eine geförderte Weiterbildung beginnen, auch motiviert sind, sie abzuschließen.</p>
-<p>Wenn es einen wichtigen Grund gibt (Gesundheit, Pflege, neue Stelle), kann die Agentur auf die Sperrzeit verzichten.</p>
+<h2>Wer bezahlt eine geförderte Weiterbildung?</h2>
+<p>Bei einer bewilligten Förderung können unterschiedliche Weiterbildungskosten übernommen werden – dazu gehören laut Bundesagentur für Arbeit beispielsweise Lehrgangsgebühren, erforderliche Lernmittel und Prüfungsgebühren sowie unter bestimmten Voraussetzungen Fahrt-, Kinderbetreuungs-, Unterkunfts- und Verpflegungskosten.</p>
+<p>Du musst die bewilligten Lehrgangskosten auch nicht grundsätzlich erst selbst bezahlen und anschließend darauf hoffen, sie zurückzubekommen. Nach dem BA-Merkblatt werden Lehrgangskosten im Regelfall direkt an den Bildungsträger ausgezahlt. Andere Weiterbildungskosten können je nach Leistung an dich ausgezahlt werden.</p>
 
-<h2>Nebentätigkeit während der Weiterbildung</h2>
-<p>Wenn du während einer Weiterbildung einem Minijob nachgehst (bis 538 € monatlich), bleibt das meist ohne Auswirkungen auf dein ALG. Bei höheren Einnahmen gibt es Anrechnungsregeln – lass dich dazu von deiner Vermittlerin oder deinem Vermittler beraten.</p>
+<h2>Darfst du während der Weiterbildung nebenbei arbeiten?</h2>
+<img src="/images/blog/frau-kaut-auf-stift-und-denkt-nach.png" alt="Frau denkt über ihre Weiterbildung nach" />
+<p>Ein Nebenjob ist grundsätzlich möglich. Dabei gelten aber dieselben wichtigen Grenzen, die auch sonst beim ALG-I-Bezug zu beachten sind. Die Bundesagentur für Arbeit erklärt zum Nebenjob bei Arbeitslosengeld, dass du die Nebentätigkeit vorab melden und weniger als 15 Stunden pro Kalenderwoche arbeiten musst. Ab 15 Stunden wöchentlich giltst du grundsätzlich nicht mehr als arbeitslos.</p>
+<p>Beim normalen Nebenverdienst gilt grundsätzlich ein monatlicher Freibetrag von 165 Euro. Einkommen oberhalb des anrechnungsfreien Betrags kann dein Arbeitslosengeld reduzieren. Unter bestimmten Voraussetzungen kann ein höherer individueller Freibetrag gelten. Deshalb ist es nicht sinnvoll, sich an einer allgemeinen Minijob-Grenze zu orientieren – für ALG I gelten eigene Regeln zu Arbeitszeit und Einkommensanrechnung.</p>
 
-<h2>Tipp: Vorbereitung ist alles</h2>
-<p>Eine kostenlose Erstberatung bei einem Weiterbildungsanbieter kann helfen, dich optimal auf das Gespräch mit deinem Vermittler vorzubereiten.</p>
+<h2>Bekommst du zusätzlich 150 Euro Weiterbildungsgeld?</h2>
+<p>Nicht bei jeder Weiterbildung. Das monatliche Weiterbildungsgeld von 150 Euro ist an bestimmte geförderte, abschlussorientierte Weiterbildungen gekoppelt. Dazu zählen beispielsweise Weiterbildungen, die zu einem Abschluss in einem Ausbildungsberuf mit einer regulären Ausbildungsdauer von mindestens zwei Jahren führen.</p>
+<p>Unter den gesetzlichen Voraussetzungen können außerdem Prüfungsprämien gezahlt werden: 1.000 Euro nach erfolgreicher entsprechender Zwischenprüfung oder dem ersten Teil einer gestreckten Abschlussprüfung, und 1.500 Euro nach erfolgreicher Abschlussprüfung. Nur weil eine Weiterbildung gefördert wird, bekommst du also nicht automatisch zusätzlich 150 Euro pro Monat oder eine Prüfungsprämie.</p>
+
+<h2>Was passiert, wenn du die Weiterbildung abbrichst?</h2>
+<p>Wenn du merkst, dass eine Weiterbildung nicht funktioniert, solltest du nicht einfach aufhören und anschließend die Agentur für Arbeit informieren. Bei einer von der Agentur für Arbeit relevanten Weiterbildungs- oder Eingliederungsmaßnahme kann eine Ablehnung oder ein Abbruch ohne wichtigen Grund und nach entsprechender Rechtsfolgenbelehrung eine Sperrzeit auslösen. § 159 SGB III sieht für diese Kategorie grundsätzlich drei Wochen beim ersten entsprechenden versicherungswidrigen Verhalten, sechs Wochen beim zweiten und zwölf Wochen bei weiteren Fällen vor.</p>
+<p>Das heißt nicht, dass jeder Abbruch automatisch zu einer Sperrzeit führt. Ein wichtiger Grund kann eine Rolle spielen, und die konkrete Situation muss geprüft werden. Sprich deshalb möglichst vor einem Abbruch mit deiner Agentur für Arbeit und dem Bildungsträger.</p>
+
+<h2>Was gilt bei Krankheit oder wenn du einen Job findest?</h2>
+<p>Auch während einer geförderten Weiterbildung bestehen Mitwirkungs- und Meldepflichten. Eine Arbeitsunfähigkeit musst du der zuständigen Stelle melden. Ebenso solltest du Änderungen mitteilen, die deinen Leistungsanspruch beeinflussen können – beispielsweise eine neue Beschäftigung, eine Unterbrechung der Weiterbildung oder andere relevante Veränderungen.</p>
+<p>Findest du während deiner Weiterbildung einen Job, ist das grundsätzlich erst einmal positiv. Wie es mit deiner Weiterbildung weitergeht, solltest du jedoch mit der Agentur für Arbeit und deinem Bildungsträger abstimmen, anstatt die Maßnahme einfach selbstständig zu beenden.</p>
+
+<h2>Was gilt, wenn du Bürgergeld statt ALG I bekommst?</h2>
+<p>ALG I und Bürgergeld sind nicht dasselbe. Die oben erklärte 2:1-Regel für den ALG-I-Restanspruch betrifft Arbeitslosengeld nach dem SGB III und lässt sich nicht einfach auf Bürgergeld übertragen.</p>
+<p>Seit 1. Januar 2025 gibt es außerdem eine wichtige Änderung bei der Weiterbildungsförderung von Menschen im SGB-II-Bezug: Das Jobcenter kann den Weiterbildungsbedarf feststellen und eine Vorklärung vornehmen, während anschließend die Agentur für Arbeit in die Weiterbildungsberatung einbezogen wird und die Fördervoraussetzungen abschließend prüft. Ältere Ratgeber, die pauschal davon sprechen, dass das Jobcenter selbst sämtliche Entscheidungen über den Bildungsgutschein trifft, können deshalb inzwischen veraltet sein.</p>
+
+<h2>Spielt dein Alter bei einer Weiterbildung eine Rolle?</h2>
+<p>Für die allgemeine Förderung einer beruflichen Weiterbildung nach § 81 SGB III gibt es keine pauschale Altersgrenze, ab der eine Weiterbildung automatisch ausgeschlossen wäre. Die gesetzlichen Voraussetzungen beziehen sich vielmehr unter anderem auf die Notwendigkeit der Weiterbildung, Beratung sowie die Zulassung von Maßnahme und Träger. Wie sinnvoll und förderfähig eine konkrete Weiterbildung ist, wird deshalb individuell geprüft.</p>
+
+<h2>Welche Weiterbildung passt zu dir?</h2>
+<p>Eine mögliche Förderung ist wichtig, sie sollte aber nicht das einzige Kriterium für deine Entscheidung sein. Entscheidend ist vor allem, welche Kenntnisse du für dein berufliches Ziel benötigst und welche Weiterbildung zu deiner Lebenssituation passt.</p>
+<p>Bei HalloSkills findest du kaufmännische Online-Weiterbildungen mit Inhalten klassischer Umschulungen, die kompakt und vollständig online vermittelt werden. Die HalloSkills-Lehrgänge sind dabei keine klassischen IHK-Umschulungen: Du schließt deinen Lehrgang mit einem HalloSkills-Zertifikat statt einer IHK-Prüfung ab. HalloSkills befindet sich aktuell im AZAV-Zertifizierungsprozess. Eine Förderung unserer Lehrgänge über den Bildungsgutschein ist erst möglich, sobald die dafür erforderlichen AZAV-Zulassungen für Träger und Maßnahme vorliegen.</p>
+
+<h2>Fazit</h2>
+<p>Eine Weiterbildung während des Bezugs von Arbeitslosengeld ist grundsätzlich möglich. Besonders klar ist die Situation bei einer geförderten beruflichen Weiterbildung: Dein ALG I kann weitergezahlt werden und dein Restanspruch wird grundsätzlich im Verhältnis 2:1 reduziert.</p>
+<p>Doch auch eine nicht geförderte Weiterbildung muss ALG I nicht automatisch ausschließen. Hier kommt es insbesondere darauf an, dass die Agentur für Arbeit vorher zustimmt und deine Verfügbarkeit für eine berufliche Eingliederung erhalten bleibt.</p>
+<p>Wichtig ist deshalb vor allem: Kläre deine Weiterbildung vor dem Start mit der Agentur für Arbeit. So weißt du, ob eine Förderung möglich ist, welche Kosten übernommen werden können und welche Regeln während deiner Weiterbildung gelten.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – komplett unverbindlich und kostenlos.</p>
     `,
@@ -171,17 +247,22 @@ export const POSTS: BlogPost[] = [
     slug: "remote-arbeit-tipps",
     title: "Remote Work Tipps: So funktioniert das Arbeiten von zuhause wirklich",
     category: "Karriere",
-    readingTime: "6 min",
-    date: "2025-06-01",
-    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&auto=format&fit=crop&q=60",
+    readingTime: "7 min",
+    date: "2026-09-24",
+    image: "/images/blog/frau-am-pc-und-home-office.jpg",
     excerpt:
-      "Homeoffice klingt verlockend – aber es braucht die richtigen Strategien. Diese Tipps helfen dir, produktiv, fokussiert und zufrieden von zuhause zu arbeiten.",
+      "Remote Work gehört für viele längst zum Arbeitsalltag – funktioniert aber nicht automatisch. Diese Tipps helfen dir, zuhause konzentriert, produktiv und zufrieden zu arbeiten.",
     content: `
-<h2>Remote Work ist gekommen um zu bleiben</h2>
-<p>Laut einer Studie des Fraunhofer Instituts arbeiten 2025 noch immer über 40% der deutschen Wissensarbeiter:innen regelmäßig im Homeoffice. Viele Unternehmen bieten Remote-Optionen als Standard an – besonders in kaufmännischen Berufen mit digitalen Prozessen.</p>
+<p>Remote Work gehört für viele längst zum normalen Arbeitsalltag. Zuhause zu arbeiten bedeutet dabei nicht einfach, den Laptop aufzuklappen und loszulegen. Damit du auch außerhalb des klassischen Büros konzentriert und produktiv wie im Büro arbeiten kannst, brauchst du klare Routinen, passende Tools und einen Arbeitsplatz, an dem du möglichst ungestört arbeiten kannst.</p>
+<p>Gerade wer nicht jeden Tag ins Büro gehen möchte oder muss, kann von flexiblen Arbeitsmodellen profitieren. Gleichzeitig verändert Remote Work aber auch den Büroalltag: Kommunikation, Zusammenarbeit und Selbstorganisation laufen stärker digital ab und müssen bewusster geplant werden.</p>
+<p>Mit den richtigen Strukturen lässt sich Remote Work gut in den Alltag integrieren, ohne dass Arbeit und Freizeit ständig ineinander übergehen. Hier findest du praktische Tipps, mit denen du deinen Arbeitstag zuhause sinnvoll organisieren und typische Probleme im Homeoffice vermeiden kannst.</p>
+
+<h2>Remote Work ist gekommen, um zu bleiben</h2>
+<p>Laut einer Studie des Fraunhofer-Instituts arbeiten 2025 noch immer über 40% der deutschen Wissensarbeiter:innen regelmäßig im Homeoffice. Viele Unternehmen bieten Remote-Optionen als Standard an – besonders in kaufmännischen Berufen mit digitalen Prozessen.</p>
 <p>Das ist eine riesige Chance für alle, die in diese Berufsfelder einsteigen wollen. Aber Homeoffice funktioniert nicht automatisch. Es braucht die richtigen Strukturen, Tools und Gewohnheiten.</p>
 
 <h2>Tipp 1: Einen festen Arbeitsbereich einrichten</h2>
+<img src="/images/blog/laptop-und-fenster.jpg" alt="Laptop an einem Arbeitsplatz am Fenster" />
 <p>Das Sofa ist eine Falle. Ein dedizierter Arbeitsbereich – auch eine Zimmerecke mit Schreibtisch – hilft dem Gehirn, in den Arbeitsmodus zu wechseln. Wichtig: Am Feierabend diesen Bereich verlassen und nicht mehr hinschauen.</p>
 <p>Praktische Ausstattung für dein Homeoffice:</p>
 <ul>
@@ -191,10 +272,12 @@ export const POSTS: BlogPost[] = [
 <li>Kopfhörer mit Noise Cancelling für Fokusphasen</li>
 <li>Neutraler, aufgeräumter Hintergrund für Video-Calls</li>
 </ul>
+<p>Auch die Deutsche Gesetzliche Unfallversicherung weist darauf hin, dass eine ungünstige ergonomische Ausstattung im Homeoffice das Risiko für Beschwerden insbesondere im Nacken- und Rückenbereich erhöhen kann.</p>
 
 <h2>Tipp 2: Feste Arbeitszeiten und klare Grenzen</h2>
 <p>Im Homeoffice verschwimmen Grenzen schnell – entweder arbeitet man zu wenig (weil man sich ablenken lässt) oder zu viel (weil man nie wirklich abschaltet). Beides schadet auf Dauer.</p>
 <p>Definiere klare Start- und Endzeiten, kommuniziere sie im Team und ritualisiere das Ende des Arbeitstags: Computer ausschalten, kurzen Spaziergang machen – das signalisiert dem Gehirn: Feierabend.</p>
+<p>Klare Grenzen sind auch aus Arbeitsschutzsicht sinnvoll: Das Bundesministerium für Arbeit und Soziales betont, dass mobile Arbeit nicht zu einer dauerhaften Entgrenzung führen sollte und Arbeits- sowie Ruhezeiten auch im Homeoffice beachtet werden müssen.</p>
 
 <h2>Tipp 3: Asynchrone Kommunikation meistern</h2>
 <p>Einer der häufigsten Fehler in Remote-Teams: Alles wird sofort per Chat oder Meeting besprochen. Das führt zu einer Flut von Unterbrechungen. Die bessere Alternative: Asynchrone Kommunikation.</p>
@@ -206,6 +289,7 @@ export const POSTS: BlogPost[] = [
 <li>Loom-Videos für komplexe Erklärungen nutzen</li>
 <li>Klare Betreff-Zeilen in E-Mails und Slack/Teams-Nachrichten</li>
 </ul>
+<p>Gerade bei Remote Work helfen solche festen Strukturen dabei, die Arbeitsorganisation übersichtlich zu halten und unnötige Unterbrechungen zu vermeiden.</p>
 
 <h2>Tipp 4: Die richtigen digitalen Tools kennen</h2>
 <p>Remote-Worker:innen, die diese Tools beherrschen, sind in jedem Team willkommen:</p>
@@ -216,6 +300,7 @@ export const POSTS: BlogPost[] = [
 <li><strong>Kollaboration:</strong> Google Workspace, Notion, Confluence</li>
 <li><strong>Kreativ-Workshops:</strong> Miro, Mural</li>
 </ul>
+<p>Welche Tools sinnvoll sind, hängt vom jeweiligen Arbeitsmodell ab – bei Fernarbeit oder Telearbeit sollten sie vor allem Kommunikation, Zusammenarbeit und eine klare Aufgabenverteilung erleichtern.</p>
 
 <h2>Tipp 5: Ablenkungen aktiv managen</h2>
 <p>Zuhause gibt es mehr Ablenkungen als im Büro: Haushalt, Familie, Social Media, Nachrichten. Erfolgreiche Remote-Worker:innen managen das aktiv:</p>
@@ -225,12 +310,24 @@ export const POSTS: BlogPost[] = [
 <li>Pomodoro-Technik: 25 Minuten fokussiert, 5 Minuten Pause</li>
 <li>Klare Absprachen mit Mitbewohner:innen oder Familie</li>
 </ul>
+<p>Versuche außerdem, die wichtigsten Aufgaben des Tages zu priorisieren, mögliche Störfaktoren bewusst auszuschalten und regelmäßig Pausen einzulegen – so kannst du auch zuhause möglichst produktiv arbeiten.</p>
 
 <h2>Tipp 6: Soziale Kontakte aktiv pflegen</h2>
 <p>Isolation ist das größte Langzeitrisiko im Homeoffice. Plane bewusst sozialen Austausch ein: virtuelle Kaffeepausen mit Kolleg:innen, gelegentliche Co-Working-Tage, Meetups und Networking-Events in der eigenen Branche.</p>
 
 <h2>Remote Work durch Remote-Lernen vorbereiten</h2>
+<img src="/images/blog/infografik-remote-lernen.png" alt="Infografik zu Remote-Lernen und digitalen Arbeitsfähigkeiten" />
 <p>Gute Online-Weiterbildungskurse finden vollständig remote statt – du lernst also nicht nur die Fachinhalte, sondern übst gleichzeitig die Realität des Remote-Arbeitens: digitale Tools nutzen, asynchron kommunizieren, Lernzeit selbst managen. Das ist die beste Vorbereitung auf den digitalen Berufsalltag.</p>
+
+<h2>Was sagt die Forschung zu Homeoffice?</h2>
+<p>Eine 2024 in Nature veröffentlichte Studie zu hybridem Arbeiten liefert interessante Ergebnisse. In einem sechsmonatigen randomisierten Experiment mit 1.612 Beschäftigten eines chinesischen Technologieunternehmens arbeitete ein Teil der Beschäftigten zwei Tage pro Woche von zuhause. In dieser Gruppe stieg die Arbeitszufriedenheit und die Kündigungsrate sank um rund ein Drittel. Gleichzeitig fanden die Forschenden keine messbaren Nachteile bei Leistungsbewertungen oder Beförderungen in den folgenden zwei Jahren.</p>
+<p>Wichtig: Untersucht wurde hybrides Arbeiten mit zwei Homeoffice-Tagen pro Woche, nicht ausschließliches Remote Work. Die Studie zeigt also nicht, dass jede Form von Remote Work automatisch produktiver ist – wohl aber, dass ein hybrides Modell gut funktionieren kann, ohne die gemessene Arbeitsleistung zu verschlechtern.</p>
+
+<h2>Fazit</h2>
+<p>Remote Work ist längst mehr als nur eine vorübergehende Arbeitsform. Für viele Mitarbeitende gehört die Arbeit im Homeoffice inzwischen ganz selbstverständlich zum Arbeitsalltag. Wer regelmäßig remote zu arbeiten beginnt, merkt aber schnell: Erfolgreiches Arbeiten von zu Hause braucht mehr als einen Laptop und eine stabile Internetverbindung.</p>
+<p>Ein fester Arbeitsplatz, klare Routinen und gutes Zeitmanagement helfen dir dabei, konzentriert zu arbeiten und Aufgaben effizient zu erledigen. Genauso wichtig ist es, bewusst Pausen einzulegen, soziale Kontakte zu pflegen und das Arbeitsleben nicht vollständig mit dem Privatleben verschmelzen zu lassen.</p>
+<p>Der große Vorteil der Remote-Arbeit ist die Flexibilität. Je nach Beruf und Unternehmen kannst du zuhause arbeiten oder teilweise außerhalb des Büros tätig sein und beispielsweise Telefonate, Meetings oder konzentrierte Aufgaben ortsunabhängig erledigen. Das bedeutet jedoch nicht, dass du automatisch produktiver bist, nur weil du von überall aus arbeiten kannst. Entscheidend sind die Strukturen, die du dir selbst schaffst.</p>
+<p>Wenn du diese Routinen entwickelst, kann Arbeit von zu Hause zu einer flexiblen und langfristig funktionierenden Form des modernen Arbeitens werden.</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> und starte deine Karriere im Remote-Arbeitsmarkt.</p>
     `,
@@ -302,68 +399,81 @@ export const POSTS: BlogPost[] = [
   },
   {
     slug: "umschulung-vs-weiterbildung",
-    title: "Umschulung oder Weiterbildung – was ist der Unterschied?",
+    title: "Umschulung oder Weiterbildung: Was ist der Unterschied?",
     category: "Bildungsgutschein",
-    readingTime: "5 min",
-    date: "2025-07-01",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=60",
+    readingTime: "7 min",
+    date: "2026-09-24",
+    image: "/images/blog/finger-der-auf-laptop-zeigt.jpg",
     excerpt:
-      "Umschulung und Weiterbildung werden oft verwechselt. Wir erklären den Unterschied, wer welche Förderung bekommt – und was für dich sinnvoll ist.",
+      "Umschulung und Weiterbildung werden oft verwechselt. Wir erklären den Unterschied, wann welcher Weg besser passt – und was das für HalloSkills-Lehrgänge bedeutet.",
     content: `
-<h2>Zwei unterschiedliche Konzepte – häufig verwechselt</h2>
-<p>Umschulung und Weiterbildung werden im Alltag oft als Synonyme verwendet – dabei meinen sie etwas grundlegend Verschiedenes. Beide können über die Agentur für Arbeit oder das Jobcenter gefördert werden, aber die Unterschiede in Dauer, Ziel und Fördermöglichkeiten sind erheblich.</p>
-<p>Die falsche Wahl kann dich wertvolle Monate kosten. Deshalb ist es wichtig, dass du weißt, was für deine konkrete Situation sinnvoll ist – bevor du den Antrag stellst.</p>
+<h2>Wichtigste Erkenntnisse</h2>
+<ul>
+<li>Eine Umschulung zielt in der Regel auf einen neuen anerkannten Berufsabschluss und damit auf einen grundlegenderen Berufswechsel.</li>
+<li>Eine Weiterbildung erweitert, aktualisiert oder ergänzt vorhandene Kenntnisse und kann sehr unterschiedlich aufgebaut sein.</li>
+<li>Formal ist die Trennung nicht ganz so eindeutig: Die Bundesagentur für Arbeit zählt auch Umschulungen zur beruflichen Weiterbildung.</li>
+<li>Welche Variante besser passt, hängt von deinem Berufsziel, deiner bisherigen Erfahrung, dem benötigten Abschluss und deiner verfügbaren Zeit ab.</li>
+<li>Sowohl Weiterbildung als auch Umschulung können unter bestimmten Voraussetzungen gefördert werden.</li>
+<li>HalloSkills bietet Online-Weiterbildungen beziehungsweise Lehrgänge mit Umschulungsinhalten, aber keine klassischen IHK-Umschulungen.</li>
+</ul>
+<p>Umschulung und Weiterbildung werden im Alltag häufig nebeneinander verwendet. Der wichtigste Unterschied lässt sich trotzdem ziemlich einfach erklären: Möchtest du einen neuen Berufsabschluss erwerben oder vor allem deine vorhandenen Kenntnisse erweitern?</p>
+<p>Beides kann dir bei einem Berufswechsel oder einer beruflichen Neuorientierung helfen. Welcher Weg sinnvoller ist, hängt aber stark von deinem Ziel ab. Die Bundesagentur für Arbeit nennt neben Umschulung und Weiterbildung außerdem Möglichkeiten wie Quereinstieg und Externenprüfung.</p>
+
+<h2>Umschulung und Weiterbildung: Wo liegt der wichtigste Unterschied?</h2>
+<img src="/images/blog/infografik-umschulung-oder-weiterbildung.png" alt="Infografik: Umschulung oder Weiterbildung im Vergleich" />
+<p>Bei einer Umschulung steht normalerweise ein neuer Berufsabschluss im Mittelpunkt. Du qualifizierst dich für einen anderen anerkannten Ausbildungsberuf und kannst anschließend entsprechend in diesem Beruf arbeiten.</p>
+<p>Eine Weiterbildung ist breiter angelegt. Sie kann vorhandenes Wissen vertiefen, neue fachliche Kenntnisse vermitteln oder dich auf zusätzliche Aufgaben vorbereiten. Je nach Weiterbildung kann sie sehr kurz oder deutlich umfangreicher sein und unterschiedliche Abschlüsse oder Zertifikate umfassen. Die Bundesagentur für Arbeit weist sogar darauf hin, dass bestimmte Weiterbildungen ebenfalls zu einem anerkannten Berufsabschluss führen können.</p>
+<p>Deshalb ist „Umschulung oder Weiterbildung" vor allem eine praktische Vergleichsfrage. Formal kann eine Umschulung ebenfalls unter den Oberbegriff berufliche Weiterbildung fallen.</p>
 
 <h2>Was ist eine Umschulung?</h2>
-<p>Eine Umschulung ist eine vollwertige Berufsausbildung in einem neuen Berufsfeld – nur verkürzt. Während eine reguläre Ausbildung 3 Jahre dauert, ist eine Umschulung in der Regel auf 2 Jahre komprimiert. Sie schließt mit einer anerkannten IHK- oder HWK-Prüfung ab.</p>
-<p>Beispiele für Umschulungsberufe:</p>
-<ul>
-<li>Kaufmann/-frau für Büromanagement</li>
-<li>Fachinformatiker:in für Systemintegration</li>
-<li>Medizinische:r Fachangestellte:r</li>
-<li>Kaufmann/-frau im E-Commerce</li>
-</ul>
-<p>Umschulungen werden über den Bildungsgutschein finanziert. In manchen Fällen gibt es zusätzlich Unterhaltsgeld oder Weiterbildungsgeld während der Maßnahme.</p>
-<p><strong>Vorteil:</strong> Du erhältst einen gesetzlich anerkannten Berufsabschluss.<br>
-<strong>Nachteil:</strong> 2 Jahre sind eine lange Zeit ohne reguläres Einkommen. Und IHK-Abschlüsse sind nicht in jedem Berufsfeld der entscheidende Faktor.</p>
+<p>Mit einer Umschulung bereitest du dich auf einen neuen Berufsabschluss vor. Sie ist besonders interessant, wenn du deinen bisherigen Beruf nicht mehr ausüben kannst oder möchtest und für dein neues Berufsziel eine anerkannte Qualifikation benötigst.</p>
+<p>Eine Umschulung kann beispielsweise betrieblich oder bei einem Bildungsträger stattfinden. Je nach Beruf erfolgt der Abschluss über die zuständige Stelle, beispielsweise eine Kammer. Die Bundesagentur für Arbeit beschreibt Umschulung ausdrücklich als einen Weg, einen Abschluss in einem anerkannten Ausbildungsberuf zu erwerben.</p>
+<p>Umschulungen sind normalerweise umfangreicher als eine gezielte Weiterbildung, weil du nicht nur einzelne neue Fähigkeiten lernst, sondern dich für einen neuen Beruf qualifizierst. Gerade für Arbeitssuchende kann dieser Weg neue Chancen auf dem Arbeitsmarkt eröffnen, wenn der bisherige Beruf keine passende Perspektive mehr bietet.</p>
 
 <h2>Was ist eine Weiterbildung?</h2>
-<p>Eine Weiterbildung baut auf deinen bestehenden Kenntnissen auf oder ergänzt sie gezielt. Sie dauert deutlich kürzer – typischerweise 3–12 Monate – und schließt mit einem Zertifikat ab, nicht mit einem IHK-Abschluss.</p>
-<p>Weiterbildungen bei entsprechend zugelassenen Anbietern sind über den Bildungsgutschein vollständig finanzierbar. Das Ziel ist nicht ein neuer Berufsabschluss, sondern praxisrelevante Skills, die direkt auf dem Arbeitsmarkt einsetzbar sind.</p>
-<p>Ein Beispiel: HalloSkills bietet die Inhalte klassischer Umschulungen im Weiterbildungsformat an, kompakt in 6 statt 24 Monaten:</p>
+<p>Eine Weiterbildung setzt nicht zwingend einen vollständigen Berufswechsel voraus. Du kannst damit vorhandene Kenntnisse vertiefen, erweitern oder aktualisieren.</p>
+<p>Eine Weiterbildung kann sich direkt auf deinen aktuellen Beruf beziehen oder dich auf neue Aufgaben innerhalb deiner bisherigen beruflichen Tätigkeit vorbereiten. Beispiele reichen von einer kurzen Schulung für neue Software bis zu umfangreicheren Qualifikationen wie einem Fachwirt. Das kann beispielsweise sinnvoll sein, wenn du bereits kaufmännische Erfahrung hast, dir aber Kenntnisse in digitalen Anwendungen, Buchhaltung, Organisation oder einem neuen Fachbereich fehlen.</p>
+<p>Eine klassische Anpassungsfortbildung dient beispielsweise dazu, vorhandene Kenntnisse und Fertigkeiten an neue Anforderungen anzupassen. Weiterbildung wird im Alltag außerdem oft synonym verwendet mit Begriffen wie Fortbildung, obwohl die genaue Abgrenzung je nach Kontext unterschiedlich sein kann.</p>
+<p>Die Dauer lässt sich nicht pauschal auf drei, sechs oder zwölf Monate festlegen. Sie hängt vom Bildungsziel und vom konkreten Lehrgang ab. Auch Unterrichtsform und Lernaufwand unterscheiden sich je nach Angebot.</p>
+
+<h2>Warum werden die Begriffe schon so lange unterschiedlich verwendet?</h2>
+<img src="/images/blog/foerderung-posted.png" alt="Förderung von Umschulung und Weiterbildung" />
+<p>Die begriffliche Abgrenzung ist tatsächlich nicht neu. In einem BIBB-Fachbeitrag von Tomas Kemp aus dem Jahr 1976 wurde bereits kritisch diskutiert, was genau unter Weiterbildung verstanden werden sollte. Der Beitrag ist keine empirische Studie, sondern eine fachliche Analyse der damals verwendeten Definitionen.</p>
+<p>Kemp setzte sich unter anderem mit der damaligen Definition des Deutschen Bildungsrats auseinander, nach der Weiterbildung sowohl Fortbildung als auch Umschulung umfasste. Er argumentierte dagegen, Weiterbildung stärker als Vertiefung, Erweiterung oder Ergänzung vorhandener Bildung zu verstehen, während eine Umschulung stärker in eine neue berufliche Richtung führt.</p>
+<p>Für die heutige Praxis ist vor allem wichtig: Die Begriffe wurden historisch unterschiedlich abgegrenzt. Bei Förderfragen solltest du dich deshalb an der aktuellen Terminologie der Bundesagentur für Arbeit orientieren. Dort wird die Umschulung heute als eine mögliche Form geförderter beruflicher Weiterbildung behandelt. Damit lässt sich Weiterbildung als Oberbegriff verstehen, unter dem unterschiedliche Formen beruflicher Qualifizierung zusammengefasst werden können.</p>
+
+<h2>Umschulung oder Weiterbildung im direkten Vergleich</h2>
 <ul>
-<li>Büromanagement (6 Monate)</li>
-<li>Industriewirtschaft (6 Monate)</li>
-<li>Bankwesen (6 Monate)</li>
+<li><strong>Typisches Ziel:</strong> Weiterbildung – Kenntnisse erweitern oder aktualisieren; Umschulung – neuen Berufsabschluss erwerben</li>
+<li><strong>Beruflicher Ausgangspunkt:</strong> Weiterbildung – vorhandene Erfahrung wird weiter genutzt; Umschulung – grundlegender Berufswechsel</li>
+<li><strong>Dauer:</strong> Weiterbildung – abhängig von Lehrgang und Bildungsziel; Umschulung – meist deutlich umfangreicher</li>
+<li><strong>Abschluss:</strong> Weiterbildung – abhängig von der Maßnahme, z.&nbsp;B. Zertifikat; Umschulung – anerkannter Berufsabschluss</li>
+<li><strong>Quereinstieg:</strong> Weiterbildung – gut für gezielten Kompetenzaufbau geeignet; Umschulung – sinnvoll, wenn ein neuer Berufsabschluss benötigt wird</li>
+<li><strong>Förderung:</strong> bei beiden unter Voraussetzungen möglich</li>
 </ul>
 
-<h2>Wann ist eine Weiterbildung sinnvoller?</h2>
-<p>Eine Weiterbildung ist in den meisten Fällen die schnellere und strategisch klügere Wahl – besonders wenn:</p>
-<ul>
-<li>Du in eine verwandte oder digitale Branche wechselst (z.&nbsp;B. von einem kaufmännischen Ausgangsberuf in einen neuen Schwerpunkt)</li>
-<li>Du bestehende Berufserfahrung hast, die du durch digitale Skills ergänzen willst</li>
-<li>Du schnell wieder arbeiten möchtest – 6 Monate statt 2 Jahre</li>
-<li>Dein Zielberuf eher Skills als formale Abschlüsse bewertet (das trifft auf fast alle digitalen Berufe zu)</li>
-</ul>
+<h2>Wann kann eine Weiterbildung besser zu dir passen?</h2>
+<p>Eine Weiterbildung kann sinnvoll sein, wenn du grundsätzlich in deinem bisherigen oder einem verwandten Berufsfeld bleiben möchtest und dir vor allem bestimmte Kenntnisse fehlen. Auch eine betriebliche Weiterbildung kann sinnvoll sein, wenn du deinen bestehenden Beruf weiter ausüben möchtest, aber zusätzliche Kenntnisse oder Fertigkeiten brauchst.</p>
+<p>Das gilt auch bei einem Quereinstieg. Nicht jeder Berufswechsel erfordert automatisch eine vollständige Umschulung. Die Bundesagentur für Arbeit nennt beispielsweise Weiterbildung, Quereinstieg und Externenprüfung als weitere mögliche Wege in einen neuen Beruf.</p>
+<p>Wenn deine bisherige Berufserfahrung weiterhin wertvoll ist und du lediglich neue fachliche oder digitale Kompetenzen ergänzen möchtest, kann eine Weiterbildung der direktere Weg sein. Entscheidend ist also nicht nur, welche Weiterbildungsangebote verfügbar sind, sondern ob die jeweilige Maßnahme sinnvoll zu deinem beruflichen Ziel und deiner bisherigen Berufserfahrung passt.</p>
 
-<h2>Wann ist eine Umschulung sinnvoller?</h2>
-<p>Eine Umschulung ist dann die richtige Wahl, wenn:</p>
-<ul>
-<li>Dein bisheriger Beruf nicht mehr nachgefragt wird und du komplett neu starten musst</li>
-<li>Dein Zielberuf einen gesetzlich anerkannten Berufsabschluss als Eingangsvoraussetzung hat</li>
-<li>Du dir sicher bist, dass du 2 Jahre Zeit und Energie investieren kannst und willst</li>
-</ul>
+<h2>Wann kann eine Umschulung besser zu dir passen?</h2>
+<p>Eine Umschulung kann besser passen, wenn du komplett in einen neuen Ausbildungsberuf wechseln möchtest und dafür einen anerkannten Berufsabschluss brauchst.</p>
+<p>Das kann beispielsweise relevant sein, wenn dein bisheriger Beruf langfristig keine passende Perspektive mehr bietet, gesundheitliche Gründe einen Wechsel erforderlich machen oder dein Zielberuf eine formale Qualifikation voraussetzt. Die Bundesagentur für Arbeit nennt sowohl Veränderungen auf dem Arbeitsmarkt als auch gesundheitliche Gründe als mögliche Auslöser für eine berufliche Neuorientierung.</p>
+<p>Es geht also nicht darum, ob Umschulung oder Weiterbildung grundsätzlich „besser" ist. Entscheidend ist, welches Ergebnis du am Ende brauchst.</p>
 
-<h2>Was sagen Arbeitgeber in digitalen Berufen?</h2>
-<p>In der Praxis zeigt sich: In vielen kaufmännischen und digitalen Berufen zählen konkrete Skills und nachweisbare Ergebnisse mehr als formale Abschlüsse. Viele Arbeitgeber fragen im Bewerbungsgespräch explizit nach Portfolios, Praxisprojekten und Zertifikaten – nicht nach dem IHK-Stempel.</p>
-<p>Das macht eine gezielte, praxisorientierte Weiterbildung in vielen Fällen zur effektiveren Option.</p>
+<h2>Wie können Umschulung und Weiterbildung gefördert werden?</h2>
+<p>Sowohl eine Weiterbildung als auch eine Umschulung kann unter bestimmten Voraussetzungen über einen Bildungsgutschein unterstützt werden. Die Agentur für Arbeit prüft dabei deine individuelle Situation. Außerdem müssen der Bildungsträger und die konkrete Maßnahme entsprechend zugelassen sein.</p>
+<p>Bei einer geförderten abschlussorientierten Weiterbildung kann außerdem ein Weiterbildungsgeld von 150 Euro monatlich hinzukommen. Die Bundesagentur für Arbeit nennt eine Umschulung ausdrücklich als Beispiel für eine solche abschlussorientierte Weiterbildung. Unter bestimmten Voraussetzungen sind auch Prüfungsprämien möglich.</p>
+<p>Mehr zum Ablauf findest du in unserem <a href='/blog/bildungsgutschein-beantragen'>Ratgeber zum Bildungsgutschein</a>.</p>
 
-<h2>Förderung im Vergleich</h2>
-<ul>
-<li><strong>Weiterbildung mit Bildungsgutschein:</strong> Kurskosten vollständig übernommen, ALG läuft weiter</li>
-<li><strong>Umschulung mit Bildungsgutschein:</strong> Kurskosten vollständig übernommen, ALG läuft weiter, ggf. Weiterbildungsgeld</li>
-<li><strong>Aufstiegs-BAföG (für Weiterbildung):</strong> Zusätzliche Förderung für bestimmte Aufstiegsqualifikationen</li>
-</ul>
+<h2>Was bedeutet der Unterschied für HalloSkills?</h2>
+<p>HalloSkills bietet Online-Weiterbildungen beziehungsweise Lehrgänge mit Umschulungsinhalten an. Sie sind keine klassischen IHK-Umschulungen und führen nicht zu einem IHK-Berufsabschluss. Nach Abschluss erhältst du ein HalloSkills-Zertifikat.</p>
+<p>Die Lehrgänge richten sich damit besonders an Menschen, die vorhandene Erfahrungen ergänzen oder sich beruflich neu orientieren möchten, ohne eine klassische mehrjährige Umschulung zu absolvieren.</p>
+
+<h2>Fazit</h2>
+<p>Der Unterschied zwischen Umschulung und Weiterbildung liegt vor allem im Ziel. Wenn du einen neuen anerkannten Berufsabschluss brauchst, kann eine Umschulung der passende Weg sein. Möchtest du dagegen vorhandene Kenntnisse erweitern, neue Fähigkeiten aufbauen oder dich gezielt für ein anderes Aufgabenfeld qualifizieren, kann eine Weiterbildung besser zu deiner Situation passen.</p>
+<p>Ob Weiterbildung oder Umschulung besser zu dir passt, hängt letztlich davon ab, ob du deinen bestehenden Beruf weiterentwickeln oder einen vollständigen beruflichen Neustart wagen möchtest. Bevor du dich entscheidest, solltest du deshalb nicht nur auf die Dauer schauen. Frage dich vor allem: Welchen Abschluss brauche ich für mein berufliches Ziel und welche Kenntnisse bringe ich bereits mit?</p>
 
 <p>Bereit für den nächsten Schritt? <a href='/beratung-buchen'>Buch dir jetzt ein kostenloses Beratungsgespräch</a> – wir helfen dir, die richtige Entscheidung für deine Situation zu treffen.</p>
     `,
