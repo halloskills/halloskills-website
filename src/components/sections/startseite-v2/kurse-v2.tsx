@@ -97,7 +97,7 @@ function KursKarte({ kurs }: { kurs: (typeof kurse)[number] }) {
         <p className="mt-2 text-[0.8rem] text-hs-muted">{kurs.meta.join(" · ")}</p>
 
         <div className="mt-4 flex items-center justify-between border-t border-hs-line pt-4">
-          <span className="text-[0.75rem] font-[600] text-hs-blue">Start Herbst 2026</span>
+          <span className="text-[0.75rem] font-[600] text-hs-blue">Jetzt Beratung sichern</span>
           <PfeilKnopf />
         </div>
       </div>

@@ -100,7 +100,7 @@ export default function KurseUebersicht() {
                 </p>
                 <div className="mt-4 flex items-center justify-between border-t border-hs-line pt-4">
                   <span className="text-[0.75rem] font-[600] text-hs-blue">
-                    Start Herbst 2026
+                    Jetzt Beratung sichern
                   </span>
                   <PfeilKnopf />
                 </div>
