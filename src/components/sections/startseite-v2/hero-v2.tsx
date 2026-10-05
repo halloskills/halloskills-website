@@ -196,10 +196,10 @@ export function HeroV2() {
               style={{ borderRadius: "999px 999px 220px 48px" }}
             >
               <Image
-                src="/images/bilder/managerin-schwarzer-pullover-imac.png"
-                alt="Teilnehmerin arbeitet am Rechner an ihrem Online-Lehrgang"
-                width={900}
-                height={1000}
+                src="/images/bilder/hero-online-lernen.webp"
+                alt="Teilnehmerin lernt online am Schreibtisch mit Headset, auf den Bildschirmen laufen Live-Unterricht und die Lerninhalte"
+                width={846}
+                height={941}
                 preload
                 sizes="(max-width: 992px) 90vw, 560px"
                 className="aspect-[9/10] w-full object-cover"
