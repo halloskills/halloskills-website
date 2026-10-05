@@ -1,98 +1,10 @@
 {
-  "navigationFallback": {
-    "rewrite": "/404.html",
-    "exclude": ["/images/*", "/favicon.ico", "/sitemap.xml", "/robots.txt"]
-  },
   "responseOverrides": {
     "404": {
       "rewrite": "/404.html",
       "statusCode": 404
     }
   },
-  "routes": [
-    {
-      "route": "/coming-soon.html"
-    },
-    {
-      "route": "/brand-guide.html"
-    },
-    {
-      "route": "/robots.txt"
-    },
-    {
-      "route": "/sitemap.xml"
-    },
-    {
-      "route": "/"
-    },
-    {
-      "route": "/kurse"
-    },
-    {
-      "route": "/kurse/*"
-    },
-    {
-      "route": "/beratung-buchen"
-    },
-    {
-      "route": "/beratung-buchen/*"
-    },
-    {
-      "route": "/blog"
-    },
-    {
-      "route": "/blog/*"
-    },
-    {
-      "route": "/impressum"
-    },
-    {
-      "route": "/impressum/*"
-    },
-    {
-      "route": "/datenschutz"
-    },
-    {
-      "route": "/datenschutz/*"
-    },
-    {
-      "route": "/ueber-uns"
-    },
-    {
-      "route": "/tools/*"
-    },
-    {
-      "route": "/agb"
-    },
-    {
-      "route": "/bildungsgutschein"
-    },
-    {
-      "route": "/datenschutz-bewerber"
-    },
-    {
-      "route": "/jobs"
-    },
-    {
-      "route": "/_next/*"
-    },
-    {
-      "route": "/images/*"
-    },
-    {
-      "route": "/favicon.ico"
-    },
-    {
-      "route": "/icon.png"
-    },
-    {
-      "route": "/apple-icon.png"
-    },
-    {
-      "route": "/*",
-      "rewrite": "/coming-soon.html"
-    }
-  ],
   "globalHeaders": {
     "X-Content-Type-Options": "nosniff",
     "X-Frame-Options": "SAMEORIGIN",
