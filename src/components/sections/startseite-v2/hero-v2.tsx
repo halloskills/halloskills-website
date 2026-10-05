@@ -209,7 +209,7 @@ export function HeroV2() {
             {/* Glass-Card — sitzt am oberen rechten Bildrand, halb überlappend.
                 Der helle Fensterbereich dahinter lässt das Glas weiss statt grau
                 wirken (siehe Kontrastmessung in der Karte selbst). */}
-            <div className="absolute -right-4 top-[7%] sm:-right-6 lg:-right-10">
+            <div className="absolute -right-4 top-[55%] sm:-right-6 lg:-right-10">
               <FortschrittsKarte />
             </div>
           </div>
