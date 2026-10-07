@@ -130,7 +130,7 @@ export function BeratungHeroV2() {
             >
               <Image
                 src="/images/bilder/mann-airpods-khaki-dual-monitor.png"
-                alt="Teilnehmer im Beratungsgespräch per Videocall"
+                alt="KI-generiertes Bild: Teilnehmer im Beratungsgespräch per Videocall"
                 width={900}
                 height={1000}
                 preload

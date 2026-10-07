@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: "/images/bilder/hero.png",
         width: 1200,
         height: 630,
-        alt: "HalloSkills – Kostenlose Weiterbildung mit Bildungsgutschein",
+        alt: "HalloSkills – Kostenlose Weiterbildung mit Bildungsgutschein (KI-generiertes Bild)",
       },
     ],
   },

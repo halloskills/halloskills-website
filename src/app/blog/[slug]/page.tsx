@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { POSTS, calcReadingTime, findePost } from "@/lib/blog-data";
+import { POSTS, calcReadingTime, findePost, postBildAlt } from "@/lib/blog-data";
 import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
 import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 import { CtaV2 } from "@/components/sections/startseite-v2/cta-v2";
@@ -96,7 +96,7 @@ export default async function BlogPostSeite({
         <div className="mx-auto max-w-[900px] overflow-hidden rounded-hs-image shadow-hs-soft">
           <Image
             src={post.image}
-            alt={post.title}
+            alt={postBildAlt(post)}
             width={1200}
             height={630}
             sizes="(max-width: 900px) 90vw, 900px"
@@ -125,7 +125,7 @@ export default async function BlogPostSeite({
                 >
                   <Image
                     src={r.image}
-                    alt={r.title}
+                    alt={postBildAlt(r)}
                     width={400}
                     height={250}
                     sizes="300px"

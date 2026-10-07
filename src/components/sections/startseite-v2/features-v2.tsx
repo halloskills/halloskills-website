@@ -123,7 +123,7 @@ export function FeaturesV2() {
           >
             <Image
               src="/images/bilder/frau-mit-laptop.png"
-              alt="Teilnehmerin lernt entspannt mit ihrem Laptop"
+              alt="KI-generiertes Bild: Teilnehmerin lernt entspannt mit ihrem Laptop"
               width={520}
               height={390}
               sizes="260px"

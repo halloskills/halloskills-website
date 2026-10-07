@@ -66,7 +66,7 @@ export const KURSE: Kurs[] = [
     subline:
       "Du lernst die zentralen Themen der beruflichen Umschulung zum Bürokaufmann/zur Bürokauffrau (Kaufmann/Kauffrau für Büromanagement), kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
-    bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Büromanagement",
+    bildAlt: "KI-generiertes Bild: Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Büromanagement",
     fuerWen: [
       "Du willst im Büro, in der Verwaltung oder im Sekretariat arbeiten.",
       "Du organisierst gerne, behältst den Überblick und kommunizierst klar.",
@@ -109,7 +109,7 @@ export const KURSE: Kurs[] = [
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in vielen kaufmännischen Bereichen einsetzen, zum Beispiel im Büro, in der Verwaltung, im Kundenservice oder in der Organisation.",
     danachBild: "/images/bilder/mann-am-laptop-stehend.png",
-    danachBildAlt: "Teilnehmer schaut stehend auf seinen Laptop",
+    danachBildAlt: "KI-generiertes Bild: Teilnehmer schaut stehend auf seinen Laptop",
     danach: [
       {
         titel: "Büro & Verwaltung",
@@ -172,7 +172,7 @@ export const KURSE: Kurs[] = [
     subline:
       "Du lernst die zentralen Themen der beruflichen Umschulung zum Industriekaufmann/zur Industriekauffrau, kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
-    bildAlt: "Teilnehmer arbeitet an seinem Online-Lehrgang zum Industriekaufmann",
+    bildAlt: "KI-generiertes Bild: Teilnehmer arbeitet an seinem Online-Lehrgang zum Industriekaufmann",
     fuerWen: [
       "Du willst in Einkauf, Produktion, Vertrieb oder Controlling eines Industriebetriebs arbeiten.",
       "Du denkst gerne in Zahlen und Prozessen und behältst Lieferketten im Blick.",
@@ -215,7 +215,7 @@ export const KURSE: Kurs[] = [
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen kaufmännischen Bereichen eines Unternehmens einsetzen, vom Einkauf über Vertrieb und Logistik bis zum Controlling.",
     danachBild: "/images/bilder/frau-vertieft-am-laptop.png",
-    danachBildAlt: "Teilnehmerin schaut vertieft auf ihren Laptop",
+    danachBildAlt: "KI-generiertes Bild: Teilnehmerin schaut vertieft auf ihren Laptop",
     danach: [
       {
         titel: "Einkauf & Beschaffung",
@@ -278,7 +278,7 @@ export const KURSE: Kurs[] = [
     subline:
       "Du lernst die zentralen Themen der beruflichen Umschulung zum Bankkaufmann/zur Bankkauffrau, kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
     bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
-    bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Bankwesen",
+    bildAlt: "KI-generiertes Bild: Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Bankwesen",
     fuerWen: [
       "Du willst Kund:innen bei Bank- und Finanzthemen beraten.",
       "Du gehst gerne sorgfältig mit Zahlen, Verträgen und Verantwortung um.",
@@ -321,7 +321,7 @@ export const KURSE: Kurs[] = [
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen Bereichen rund um Bank, Finanzen und Kundenberatung einsetzen.",
     danachBild: "/images/bilder/aelterer-mann-am-schreibtisch.png",
-    danachBildAlt: "Teilnehmer arbeitet konzentriert an seinem Schreibtisch",
+    danachBildAlt: "KI-generiertes Bild: Teilnehmer arbeitet konzentriert an seinem Schreibtisch",
     danach: [
       {
         titel: "Kundenberatung & Service",

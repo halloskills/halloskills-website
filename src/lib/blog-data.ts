@@ -173,7 +173,7 @@ export const POSTS: BlogPost[] = [
 <p>Besonders interessant kann eine Weiterbildung sein, wenn dir für deinen nächsten Job bestimmte Kenntnisse fehlen oder du dich beruflich neu orientieren möchtest. Unter bestimmten Voraussetzungen kann die Agentur für Arbeit die Weiterbildung fördern und dein Arbeitslosengeld während dieser Zeit weiterzahlen.</p>
 
 <h2>Bekommst du während einer Weiterbildung weiter Arbeitslosengeld?</h2>
-<img src="/images/blog/offene-hand-mit-euro-muenzen.png" alt="Offene Hand mit Euro-Münzen" />
+<img src="/images/blog/offene-hand-mit-euro-muenzen.png" alt="KI-generiertes Bild: Offene Hand mit Euro-Münzen" />
 <p>Bei einer geförderten beruflichen Weiterbildung kann dein ALG I grundsätzlich weitergezahlt werden. Die Bundesagentur für Arbeit erklärt im Merkblatt 6 zur Förderung der beruflichen Weiterbildung, dass Arbeitslosengeld während einer geförderten Weiterbildung gezahlt wird, solange die entsprechenden Anspruchsvoraussetzungen vorliegen.</p>
 <p>Dabei handelt es sich nicht um eine zusätzliche Leistung neben deinem bisherigen Arbeitslosengeld. Dein bestehender ALG-I-Anspruch läuft vielmehr unter besonderen Regeln weiter.</p>
 <p>Eine Weiterbildung wird allerdings nicht automatisch gefördert, nur weil du arbeitslos bist. Nach § 81 SGB III kann eine berufliche Weiterbildung unter anderem gefördert werden, wenn sie notwendig ist, um dich beruflich einzugliedern oder eine drohende Arbeitslosigkeit abzuwenden, du vorher beraten wurdest und sowohl Träger als auch Maßnahme für die Förderung zugelassen sind.</p>
@@ -208,7 +208,7 @@ export const POSTS: BlogPost[] = [
 <p>Du musst die bewilligten Lehrgangskosten auch nicht grundsätzlich erst selbst bezahlen und anschließend darauf hoffen, sie zurückzubekommen. Nach dem BA-Merkblatt werden Lehrgangskosten im Regelfall direkt an den Bildungsträger ausgezahlt. Andere Weiterbildungskosten können je nach Leistung an dich ausgezahlt werden.</p>
 
 <h2>Darfst du während der Weiterbildung nebenbei arbeiten?</h2>
-<img src="/images/blog/frau-kaut-auf-stift-und-denkt-nach.png" alt="Frau denkt über ihre Weiterbildung nach" />
+<img src="/images/blog/frau-kaut-auf-stift-und-denkt-nach.png" alt="KI-generiertes Bild: Frau denkt über ihre Weiterbildung nach" />
 <p>Ein Nebenjob ist grundsätzlich möglich. Dabei gelten aber dieselben wichtigen Grenzen, die auch sonst beim ALG-I-Bezug zu beachten sind. Die Bundesagentur für Arbeit erklärt zum Nebenjob bei Arbeitslosengeld, dass du die Nebentätigkeit vorab melden und weniger als 15 Stunden pro Kalenderwoche arbeiten musst. Ab 15 Stunden wöchentlich giltst du grundsätzlich nicht mehr als arbeitslos.</p>
 <p>Beim normalen Nebenverdienst gilt grundsätzlich ein monatlicher Freibetrag von 165 Euro. Einkommen oberhalb des anrechnungsfreien Betrags kann dein Arbeitslosengeld reduzieren. Unter bestimmten Voraussetzungen kann ein höherer individueller Freibetrag gelten. Deshalb ist es nicht sinnvoll, sich an einer allgemeinen Minijob-Grenze zu orientieren – für ALG I gelten eigene Regeln zu Arbeitszeit und Einkommensanrechnung.</p>
 
@@ -411,7 +411,7 @@ export const POSTS: BlogPost[] = [
 <p>Auch irrelevante Hobbys oder sehr alte berufliche Stationen müssen nicht ausführlich dargestellt werden. Konzentriere dich lieber darauf, was für deinen nächsten Job tatsächlich interessant ist.</p>
 
 <h2>Wie gehst du mit Lücken im Lebenslauf um?</h2>
-<img src="/images/blog/mann-macht-beruflichen-sprung.png" alt="Mann springt über eine Felsspalte als Sinnbild für den beruflichen Neustart" />
+<img src="/images/blog/mann-macht-beruflichen-sprung.png" alt="KI-generiertes Bild: Mann springt über eine Felsspalte als Sinnbild für den beruflichen Neustart" />
 <p>Lücken solltest du nicht künstlich verstecken. Auch die Bundesagentur für Arbeit empfiehlt einen offenen Umgang mit Lücken. Entscheidend ist, kurz und sachlich anzugeben, was du in dieser Zeit gemacht hast.</p>
 <p>Das kann zum Beispiel sein:</p>
 <ul>
@@ -730,6 +730,11 @@ Ja, wenn sie für deine berufliche Entwicklung oder die gewünschte Stelle relev
     `,
   },
 ];
+
+/** Alt-Text für das Titelbild; lokale Bilder (/images/...) sind KI-generiert und gekennzeichnet. */
+export function postBildAlt(post: BlogPost): string {
+  return post.image.startsWith("/images/") ? `KI-generiertes Bild: ${post.title}` : post.title;
+}
 
 export function findePost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);

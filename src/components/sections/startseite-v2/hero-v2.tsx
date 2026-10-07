@@ -197,7 +197,7 @@ export function HeroV2() {
             >
               <Image
                 src="/images/bilder/hero-online-lernen.webp"
-                alt="Teilnehmerin lernt online am Schreibtisch mit Headset, auf den Bildschirmen laufen Live-Unterricht und die Lerninhalte"
+                alt="KI-generiertes Bild: Teilnehmerin lernt online am Schreibtisch mit Headset, auf den Bildschirmen laufen Live-Unterricht und die Lerninhalte"
                 width={846}
                 height={941}
                 preload

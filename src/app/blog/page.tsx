@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { POSTS, calcReadingTime } from "@/lib/blog-data";
+import { POSTS, calcReadingTime, postBildAlt } from "@/lib/blog-data";
 import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
 import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
 import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
@@ -38,7 +38,7 @@ export default function BlogUebersicht() {
               <div className="overflow-hidden">
                 <Image
                   src={post.image}
-                  alt={post.title}
+                  alt={postBildAlt(post)}
                   width={640}
                   height={400}
                   sizes="(max-width: 640px) 90vw, 380px"

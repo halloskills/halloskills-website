@@ -64,7 +64,7 @@ function KursKarte({ kurs }: { kurs: (typeof kurse)[number] }) {
     >
       <Image
         src={kurs.bild}
-        alt={kurs.titel}
+        alt={`KI-generiertes Bild: ${kurs.titel}`}
         width={660}
         height={880}
         sizes="330px"
