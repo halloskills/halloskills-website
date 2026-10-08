@@ -53,14 +53,14 @@ export default function DatenschutzBewerberPage() {
               <br />
               Vertreten durch: Heiko Kuhn<br />
               <br />
-              E-Mail: <a href="mailto:admin@halloskills.de">admin@halloskills.de</a><br />
+              E-Mail: <a href="mailto:jobs@halloskills.de">jobs@halloskills.de</a><br />
               <br />
               Handelsregister: Amtsgericht Hamburg, HRB 198168
             </p>
 
             <h2>2. Datenschutzkontakt / Datenschutzbeauftragter</h2>
             <p>Ein Datenschutzbeauftragter ist nicht benannt. Bei Fragen zum Datenschutz können Sie sich jederzeit an uns wenden:</p>
-            <p><a href="mailto:admin@halloskills.de">admin@halloskills.de</a></p>
+            <p><a href="mailto:jobs@halloskills.de">jobs@halloskills.de</a></p>
 
             <h2>3. Zwecke der Verarbeitung</h2>
             <p>Wir verarbeiten Ihre personenbezogenen Daten, soweit dies für die Durchführung des Bewerbungsverfahrens erforderlich ist. Dazu gehören insbesondere folgende Zwecke:</p>
@@ -123,7 +123,7 @@ export default function DatenschutzBewerberPage() {
 
             <h2>10. Talentpool</h2>
             <p>Sofern Sie hierzu gesondert einwilligen, nehmen wir Ihre Bewerbungsdaten in unseren Talentpool auf. Bei Aufnahme in den Talentpool speichern wir Ihre Daten für bis zu zwölf Monate ab Erteilung der Einwilligung.</p>
-            <p>Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, z. B. per E-Mail an <a href="mailto:admin@halloskills.de">admin@halloskills.de</a>.</p>
+            <p>Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, z. B. per E-Mail an <a href="mailto:jobs@halloskills.de">jobs@halloskills.de</a>.</p>
 
             <h2>11. Bereitstellung der Daten</h2>
             <p>Die Bereitstellung der für die Bewerbung erforderlichen personenbezogenen Daten ist notwendig, damit wir Ihre Bewerbung prüfen und das Bewerbungsverfahren durchführen können. Ohne diese Daten können wir Ihre Bewerbung nicht oder nur eingeschränkt berücksichtigen.</p>
@@ -140,7 +140,7 @@ export default function DatenschutzBewerberPage() {
               <li>Recht auf Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen</li>
               <li>Recht auf Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft</li>
             </ul>
-            <p>Zur Ausübung Ihrer Rechte: <a href="mailto:admin@halloskills.de">admin@halloskills.de</a></p>
+            <p>Zur Ausübung Ihrer Rechte: <a href="mailto:jobs@halloskills.de">jobs@halloskills.de</a></p>
 
             <h2>13. Beschwerderecht bei einer Aufsichtsbehörde</h2>
             <p>Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Für uns ist zuständig:</p>
