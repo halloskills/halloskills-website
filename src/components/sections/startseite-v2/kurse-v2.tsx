@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import Link from "next/link";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { PfeilKnopf, btnPrimary } from "./hs-ui";
@@ -20,7 +20,7 @@ const kurse = [
     // Namensgebung konsistent mit src/lib/kurse-data.ts, siehe Kommentar dort.
     titel: "Weiterbildung Bürokaufmann/-frau",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
-    bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
+    bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt-start-ai-d.webp",
     href: "/kurse/bueromanagement",
     trending: true,
   },
@@ -28,7 +28,7 @@ const kurse = [
     slug: "industriekaufmann",
     titel: "Weiterbildung Industriekaufmann/-frau",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
-    bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
+    bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard-start-ai-d.webp",
     href: "/kurse/industriekaufmann",
     trending: false,
   },
@@ -36,7 +36,7 @@ const kurse = [
     slug: "bankkaufmann",
     titel: "Weiterbildung Bankkaufmann/-frau",
     meta: ["Umschulungsinhalte", "6 statt 24 Monate", "100% online"],
-    bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
+    bild: "/images/bilder/beraterin-orange-pullover-laptop-start-ai-d.webp",
     href: "/kurse/bankkaufmann",
     trending: false,
   },
@@ -62,9 +62,9 @@ function KursKarte({ kurs }: { kurs: (typeof kurse)[number] }) {
       href={kurs.href}
       className="hs-snap-item group relative block w-[290px] shrink-0 overflow-hidden rounded-hs-image shadow-hs-soft transition-shadow duration-300 hover:shadow-hs-float sm:w-[330px]"
     >
-      <Image
+      <AiImage
         src={kurs.bild}
-        alt={`KI-generiertes Bild: ${kurs.titel}`}
+        alt={`${kurs.titel} (KI-generiert)`}
         width={660}
         height={880}
         sizes="330px"

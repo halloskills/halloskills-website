@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import Link from "next/link";
 import React from "react";
 import { PfeilKnopf } from "./hs-ui";
@@ -121,9 +121,9 @@ export function FeaturesV2() {
             className="relative w-[220px] shrink-0 overflow-hidden shadow-hs-float sm:w-[260px]"
             style={{ borderRadius: "999px 999px 140px 32px" }}
           >
-            <Image
-              src="/images/bilder/frau-mit-laptop.png"
-              alt="KI-generiertes Bild: Teilnehmerin lernt entspannt mit ihrem Laptop"
+            <AiImage
+              src="/images/bilder/frau-mit-laptop-ai-d.webp"
+              alt="Teilnehmerin lernt entspannt mit ihrem Laptop (KI-generiert)"
               width={520}
               height={390}
               sizes="260px"

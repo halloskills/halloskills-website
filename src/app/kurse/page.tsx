@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import Link from "next/link";
 import { KURSE } from "@/lib/kurse-data";
 import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
@@ -79,8 +79,8 @@ export default function KurseUebersicht() {
               href={`/kurse/${kurs.slug}`}
               className="group relative block overflow-hidden rounded-hs-image shadow-hs-soft transition-shadow duration-300 hover:shadow-hs-float"
             >
-              <Image
-                src={kurs.bild}
+              <AiImage
+                src={kurs.bildListe}
                 alt={kurs.bildAlt}
                 width={660}
                 height={880}

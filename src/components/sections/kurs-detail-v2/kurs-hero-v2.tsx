@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import Link from "next/link";
 import React from "react";
 import type { Kurs } from "@/lib/kurse-data";
@@ -113,12 +113,13 @@ export function KursHeroV2({ kurs }: { kurs: Kurs }) {
               className="relative overflow-hidden shadow-hs-float"
               style={{ borderRadius: "999px 999px 220px 48px" }}
             >
-              <Image
+              <AiImage
                 src={kurs.bild}
                 alt={kurs.bildAlt}
                 width={900}
                 height={1000}
-                preload
+                fetchPriority="high"
+                loading="eager"
                 sizes="(max-width: 992px) 90vw, 560px"
                 className="aspect-[9/10] w-full object-cover"
               />

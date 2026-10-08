@@ -15,6 +15,16 @@ export function calcReadingTime(content: string): string {
   return `${minutes} Min.`;
 }
 
+/** Bild mit AI-Kreis im Artikeltext: Desktop-Datei ab 768 px, darunter die Mobil-Datei (Basis endet auf -ai: <basis>-d / <basis>-m). */
+function kiBild(basis: string, ext: string, alt: string): string {
+  return `<picture><source media="(min-width: 768px)" srcset="${basis}-d.${ext}" /><img src="${basis}-m.${ext}" alt="${alt}" loading="lazy" /></picture>`;
+}
+
+/** Titelbild-Variante: "liste" (Kartenliste), "klein" (Weitere Artikel); ohne Variante das große Titelbild. Fremdbilder bleiben unverändert. */
+export function blogBild(src: string, variante?: "liste" | "klein"): string {
+  return variante ? src.replace("-ai-d.", `-${variante}-ai-d.`) : src;
+}
+
 export const POSTS: BlogPost[] = [
   {
     slug: "bildungsgutschein-beantragen",
@@ -22,7 +32,7 @@ export const POSTS: BlogPost[] = [
     category: "Bildungsgutschein",
     readingTime: "8 min",
     date: "2026-09-24",
-    image: "/images/blog/mann-der-nachdenkt.png",
+    image: "/images/blog/mann-der-nachdenkt-ai-d.jpg",
     excerpt:
       "Wie beantragst du einen Bildungsgutschein, welche Voraussetzungen gelten und was hat sich seit 2025 geändert? Der komplette Ablauf Schritt für Schritt erklärt.",
     content: `
@@ -84,7 +94,7 @@ export const POSTS: BlogPost[] = [
 <p>Die wichtigste Reihenfolge lautet also: Förderung klären → passende Maßnahme auswählen → Unterlagen einreichen → Weiterbildung starten.</p>
 
 <h2>Welche Unterlagen helfen beim Beratungsgespräch?</h2>
-<img src="/images/blog/bildungsgutschein-unterlagen.png" alt="Unterlagen für den Bildungsgutschein" />
+${kiBild("/images/blog/bildungsgutschein-unterlagen-ai", "webp", "Unterlagen für den Bildungsgutschein (KI-generiert)")}
 <p>Es gibt keine allgemeine Liste nach dem Motto: „Ohne exakt diese sieben Dokumente bekommst du keinen Bildungsgutschein." Welche Unterlagen erforderlich sind, hängt von deiner individuellen Situation ab. Hilfreich können aber sein:</p>
 <ul>
 <li>ein aktueller Lebenslauf,</li>
@@ -155,7 +165,7 @@ export const POSTS: BlogPost[] = [
     category: "Bildungsgutschein",
     readingTime: "9 min",
     date: "2026-09-24",
-    image: "/images/blog/blonde-frau-mit-laptop.png",
+    image: "/images/blog/blonde-frau-mit-laptop-ai-d.jpg",
     excerpt:
       "Kannst du während ALG I eine Weiterbildung machen und läuft dein Arbeitslosengeld weiter? Was bei geförderten und nicht geförderten Kursen gilt – und was beim Bürgergeld anders ist.",
     content: `
@@ -173,7 +183,7 @@ export const POSTS: BlogPost[] = [
 <p>Besonders interessant kann eine Weiterbildung sein, wenn dir für deinen nächsten Job bestimmte Kenntnisse fehlen oder du dich beruflich neu orientieren möchtest. Unter bestimmten Voraussetzungen kann die Agentur für Arbeit die Weiterbildung fördern und dein Arbeitslosengeld während dieser Zeit weiterzahlen.</p>
 
 <h2>Bekommst du während einer Weiterbildung weiter Arbeitslosengeld?</h2>
-<img src="/images/blog/offene-hand-mit-euro-muenzen.png" alt="KI-generiertes Bild: Offene Hand mit Euro-Münzen" />
+${kiBild("/images/blog/offene-hand-mit-euro-muenzen-ai", "webp", "Offene Hand mit Euro-Münzen (KI-generiert)")}
 <p>Bei einer geförderten beruflichen Weiterbildung kann dein ALG I grundsätzlich weitergezahlt werden. Die Bundesagentur für Arbeit erklärt im Merkblatt 6 zur Förderung der beruflichen Weiterbildung, dass Arbeitslosengeld während einer geförderten Weiterbildung gezahlt wird, solange die entsprechenden Anspruchsvoraussetzungen vorliegen.</p>
 <p>Dabei handelt es sich nicht um eine zusätzliche Leistung neben deinem bisherigen Arbeitslosengeld. Dein bestehender ALG-I-Anspruch läuft vielmehr unter besonderen Regeln weiter.</p>
 <p>Eine Weiterbildung wird allerdings nicht automatisch gefördert, nur weil du arbeitslos bist. Nach § 81 SGB III kann eine berufliche Weiterbildung unter anderem gefördert werden, wenn sie notwendig ist, um dich beruflich einzugliedern oder eine drohende Arbeitslosigkeit abzuwenden, du vorher beraten wurdest und sowohl Träger als auch Maßnahme für die Förderung zugelassen sind.</p>
@@ -208,7 +218,7 @@ export const POSTS: BlogPost[] = [
 <p>Du musst die bewilligten Lehrgangskosten auch nicht grundsätzlich erst selbst bezahlen und anschließend darauf hoffen, sie zurückzubekommen. Nach dem BA-Merkblatt werden Lehrgangskosten im Regelfall direkt an den Bildungsträger ausgezahlt. Andere Weiterbildungskosten können je nach Leistung an dich ausgezahlt werden.</p>
 
 <h2>Darfst du während der Weiterbildung nebenbei arbeiten?</h2>
-<img src="/images/blog/frau-kaut-auf-stift-und-denkt-nach.png" alt="KI-generiertes Bild: Frau denkt über ihre Weiterbildung nach" />
+${kiBild("/images/blog/frau-kaut-auf-stift-und-denkt-nach-ai", "webp", "Frau denkt über ihre Weiterbildung nach (KI-generiert)")}
 <p>Ein Nebenjob ist grundsätzlich möglich. Dabei gelten aber dieselben wichtigen Grenzen, die auch sonst beim ALG-I-Bezug zu beachten sind. Die Bundesagentur für Arbeit erklärt zum Nebenjob bei Arbeitslosengeld, dass du die Nebentätigkeit vorab melden und weniger als 15 Stunden pro Kalenderwoche arbeiten musst. Ab 15 Stunden wöchentlich giltst du grundsätzlich nicht mehr als arbeitslos.</p>
 <p>Beim normalen Nebenverdienst gilt grundsätzlich ein monatlicher Freibetrag von 165 Euro. Einkommen oberhalb des anrechnungsfreien Betrags kann dein Arbeitslosengeld reduzieren. Unter bestimmten Voraussetzungen kann ein höherer individueller Freibetrag gelten. Deshalb ist es nicht sinnvoll, sich an einer allgemeinen Minijob-Grenze zu orientieren – für ALG I gelten eigene Regeln zu Arbeitszeit und Einkommensanrechnung.</p>
 
@@ -249,7 +259,7 @@ export const POSTS: BlogPost[] = [
     category: "Karriere",
     readingTime: "7 min",
     date: "2026-09-24",
-    image: "/images/blog/frau-am-pc-und-home-office.jpg",
+    image: "/images/blog/frau-am-pc-und-home-office-ai-d.jpg",
     excerpt:
       "Remote Work gehört für viele längst zum Arbeitsalltag – funktioniert aber nicht automatisch. Diese Tipps helfen dir, zuhause konzentriert, produktiv und zufrieden zu arbeiten.",
     content: `
@@ -262,7 +272,7 @@ export const POSTS: BlogPost[] = [
 <p>Das ist eine riesige Chance für alle, die in diese Berufsfelder einsteigen wollen. Aber Homeoffice funktioniert nicht automatisch. Es braucht die richtigen Strukturen, Tools und Gewohnheiten.</p>
 
 <h2>Tipp 1: Einen festen Arbeitsbereich einrichten</h2>
-<img src="/images/blog/laptop-und-fenster.jpg" alt="Laptop an einem Arbeitsplatz am Fenster" />
+${kiBild("/images/blog/laptop-und-fenster-ai", "jpg", "Laptop an einem Arbeitsplatz am Fenster (KI-generiert)")}
 <p>Das Sofa ist eine Falle. Ein dedizierter Arbeitsbereich – auch eine Zimmerecke mit Schreibtisch – hilft dem Gehirn, in den Arbeitsmodus zu wechseln. Wichtig: Am Feierabend diesen Bereich verlassen und nicht mehr hinschauen.</p>
 <p>Praktische Ausstattung für dein Homeoffice:</p>
 <ul>
@@ -338,7 +348,7 @@ export const POSTS: BlogPost[] = [
     category: "Karriere",
     readingTime: "8 min",
     date: "2026-09-24",
-    image: "/images/blog/lebenslauf-mit-stift-geschrieben.jpg",
+    image: "/images/blog/lebenslauf-mit-stift-geschrieben-ai-d.jpg",
     excerpt:
       "Ein guter Lebenslauf soll nicht deine komplette Lebensgeschichte erzählen, sondern schnell zeigen, was du kannst. Was laut Bundesagentur für Arbeit und aktueller Stepstone-Studie 2026 wirklich zählt.",
     content: `
@@ -355,7 +365,7 @@ export const POSTS: BlogPost[] = [
 <p>Gerade 2026 wird das wichtiger. Digitale Bewerbungsprozesse, KI und automatisierte Vorauswahl verändern zwar die Bewerbung, die grundlegende Frage bleibt aber dieselbe: Passt dein Profil zu dem, was das Unternehmen sucht?</p>
 
 <h2>Wie sollte ein moderner Lebenslauf 2026 aufgebaut sein?</h2>
-<img src="/images/blog/lebenslauf-und-laptop.jpg" alt="Lebenslauf auf einem Klemmbrett neben einem Laptop" />
+${kiBild("/images/blog/lebenslauf-und-laptop-ai", "jpg", "Lebenslauf auf einem Klemmbrett neben einem Laptop (KI-generiert)")}
 <p>Die Bundesagentur für Arbeit empfiehlt, den Lebenslauf tabellarisch aufzubauen, auf maximal zwei Seiten zu begrenzen und innerhalb der einzelnen Bereiche mit der aktuellsten Station zu beginnen.</p>
 <p>Ein übersichtlicher Lebenslauf Aufbau kann zum Beispiel so aussehen:</p>
 <ul>
@@ -411,7 +421,7 @@ export const POSTS: BlogPost[] = [
 <p>Auch irrelevante Hobbys oder sehr alte berufliche Stationen müssen nicht ausführlich dargestellt werden. Konzentriere dich lieber darauf, was für deinen nächsten Job tatsächlich interessant ist.</p>
 
 <h2>Wie gehst du mit Lücken im Lebenslauf um?</h2>
-<img src="/images/blog/mann-macht-beruflichen-sprung.png" alt="KI-generiertes Bild: Mann springt über eine Felsspalte als Sinnbild für den beruflichen Neustart" />
+${kiBild("/images/blog/mann-macht-beruflichen-sprung-ai", "webp", "Mann springt über eine Felsspalte als Sinnbild für den beruflichen Neustart (KI-generiert)")}
 <p>Lücken solltest du nicht künstlich verstecken. Auch die Bundesagentur für Arbeit empfiehlt einen offenen Umgang mit Lücken. Entscheidend ist, kurz und sachlich anzugeben, was du in dieser Zeit gemacht hast.</p>
 <p>Das kann zum Beispiel sein:</p>
 <ul>
@@ -456,7 +466,7 @@ Ja, wenn sie für deine berufliche Entwicklung oder die gewünschte Stelle relev
     category: "Bildungsgutschein",
     readingTime: "7 min",
     date: "2026-09-24",
-    image: "/images/blog/finger-der-auf-laptop-zeigt.jpg",
+    image: "/images/blog/finger-der-auf-laptop-zeigt-ai-d.jpg",
     excerpt:
       "Umschulung und Weiterbildung werden oft verwechselt. Wir erklären den Unterschied, wann welcher Weg besser passt – und was das für HalloSkills-Lehrgänge bedeutet.",
     content: `
@@ -733,7 +743,7 @@ Ja, wenn sie für deine berufliche Entwicklung oder die gewünschte Stelle relev
 
 /** Alt-Text für das Titelbild; lokale Bilder (/images/...) sind KI-generiert und gekennzeichnet. */
 export function postBildAlt(post: BlogPost): string {
-  return post.image.startsWith("/images/") ? `KI-generiertes Bild: ${post.title}` : post.title;
+  return post.image.startsWith("/images/") ? `${post.title} (KI-generiert)` : post.title;
 }
 
 export function findePost(slug: string): BlogPost | undefined {

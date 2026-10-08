@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import Link from "next/link";
 import React from "react";
 import { btnPrimary, btnWeiss } from "./hs-ui";
@@ -195,12 +195,13 @@ export function HeroV2() {
               className="relative overflow-hidden shadow-hs-float"
               style={{ borderRadius: "999px 999px 220px 48px" }}
             >
-              <Image
-                src="/images/bilder/hero-online-lernen.webp"
-                alt="KI-generiertes Bild: Teilnehmerin lernt online am Schreibtisch mit Headset, auf den Bildschirmen laufen Live-Unterricht und die Lerninhalte"
+              <AiImage
+                src="/images/bilder/hero-online-lernen-ai-d.webp"
+                alt="Teilnehmerin lernt online am Schreibtisch mit Headset, auf den Bildschirmen laufen Live-Unterricht und die Lerninhalte (KI-generiert)"
                 width={846}
                 height={941}
-                preload
+                fetchPriority="high"
+                loading="eager"
                 sizes="(max-width: 992px) 90vw, 560px"
                 className="aspect-[9/10] w-full object-cover"
               />

@@ -42,6 +42,8 @@ export type Kurs = {
   eyebrow: string;
   subline: string;
   bild: string;
+  /** Variante für die Kartenliste auf /kurse (4:5), mit eigenem AI-Kreis. */
+  bildListe: string;
   bildAlt: string;
   fuerWen: string[];
   module: KursModul[];
@@ -65,8 +67,9 @@ export const KURSE: Kurs[] = [
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
       "Du lernst die zentralen Themen der beruflichen Umschulung zum Bürokaufmann/zur Bürokauffrau (Kaufmann/Kauffrau für Büromanagement), kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
-    bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt.png",
-    bildAlt: "KI-generiertes Bild: Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Büromanagement",
+    bild: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt-hero-ai-d.webp",
+    bildListe: "/images/bilder/managerin-gruener-rollkragen-tablet-schreibt-liste-ai-d.webp",
+    bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Büromanagement (KI-generiert)",
     fuerWen: [
       "Du willst im Büro, in der Verwaltung oder im Sekretariat arbeiten.",
       "Du organisierst gerne, behältst den Überblick und kommunizierst klar.",
@@ -108,8 +111,8 @@ export const KURSE: Kurs[] = [
     ],
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in vielen kaufmännischen Bereichen einsetzen, zum Beispiel im Büro, in der Verwaltung, im Kundenservice oder in der Organisation.",
-    danachBild: "/images/bilder/mann-am-laptop-stehend.png",
-    danachBildAlt: "KI-generiertes Bild: Teilnehmer schaut stehend auf seinen Laptop",
+    danachBild: "/images/bilder/mann-am-laptop-stehend-ai-d.webp",
+    danachBildAlt: "Teilnehmer schaut stehend auf seinen Laptop (KI-generiert)",
     danach: [
       {
         titel: "Büro & Verwaltung",
@@ -171,8 +174,9 @@ export const KURSE: Kurs[] = [
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
       "Du lernst die zentralen Themen der beruflichen Umschulung zum Industriekaufmann/zur Industriekauffrau, kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
-    bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard.png",
-    bildAlt: "KI-generiertes Bild: Teilnehmer arbeitet an seinem Online-Lehrgang zum Industriekaufmann",
+    bild: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard-hero-ai-d.webp",
+    bildListe: "/images/bilder/mann-kopfhoerer-blauer-pulli-analytics-dashboard-liste-ai-d.webp",
+    bildAlt: "Teilnehmer arbeitet an seinem Online-Lehrgang zum Industriekaufmann (KI-generiert)",
     fuerWen: [
       "Du willst in Einkauf, Produktion, Vertrieb oder Controlling eines Industriebetriebs arbeiten.",
       "Du denkst gerne in Zahlen und Prozessen und behältst Lieferketten im Blick.",
@@ -214,8 +218,8 @@ export const KURSE: Kurs[] = [
     ],
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen kaufmännischen Bereichen eines Unternehmens einsetzen, vom Einkauf über Vertrieb und Logistik bis zum Controlling.",
-    danachBild: "/images/bilder/frau-vertieft-am-laptop.png",
-    danachBildAlt: "KI-generiertes Bild: Teilnehmerin schaut vertieft auf ihren Laptop",
+    danachBild: "/images/bilder/frau-vertieft-am-laptop-ai-d.webp",
+    danachBildAlt: "Teilnehmerin schaut vertieft auf ihren Laptop (KI-generiert)",
     danach: [
       {
         titel: "Einkauf & Beschaffung",
@@ -277,8 +281,9 @@ export const KURSE: Kurs[] = [
     eyebrow: "Umschulungsinhalte · 6 statt 24 Monate",
     subline:
       "Du lernst die zentralen Themen der beruflichen Umschulung zum Bankkaufmann/zur Bankkauffrau, kompakt als Weiterbildung, online und mit persönlicher Begleitung bis zu deinem HalloSkills-Abschlusszertifikat.",
-    bild: "/images/bilder/beraterin-orange-pullover-laptop.png",
-    bildAlt: "KI-generiertes Bild: Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Bankwesen",
+    bild: "/images/bilder/beraterin-orange-pullover-laptop-hero-ai-d.webp",
+    bildListe: "/images/bilder/beraterin-orange-pullover-laptop-liste-ai-d.webp",
+    bildAlt: "Teilnehmerin arbeitet an ihrem Online-Lehrgang zum Bankwesen (KI-generiert)",
     fuerWen: [
       "Du willst Kund:innen bei Bank- und Finanzthemen beraten.",
       "Du gehst gerne sorgfältig mit Zahlen, Verträgen und Verantwortung um.",
@@ -320,8 +325,8 @@ export const KURSE: Kurs[] = [
     ],
     danachIntro:
       "Nach deinem Lehrgang kannst du dein neues Wissen direkt in verschiedenen Bereichen rund um Bank, Finanzen und Kundenberatung einsetzen.",
-    danachBild: "/images/bilder/aelterer-mann-am-schreibtisch.png",
-    danachBildAlt: "KI-generiertes Bild: Teilnehmer arbeitet konzentriert an seinem Schreibtisch",
+    danachBild: "/images/bilder/aelterer-mann-am-schreibtisch-ai-d.webp",
+    danachBildAlt: "Teilnehmer arbeitet konzentriert an seinem Schreibtisch (KI-generiert)",
     danach: [
       {
         titel: "Kundenberatung & Service",

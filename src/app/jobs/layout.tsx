@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Jobs & Karriere | HalloSkills",
     description:
       "Arbeite bei HalloSkills und mach einen Unterschied im Leben von Arbeitssuchenden.",
-    images: [{ url: "/images/bilder/hero.png", width: 1200, height: 630 }],
+    images: [{ url: "/images/bilder/hero-og-ai-d.jpg", width: 1200, height: 630 }],
   },
 };
 

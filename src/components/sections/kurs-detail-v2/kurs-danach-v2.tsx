@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import React from "react";
 import type { Kurs } from "@/lib/kurse-data";
 import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
@@ -30,7 +30,7 @@ export function KursDanachV2({ kurs }: { kurs: Kurs }) {
               className="relative w-[200px] shrink-0 overflow-hidden shadow-hs-float sm:w-[230px]"
               style={{ borderRadius: "999px 999px 120px 32px" }}
             >
-              <Image
+              <AiImage
                 src={kurs.danachBild}
                 alt={kurs.danachBildAlt ?? ""}
                 width={460}

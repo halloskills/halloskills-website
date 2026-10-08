@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import Link from "next/link";
 import React from "react";
 import { btnPrimary, btnWeiss } from "@/components/sections/startseite-v2/hs-ui";
@@ -128,12 +128,13 @@ export function BeratungHeroV2() {
               className="relative overflow-hidden shadow-hs-float"
               style={{ borderRadius: "999px 999px 220px 48px" }}
             >
-              <Image
-                src="/images/bilder/mann-airpods-khaki-dual-monitor.png"
-                alt="KI-generiertes Bild: Teilnehmer im Beratungsgespräch per Videocall"
+              <AiImage
+                src="/images/bilder/mann-airpods-khaki-dual-monitor-ai-d.webp"
+                alt="Teilnehmer im Beratungsgespräch per Videocall (KI-generiert)"
                 width={900}
                 height={1000}
-                preload
+                fetchPriority="high"
+                loading="eager"
                 sizes="(max-width: 992px) 90vw, 560px"
                 className="aspect-[9/10] w-full object-cover"
               />

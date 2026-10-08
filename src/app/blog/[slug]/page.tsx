@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import AiImage from "@/components/AiImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { POSTS, calcReadingTime, findePost, postBildAlt } from "@/lib/blog-data";
+import { POSTS, blogBild, calcReadingTime, findePost, postBildAlt } from "@/lib/blog-data";
 import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
 import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 import { CtaV2 } from "@/components/sections/startseite-v2/cta-v2";
@@ -94,7 +94,7 @@ export default async function BlogPostSeite({
 
       <section className="px-6 pb-6 md:px-10">
         <div className="mx-auto max-w-[900px] overflow-hidden rounded-hs-image shadow-hs-soft">
-          <Image
+          <AiImage
             src={post.image}
             alt={postBildAlt(post)}
             width={1200}
@@ -123,8 +123,8 @@ export default async function BlogPostSeite({
                   href={`/blog/${r.slug}`}
                   className="group overflow-hidden rounded-hs-card border border-hs-line bg-white shadow-hs-soft transition-shadow duration-300 hover:shadow-hs-float"
                 >
-                  <Image
-                    src={r.image}
+                  <AiImage
+                    src={blogBild(r.image, "klein")}
                     alt={postBildAlt(r)}
                     width={400}
                     height={250}

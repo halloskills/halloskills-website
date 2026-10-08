@@ -1,148 +1,69 @@
-# KI-Kennzeichnung von Bildern (projektübergreifende Anweisung)
+# KI-Kennzeichnung von Bildern: der „AI-Kreis“
 
-Diese Anleitung gilt für alle HalloSkills-Websites (halloskills.de, career-now). Sie kann unverändert in andere Projekte kopiert und in der `CLAUDE.md` per `@docs/ki-kennzeichnung.md` eingebunden werden.
+Diese Anleitung gilt für alle HalloSkills-Websites (halloskills.de, career now) und ist in der `CLAUDE.md` eingebunden. Maßgeblich für die Umsetzung ist die Regel in der `CLAUDE.md` (Abschnitt „KI-Kennzeichnung von Bildern“). Dieses Dokument erklärt den Hintergrund und das Vorgehen.
+
+Die frühere Variante (EU-Icon „AI GENERATED“ als Pille per `add-ai-badge.py`) ist abgelöst. Sie war zu groß und wirkte je nach Bild unterschiedlich stark.
 
 ## 1. Grundsatz
 
-Alle Bilder auf unseren Websites sind mit ChatGPT erstellt, also KI-generiert. Texte und alles andere wurde von Menschen geschrieben und wird **nicht** gekennzeichnet. Gekennzeichnet werden nur die Bilder.
+Bilder, die mit KI erzeugt wurden und fotorealistisch wirken, bekommen einen kleinen runden Kreis mit „AI“ direkt im Bild. Texte und alles andere wurde von Menschen geschrieben und wird **nicht** gekennzeichnet.
 
-Rechtlicher Hintergrund: Ab dem **2. August 2026** verlangt Artikel 50 des EU AI Act eine klare Kennzeichnung von KI-generierten oder KI-manipulierten Bild-, Audio- und Videoinhalten (Deepfakes). Die EU-Kommission hat dafür offizielle Icons veröffentlicht. Deren Verwendung ist freiwillig, die Kennzeichnungspflicht selbst nicht.
+Rechtlicher Hintergrund: Ab dem **2. August 2026** verlangt Artikel 50 des EU AI Act eine klare Kennzeichnung von KI-generierten oder KI-manipulierten Bild-, Audio- und Videoinhalten (Deepfakes). Die EU-Kommission hat dafür Icons veröffentlicht, deren Verwendung freiwillig ist. Die Kennzeichnungspflicht selbst gilt unabhängig davon. Wir nutzen als einheitliches, dezentes Zeichen den AI-Kreis.
 
-## 2. Was bei uns gekennzeichnet wird
+## 2. Was gekennzeichnet wird
 
-| Bildtyp | Badge? |
+| Bildtyp | Kreis? |
 |---|---|
-| Fotos und Bilder, auf denen Menschen zu sehen sind (auch Teile wie Hände) | **Ja** |
-| Icons, Grafiken, Infografiken, Illustrationen | Nein, nicht verpflichtend |
-| Bilder ohne Personen (z. B. Schreibtisch mit Unterlagen, Laptop am Fenster) | Nein |
-| Logos, Favicons | Nein |
-| Team-Fotos | Aktuell ausgenommen (werden voraussichtlich ersetzt) |
+| Fotorealistische KI-Bilder (mit oder ohne Menschen) | **Ja** |
+| Grafiken, Infografiken, Illustrationen, Icons | Nein |
+| Screenshots, Logos, Favicons | Nein |
+| Echte Fotos und Stockfotos (z. B. Unsplash) | Nein |
+| Team-Fotos | Aktuell nicht gekennzeichnet (offen, werden voraussichtlich ersetzt) |
 
-Im Zweifel nachfragen. Wird ein Bild später durch ein echtes Foto ersetzt, muss das Badge nicht mehr drauf.
+Ob ein Bild KI-generiert ist, entscheidet Jenny. Im Zweifel nachfragen, nicht selbst kennzeichnen. Wird ein Bild später durch ein echtes Foto ersetzt, entfällt der Kreis.
 
-## 3. Die offiziellen EU-Icons
+## 3. Aussehen und Position
 
-Es gibt drei Varianten:
+- Kleiner runder Kreis mit „AI“ in der Mitte: Kreis `#0F172A` mit ca. 75 % Deckkraft, „AI“ weiß und fett. Auf sehr dunklen Bildstellen umgekehrt (weißer Kreis, dunkles „AI“).
+- **Größe auf dem Bildschirm überall gleich: 16 px am Desktop, 14 px auf dem Handy.**
+- Position unten links, Abstand links und unten je 3 % der Bildbreite.
+- Bei Freistellern auf weißem Hintergrund (Option `--inset`) sitzt der Kreis unten links am Rand des Motivs, nicht in der leeren Ecke und nicht über Gesicht oder Händen.
+- Im sicheren Bereich: nicht von abgerundeten Bildmasken (`--r`), Textfeldern auf Karten (`--lift`) oder `object-cover`-Ausschnitten (`--crop`) verdeckt oder abgeschnitten.
 
-| Icon | Wann verwenden |
-|---|---|
-| **AI GENERATED** | Inhalt wurde vollständig von KI erzeugt (bei uns: alle ChatGPT-Bilder). Das erste Prompting zählt nicht als menschlicher Anteil. |
-| **AI MODIFIED** | Ein vorhandenes, von Menschen erstelltes Bild wurde von KI teilweise verändert (z. B. Gesicht getauscht, Raum per KI möbliert). |
-| **AI** (Basis-Icon) | KI war beteiligt, es wird aber ein eigener Text oder eine interaktive zweite Ebene ergänzt. |
+## 4. Regeln der EU zur Platzierung
 
-Jede Variante gibt es in vier Farbfassungen: **black**, **white**, **black transparent** (schwarz mit 50 % Transparenz) und **white transparent** (weiß mit 50 % Transparenz).
-
-**Unser Standard:** `LABEL_AI GENERATED_black transparent.png` (graue Pille mit weißer Schrift, wirkt auf hellen und dunklen Bildern). Auf sehr hellen Bildern, bei denen das Grau untergeht, `LABEL_AI GENERATED_black.png` nehmen.
-
-### Wo liegen die Dateien?
-
-SharePoint, Site „Marketing“, Freigegebene Dokumente:
-
-- halloskills.de: `02 HS Website / 04 Website Assets / EU LABEL AI GENERATED`
-- career-now: `00 career now / 02 cn Website / 04 Website Assets / EU LABEL AI GENERATED`
-
-In beiden Ordnern liegen dieselben 12 Dateien: `LABEL_AI GENERATED_…`, `LABEL_AI MODIFIED_…` und `LABEL_AI_…`, jeweils als black, black transparent, white und white transparent.
-
-Offizielle Quelle (mit SVG- und PNG-Download): https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content
-
-## 4. Regeln für die Platzierung (laut EU)
-
-- Das Icon muss **spätestens beim ersten Sehen** klar erkennbar und unterscheidbar sein.
-- **Keine überlagernden Elemente** über dem Icon (keine Karten, Buttons, Verläufe oder Texte darüber).
-- Das Icon wird **direkt ins Bild eingebettet**, nicht nur per CSS darübergelegt. So bleibt es sichtbar, wenn das Bild geteilt, heruntergeladen oder als Social-Media-Vorschau (`og:image`) verwendet wird.
-- Das Icon muss in **gut sichtbarer Größe** erscheinen. Bei kleinen Darstellungen (Kacheln, Vorschaubilder) das Badge größer skalieren.
-- Barrierefreiheit: Ein **Alt-Text** soll angeben, dass das Bild KI-generiert ist (z. B. „KI-generiertes Bild: Frau arbeitet am Laptop“). Beschriftungen in einfacher Sprache, ohne Abkürzungen außer „AI“.
-- Die Nutzung der Icons allein stellt **keine Rechtskonformität** sicher. Die Verantwortung für die Erfüllung von Artikel 50 bleibt beim Betreiber. Bei rechtlichen Fragen die Rechtsberatung einbeziehen.
-- Die Icons sind frei nutzbar, eine Namensnennung ist nicht nötig.
+- Das Zeichen muss **spätestens beim ersten Sehen** klar erkennbar sein.
+- **Keine überlagernden Elemente** (Karten, Buttons, Verläufe, Texte) über dem Zeichen.
+- Das Zeichen wird **direkt ins Bild eingebettet**, nicht per CSS darübergelegt. So bleibt es beim Teilen, Herunterladen und als Social-Media-Vorschau (`og:image`) sichtbar.
+- Barrierefreiheit: Der **Alt-Text** nennt die KI-Erzeugung und endet mit „(KI-generiert)“.
+- Die Verwendung der Zeichen allein stellt **keine Rechtskonformität** sicher. Die Verantwortung für Artikel 50 bleibt beim Betreiber. Bei rechtlichen Fragen die Rechtsberatung einbeziehen.
 
 ## 5. Umsetzung im Projekt
 
-### Badge einbrennen
-
-Das Badge wird mit einem kleinen Skript in die Bilddatei eingebaut (nicht per CSS). Voraussetzungen: Python 3 mit Pillow (`pip install pillow`).
-
-1. Das Badge vorbereiten: `LABEL_AI GENERATED_black transparent.png` aus SharePoint holen, auf den sichtbaren Bereich zuschneiden (transparenten Rand entfernen, z. B. `Image.open(...).crop(im.getbbox())`) und als `scripts/assets/ai-generated-badge.png` ablegen.
-2. Das Skript unten als `scripts/add-ai-badge.py` speichern.
-3. Pro Bild **einmal** ausführen:
+Der Kreis wird mit `scripts/add-ai-circle.mjs` (Node, nutzt `sharp`) in die Bilddatei eingebrannt. Weil er mit dem Bild skaliert, entstehen pro Bild und Darstellung **zwei Dateien**: `-d` (Desktop) und `-m` (Mobil). Das Skript erzeugt beide in einem Schritt.
 
 ```bash
-python3 scripts/add-ai-badge.py public/images/<pfad>/<bild>.png [bl|br|tl|tr|strip] [breite]
+node scripts/add-ai-circle.mjs <unbeschriftetes-original> public/images/<ordner>/<name>-ai --dw=<px> --mw=<px> [--crop=B:H] [--r=<px[,px]>] [--lift=<px[,px]>] [--inset] [--jpg]
 ```
 
-- Standardposition ist `bl` (unten links). Das ist meist am sichersten, weil abgerundete Bildmasken unten rechts häufiger Ecken abschneiden.
-- `breite` ist der Anteil der Bildbreite (Standard `0.20`). Bei klein dargestellten Bildern (z. B. 180 px breite Hochformat-Bilder) auf etwa `0.45` erhöhen.
-- `strip` hängt unten einen schmalen Streifen in der Randfarbe an und setzt das Badge dorthin. Das ist für Bilder mit Text oder wichtigen Inhalten bis zum Rand gedacht. (Infografiken brauchen bei uns kein Badge, falls doch, dann `strip`.)
-- Bereits gekennzeichnete PNG/JPG werden übersprungen (Marker in den Metadaten). Bei WebP gibt es keinen Marker, dort nur einmal ausführen. Fehler beim Einbrennen lassen sich mit `git checkout -- <bild>` rückgängig machen.
+- `--dw` / `--mw`: Breite in px, in der das Bild am Desktop bzw. mobil auf der Seite erscheint. Vorher im Browser messen (Entwicklerwerkzeuge oder `getBoundingClientRect()`), bei `object-contain` die tatsächlich gezeichnete Breite.
+- `--crop=B:H`: vorher mittig auf das Seitenverhältnis des Anzeigerahmens zuschneiden (z. B. `16:9`, `4:5`, `9:10`). Pflicht bei `aspect-*` mit `object-cover`.
+- `--r`: Eckenradius der Maske unten links in Bildschirm-px (Desktop,Mobil oder ein Wert).
+- `--lift`: zusätzlicher Abstand unten in Bildschirm-px, wenn ein Textfeld das Bild unten überlagert.
+- `--inset`: Freisteller auf Weiß.
+- `--jpg`: Ausgabe als JPG statt WebP (für `og:image`, das nicht alle Netzwerke als WebP lesen).
+- PNG-Quellen werden als WebP ausgegeben (die PNGs wären mehrere MB groß), JPG bleibt JPG.
+- **Immer vom Original ohne Kreis ausgehen**, nie ein schon gekennzeichnetes Bild erneut bearbeiten. Die Originale liegen in der Git-Historie.
 
-### Skript
-
-```python
-#!/usr/bin/env python3
-"""Setzt das "AI GENERATED"-Badge in eine Ecke eines Bildes (in place).
-
-Aufruf: python3 scripts/add-ai-badge.py <bild> [bl|br|tl|tr|strip] [breite=0.20]
-"strip" hängt unten einen Streifen in der Randfarbe an.
-Einmal pro Bild ausführen. Bereits gekennzeichnete PNG/JPG werden übersprungen.
-"""
-import sys
-from pathlib import Path
-from PIL import Image, PngImagePlugin
-
-BADGE = Path(__file__).parent / "assets" / "ai-generated-badge.png"
-MARKER = "ai-badge"
-
-
-def apply(path, corner="bl", out=None, size=0.20):
-    path = Path(path)
-    im = Image.open(path)
-    if im.info.get(MARKER) or im.info.get("comment") == MARKER.encode():
-        print(f"skip (schon gekennzeichnet): {path}")
-        return
-    fmt = im.format
-    had_alpha = im.mode in ("RGBA", "LA") or "transparency" in im.info
-    base = im.convert("RGBA")
-    w, h = base.size
-    badge = Image.open(BADGE).convert("RGBA")
-    bw = max(int(w * size), 150)
-    bw = min(bw, int(w * 0.6))
-    bh = round(badge.height * bw / badge.width)
-    badge = badge.resize((bw, bh), Image.LANCZOS)
-    m = round(max(w * 0.04, 12))
-    if corner == "strip":
-        row = [base.getpixel((i, h - 1)) for i in range(0, w, max(w // 200, 1))]
-        col = tuple(sorted(c[k] for c in row)[len(row) // 2] for k in range(4))
-        strip = bh + m
-        canvas = Image.new("RGBA", (w, h + strip), col)
-        canvas.paste(base, (0, 0))
-        base, h = canvas, h + strip
-        corner = "bl"
-        m = m // 2 + m // 4
-    x = m if corner[1] == "l" else w - bw - m
-    y = m if corner[0] == "t" else h - bh - m
-    base.alpha_composite(badge, (x, y))
-    out = Path(out or path)
-    if fmt == "PNG":
-        meta = PngImagePlugin.PngInfo()
-        meta.add_text(MARKER, "1")
-        (base if had_alpha else base.convert("RGB")).save(out, "PNG", pnginfo=meta, optimize=True)
-    elif fmt == "JPEG":
-        base.convert("RGB").save(out, "JPEG", quality=90, comment=MARKER.encode())
-    else:
-        base.save(out, quality=90)
-    print(f"ok: {out} ({corner})")
-
-
-if __name__ == "__main__":
-    apply(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else "bl", size=float(sys.argv[3]) if len(sys.argv) > 3 else 0.20)
-```
+Im Code: `src/components/AiImage.tsx` zeigt je nach Bildschirmbreite (ab 768 px) die `-d`- oder `-m`-Datei. Im Blog-Fließtext erzeugt `kiBild()` in `src/lib/blog-data.ts` das `<picture>`.
 
 ## 6. Checkliste für jedes neue Bild
 
-1. Zeigt das Bild Menschen (oder Körperteile)? Dann Badge nötig, sonst nicht.
-2. Badge mit dem Skript einbrennen, Position und Größe so wählen, dass es **nichts Wichtiges verdeckt** und auch in der verkleinerten Darstellung lesbar bleibt.
-3. Prüfen, ob das Badge in der Darstellung auf der Seite **nicht abgeschnitten** wird (Bildmasken mit großen Rundungen, `object-cover`-Ausschnitte, kleine runde Vorschaubilder) und nicht von Karten oder Buttons überlagert wird.
-4. Alt-Text mit Hinweis auf KI-Generierung schreiben.
-5. Dateiname URL-sicher wählen (keine Leerzeichen oder Sonderzeichen, ä→ae, ö→oe, ü→ue).
+1. Ist es ein fotorealistisches KI-Bild? Das entscheidet Jenny. Sonst kein Kreis.
+2. Anzeigebreite am Desktop und mobil (390 px) messen, Anzeigerahmen (Seitenverhältnis, Rundung, Textfeld darüber) notieren.
+3. Skript ausführen, neue Dateinamen (`-ai-d`, `-ai-m`, kleingeschrieben, URL-sicher), alte Datei löschen, Verweise anpassen.
+4. Alt-Text mit „(KI-generiert)“ am Ende.
+5. Im Browser prüfen: Kreis nicht abgeschnitten oder überlagert, nicht auf Gesicht oder Händen, überall 16 px bzw. 14 px.
 
 ## 7. Quellen
 
