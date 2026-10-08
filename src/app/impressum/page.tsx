@@ -41,6 +41,8 @@ export default function ImpressumPage() {
             <h2>Kontakt</h2>
             <p>
               E-Mail: <a href="mailto:admin@halloskills.de">admin@halloskills.de</a>
+              <br />
+              Kontaktformular: <a href="/beratung-buchen#formular">Beratung buchen</a>
             </p>
 
             <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
@@ -49,7 +51,6 @@ export default function ImpressumPage() {
               vor einer Verbraucherschlichtungsstelle teilzunehmen.
             </p>
 
-            <p className="mt-12 text-[0.85rem] text-hs-muted">Quelle: e-recht24.de</p>
           </div>
         </div>
       </section>
