@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Logo } from "./hs-ui";
+import { CookieSettingsButton } from "@/components/CookieSettingsButton";
 
 const spalten = [
   {
@@ -117,6 +118,7 @@ export function FooterV2() {
                 {link.label}
               </Link>
             ))}
+            <CookieSettingsButton className="text-[0.8rem] text-white/55 transition-colors hover:text-white" />
           </nav>
         </div>
       </div>

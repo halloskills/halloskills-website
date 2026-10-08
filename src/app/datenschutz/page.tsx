@@ -461,12 +461,14 @@ export default function DatenschutzPage() {
               keine eigenständigen Nutzerprofile und dient nicht unmittelbar der
               Analyse des Nutzerverhaltens. Über den Tag Manager können jedoch
               andere Dienste, insbesondere Google Analytics, eingebunden und
-              gesteuert werden. Soweit über den Google Tag Manager Dienste aktiviert
-              werden, für deren Einsatz eine Einwilligung erforderlich ist, werden
-              diese Analyse-Dienste erst auf Grundlage Ihrer Einwilligung aktiviert.
-              Die Einwilligung können Sie jederzeit über die
+              gesteuert werden. Der Google Tag Manager wird nur geladen, wenn
+              Sie zuvor über unser Cookie-Banner in die Statistik eingewilligt haben
+              (Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit § 25 Abs. 1 TDDDG).
+              Ohne Ihre Einwilligung wird keine Verbindung zu Servern von Google
+              hergestellt. Die Einwilligung können Sie jederzeit über die
               &bdquo;Cookie-Einstellungen&ldquo; auf unserer Website mit Wirkung für
-              die Zukunft ändern oder widerrufen.
+              die Zukunft ändern oder widerrufen. Nach einem Widerruf wird der Google
+              Tag Manager beim nächsten Seitenaufruf nicht mehr geladen.
             </p>
 
             <h3>Google Analytics</h3>
@@ -555,17 +557,12 @@ export default function DatenschutzPage() {
 
             <h2>7. Schriftarten</h2>
             <p>
-              Diese Website nutzt zur einheitlichen Darstellung sogenannte Web Fonts.
-              Die Schriftart Montserrat wird lokal über unseren Hosting-Anbieter
-              bereitgestellt. Zusätzlich werden die Schriftarten DM Sans und Inter
-              von Google Fonts geladen. Anbieter ist Google Ireland Limited, Gordon
-              House, Barrow Street, Dublin 4, Irland. Beim Aufruf einer Seite
-              stellt Ihr Browser dafür eine Verbindung zu Servern von Google her,
-              dabei wird Ihre IP-Adresse an Google übermittelt. Übermittlungen an die
-              Google LLC in den USA erfolgen auf Grundlage des EU-US Data Privacy
-              Framework (DPF). Die Verarbeitung erfolgt auf Grundlage unseres
-              berechtigten Interesses an einer einheitlichen und ansprechenden
-              Darstellung unserer Website gemäß Art. 6 Abs. 1 lit. f DSGVO.
+              Diese Website nutzt zur einheitlichen Darstellung von Schriftarten
+              sogenannte Web Fonts. Die von uns verwendeten Schriftarten werden
+              lokal über unsere Website beziehungsweise unseren Hosting-Anbieter
+              bereitgestellt. Beim Laden der Schriftarten wird daher keine
+              Verbindung zu Servern von Google Fonts oder anderen externen
+              Schriftanbieter-Diensten hergestellt.
             </p>
 
             <h2>Cookie-Übersicht</h2>

@@ -20,7 +20,6 @@ const cols = [
       { label: "Magazin", href: "/blog" },
       { label: "Bildungsgutschein", href: "/bildungsgutschein" },
       { label: "Beratung buchen", href: "/beratung-buchen" },
-      { label: "Jobs", href: "/jobs" },
     ],
   },
 ];
@@ -54,7 +53,7 @@ export function Footer4() {
             <div key={col.heading}>
               <h4
                 style={{
-                  fontFamily: "DM Sans, sans-serif",
+                  fontFamily: "var(--font-dm-sans), sans-serif",
                   fontSize: "0.75rem",
                   fontWeight: 700,
                   letterSpacing: "0.12em",

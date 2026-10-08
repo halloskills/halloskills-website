@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Montserrat } from "next/font/google";
+import { DM_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 import { SiteChrome } from "@/components/SiteChrome";
 import { CookieBanner } from "@/components/CookieBanner";
 import { HubSpotLoader } from "@/components/HubSpotLoader";
+import { GtmLoader } from "@/components/GtmLoader";
 
-const GTM_ID = "GTM-WJQK9TC8";
-
-const inter = Inter({
+// Lokal gehostet (next/font), kein Abruf bei Google. Wird vom alten Seitendesign als Fließtextschrift genutzt.
+const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-dm-sans",
+  weight: ["300", "400", "500", "600"],
 });
 
 // Rebrand 2026 — als CSS-Variable, damit nur der .hs-v2 Scope sie nutzt
@@ -58,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={`h-full scroll-smooth ${montserrat.variable}`}>
+    <html lang="de" className={`h-full scroll-smooth ${montserrat.variable} ${dmSans.variable}`}>
       <head>
         {/* Consent-Status aus einem früheren Besuch schon vor GTM ins
             dataLayer schreiben, damit Tags mit Consent-Trigger den
@@ -79,29 +81,8 @@ export default function RootLayout({
             })();
           `}
         </Script>
-        {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');
-          `}
-        </Script>
-        {/* End Google Tag Manager */}
       </head>
       <body className="min-h-full flex flex-col antialiased">
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
         {/* HubSpot-Tracking-Code — bewusst als type="text/plain" im HTML
             vorhanden (damit HubSpots eigener Install-Check das Skript im
             Quelltext findet), aber inaktiv. HubSpotLoader.tsx aktiviert es
@@ -117,6 +98,8 @@ export default function RootLayout({
         <SiteChrome>{children}</SiteChrome>
         <CookieBanner />
         <HubSpotLoader />
+        {/* GTM lädt erst nach Einwilligung für Statistik (GtmLoader), nicht schon beim Seitenaufruf. */}
+        <GtmLoader />
       </body>
     </html>
   );
