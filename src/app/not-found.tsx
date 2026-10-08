@@ -1,43 +1,28 @@
 import Link from "next/link";
+import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
+import { Eyebrow, btnPrimary } from "@/components/sections/startseite-v2/hs-ui";
+import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 
 export default function NotFound() {
   return (
-    <section
-      className="flex min-h-[80vh] flex-col items-center justify-center px-6 text-center"
-      style={{ background: "#f5f7f9" }}
-    >
-      <span
-        className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-        style={{ color: "#D4AF37" }}
-      >
-        Fehler 404
-      </span>
-      <h1
-        className="mb-6"
-        style={{
-          fontFamily: "Georgia, 'Times New Roman', serif",
-          fontSize: "clamp(2rem, 5vw, 3.5rem)",
-          fontWeight: 400,
-          color: "#0f2744",
-          lineHeight: 1.2,
-        }}
-      >
-        Diese Seite existiert nicht.
-      </h1>
-      <p
-        className="mb-10"
-        style={{ color: "#475467", fontSize: "1rem", lineHeight: 1.7, maxWidth: 480 }}
-      >
-        Die gesuchte Seite wurde möglicherweise verschoben oder gelöscht.
-        Geh zurück zur Startseite und finde, was du suchst.
-      </p>
-      <Link
-        href="/"
-        className="inline-block border-[1.5px] border-[#004B76] px-8 py-3.5 text-[0.8rem] font-semibold uppercase tracking-[0.1em] transition-colors hover:bg-[#004B76] hover:text-white"
-        style={{ color: "#004B76" }}
-      >
-        Zurück zur Startseite
-      </Link>
-    </section>
+    <div className="hs-v2 bg-white">
+      <NavV2 />
+
+      <section className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-20 text-center md:px-10">
+        <Eyebrow ton="blau">Fehler 404</Eyebrow>
+        <h1 className="mt-6 text-[clamp(2rem,5vw,3.25rem)] leading-[1.15]">
+          Diese Seite existiert nicht.
+        </h1>
+        <p className="mt-6 max-w-[480px] leading-[1.7] text-hs-body">
+          Die gesuchte Seite wurde möglicherweise verschoben oder gelöscht.
+          Geh zurück zur Startseite und finde, was du suchst.
+        </p>
+        <Link href="/" className={`${btnPrimary} mt-10`}>
+          Zurück zur Startseite
+        </Link>
+      </section>
+
+      <FooterV2 />
+    </div>
   );
 }

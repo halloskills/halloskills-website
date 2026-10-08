@@ -9,9 +9,6 @@ import React from "react";
  *
  * Die SVGs werden unverändert eingebunden. Die Wortmarke steckt als Pfade
  * darin, deshalb steht kein separater Text daneben.
- *
- * NICHT verwenden: public/images/logo-primary.svg und logo-weiss.svg sind das
- * ALTE Logo und enthalten noch Gold #D4AF37.
  */
 const LOGO_VARIANTEN = {
   dunkel: "/images/logo-hs-dunkel.svg",

@@ -1,4 +1,16 @@
 {
+  "routes": [
+    {
+      "route": "/bildungsgutschein",
+      "redirect": "/blog/bildungsgutschein-beantragen/",
+      "statusCode": 301
+    },
+    {
+      "route": "/bildungsgutschein/",
+      "redirect": "/blog/bildungsgutschein-beantragen/",
+      "statusCode": 301
+    }
+  ],
   "responseOverrides": {
     "404": {
       "rewrite": "/404.html",

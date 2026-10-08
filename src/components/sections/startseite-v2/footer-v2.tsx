@@ -37,6 +37,7 @@ const spalten = [
     links: [
       { label: "Impressum", href: "/impressum" },
       { label: "Datenschutz", href: "/datenschutz" },
+      { label: "AGB", href: "/agb" },
     ],
   },
 ];
@@ -44,6 +45,7 @@ const spalten = [
 const rechtsleiste = [
   { label: "Impressum", href: "/impressum" },
   { label: "Datenschutz", href: "/datenschutz" },
+  { label: "AGB", href: "/agb" },
 ];
 
 export function FooterV2() {

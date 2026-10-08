@@ -51,12 +51,28 @@ export default async function BlogPostSeite({
     publisher: { "@type": "Organization", name: "HalloSkills", url: "https://halloskills.de" },
   };
 
+  const faqJsonLd = post.faq && {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faq.map((f) => ({
+      "@type": "Question",
+      name: f.frage,
+      acceptedAnswer: { "@type": "Answer", text: f.antwort },
+    })),
+  };
+
   return (
     <div className="hs-v2 bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <NavV2 />
 
       <section className="px-6 pb-8 pt-10 md:px-10 lg:pt-14">

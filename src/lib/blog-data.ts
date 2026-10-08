@@ -7,6 +7,8 @@ export type BlogPost = {
   date: string;
   image: string;
   content: string;
+  /** Sichtbarer FAQ-Block im Artikel; dieselben Einträge gehen als FAQPage-JSON-LD raus. */
+  faq?: { frage: string; antwort: string }[];
 };
 
 export function calcReadingTime(content: string): string {
@@ -25,9 +27,44 @@ export function blogBild(src: string, variante?: "liste" | "klein"): string {
   return variante ? src.replace("-ai-d.", `-${variante}-ai-d.`) : src;
 }
 
+const BGS_FAQ = [
+  {
+    frage: "Wer bekommt einen Bildungsgutschein?",
+    antwort:
+      "Einen Bildungsgutschein bekommst du, wenn die Agentur für Arbeit oder das Jobcenter in deinem Einzelfall feststellt, dass die Weiterbildung für deine berufliche Situation notwendig und sinnvoll ist. Das kann zum Beispiel zutreffen, wenn du arbeitslos bist, dir Arbeitslosigkeit droht oder dir Kenntnisse für eine nachhaltige Beschäftigung fehlen. Einen automatischen Anspruch gibt es nicht.",
+  },
+  {
+    frage: "Wie lange ist der Bildungsgutschein gültig?",
+    antwort:
+      "Wie lange dein Bildungsgutschein gilt, steht auf dem Gutschein selbst, denn er wird zeitlich befristet ausgestellt. Außerdem kann er regional begrenzt und an ein bestimmtes Bildungsziel gebunden sein.",
+  },
+  {
+    frage: "Was mache ich, wenn mein Antrag abgelehnt wird?",
+    antwort:
+      "Lies zuerst den Bescheid und prüfe, warum die Förderung nicht bewilligt wurde. Bist du mit dem schriftlichen Bescheid nicht einverstanden, kannst du grundsätzlich innerhalb eines Monats nach Bekanntgabe Widerspruch einlegen. Die Entscheidung wird dann noch einmal überprüft.",
+  },
+  {
+    frage: "Was ist der Unterschied zwischen Bildungsgutschein und AVGS?",
+    antwort:
+      "Der Bildungsgutschein ist für Weiterbildungen und Umschulungen gedacht, der AVGS dagegen für Coaching, Bewerbungstraining oder Unterstützung bei der Vermittlung. Beide Gutscheine können die Kosten übernehmen, aber nur für ihren jeweiligen Zweck. Die Entscheidung trifft in beiden Fällen die Agentur für Arbeit oder das Jobcenter.",
+  },
+  {
+    frage: "Kann ich einen Bildungsgutschein bekommen, wenn ich noch arbeite?",
+    antwort:
+      "Ja, unter bestimmten Voraussetzungen können auch Beschäftigte bei einer beruflichen Weiterbildung gefördert werden, zum Beispiel über den Arbeitgeber (§ 82 SGB III). Für Beschäftigte gelten teilweise andere Regeln als für Arbeitslose. Ob das in deiner Situation passt, klärst du am besten im Gespräch mit der Agentur für Arbeit.",
+  },
+];
+
+function faqHtml(faq: { frage: string; antwort: string }[]): string {
+  return `<h2>Häufige Fragen zum Bildungsgutschein</h2>
+${faq.map((f) => `<h3>${f.frage}</h3>
+<p>${f.antwort}</p>`).join("\n")}`;
+}
+
 export const POSTS: BlogPost[] = [
   {
     slug: "bildungsgutschein-beantragen",
+    faq: BGS_FAQ,
     title: "Bildungsgutschein beantragen: So gehst du Schritt für Schritt vor",
     category: "Bildungsgutschein",
     readingTime: "8 min",
@@ -131,6 +168,14 @@ ${kiBild("/images/blog/bildungsgutschein-unterlagen-ai", "webp", "Unterlagen fü
 <p>Vielleicht hast du schon gelesen, dass ein Bildungsgutschein grundsätzlich drei Monate gültig sei. So pauschal solltest du dich darauf nicht verlassen. Der Bildungsgutschein wird zeitlich befristet ausgestellt. Zusätzlich kann er regional eingeschränkt und an ein bestimmtes Bildungsziel gebunden sein. Entscheidend ist deshalb die Gültigkeitsdauer, die tatsächlich auf deinem Gutschein steht.</p>
 <p>Beginnt dein gewünschter Lehrgang nicht innerhalb dieser Frist oder findest du keine geeignete Maßnahme, solltest du dich möglichst schnell wieder an die Agentur für Arbeit wenden. Das Merkblatt weist ausdrücklich darauf hin, dass ein Bildungsgutschein ansonsten verfallen kann.</p>
 
+<h2>Was ist der AVGS?</h2>
+<p>Neben dem Bildungsgutschein stößt du vielleicht auch auf den Aktivierungs- und Vermittlungsgutschein, kurz AVGS. Der AVGS ist für andere Leistungen gedacht, zum Beispiel für Coaching, Bewerbungstraining oder die Unterstützung bei der Vermittlung in Arbeit. Für eine Weiterbildung oder Umschulung ist er nicht der richtige Gutschein. Dafür ist der Bildungsgutschein zuständig.</p>
+<p>Auch beim AVGS gilt: Die Kosten können übernommen werden. Ob du ihn bekommst, entscheidet die Agentur für Arbeit oder das Jobcenter im Einzelfall.</p>
+
+<h2>Bildungsgutschein, wenn du noch arbeitest?</h2>
+<p>Du musst nicht arbeitslos sein, um dich über Fördermöglichkeiten zu informieren. Auch Beschäftigte können unter bestimmten Voraussetzungen bei einer beruflichen Weiterbildung gefördert werden, zum Beispiel über den Arbeitgeber (§ 82 SGB III). Die Regeln unterscheiden sich dabei teilweise von denen für Arbeitslose.</p>
+<p>Ob eine Förderung in deiner Situation infrage kommt, klärst du am besten in einem Gespräch mit der Agentur für Arbeit. Wenn du vorher einen ersten Überblick möchtest, kannst du dir auch unsere <a href='/beratung-buchen/'>kostenlose Beratung</a> buchen.</p>
+
 <h2>Was solltest du bei der Wahl des Bildungsträgers beachten?</h2>
 <p>Nur weil ein Kurs interessant klingt, kann er nicht automatisch über einen Bildungsgutschein finanziert werden. Sowohl Träger als auch Maßnahme müssen die notwendigen Zulassungsvoraussetzungen erfüllen. Außerdem muss der Lehrgang zu dem Bildungsziel passen, das auf deinem Bildungsgutschein festgelegt wurde. Schau deshalb nicht nur auf Kursname und Preis. Interessant sind auch:</p>
 <ul>
@@ -150,6 +195,8 @@ ${kiBild("/images/blog/bildungsgutschein-unterlagen-ai", "webp", "Unterlagen fü
 
 <h2>Kannst du einen HalloSkills-Lehrgang mit Bildungsgutschein finanzieren?</h2>
 <p>Ob ein Bildungsgutschein grundsätzlich für deine persönliche Situation infrage kommt, können wir gemeinsam mit dir anschauen. Eine Förderung eines HalloSkills-Lehrgangs über den Bildungsgutschein ist jedoch erst möglich, sobald die dafür erforderlichen AZAV-Zulassungen für Träger und Maßnahme vorliegen.</p>
+
+${faqHtml(BGS_FAQ)}
 
 <h2>Fazit</h2>
 <p>Einen Bildungsgutschein zu beantragen klingt zunächst komplizierter, als der Ablauf eigentlich ist. Du brauchst vor allem ein nachvollziehbares berufliches Ziel, ein Beratungsgespräch und eine Weiterbildung, die geeignet ist, deine Beschäftigungschancen zu verbessern.</p>

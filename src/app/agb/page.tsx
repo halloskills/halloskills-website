@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
+import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
+import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 
 export const metadata: Metadata = {
   title: "AGB | HalloSkills",
@@ -7,37 +10,21 @@ export const metadata: Metadata = {
 
 export default function AgbPage() {
   return (
-    <>
-      <section
-        className="relative flex min-h-[30vh] items-center overflow-hidden"
-        style={{ backgroundColor: "#004B76" }}
-      >
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-16 md:px-12 md:py-20">
-          <span
-            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-            style={{ color: "#D4AF37" }}
-          >
-            Rechtliches
-          </span>
-          <h1
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
-              color: "#ffffff",
-              lineHeight: 1.2,
-            }}
-          >
-            Allgemeine Geschäftsbedingungen
-          </h1>
+    <div className="hs-v2 bg-white">
+      <NavV2 />
+
+      <section className="px-6 pb-6 pt-14 md:px-10 lg:pt-20">
+        <div className="mx-auto max-w-[760px]">
+          <Eyebrow ton="blau">Rechtliches</Eyebrow>
+          <h1 className="mt-6 text-[clamp(2rem,4vw,2.75rem)] leading-[1.15]">Allgemeine Geschäftsbedingungen</h1>
         </div>
       </section>
 
-      <section className="py-20" style={{ background: "#ffffff" }}>
-        <div className="mx-auto max-w-[760px] px-6 md:px-12">
-          <div className="legal-content">
+      <section className="px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-[760px]">
+          <div className="hs-legal">
             <h2>§ 1 Geltungsbereich</h2>
-            <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der HalloSkills GmbH (nachfolgend „HalloSkills" oder „Anbieter") und ihren Kunden (nachfolgend „Teilnehmer") über die Nutzung der von HalloSkills angebotenen Online-Umschulungen, Kurse und damit verbundenen Dienstleistungen.</p>
+            <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der HalloSkills GmbH (nachfolgend „HalloSkills&quot; oder „Anbieter&quot;) und ihren Kunden (nachfolgend „Teilnehmer&quot;) über die Nutzung der von HalloSkills angebotenen Online-Umschulungen, Kurse und damit verbundenen Dienstleistungen.</p>
             <p>Abweichende Bedingungen des Teilnehmers werden nicht anerkannt, sofern der Anbieter nicht ausdrücklich schriftlich zugestimmt hat.</p>
 
             <h2>§ 2 Vertragspartner und Vertragsgegenstand</h2>
@@ -97,6 +84,8 @@ export default function AgbPage() {
           </div>
         </div>
       </section>
-    </>
+
+      <FooterV2 />
+    </div>
   );
 }

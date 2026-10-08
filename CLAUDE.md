@@ -14,7 +14,7 @@
 ## Design-System (hs-v2)
 - Aktuelles Design-System heißt `hs-v2`: Montserrat, `--color-hs-*`-Tokens, Pill-Buttons, geteilte Bausteine in `src/components/sections/startseite-v2/hs-ui.tsx`.
 - `.hs-v2 h1–h6` setzt global eine dunkle Navy-Textfarbe mit hoher Spezifität. Auf dunklen Hintergründen (Gradients, dunkle Karten) IMMER `!text-white` statt nur `text-white` verwenden, sonst ist die Überschrift kaum lesbar.
-- Neue Seiten mit eigenem Header/Footer (`NavV2`/`FooterV2`) müssen in `src/components/SiteChrome.tsx` unter `EIGENES_CHROME` eingetragen werden — sonst wird zusätzlich das alte globale Chrome (`Navbar2`/`Footer4`) mitgerendert (doppelter Header/Footer).
+- Jede Seite bindet `NavV2` und `FooterV2` selbst ein (auch `not-found.tsx`). `src/components/SiteChrome.tsx` umschließt nur noch `<main>`, es gibt kein globales Chrome und keine `EIGENES_CHROME`-Liste mehr. Der Cookie-Link „Cookie-Einstellungen“ kommt über `FooterV2`, neue Seiten brauchen deshalb zwingend `FooterV2`.
 - Routing: `public/staticwebapp.config.json` enthält bewusst keine Routen-Allowlist mehr. Neue Seiten werden direkt ausgeliefert, unbekannte URLs liefern ein echtes 404 (`404.html`).
 
 ## Content-Struktur

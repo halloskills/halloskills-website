@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
+import { Eyebrow } from "@/components/sections/startseite-v2/hs-ui";
+import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 
 export const metadata: Metadata = {
   title: "Datenschutzhinweise für Bewerber | HalloSkills",
@@ -7,38 +10,20 @@ export const metadata: Metadata = {
 
 export default function DatenschutzBewerberPage() {
   return (
-    <>
-      <section
-        className="relative flex min-h-[30vh] items-center overflow-hidden"
-        style={{ backgroundColor: "#004B76" }}
-      >
-        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 py-16 md:px-12 md:py-20">
-          <span
-            className="mb-5 block text-[0.75rem] font-bold uppercase tracking-[0.12em]"
-            style={{ color: "#D4AF37" }}
-          >
-            Rechtliches
-          </span>
-          <h1
-            style={{
-              fontFamily: "Georgia, 'Times New Roman', serif",
-              fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 400,
-              color: "#ffffff",
-              lineHeight: 1.2,
-            }}
-          >
-            Datenschutzhinweise für Bewerberinnen und Bewerber
-          </h1>
-          <p className="mt-4" style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.9rem" }}>
-            Stand: 02.07.2026
-          </p>
+    <div className="hs-v2 bg-white">
+      <NavV2 />
+
+      <section className="px-6 pb-6 pt-14 md:px-10 lg:pt-20">
+        <div className="mx-auto max-w-[760px]">
+          <Eyebrow ton="blau">Rechtliches</Eyebrow>
+          <h1 className="mt-6 text-[clamp(2rem,4vw,2.75rem)] leading-[1.15]">Datenschutzhinweise für Bewerberinnen und Bewerber</h1>
+          <p className="mt-4 text-sm text-hs-muted">Stand: 02.07.2026</p>
         </div>
       </section>
 
-      <section className="py-20" style={{ background: "#ffffff" }}>
-        <div className="mx-auto max-w-[760px] px-6 md:px-12">
-          <div className="legal-content">
+      <section className="px-6 py-16 md:px-10">
+        <div className="mx-auto max-w-[760px]">
+          <div className="hs-legal">
             <p>Wir freuen uns über Ihr Interesse an einer Tätigkeit bei uns. Mit diesen Datenschutzhinweisen informieren wir Sie darüber, wie wir personenbezogene Daten im Rahmen von Bewerbungen verarbeiten.</p>
             <p>Diese Datenschutzhinweise gelten unabhängig davon, über welchen Weg Sie sich bei uns bewerben, insbesondere über eine Recruiting-Plattform, eine Jobbörse, per E-Mail, postalisch, über eine Empfehlung oder auf anderem Wege.</p>
             <p>Soweit wir personenbezogene Daten nicht direkt von Ihnen erhalten, sondern z. B. über eine Empfehlung, eine vermittelnde Person, eine Recruiting-Plattform oder öffentlich zugängliche berufsbezogene Quellen, informieren wir Sie zusätzlich über die jeweilige Quelle der Daten, soweit dies gesetzlich erforderlich ist.</p>
@@ -156,6 +141,8 @@ export default function DatenschutzBewerberPage() {
           </div>
         </div>
       </section>
-    </>
+
+      <FooterV2 />
+    </div>
   );
 }
