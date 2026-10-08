@@ -27,6 +27,7 @@ Ob ein Bild KI-generiert ist, entscheidet Jenny. Im Zweifel nachfragen, nicht se
 - Kleiner runder Kreis mit „AI“ in der Mitte: Kreis `#0F172A` mit ca. 75 % Deckkraft, „AI“ weiß und fett. Auf sehr dunklen Bildstellen umgekehrt (weißer Kreis, dunkles „AI“).
 - **Größe auf dem Bildschirm überall gleich: 16 px am Desktop, 14 px auf dem Handy.**
 - Position unten links, Abstand links und unten je 3 % der Bildbreite.
+- Ausnahme sehr kleine Vorschaubilder (unter ca. 100 px Anzeigebreite): Kreis ca. 11–12 px (`--px=11`).
 - Bei Freistellern auf weißem Hintergrund (Option `--inset`) sitzt der Kreis unten links am Rand des Motivs, nicht in der leeren Ecke und nicht über Gesicht oder Händen.
 - Im sicheren Bereich: nicht von abgerundeten Bildmasken (`--r`), Textfeldern auf Karten (`--lift`) oder `object-cover`-Ausschnitten (`--crop`) verdeckt oder abgeschnitten.
 

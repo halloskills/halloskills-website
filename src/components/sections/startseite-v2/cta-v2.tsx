@@ -24,7 +24,7 @@ export function CtaV2() {
           <div className="relative hidden shrink-0 sm:block">
             <div className="size-16 overflow-hidden rounded-[18px] border-2 border-white shadow-hs-soft">
               <Image
-                src="/images/bilder/mann-mit-laptop-ai-d.webp"
+                src="/images/bilder/mann-mit-laptop-vorschau-ai-d.webp"
                 alt="Teilnehmer lernt mit seinem Laptop (KI-generiert)"
                 width={160}
                 height={160}
@@ -34,7 +34,7 @@ export function CtaV2() {
             </div>
             <div className="absolute -bottom-3 -right-3 size-14 overflow-hidden rounded-[16px] border-2 border-white shadow-hs-soft">
               <Image
-                src="/images/bilder/dunkelhaarige-frau-mit-laptop-ai-d.webp"
+                src="/images/bilder/dunkelhaarige-frau-mit-laptop-vorschau-ai-d.webp"
                 alt="Teilnehmerin lernt mit ihrem Laptop (KI-generiert)"
                 width={140}
                 height={140}

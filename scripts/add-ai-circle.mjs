@@ -1,5 +1,5 @@
 // Brennt den "AI-Kreis" (KI-Kennzeichnung) unten links in ein Bild ein, einmal für Desktop (-d) und einmal für Mobil (-m).
-// Aufruf: node scripts/add-ai-circle.mjs <original> <ziel-basis> --dw=<px> [--mw=<px>] [--crop=<B:H>] [--r=<px[,px]>] [--lift=<px[,px]>] [--inset] [--jpg]
+// Aufruf: node scripts/add-ai-circle.mjs <original> <ziel-basis> --dw=<px> [--mw=<px>] [--crop=<B:H>] [--r=<px[,px]>] [--lift=<px[,px]>] [--inset] [--jpg] [--px=<n>]
 //   <ziel-basis>  Pfad ohne -d/-m und ohne Endung, endet auf "-ai", z. B. public/images/hero-person-ai
 //   --dw / --mw   Breite in px, in der das Bild am Desktop bzw. mobil auf der Seite angezeigt wird (im Browser messen).
 //                 Ohne --mw entsteht nur die -d-Datei (Bild wird mobil nicht gezeigt).
@@ -7,6 +7,7 @@
 //   --r           Eckenradius der Bildmaske in Bildschirm-px (unten links), je "Desktop,Mobil" oder ein Wert für beide.
 //                 Der Kreis rückt so weit von der Ecke weg, dass er nicht abgeschnitten wird (Minimum: 3 % der Breite).
 //   --lift        Zusätzlicher Abstand unten in Bildschirm-px (Desktop,Mobil), wenn unten ein Element über das Bild ragt (z. B. Textfeld einer Karte)
+//   --px          Ausnahme für sehr kleine Vorschaubilder (unter ca. 100 px Anzeigebreite): Kreisgröße am Desktop in px statt 16 (11-12)
 //   --inset       Freisteller auf weißem Grund: Kreis sitzt am erkannten Motivrand (Bereich ohne Weiß) statt in der Bildecke
 // Kreis: auf dem Bildschirm immer DESKTOP_PX bzw. MOBILE_PX groß, Abstand unten und links 3 % der Bildbreite (bzw. Motivrand, Maskenrundung, Textfeld darunter),
 // #0F172A mit 75 % Deckkraft + weißes "AI"; auf sehr dunklem Untergrund umgekehrt.
@@ -109,5 +110,5 @@ async function render(targetPx, displayedPx, dest, i) {
   console.log(`ok ${path.basename(dest)} ${w}x${h} Kreis ${D.toFixed(1)}px im Bild = ${targetPx}px bei ${displayedPx}px Anzeige, x=${(left / w).toFixed(3)}${dark ? " invertiert" : ""}`);
 }
 
-await render(DESKTOP_PX, dw, `${base}-d${ext}`, 0);
+await render(parseFloat(opt("px")) || DESKTOP_PX, dw, `${base}-d${ext}`, 0);
 if (mw) await render(MOBILE_PX, mw, `${base}-m${ext}`, 1);
