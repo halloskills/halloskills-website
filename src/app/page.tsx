@@ -6,7 +6,8 @@ import { KurseV2 } from "@/components/sections/startseite-v2/kurse-v2";
 import { VergleichV2 } from "@/components/sections/startseite-v2/vergleich-v2";
 import { CtaV2 } from "@/components/sections/startseite-v2/cta-v2";
 import { SchritteV2 } from "@/components/sections/startseite-v2/schritte-v2";
-import { JobsV2 } from "@/components/sections/startseite-v2/jobs-v2";
+// Jobs-Abschnitt ausgeblendet. Zum Wieder-Aktivieren diesen Import und <JobsV2 /> unten einkommentieren.
+// import { JobsV2 } from "@/components/sections/startseite-v2/jobs-v2";
 import { FooterV2 } from "@/components/sections/startseite-v2/footer-v2";
 
 export const metadata: Metadata = {
@@ -26,7 +27,8 @@ export default function Startseite() {
       <KurseV2 />
       <SchritteV2 />
       <CtaV2 />
-      <JobsV2 />
+      {/* Jobs-Abschnitt ausgeblendet. Wieder aktivieren: Zeile einkommentieren (+ Import oben). */}
+      {/* <JobsV2 /> */}
       <FooterV2 />
     </div>
   );
