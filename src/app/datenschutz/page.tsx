@@ -324,8 +324,8 @@ export default function DatenschutzPage() {
               oder ob Sie zusätzlich in die Nutzung von Analyse- und
               Marketing-Technologien einwilligen. Ihre Auswahl wird in Ihrem Browser
               gespeichert, damit Sie nicht bei jedem Seitenaufruf erneut gefragt
-              werden. Sie können Ihre Entscheidung jederzeit über die
-              &bdquo;Cookie-Einstellungen&ldquo; auf unserer Website ändern oder eine
+              werden. Sie können Ihre Entscheidung jederzeit über den Link
+              &bdquo;Cookie-Einstellungen&ldquo; im Footer unserer Website ändern oder eine
               erteilte Einwilligung widerrufen. Google Analytics und HubSpot werden
               nur auf Grundlage Ihrer Einwilligung eingesetzt.
             </p>
@@ -465,8 +465,8 @@ export default function DatenschutzPage() {
               Sie zuvor über unser Cookie-Banner in die Statistik eingewilligt haben
               (Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit § 25 Abs. 1 TDDDG).
               Ohne Ihre Einwilligung wird keine Verbindung zu Servern von Google
-              hergestellt. Die Einwilligung können Sie jederzeit über die
-              &bdquo;Cookie-Einstellungen&ldquo; auf unserer Website mit Wirkung für
+              hergestellt. Die Einwilligung können Sie jederzeit über den Link
+              &bdquo;Cookie-Einstellungen&ldquo; im Footer unserer Website mit Wirkung für
               die Zukunft ändern oder widerrufen. Nach einem Widerruf wird der Google
               Tag Manager beim nächsten Seitenaufruf nicht mehr geladen.
             </p>
@@ -487,7 +487,7 @@ export default function DatenschutzPage() {
               haben. Die Verarbeitung erfolgt auf Grundlage Ihrer Einwilligung gemäß
               Art. 6 Abs. 1 lit. a DSGVO in Verbindung mit § 25 Abs. 1 TDDDG. Sie
               können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft über den
-              Link &bdquo;Cookie-Einstellungen&ldquo; auf unserer Website widerrufen
+              Link &bdquo;Cookie-Einstellungen&ldquo; im Footer unserer Website widerrufen
               oder ändern.
             </p>
             <p>
@@ -539,7 +539,7 @@ export default function DatenschutzPage() {
               erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a
               DSGVO in Verbindung mit § 25 Abs. 1 TDDDG. Sie können Ihre
               Einwilligung jederzeit mit Wirkung für die Zukunft über den Link
-              &bdquo;Cookie-Einstellungen&ldquo; auf unserer Website widerrufen oder
+              &bdquo;Cookie-Einstellungen&ldquo; im Footer unserer Website widerrufen oder
               ändern.
             </p>
             <p>

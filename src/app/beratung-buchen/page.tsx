@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 
 /**
  * Beratungsseite im Design System v1.0 — parallel zu /beratung-buchen
- * (altes Design). Formspree-Endpoint und Feldnamen des Formulars sind
- * unverändert, nur Optik und die Lehrgangs-Auswahl sind neu.
+ * (altes Design). Das Formular ist ein HubSpot-Formular (siehe
+ * BeratungHubspotFormularV2).
  */
 export default function BeratungBuchenPage() {
   const jsonLd = {
