@@ -3,189 +3,220 @@ import { Eyebrow, Logo } from "./hs-ui";
 
 /* ── Mockup-Bausteine: komplett in HTML/CSS, keine Bilder ── */
 
-function Fenster({ titel, children }: { titel: string; children: React.ReactNode }) {
-  return (
-    <div className="overflow-hidden rounded-[20px] border border-hs-line bg-white shadow-hs-soft">
-      <div className="flex items-center gap-3 border-b border-hs-line px-4 py-2.5">
-        <Logo className="h-4" />
-        <span className="ml-auto truncate text-[0.7rem] font-[500] text-hs-muted">{titel}</span>
-      </div>
-      <div className="p-4 sm:p-5">{children}</div>
-    </div>
-  );
-}
+type Navi = "Home" | "Entdecken" | "Bibliothek" | "Tests";
 
-function Pill({ children, ton = "blau" }: { children: React.ReactNode; ton?: "blau" | "pink" | "violett" }) {
-  const toene = {
-    blau: "bg-hs-lightblue text-hs-blue",
-    pink: "bg-hs-pink/10 text-hs-pink",
-    violett: "bg-hs-violet/10 text-hs-violet",
-  };
+function NaviIkon({ name }: { name: Navi }) {
+  const p = { stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round", strokeLinejoin: "round", fill: "none" } as const;
   return (
-    <span className={`inline-flex rounded-full px-3 py-1 text-[0.68rem] font-[600] ${toene[ton]}`}>
-      {children}
-    </span>
-  );
-}
-
-function Haken() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <path d="M3 8.5l3.2 3.2L13 4.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      {name === "Home" && <path {...p} d="M4 11l8-7 8 7v9a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1v-9z" />}
+      {name === "Entdecken" && (
+        <>
+          <circle {...p} cx="12" cy="12" r="9" />
+          <path {...p} d="M15.5 8.5l-2 5-5 2 2-5 5-2z" />
+        </>
+      )}
+      {name === "Bibliothek" && <path {...p} d="M5 4h4v16H5zM11 4h4v16h-4zM17.5 5l3 .8-3.6 14-3-.8z" />}
+      {name === "Tests" && (
+        <>
+          <rect {...p} x="5" y="4" width="14" height="17" rx="2" />
+          <path {...p} d="M9 4V3h6v1M9 11l2 2 4-4M9 17h6" />
+        </>
+      )}
     </svg>
   );
 }
 
-function MockLernsituation() {
+/**
+ * App-Fenster der Lernplattform: dunkle Oberfläche in HalloSkills-Navy,
+ * schmale Seitenleiste mit Navigation, leichter Leuchtrand, weiches
+ * Ausblenden nach unten.
+ */
+function AppFenster({ aktiv, children }: { aktiv: Navi; children: React.ReactNode }) {
+  const navi: Navi[] = ["Home", "Entdecken", "Bibliothek", "Tests"];
   return (
-    <Fenster titel="Büromanagement · Lernsituation">
-      <div className="flex flex-wrap items-center gap-2">
-        <Pill ton="violett">Praxisfall</Pill>
-        <span className="text-[0.7rem] text-hs-muted">Kundenservice im Büro</span>
-      </div>
-      <p className="mt-3 text-[0.8rem] leading-[1.55] text-hs-body">
-        Du arbeitest im Kundenservice eines Büroausstatters. Eine bestellte Lieferung ist nicht
-        vollständig angekommen.
-      </p>
-      <div className="mt-3 rounded-[14px] border border-hs-violet/25 bg-hs-violet/5 p-3.5">
-        <p className="text-[0.66rem] font-[700] uppercase tracking-[0.1em] text-hs-violet">Handlungsauftrag</p>
-        <p className="mt-1 text-[0.9rem] font-[600] leading-[1.4] text-hs-navy">
-          Ein Kunde reklamiert eine Lieferung. Formuliere eine Antwort.
-        </p>
-      </div>
-      <div className="mt-3 h-14 rounded-[12px] border border-hs-line bg-hs-soft px-3 py-2 text-[0.75rem] text-hs-muted">
-        Deine Antwort an den Kunden
-      </div>
-    </Fenster>
-  );
-}
-
-function MockFortschritt() {
-  const schritte = [
-    { art: "Video", titel: "Einführung Kundenkommunikation", status: "fertig" },
-    { art: "Übung", titel: "Gesprächsnotiz formulieren", status: "fertig" },
-    { art: "Video", titel: "Reklamationen bearbeiten", status: "aktuell" },
-    { art: "Übung", titel: "Antwortschreiben aufsetzen", status: "offen" },
-  ] as const;
-  return (
-    <Fenster titel="Dein Lernfortschritt">
-      <div className="flex items-end justify-between gap-3">
-        <p className="text-[0.85rem] font-[600] text-hs-navy">Modul 2: Kundenkommunikation</p>
-        <span className="shrink-0 whitespace-nowrap text-[0.8rem] font-[700] text-hs-blue">50 %</span>
-      </div>
-      <div className="mt-2 h-2 overflow-hidden rounded-full bg-hs-lightblue">
-        <div className="h-full w-1/2 rounded-full bg-gradient-to-r from-hs-violet to-hs-pink" />
-      </div>
-      <ul className="mt-4 space-y-2">
-        {schritte.map((s) => (
-          <li
-            key={s.titel}
-            className={`flex items-center gap-3 rounded-[12px] border px-3 py-2 ${
-              s.status === "aktuell" ? "border-hs-violet/40 bg-hs-violet/5" : "border-hs-line bg-white"
+    <div
+      className="flex h-[300px] overflow-hidden rounded-[20px] border border-white/15 bg-[#0b2036] text-white [mask-image:linear-gradient(to_bottom,black_80%,transparent)] sm:h-[300px]"
+      style={{ boxShadow: "0 0 0 1px rgba(120,97,255,0.35), 0 0 36px rgba(120,97,255,0.28)" }}
+    >
+      <nav className="flex w-11 shrink-0 flex-col gap-1 border-r border-white/10 bg-white/[0.03] px-1.5 py-3 sm:w-[118px] sm:px-2.5">
+        <Logo variante="hell" className="mb-3 hidden h-4 self-start sm:block" />
+        <span className="mb-3 flex justify-center sm:hidden">
+          <Logo variante="hell" className="h-3" />
+        </span>
+        {navi.map((n) => (
+          <span
+            key={n}
+            className={`flex items-center justify-center gap-2 rounded-[10px] px-2 py-2 text-[0.72rem] font-[500] sm:justify-start ${
+              n === aktiv ? "bg-hs-violet/25 text-white" : "text-white/55"
             }`}
           >
-            <span
-              className={`flex size-6 shrink-0 items-center justify-center rounded-full ${
-                s.status === "fertig"
-                  ? "bg-hs-blue text-white"
-                  : s.status === "aktuell"
-                    ? "bg-hs-violet text-white"
-                    : "border border-hs-line text-transparent"
-              }`}
-            >
-              {s.status === "fertig" ? <Haken /> : s.status === "aktuell" ? <span className="size-1.5 rounded-full bg-white" /> : null}
-            </span>
-            <span className="min-w-0 flex-1 truncate text-[0.75rem] font-[500] text-hs-navy">{s.titel}</span>
-            <Pill ton={s.art === "Video" ? "blau" : "pink"}>{s.art}</Pill>
-          </li>
+            <NaviIkon name={n} />
+            <span className="hidden sm:inline">{n}</span>
+          </span>
         ))}
-      </ul>
-    </Fenster>
+      </nav>
+      <div className="relative min-w-0 flex-1 p-3.5 sm:p-5">{children}</div>
+    </div>
   );
 }
 
-function MockUebung() {
-  const zellen = [12, 18, 9, 21];
+function Reiter({ aktiv }: { aktiv: "Lernpläne" | "Karteikarten" | "Verlauf" }) {
   return (
-    <Fenster titel="Übung · Tabellenkalkulation">
-      <div className="flex items-center gap-2">
-        <Pill ton="pink">Übung</Pill>
-        <span className="text-[0.7rem] text-hs-muted">Aufgabe 3 von 8</span>
+    <div className="flex gap-4 border-b border-white/10 text-[0.72rem] font-[500]">
+      {(["Lernpläne", "Karteikarten", "Verlauf"] as const).map((r) => (
+        <span
+          key={r}
+          className={`-mb-px border-b-2 pb-2 ${
+            r === aktiv ? "border-hs-pink text-white" : "border-transparent text-white/50"
+          }`}
+        >
+          {r}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function MockUebungsfragen() {
+  return (
+    <AppFenster aktiv="Entdecken">
+      <div className="flex items-center justify-between text-[0.7rem] text-white/60">
+        <span className="font-[600] text-white">Frage 5 von 10</span>
+        <span>Tabellenkalkulation</span>
       </div>
-      <div className="mt-3 grid gap-4 sm:grid-cols-[auto_1fr]">
-        <div className="w-28 overflow-hidden rounded-[10px] border border-hs-line text-[0.72rem]">
-          <div className="bg-hs-soft px-3 py-1 text-center font-[600] text-hs-muted">A</div>
-          {zellen.map((z, i) => (
-            <div key={i} className="flex border-t border-hs-line">
-              <span className="w-7 bg-hs-soft py-1 text-center text-hs-muted">{i + 1}</span>
-              <span className="flex-1 px-3 py-1 text-right text-hs-navy">{z}</span>
+      <div className="mt-2 flex gap-1">
+        {Array.from({ length: 10 }, (_, i) => (
+          <span
+            key={i}
+            className={`h-1.5 flex-1 rounded-full ${i < 4 ? "bg-hs-violet" : i === 4 ? "bg-hs-pink" : "bg-white/15"}`}
+          />
+        ))}
+      </div>
+      <p className="mt-4 text-[0.85rem] font-[600] leading-[1.4] text-white">
+        Berechne den Mittelwert der Zellen A1 bis A4.
+      </p>
+      <div className="mt-3 flex items-start gap-3">
+        <div className="w-[88px] shrink-0 overflow-hidden rounded-[8px] border border-white/15 text-[0.68rem]">
+          <div className="grid grid-cols-[22px_1fr] bg-white/10 text-white/60">
+            <span />
+            <span className="py-0.5 text-center">A</span>
+          </div>
+          {[12, 18, 9, 21].map((z, i) => (
+            <div key={i} className="grid grid-cols-[22px_1fr] border-t border-white/10">
+              <span className="bg-white/[0.06] py-0.5 text-center text-white/50">{i + 1}</span>
+              <span className="px-2 py-0.5 text-right text-white">{z}</span>
             </div>
           ))}
         </div>
-        <div>
-          <p className="text-[0.9rem] font-[600] leading-[1.4] text-hs-navy">
-            Welche Funktion berechnet den Mittelwert von A1 bis A4?
-          </p>
-          <div className="mt-3 flex h-10 items-center rounded-[12px] border-2 border-hs-violet/50 bg-white px-3 text-[0.78rem] text-hs-muted">
-            Deine Antwort eingeben
+        <div className="min-w-0 flex-1">
+          <div className="flex h-9 items-center gap-2 rounded-[10px] border border-hs-violet/60 bg-white/[0.06] px-3 text-[0.72rem] text-white/50">
+            <span className="font-[600] italic text-hs-violet">fx</span>
+            Funktion eintippen
           </div>
-          <span className="mt-3 inline-flex rounded-full bg-hs-navy px-5 py-2 text-[0.75rem] font-[600] text-white">
-            Weiter
+          <span className="mt-2.5 inline-flex rounded-full bg-hs-pink px-4 py-1.5 text-[0.7rem] font-[600] text-white">
+            Prüfen
           </span>
         </div>
       </div>
-    </Fenster>
+    </AppFenster>
+  );
+}
+
+function MockLernplan() {
+  return (
+    <AppFenster aktiv="Bibliothek">
+      <Reiter aktiv="Lernpläne" />
+      <div aria-hidden="true" className="mt-4 space-y-2 opacity-40">
+        <div className="h-9 rounded-[10px] bg-white/10" />
+        <div className="h-9 rounded-[10px] bg-white/10" />
+      </div>
+      <div className="absolute inset-x-3 top-14 rounded-[16px] border border-white/20 bg-[#10294a] p-3.5 shadow-[0_12px_40px_rgba(0,0,0,0.45)] sm:inset-x-5 sm:top-16 sm:p-4">
+        <p className="text-[0.82rem] font-[700] text-white">Lernplan erstellen</p>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          <div className="rounded-[12px] border-2 border-hs-violet bg-hs-violet/15 p-3">
+            <span className="inline-flex rounded-full bg-hs-pink px-2.5 py-0.5 text-[0.62rem] font-[700] text-white">
+              Empfohlen
+            </span>
+            <p className="mt-2 text-[0.78rem] font-[600] text-white">Vorlage nutzen</p>
+          </div>
+          <div className="rounded-[12px] border border-white/20 bg-white/[0.04] p-3">
+            <p className="text-[0.78rem] font-[600] text-white sm:mt-[1.35rem]">Eigenen Lernplan anlegen</p>
+          </div>
+        </div>
+      </div>
+    </AppFenster>
+  );
+}
+
+function MockKarteikarten() {
+  return (
+    <AppFenster aktiv="Bibliothek">
+      <Reiter aktiv="Karteikarten" />
+      <div className="mx-auto mt-4 max-w-[300px] rounded-[16px] border border-white/20 bg-gradient-to-br from-[#16335c] to-[#10294a] px-4 py-5 text-center shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+        <p className="text-[0.62rem] font-[700] uppercase tracking-[0.12em] text-white/50">Fachbegriff</p>
+        <p className="mt-2 text-[1.5rem] font-[700] leading-none text-white">Skonto</p>
+        <p className="mt-3 text-[0.68rem] text-white/50">Tippe auf die Karte, um die Antwort zu sehen</p>
+      </div>
+      <div className="mx-auto mt-3 flex max-w-[300px] gap-2.5">
+        <span className="flex-1 rounded-full border border-white/25 py-2 text-center text-[0.75rem] font-[600] text-white">
+          Nochmal
+        </span>
+        <span className="flex-1 rounded-full bg-hs-violet py-2 text-center text-[0.75rem] font-[600] text-white">
+          Gewusst
+        </span>
+      </div>
+    </AppFenster>
   );
 }
 
 function MockPruefung() {
-  const simulationen = ["Büromanagement", "Industriekaufmann", "Bankkaufmann"];
+  const berufe = [
+    { name: "Kaufmann/-frau für Büromanagement", wert: "w-[62%]" },
+    { name: "Industriekaufmann/-frau", wert: "w-[38%]" },
+    { name: "Bankkaufmann/-frau", wert: "w-[24%]" },
+  ];
   return (
-    <Fenster titel="Prüfungsvorbereitung">
-      <p className="text-[0.85rem] font-[600] text-hs-navy">Prüfungssimulationen</p>
-      <ul className="mt-3 space-y-2">
-        {simulationen.map((name, i) => (
-          <li key={name} className="flex items-center gap-3 rounded-[14px] border border-hs-line bg-white px-3.5 py-3">
-            <span
-              className={`flex size-9 shrink-0 items-center justify-center rounded-[11px] text-[0.8rem] font-[700] ${
-                ["bg-hs-violet/10 text-hs-violet", "bg-hs-pink/10 text-hs-pink", "bg-hs-lightblue text-hs-blue"][i]
-              }`}
-            >
-              {name[0]}
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block truncate text-[0.8rem] font-[600] text-hs-navy">{name}</span>
-              <span className="block text-[0.68rem] text-hs-muted">Prüfungssimulation</span>
-            </span>
-            <span className="rounded-full border border-hs-line px-3.5 py-1.5 text-[0.7rem] font-[600] text-hs-navy">
-              Starten
-            </span>
+    <AppFenster aktiv="Tests">
+      <p className="text-[0.62rem] font-[700] uppercase tracking-[0.12em] text-white/50">Tests</p>
+      <p className="mt-1 text-[0.9rem] font-[700] leading-snug text-white">Prüfungsvorbereitung für deinen Beruf</p>
+      <div className="mt-4 flex items-center justify-between">
+        <p className="text-[0.75rem] font-[600] text-white">Vollständige Prüfungssimulationen</p>
+        <span className="text-[0.68rem] font-[600] text-hs-pink">Alle anzeigen</span>
+      </div>
+      <ul className="mt-2.5 space-y-2">
+        {berufe.map((b) => (
+          <li key={b.name} className="rounded-[12px] border border-white/15 bg-white/[0.05] px-3 py-2.5">
+            <p className="truncate text-[0.74rem] font-[600] text-white">{b.name}</p>
+            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/15">
+              <div className={`h-full rounded-full bg-gradient-to-r from-hs-violet to-hs-pink ${b.wert}`} />
+            </div>
           </li>
         ))}
       </ul>
-    </Fenster>
+    </AppFenster>
   );
 }
 
 const karten = [
   {
-    titel: "Lernsituationen aus dem Berufsalltag",
-    text: "Du bekommst Praxisfälle mit einem konkreten Handlungsauftrag, so wie sie dir im Büro, in der Industrie oder bei der Bank begegnen.",
-    mock: <MockLernsituation />,
+    titel: "Üben mit echten Prüfungsfragen",
+    text: "Du beantwortest die Aufgaben Schritt für Schritt und siehst an der Leiste, wie weit du schon bist.",
+    mock: <MockUebungsfragen />,
   },
   {
-    titel: "Dein Lernfortschritt im Blick",
-    text: "Du siehst jederzeit, wo du stehst: Schritt für Schritt durch Videos und Übungen, mit einem Fortschrittsbalken für jedes Modul.",
-    mock: <MockFortschritt />,
+    titel: "Dein eigener Lernplan",
+    text: "Starte mit einer Vorlage oder lege deinen Lernplan selbst an, so wie es zu deinem Alltag passt.",
+    mock: <MockLernplan />,
   },
   {
-    titel: "Üben, bis es sitzt",
-    text: "Zu den Themen gibt es Übungsaufgaben, die du direkt am Bildschirm beantwortest.",
-    mock: <MockUebung />,
+    titel: "Fachbegriffe mit Karteikarten lernen",
+    text: "Du drehst die Karte um, markierst, ob du den Begriff gewusst hast, und wiederholst, was noch nicht sitzt.",
+    mock: <MockKarteikarten />,
   },
   {
-    titel: "Gut vorbereitet in die Prüfung",
-    text: "Mit Prüfungssimulationen für Büromanagement, Industriekaufmann und Bankkaufmann übst du den Ernstfall.",
+    titel: "Gezielt auf die Prüfung vorbereiten",
+    text: "Mit vollständigen Prüfungssimulationen für Büromanagement, Industriekaufmann und Bankkaufmann übst du den Ernstfall.",
     mock: <MockPruefung />,
   },
 ];
@@ -206,7 +237,7 @@ export function LernplattformV2() {
             So lernst du bei <span className="text-hs-pink">HalloSkills.</span>
           </h2>
           <p className="mt-5 text-[1rem] leading-[1.65] text-hs-body">
-            Ein Blick in die Lernplattform: So sehen Praxisfälle, Übungen und die
+            Ein Blick in die Lernplattform: So sehen Übungen, Lernplan, Karteikarten und die
             Prüfungsvorbereitung aus.
           </p>
         </div>
