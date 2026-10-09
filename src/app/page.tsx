@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { NavV2 } from "@/components/sections/startseite-v2/nav-v2";
 import { HeroV2 } from "@/components/sections/startseite-v2/hero-v2";
 import { FeaturesV2 } from "@/components/sections/startseite-v2/features-v2";
+import { LernplattformV2 } from "@/components/sections/startseite-v2/lernplattform-v2";
 import { KurseV2 } from "@/components/sections/startseite-v2/kurse-v2";
 import { VergleichV2 } from "@/components/sections/startseite-v2/vergleich-v2";
 import { CtaV2 } from "@/components/sections/startseite-v2/cta-v2";
@@ -24,6 +25,7 @@ export default function Startseite() {
       <HeroV2 />
       <VergleichV2 />
       <FeaturesV2 />
+      <LernplattformV2 />
       <KurseV2 />
       <SchritteV2 />
       <CtaV2 />
