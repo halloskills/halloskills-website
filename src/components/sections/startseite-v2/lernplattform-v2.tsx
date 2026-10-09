@@ -1,7 +1,8 @@
 import React from "react";
 import { Eyebrow, Logo } from "./hs-ui";
 
-/* ── Mockup-Bausteine: komplett in HTML/CSS, keine Bilder ── */
+/* ── Mockup-Bausteine: komplett in HTML/CSS, keine Bilder ──
+   Inhalte sind nur angedeutet (graue Platzhalter-Balken), keine konkreten Lerninhalte. */
 
 type Navi = "Home" | "Entdecken" | "Bibliothek" | "Tests";
 
@@ -30,13 +31,25 @@ function NaviIkon({ name }: { name: Navi }) {
 /**
  * App-Fenster der Lernplattform: dunkle Oberfläche in HalloSkills-Navy,
  * schmale Seitenleiste mit Navigation, leichter Leuchtrand, weiches
- * Ausblenden nach unten.
+ * Ausblenden nach unten (stark = unten angedeutete Inhalte).
  */
-function AppFenster({ aktiv, children }: { aktiv: Navi; children: React.ReactNode }) {
+function AppFenster({
+  aktiv,
+  stark = false,
+  children,
+}: {
+  aktiv: Navi;
+  stark?: boolean;
+  children: React.ReactNode;
+}) {
   const navi: Navi[] = ["Home", "Entdecken", "Bibliothek", "Tests"];
   return (
     <div
-      className="flex h-[300px] overflow-hidden rounded-[20px] border border-white/15 bg-[#0b2036] text-white [mask-image:linear-gradient(to_bottom,black_80%,transparent)] sm:h-[300px]"
+      className={`flex h-[320px] overflow-hidden rounded-[20px] border border-white/15 bg-[#0b2036] text-white ${
+        stark
+          ? "[mask-image:linear-gradient(to_bottom,black_58%,transparent)]"
+          : "[mask-image:linear-gradient(to_bottom,black_88%,transparent)]"
+      }`}
       style={{ boxShadow: "0 0 0 1px rgba(120,97,255,0.35), 0 0 36px rgba(120,97,255,0.28)" }}
     >
       <nav className="flex w-11 shrink-0 flex-col gap-1 border-r border-white/10 bg-white/[0.03] px-1.5 py-3 sm:w-[118px] sm:px-2.5">
@@ -61,10 +74,10 @@ function AppFenster({ aktiv, children }: { aktiv: Navi; children: React.ReactNod
   );
 }
 
-function Reiter({ aktiv }: { aktiv: "Lernpläne" | "Karteikarten" | "Verlauf" }) {
+function Reiter({ reiter, aktiv }: { reiter: string[]; aktiv: string }) {
   return (
     <div className="flex gap-4 border-b border-white/10 text-[0.72rem] font-[500]">
-      {(["Lernpläne", "Karteikarten", "Verlauf"] as const).map((r) => (
+      {reiter.map((r) => (
         <span
           key={r}
           className={`-mb-px border-b-2 pb-2 ${
@@ -78,12 +91,24 @@ function Reiter({ aktiv }: { aktiv: "Lernpläne" | "Karteikarten" | "Verlauf" })
   );
 }
 
+/** Grauer, abgerundeter Platzhalter-Balken statt konkretem Inhalt. */
+function Balken({ breite = "w-full", hoch = "h-2.5" }: { breite?: string; hoch?: string }) {
+  return <span className={`block rounded-full bg-white/15 ${hoch} ${breite}`} />;
+}
+
+function PfeilRechts() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="shrink-0 text-white/60">
+      <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 function MockUebungsfragen() {
   return (
     <AppFenster aktiv="Entdecken">
       <div className="flex items-center justify-between text-[0.7rem] text-white/60">
         <span className="font-[600] text-white">Frage 5 von 10</span>
-        <span>Tabellenkalkulation</span>
       </div>
       <div className="mt-2 flex gap-1">
         {Array.from({ length: 10 }, (_, i) => (
@@ -93,114 +118,210 @@ function MockUebungsfragen() {
           />
         ))}
       </div>
-      <p className="mt-4 text-[0.85rem] font-[600] leading-[1.4] text-white">
-        Berechne den Mittelwert der Zellen A1 bis A4.
-      </p>
-      <div className="mt-3 flex items-start gap-3">
-        <div className="w-[88px] shrink-0 overflow-hidden rounded-[8px] border border-white/15 text-[0.68rem]">
-          <div className="grid grid-cols-[22px_1fr] bg-white/10 text-white/60">
-            <span />
-            <span className="py-0.5 text-center">A</span>
+      <div className="mt-5 space-y-2">
+        <Balken />
+        <Balken breite="w-3/4" />
+      </div>
+      <div className="mt-4 space-y-2">
+        {[false, true, false].map((gewaehlt, i) => (
+          <div
+            key={i}
+            className={`flex h-9 items-center gap-3 rounded-[12px] border px-3 ${
+              gewaehlt ? "border-hs-violet bg-hs-violet/20" : "border-white/15 bg-white/[0.05]"
+            }`}
+          >
+            <span
+              className={`size-3.5 shrink-0 rounded-full border ${
+                gewaehlt ? "border-hs-violet bg-hs-violet" : "border-white/30"
+              }`}
+            />
+            <Balken breite={i === 1 ? "w-3/5" : i === 0 ? "w-1/2" : "w-2/3"} hoch="h-2" />
           </div>
-          {[12, 18, 9, 21].map((z, i) => (
-            <div key={i} className="grid grid-cols-[22px_1fr] border-t border-white/10">
-              <span className="bg-white/[0.06] py-0.5 text-center text-white/50">{i + 1}</span>
-              <span className="px-2 py-0.5 text-right text-white">{z}</span>
-            </div>
-          ))}
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="flex h-9 items-center gap-2 rounded-[10px] border border-hs-violet/60 bg-white/[0.06] px-3 text-[0.72rem] text-white/50">
-            <span className="font-[600] italic text-hs-violet">fx</span>
-            Funktion eintippen
-          </div>
-          <span className="mt-2.5 inline-flex rounded-full bg-hs-pink px-4 py-1.5 text-[0.7rem] font-[600] text-white">
-            Prüfen
-          </span>
-        </div>
+        ))}
+      </div>
+      <div className="mt-3 flex justify-end">
+        <span className="inline-flex rounded-full bg-hs-pink px-5 py-1.5 text-[0.72rem] font-[600] text-white">
+          Prüfen
+        </span>
       </div>
     </AppFenster>
   );
 }
 
 function MockLernplan() {
+  const optionen = [
+    {
+      titel: "Mit Vorlage starten",
+      text: "Nimm einen fertigen Plan und pass ihn an dich an.",
+      markiert: true,
+      ikon: <path d="M5 4h10l4 4v12H5zM15 4v4h4M8 12h8M8 16h5" />,
+    },
+    {
+      titel: "Leeren Lernplan anlegen",
+      text: "Wähle deine Themen selbst aus.",
+      markiert: false,
+      ikon: <path d="M12 5v14M5 12h14" />,
+    },
+  ];
   return (
     <AppFenster aktiv="Bibliothek">
-      <Reiter aktiv="Lernpläne" />
+      <Reiter reiter={["Lernpläne", "Karteikarten", "Verlauf"]} aktiv="Lernpläne" />
       <div aria-hidden="true" className="mt-4 space-y-2 opacity-40">
         <div className="h-9 rounded-[10px] bg-white/10" />
         <div className="h-9 rounded-[10px] bg-white/10" />
       </div>
       <div className="absolute inset-x-3 top-14 rounded-[16px] border border-white/20 bg-[#10294a] p-3.5 shadow-[0_12px_40px_rgba(0,0,0,0.45)] sm:inset-x-5 sm:top-16 sm:p-4">
         <p className="text-[0.82rem] font-[700] text-white">Lernplan erstellen</p>
-        <div className="mt-3 grid gap-2 sm:grid-cols-2">
-          <div className="rounded-[12px] border-2 border-hs-violet bg-hs-violet/15 p-3">
-            <span className="inline-flex rounded-full bg-hs-pink px-2.5 py-0.5 text-[0.62rem] font-[700] text-white">
-              Empfohlen
-            </span>
-            <p className="mt-2 text-[0.78rem] font-[600] text-white">Vorlage nutzen</p>
-          </div>
-          <div className="rounded-[12px] border border-white/20 bg-white/[0.04] p-3">
-            <p className="text-[0.78rem] font-[600] text-white sm:mt-[1.35rem]">Eigenen Lernplan anlegen</p>
-          </div>
+        <div className="mt-3 space-y-2">
+          {optionen.map((o) => (
+            <div
+              key={o.titel}
+              className={`relative flex items-center gap-3 rounded-[12px] p-3 ${
+                o.markiert ? "border-2 border-hs-violet bg-hs-violet/15" : "border border-white/20 bg-white/[0.04]"
+              }`}
+            >
+              {o.markiert && (
+                <span className="absolute -top-2.5 right-3 rounded-full bg-hs-pink px-2.5 py-0.5 text-[0.62rem] font-[700] text-white">
+                  Empfohlen
+                </span>
+              )}
+              <span className="flex size-8 shrink-0 items-center justify-center rounded-[10px] bg-white/10 text-white">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  {o.ikon}
+                </svg>
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-[0.78rem] font-[700] text-white">{o.titel}</span>
+                <span className="mt-0.5 block text-[0.68rem] leading-snug text-white/55">{o.text}</span>
+              </span>
+              <PfeilRechts />
+            </div>
+          ))}
         </div>
       </div>
     </AppFenster>
   );
 }
 
-function MockKarteikarten() {
+function TestKarte() {
   return (
-    <AppFenster aktiv="Bibliothek">
-      <Reiter aktiv="Karteikarten" />
-      <div className="mx-auto mt-4 max-w-[300px] rounded-[16px] border border-white/20 bg-gradient-to-br from-[#16335c] to-[#10294a] px-4 py-5 text-center shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
-        <p className="text-[0.62rem] font-[700] uppercase tracking-[0.12em] text-white/50">Fachbegriff</p>
-        <p className="mt-2 text-[1.5rem] font-[700] leading-none text-white">Skonto</p>
-        <p className="mt-3 text-[0.68rem] text-white/50">Tippe auf die Karte, um die Antwort zu sehen</p>
+    <div className="rounded-[12px] border border-white/15 bg-white/[0.05] p-3">
+      <div className="flex items-start justify-between">
+        <span className="flex size-7 items-center justify-center rounded-[9px] bg-hs-violet/25 text-white">
+          <NaviIkon name="Tests" />
+        </span>
+        <span className="size-4 rounded-full border border-white/35" />
       </div>
-      <div className="mx-auto mt-3 flex max-w-[300px] gap-2.5">
-        <span className="flex-1 rounded-full border border-white/25 py-2 text-center text-[0.75rem] font-[600] text-white">
-          Nochmal
-        </span>
-        <span className="flex-1 rounded-full bg-hs-violet py-2 text-center text-[0.75rem] font-[600] text-white">
-          Gewusst
-        </span>
+      <div className="mt-3 space-y-1.5">
+        <Balken breite="w-4/5" hoch="h-2" />
+        <Balken breite="w-3/5" hoch="h-2" />
+      </div>
+    </div>
+  );
+}
+
+function MockTests() {
+  return (
+    <AppFenster aktiv="Tests" stark>
+      <p className="text-[0.9rem] font-[700] leading-snug text-white">Tests zu deinem Lehrgang</p>
+      <div className="mt-3 flex items-center justify-between gap-3">
+        <p className="min-w-0 flex-1 truncate text-[0.74rem] font-[600] text-white">Kaufmann/-frau für Büromanagement</p>
+        <span className="shrink-0 text-[0.66rem] font-[600] text-hs-pink">Alle anzeigen</span>
+      </div>
+      <div className="mt-1.5 flex items-center gap-2">
+        <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/15" />
+        <span className="shrink-0 text-[0.64rem] text-white/60">0 %</span>
+      </div>
+      <div className="mt-2.5 grid grid-cols-2 gap-2.5">
+        <TestKarte />
+        <TestKarte />
+      </div>
+      <p className="mt-5 text-[0.74rem] font-[600] text-white/80">Industriekaufmann/-frau</p>
+      <div className="mt-2.5 grid grid-cols-2 gap-2.5">
+        <TestKarte />
+        <TestKarte />
       </div>
     </AppFenster>
   );
 }
 
-function MockPruefung() {
-  const berufe = [
-    { name: "Kaufmann/-frau für Büromanagement", wert: "w-[62%]" },
-    { name: "Industriekaufmann/-frau", wert: "w-[38%]" },
-    { name: "Bankkaufmann/-frau", wert: "w-[24%]" },
-  ];
+function Sterne({ n }: { n: number }) {
   return (
-    <AppFenster aktiv="Tests">
-      <p className="text-[0.62rem] font-[700] uppercase tracking-[0.12em] text-white/50">Tests</p>
-      <p className="mt-1 text-[0.9rem] font-[700] leading-snug text-white">Prüfungsvorbereitung für deinen Beruf</p>
-      <div className="mt-4 flex items-center justify-between">
-        <p className="text-[0.75rem] font-[600] text-white">Vollständige Prüfungssimulationen</p>
-        <span className="text-[0.68rem] font-[600] text-hs-pink">Alle anzeigen</span>
+    <span className="flex gap-0.5" aria-hidden="true">
+      {Array.from({ length: 5 }, (_, i) => (
+        <svg key={i} width="11" height="11" viewBox="0 0 20 20" className={i < n ? "text-hs-pink" : "text-white/20"}>
+          <path fill="currentColor" d="M10 1.5l2.6 5.5 6 .8-4.4 4.2 1.1 6L10 15.1 4.7 18l1.1-6L1.4 7.8l6-.8L10 1.5z" />
+        </svg>
+      ))}
+    </span>
+  );
+}
+
+function MockLernbegleitung() {
+  const zeilen = [
+    { name: "Sandra K.", lehrgang: "Büromanagement", prozent: 72, sterne: 4, ton: "bg-hs-violet" },
+    { name: "Mehmet A.", lehrgang: "Industriekaufmann", prozent: 45, sterne: 3, ton: "bg-hs-pink" },
+    { name: "Jana W.", lehrgang: "Bankkaufmann", prozent: 88, sterne: 5, ton: "bg-[#217b83]" },
+  ];
+  const spalten = "grid-cols-[1fr_82px] sm:grid-cols-[1.2fr_1fr_82px]";
+  return (
+    <AppFenster aktiv="Home" stark>
+      <p className="text-[0.9rem] font-[700] leading-snug text-white">Dein Lehrgang</p>
+      <div className="mt-2">
+        <Reiter reiter={["Lernpläne", "Tests"]} aktiv="Lernpläne" />
       </div>
-      <ul className="mt-2.5 space-y-2">
-        {berufe.map((b) => (
-          <li key={b.name} className="rounded-[12px] border border-white/15 bg-white/[0.05] px-3 py-2.5">
-            <p className="truncate text-[0.74rem] font-[600] text-white">{b.name}</p>
-            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/15">
-              <div className={`h-full rounded-full bg-gradient-to-r from-hs-violet to-hs-pink ${b.wert}`} />
-            </div>
-          </li>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {["Alle Lehrgänge", "Alle Gruppen"].map((f) => (
+          <span key={f} className="inline-flex items-center gap-1.5 rounded-full border border-white/25 px-3 py-1 text-[0.66rem] font-[500] text-white/85">
+            {f}
+            <svg width="9" height="9" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
         ))}
-      </ul>
+      </div>
+      <div className={`mt-3 grid ${spalten} gap-3 border-b border-white/10 pb-1.5 text-[0.62rem] font-[600] uppercase tracking-[0.08em] text-white/45`}>
+        <span>Name</span>
+        <span className="hidden sm:block">Fortschritt</span>
+        <span className="text-right sm:text-left">Verständnis</span>
+      </div>
+      {zeilen.map((z) => (
+        <div key={z.name} className={`grid ${spalten} items-center gap-3 border-b border-white/[0.07] py-2`}>
+          <span className="flex min-w-0 items-center gap-2">
+            <span className={`flex size-7 shrink-0 items-center justify-center rounded-full text-[0.62rem] font-[700] text-white ${z.ton}`}>
+              {z.name.split(" ").map((t) => t[0]).join("")}
+            </span>
+            <span className="min-w-0">
+              <span className="block truncate text-[0.74rem] font-[600] text-white">{z.name}</span>
+              <span className="block truncate text-[0.62rem] text-white/50">{z.lehrgang}</span>
+            </span>
+          </span>
+          <span className="hidden items-center gap-2 sm:flex">
+            <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/15">
+              <span className="block h-full rounded-full bg-gradient-to-r from-hs-violet to-hs-pink" style={{ width: `${z.prozent}%` }} />
+            </span>
+            <span className="w-8 text-right text-[0.64rem] text-white/70">{z.prozent} %</span>
+          </span>
+          <span className="flex justify-end sm:justify-start">
+            <Sterne n={z.sterne} />
+          </span>
+        </div>
+      ))}
+      <div className={`grid ${spalten} items-center gap-3 py-2`}>
+        <span className="flex items-center gap-2">
+          <span className="size-7 rounded-full bg-white/15" />
+          <span className="w-16"><Balken hoch="h-2" /></span>
+        </span>
+        <span className="hidden sm:block"><Balken hoch="h-1.5" /></span>
+        <span><Balken hoch="h-2" /></span>
+      </div>
     </AppFenster>
   );
 }
 
 const karten = [
   {
-    titel: "Üben mit echten Prüfungsfragen",
+    titel: "Üben mit prüfungsnahen Aufgaben",
     text: "Du beantwortest die Aufgaben Schritt für Schritt und siehst an der Leiste, wie weit du schon bist.",
     mock: <MockUebungsfragen />,
   },
@@ -210,14 +331,14 @@ const karten = [
     mock: <MockLernplan />,
   },
   {
-    titel: "Fachbegriffe mit Karteikarten lernen",
-    text: "Du drehst die Karte um, markierst, ob du den Begriff gewusst hast, und wiederholst, was noch nicht sitzt.",
-    mock: <MockKarteikarten />,
+    titel: "Dein Wissen testen",
+    text: "Mit Tests zu deinem Lehrgang siehst du, was schon sitzt und wo du noch üben solltest.",
+    mock: <MockTests />,
   },
   {
-    titel: "Gezielt auf die Prüfung vorbereiten",
-    text: "Mit vollständigen Prüfungssimulationen für Büromanagement, Industriekaufmann und Bankkaufmann übst du den Ernstfall.",
-    mock: <MockPruefung />,
+    titel: "Deine Lernbegleitung behält den Überblick",
+    text: "Deine Lernbegleiterinnen und Lernbegleiter sehen, wo du stehst, und unterstützen dich, wenn es mal hakt.",
+    mock: <MockLernbegleitung />,
   },
 ];
 
@@ -237,8 +358,8 @@ export function LernplattformV2() {
             So lernst du bei <span className="text-hs-pink">HalloSkills.</span>
           </h2>
           <p className="mt-5 text-[1rem] leading-[1.65] text-hs-body">
-            Ein Blick in die Lernplattform: So sehen Übungen, Lernplan, Karteikarten und die
-            Prüfungsvorbereitung aus.
+            Ein Blick in die Lernplattform: So sehen Übungen, Lernplan, Tests und die
+            Lernbegleitung aus.
           </p>
         </div>
 
