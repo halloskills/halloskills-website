@@ -45,27 +45,6 @@ export default function BeratungBuchenPage() {
       <BeratungFormularSektionV2 />
       <KursFaqV2 faq={BERATUNG_FAQ} />
 
-      <section className="px-6 pb-20 md:px-10">
-        <div className="mx-auto max-w-[600px] rounded-hs-card border border-hs-line bg-hs-soft p-8 text-center">
-          <p className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-hs-pink">
-            Andere Wege zu uns
-          </p>
-          <h2 className="mt-3 text-[1.1rem] font-[600] text-hs-navy">
-            Schreib uns jederzeit
-          </h2>
-          <p className="mt-3 text-[0.9rem] leading-[1.65] text-hs-body">
-            Du hast eine Frage zu unseren Lehrgängen oder bist dir noch
-            unsicher? Schreib uns einfach, wir melden uns bei dir.{" "}
-            <a href="mailto:admin@halloskills.de" className="text-hs-blue underline">
-              admin@halloskills.de
-            </a>
-          </p>
-          <p className="mt-4 text-[0.8rem] text-hs-muted">
-            100% online, deutschlandweit für dich da.
-          </p>
-        </div>
-      </section>
-
       <FooterV2 />
     </div>
   );
