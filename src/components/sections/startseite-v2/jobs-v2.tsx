@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { btnPrimary } from "./hs-ui";
+import { btnPrimary, btnWeiss } from "./hs-ui";
 
 /**
  * Hinweis auf offene Stellen.
@@ -44,18 +44,30 @@ export function JobsV2() {
 
           <p className="mt-4 text-[0.9375rem] leading-[1.65] text-hs-body">
             Wir bauen HalloSkills gerade auf und suchen Menschen, die etwas
-            mitgestalten wollen. Schau dir an, welche Stellen offen sind.
+            mitgestalten wollen. Aktuell offen:
           </p>
 
-          <Link
-            href="https://halloskills.jobs.personio.de"
-            target="_blank"
-            rel="noopener"
-            className={`${btnPrimary} mt-8`}
-          >
-            Offene Stellen ansehen
-            <span aria-hidden="true">→</span>
-          </Link>
+          <p className="mt-4 text-[1.0625rem] font-bold leading-snug text-hs-navy">
+            Dozent (m/w/d) für kaufmännische Weiterbildungen
+          </p>
+          <p className="mt-1 text-[0.875rem] text-hs-muted">
+            Remote · Voll- oder Teilzeit
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link href="/jobs" className={btnPrimary}>
+              Zur Stellenanzeige
+              <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href="https://halloskills-recruiting.jobs.personio.com/job/2849369"
+              target="_blank"
+              rel="noopener"
+              className={btnWeiss}
+            >
+              Direkt bewerben
+            </Link>
+          </div>
         </div>
 
         {/* Team */}

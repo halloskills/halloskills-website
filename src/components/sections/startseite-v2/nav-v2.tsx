@@ -26,6 +26,7 @@ const navGruppen: NavGruppe[] = [
   { label: "Ratgeber", href: "/blog" },
   { label: "Rechner", href: "/tools/arbeitslosengeld-rechner", kinder: rechner },
   { label: "Über uns", href: "/ueber-uns" },
+  { label: "Jobs", href: "/jobs" },
 ];
 
 function Chevron({ offen }: { offen: boolean }) {
