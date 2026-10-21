@@ -1,22 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { btnPrimary, btnWeiss } from "./hs-ui";
 
 /**
- * Hinweis auf offene Stellen.
- *
- * Rechts stehen die echten Team-Porträts statt einer Illustration — bei
- * „bewirb dich bei uns" sind die tatsächlichen Gesichter glaubwürdiger, und
- * eine passende Illustration liegt nicht in den Assets.
+ * Hinweis auf offene Stellen: links Text, rechts die aktuelle Stelle als
+ * anklickbare Card mit den Buttons darunter.
  */
-const team = [
-  { name: "Nina", bild: "/images/team/nina.png" },
-  { name: "Christian", bild: "/images/team/christian.png" },
-  { name: "Andrea", bild: "/images/team/andrea.png" },
-  { name: "Heiko", bild: "/images/team/heiko.png" },
-  { name: "Konrad", bild: "/images/team/konrad.png" },
-];
+const PERSONIO_URL = "https://halloskills-recruiting.jobs.personio.com/job/2849369";
 
 export function JobsV2() {
   return (
@@ -44,55 +34,40 @@ export function JobsV2() {
 
           <p className="mt-4 text-[0.9375rem] leading-[1.65] text-hs-body">
             Wir bauen HalloSkills gerade auf und suchen Menschen, die etwas
-            mitgestalten wollen. Aktuell offen:
+            mitgestalten wollen.
           </p>
+        </div>
 
-          <p className="mt-4 text-[1.0625rem] font-bold leading-snug text-hs-navy">
-            Dozent (m/w/d) für kaufmännische Weiterbildungen
-          </p>
-          <p className="mt-1 text-[0.875rem] text-hs-muted">
-            Remote · Voll- oder Teilzeit
-          </p>
+        {/* Stelle */}
+        <div className="relative flex w-full shrink-0 flex-col gap-5 lg:w-[400px]">
+          <Link
+            href="/jobs"
+            className="group block rounded-[24px] border border-hs-line bg-white p-7 shadow-hs-soft transition hover:-translate-y-0.5 hover:border-hs-violet"
+          >
+            <span className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-hs-pink">
+              Aktuell offen
+            </span>
+            <span className="mt-3 block text-[1.25rem] font-bold leading-snug text-hs-navy">
+              Dozent (m/w/d) für kaufmännische Weiterbildungen
+            </span>
+            <span className="mt-2 block text-[0.875rem] text-hs-muted">
+              Remote · Voll- oder Teilzeit
+            </span>
+            <span className="mt-5 inline-flex items-center gap-2 text-[0.9rem] font-bold text-hs-navy group-hover:text-hs-violet">
+              Details ansehen
+              <span aria-hidden="true">→</span>
+            </span>
+          </Link>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap gap-3">
             <Link href="/jobs" className={btnPrimary}>
               Zur Stellenanzeige
               <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              href="https://halloskills-recruiting.jobs.personio.com/job/2849369"
-              target="_blank"
-              rel="noopener"
-              className={btnWeiss}
-            >
+            <Link href={PERSONIO_URL} target="_blank" rel="noopener" className={btnWeiss}>
               Direkt bewerben
             </Link>
           </div>
-        </div>
-
-        {/* Team */}
-        <div className="relative flex shrink-0 flex-col gap-4">
-          <div className="flex">
-            {team.map((person, i) => (
-              <span
-                key={person.name}
-                className="relative -ml-4 size-16 overflow-hidden rounded-full border-[3px] border-white shadow-hs-soft first:ml-0"
-                style={{ zIndex: team.length - i }}
-              >
-                <Image
-                  src={person.bild}
-                  alt={person.name}
-                  width={128}
-                  height={128}
-                  sizes="64px"
-                  className="size-full object-cover"
-                />
-              </span>
-            ))}
-          </div>
-          <span className="text-[0.85rem] font-[500] leading-snug text-hs-muted">
-            Das Team, das dich einarbeitet
-          </span>
         </div>
       </div>
     </section>
