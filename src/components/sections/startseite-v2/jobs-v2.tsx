@@ -38,35 +38,31 @@ export function JobsV2() {
           </p>
         </div>
 
-        {/* Stelle */}
-        <div className="relative flex w-full shrink-0 flex-col gap-5 lg:w-[400px]">
-          <Link
-            href="/jobs"
-            className="group block rounded-[24px] border border-hs-line bg-white p-7 shadow-hs-soft transition hover:-translate-y-0.5 hover:border-hs-violet"
-          >
+        {/* Stelle: ganze Card klickbar (Stretched Link), Buttons liegen darüber */}
+        <div className="relative w-full shrink-0 lg:w-[420px]">
+          <div className="group relative rounded-[24px] border border-hs-line bg-white p-7 shadow-hs-soft transition hover:border-hs-violet md:p-8">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-hs-pink">
               Aktuell offen
             </span>
-            <span className="mt-3 block text-[1.25rem] font-bold leading-snug text-hs-navy">
+            <Link
+              href="/jobs"
+              className="mt-3 block text-[1.3rem] font-bold leading-snug text-hs-navy after:absolute after:inset-0 after:rounded-[24px] after:content-['']"
+            >
               Dozent (m/w/d) für kaufmännische Weiterbildungen
-            </span>
+            </Link>
             <span className="mt-2 block text-[0.875rem] text-hs-muted">
               Remote · Voll- oder Teilzeit
             </span>
-            <span className="mt-5 inline-flex items-center gap-2 text-[0.9rem] font-bold text-hs-navy group-hover:text-hs-violet">
-              Details ansehen
-              <span aria-hidden="true">→</span>
-            </span>
-          </Link>
 
-          <div className="flex flex-wrap gap-3">
-            <Link href="/jobs" className={btnPrimary}>
-              Zur Stellenanzeige
-              <span aria-hidden="true">→</span>
-            </Link>
-            <Link href={PERSONIO_URL} target="_blank" rel="noopener" className={btnWeiss}>
-              Direkt bewerben
-            </Link>
+            <div className="relative z-10 mt-7 flex flex-wrap gap-3">
+              <Link href="/jobs" className={btnPrimary}>
+                Zur Stellenanzeige
+                <span aria-hidden="true">→</span>
+              </Link>
+              <Link href={PERSONIO_URL} target="_blank" rel="noopener" className={btnWeiss}>
+                Direkt bewerben
+              </Link>
+            </div>
           </div>
         </div>
       </div>
