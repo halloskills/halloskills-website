@@ -31,11 +31,6 @@ export function JobsV2() {
           <h2 className="mt-4 text-[clamp(1.6rem,3.8vw,2.4rem)] leading-[1.15]">
             Jobs, die dich weiterbringen.
           </h2>
-
-          <p className="mt-4 text-[0.9375rem] leading-[1.65] text-hs-body">
-            Wir bauen HalloSkills gerade auf und suchen Menschen, die etwas
-            mitgestalten wollen.
-          </p>
         </div>
 
         {/* Stelle: ganze Card klickbar (Stretched Link), Buttons liegen darüber */}
